@@ -9,13 +9,13 @@
 
 #define REF_SIZE 20340 		// Size of reference genome
 #define READ_SIZE 100		// Size of each read
-#define NUM_READS 10		// Number of reads in read file
-#define REF_LINE_SIZE 60	// Length of each line in file of reference genome
+#define NUM_READS 10000		// Number of reads in read file
+#define REF_LINE_SIZE 100	// Length of each line in file of reference genome
 
 #ifdef DEBUG
 #define NUM_RUNS 1 // Make it easier to debug
 #else
-#define NUM_RUNS 100 
+#define NUM_RUNS 1 
 #endif
 
 // Direction type, EDGE means that entry is in 0th column, so we stop following
@@ -28,8 +28,8 @@ struct entry {
 };
 typedef struct entry entry, *pentry;
 
-char* genome_file = "short_reference.fasta"; 	// File where reference genome is stored
-char* read_file = "short_sequences.fastq";		// File where reference reads are stored
+char* genome_file = "long_reference.fasta"; 	// File where reference genome is stored
+char* read_file = "long_sequences.fastq";		// File where reference reads are stored
 
 entry nw_matrix[REF_SIZE+1][READ_SIZE+1];		// the NW matrix. Each entry contains a score and a direction 
 char ref_genome[REF_SIZE+1];					// The reference genome
@@ -68,6 +68,10 @@ void init() {
 		fgets(read_line, READ_SIZE*2, f);
 		while (read_line[0] != '@') {
 			fgets(read_line, READ_SIZE*2, f); // Skip lines until next read
+			if (read_line == NULL) {
+				printf("Not enough reads in file\n");
+				exit(1);
+			}
 		}
 		fgets(read_line, READ_SIZE*2, f); // Read in a read
 		strncpy(reads[i], read_line, READ_SIZE);
