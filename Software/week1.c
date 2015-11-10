@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <x86intrin.h>
 
 // Comment out for normal operation
 //#define DEBUG 1
@@ -21,27 +22,48 @@
 // Direction type, EDGE means that entry is in 0th column, so we stop following
 typedef enum {UP, LEFT, DIAG, EDGE} direction;
 
-// Entry in NW matrix. Stores score and direction
-struct entry {
-	int score;		// The score for an entry in the matrix
-	direction dir;	// The direction that we derived this score from
-};
-typedef struct entry entry, *pentry;
-
 char* genome_file = "long_reference.fasta"; 	// File where reference genome is stored
 char* read_file = "long_sequences.fastq";		// File where reference reads are stored
 
-entry nw_matrix[REF_SIZE+1][READ_SIZE+1];		// the NW matrix. Each entry contains a score and a direction 
+struct {
+	char score[REF_SIZE+1][READ_SIZE+1];
+	char dir  [REF_SIZE+1][READ_SIZE+1];
+} nw_matrix;									// The NW matrix, as struct-of-arrays instead of array-of-structs
 char ref_genome[REF_SIZE+1];					// The reference genome
 char reads[NUM_READS][READ_SIZE+1];				// The reads to be sequenced
 unsigned int best_fits[NUM_RUNS][NUM_READS];	// The best fit index for each read
 
 
 // Scoring system
-int gap_pen = -1;
-int mismatch_pen = -1;
-int match_score = 1;
+#define GAP_PEN       -1
+#define MISMATCH_PEN  -1
+#define MATCH_SCORE    1
 
+
+#ifdef __AVX__
+typedef char v16sb __attribute__((vector_size(16)));
+
+const v16sb v_match_score = {MATCH_SCORE, MATCH_SCORE, MATCH_SCORE, MATCH_SCORE,
+                             MATCH_SCORE, MATCH_SCORE, MATCH_SCORE, MATCH_SCORE,
+                             MATCH_SCORE, MATCH_SCORE, MATCH_SCORE, MATCH_SCORE,
+                             MATCH_SCORE, MATCH_SCORE, MATCH_SCORE, MATCH_SCORE};
+const v16sb v_gap_pen = {GAP_PEN, GAP_PEN, GAP_PEN, GAP_PEN,
+                         GAP_PEN, GAP_PEN, GAP_PEN, GAP_PEN,
+                         GAP_PEN, GAP_PEN, GAP_PEN, GAP_PEN,
+                         GAP_PEN, GAP_PEN, GAP_PEN, GAP_PEN};
+const v16sb v_mismatch_pen = {MISMATCH_PEN, MISMATCH_PEN, MISMATCH_PEN, MISMATCH_PEN,
+                              MISMATCH_PEN, MISMATCH_PEN, MISMATCH_PEN, MISMATCH_PEN,
+                              MISMATCH_PEN, MISMATCH_PEN, MISMATCH_PEN, MISMATCH_PEN,
+                              MISMATCH_PEN, MISMATCH_PEN, MISMATCH_PEN, MISMATCH_PEN};
+const v16sb v_dir_diag = {DIAG, DIAG, DIAG, DIAG,
+                          DIAG, DIAG, DIAG, DIAG,
+                          DIAG, DIAG, DIAG, DIAG,
+                          DIAG, DIAG, DIAG, DIAG};
+const v16sb v_dir_up = {UP, UP, UP, UP,
+                        UP, UP, UP, UP,
+                        UP, UP, UP, UP,
+                        UP, UP, UP, UP};
+#endif
 
 
 // Reads in reference genome and reads, initializes nw_matrix
@@ -112,15 +134,15 @@ void init() {
 	
 	// Init column 1 to 0s and EDGE direction
 	for (i=0; i<REF_SIZE+1; i++) {
-		nw_matrix[i][0].score = 0;
-		nw_matrix[i][0].dir = EDGE;
+		nw_matrix.score[i][0] = 0;
+		nw_matrix.dir[i][0] = EDGE;
 	}
 	
 	// Init row 0 to decreasing values and LEFT direction (EDGE?)
 	int fill = 0;
 	for (i=0; i<READ_SIZE+1; i++) {
-		nw_matrix[0][i].score = fill;
-		nw_matrix[0][i].dir = LEFT;
+		nw_matrix.score[0][i] = fill;
+		nw_matrix.dir[0][i] = LEFT;
 		fill--;
 	}
 	
@@ -159,7 +181,7 @@ void print_matrix(int read_num) {
 		
 		for (j=0; j<READ_SIZE+1; j++) {
 			fprintf(matrix, " ");
-			fprintf(matrix, "%3d", nw_matrix[i][j].score);			
+			fprintf(matrix, "%3d", nw_matrix.score[i][j]);			
 		}
 		fprintf(matrix, "\n");
 	}
@@ -168,19 +190,8 @@ void print_matrix(int read_num) {
 	fclose(matrix);
 }
 
-// Returns the maximum value between integers a, b, and c
-// NO LONGER USED
-int findMax(int a, int b, int c) {
-	if (a >= b && a >= c) return a;
-	if (b >= c) return b;
-	return c;
-}
-
 // Traces the path back to the first column to find where the best match starts (recursive function)
 int backTrack(unsigned int row, unsigned int column) {
-	//int up, left, diag;
-	//int max;
-	//int status;
 	direction dir;
 	
 	if (column == 1) {
@@ -189,7 +200,7 @@ int backTrack(unsigned int row, unsigned int column) {
 	}
 	if (row == 0) return -1;
 	
-	dir = nw_matrix[row][column].dir;
+	dir = nw_matrix.dir[row][column];
 	if (dir == UP) {
 		return backTrack(row-1, column);
 	}
@@ -199,32 +210,7 @@ int backTrack(unsigned int row, unsigned int column) {
 	else if (dir == DIAG) {
 		return backTrack(row-1, column-1);
 	}
-	
-	
-	// Removed due to new understanding of algorithm. Now have backtrace directions
-	/*
-	up = nw_matrix[row-1][column];
-	left = nw_matrix[row][column-1];
-	diag = nw_matrix[row-1][column-1];
-	
-	// Figure out which way the best path goes
-	max = findMax(up, left, diag);
-	
-	
-	// It's possible that there's more than 1 best path
-	// Recursively explore each direction that is on a best path
-	if (up == max) {
-		status = backTrack(row-1, column);
-		if (status != -1) return status;
-	}
-	if (left == max) {
-		status = backTrack(row, column-1);
-		if (status != -1) return status;
-	}
-	if (diag == max) {
-		status = backTrack(row-1, column-1);
-		if (status != -1) return status;
-	}*/
+
 	return -1;
 }
 
@@ -235,7 +221,7 @@ int main() {
 	int up_score, left_score, diag_score; // Score put in box for each of the different directions
 	int match;						// Is the current box a match
 	unsigned int max;				// Index of maximum final column value
-	int status;
+	int max_score;					// Maximum final column value
 	
 	struct timeval start; 			// start time of a run
 	struct timeval end;	  			// end time of a run
@@ -247,64 +233,99 @@ int main() {
 
 	for (l=0; l<NUM_RUNS; l++) { 	// Repeat calculation to get more accurate time measurement
 		for (k=0; k<NUM_READS; k++) { // Loop through each read
+
 			max = 0;
+			max_score = -READ_SIZE;
+
 			for (i=1; i<REF_SIZE+1; i++) { // Loop through each row
+
+#ifdef __AVX__
+				// Start by doing vectorized UP/DIAG comparisons.
+				v16sb v_ref = _mm_set1_epi8(ref_genome[i-1]);
+				for (j=1; j<READ_SIZE-14; j+=16) {
+					v16sb v_read = *(v16sb*)&reads[k][j-1];
+
+					// Does a component-wise comparison, which generates 0xFF or
+					// 0x00, then uses that as mask
+					v16sb v_match_adj = v_mismatch_pen + ((v_ref == v_read) & (v_match_score - v_mismatch_pen));
+
+					// Saturating add of match_adj to the diagonal score
+					v16sb v_diag = *(v16sb*)&nw_matrix.score[i-1][j-1];
+					v16sb v_diag_score = _mm_adds_epi8(v_diag, v_match_adj);
+
+					// Saturating add of gap_pen to the score of preceding row
+					v16sb v_up = *(v16sb*)&nw_matrix.score[i-1][j];
+					v16sb v_up_score = _mm_adds_epi8(v_up, v_gap_pen);
+
+					// Find max of the two, and update dir
+					v16sb v_score = _mm_max_epi8(v_diag_score, v_up_score);
+					v16sb v_dir = v_dir_diag + ((v_up_score > v_diag_score) & (v_dir_up - v_dir_diag));
+
+					// Write back (must be unaligned stores for now)
+					_mm_storeu_si128((__m128i*)&nw_matrix.score[i][j], v_score);
+					_mm_storeu_si128((__m128i*)&nw_matrix.dir[i][j], v_dir);
+				}
+
+				// Finish off any UP/DIAG checks that don't evenly divide into
+				// our vector size
+				for (; j<READ_SIZE+1; j++) {
+					diag = nw_matrix.score[i-1][j-1];
+					up = nw_matrix.score[i-1][j];
+					diag_score = diag + (ref_genome[i-1] == reads[k][j-1]? MATCH_SCORE : MISMATCH_PEN);
+					up_score = up + GAP_PEN;
+					if (diag_score >= up_score) {
+						nw_matrix.score[i][j] = diag_score;
+						nw_matrix.dir[i][j] = DIAG;
+					} else {
+						nw_matrix.score[i][j] = up_score;
+						nw_matrix.dir[i][j] = UP;
+					}
+				}
+
+				// Do a final scan of the full row to check for LEFT being the
+				// maximum score. Sadly, this part must be fully sequential
+				for (j=1; j<READ_SIZE+1; j++) {
+					left_score = nw_matrix.score[i][j-1] + GAP_PEN;
+					if (left_score > nw_matrix.score[i][j]) {
+						nw_matrix.score[i][j] = left_score;
+						nw_matrix.dir[i][j] = LEFT;
+					}
+				}
+#else
 				for (j=1; j<READ_SIZE+1; j++) { // Loop through each column
-					
 					// Get adjacent values
-					up = nw_matrix[i-1][j].score;
-					left = nw_matrix[i][j-1].score;
-					diag = nw_matrix[i-1][j-1].score;
-					
-					// Determine which one to use
-					
-					// removed due to new understanding of how algorithm works
-					/*if (diag >= left && diag >= up) {
-						match = ref_genome[i-1] == reads[k][j-1];
-						if (match) nw_matrix[i][j] = diag + match_score;
-						else nw_matrix[i][j] = diag + mismatch_pen; // pen is negative number
-					}
-					else if (left >= diag && left >= up) {
-						nw_matrix[i][j] = left + gap_pen; // pen is negative number
-					}
-					else {
-						nw_matrix[i][j] = up + gap_pen; //pen is negative number
-					}
-					
-					// Determine if it's the new max path (TODO: allow more than 1 max path end?)
-					if (j == READ_SIZE) {
-						if (nw_matrix[i][j] > nw_matrix[max][j])
-							max = i;
-					}*/
+					up = nw_matrix.score[i-1][j];
+					left = nw_matrix.score[i][j-1];
+					diag = nw_matrix.score[i-1][j-1];
 					
 					// Calculate each score
 					match = ref_genome[i-1] == reads[k][j-1];
-					if (match) diag_score = diag + match_score;
-					else diag_score = diag + mismatch_pen; // pen is negative
+					if (match) diag_score = diag + MATCH_SCORE;
+					else diag_score = diag + MISMATCH_PEN; // pen is negative
 					
-					left_score = left + gap_pen;
-					up_score = up + gap_pen;
+					left_score = left + GAP_PEN;
+					up_score = up + GAP_PEN;
 					
 					// Fill in current entry based on which score is best
 					if (diag_score >= left_score && diag_score >= up_score) {
-						nw_matrix[i][j].score = diag_score;
-						nw_matrix[i][j].dir = DIAG;
+						nw_matrix.score[i][j] = diag_score;
+						nw_matrix.dir[i][j] = DIAG;
 					}
 					else if (left_score >= diag_score && left_score >= up_score) {
-						nw_matrix[i][j].score = left_score; // pen is negative number
-						nw_matrix[i][j].dir = LEFT;
+						nw_matrix.score[i][j] = left_score; // pen is negative number
+						nw_matrix.dir[i][j] = LEFT;
 					}
 					else {
-						nw_matrix[i][j].score = up_score; //pen is negative number
-						nw_matrix[i][j].dir = UP;
+						nw_matrix.score[i][j] = up_score; //pen is negative number
+						nw_matrix.dir[i][j] = UP;
 					}
-					
-					// Determine if it's the new max path (TODO: allow more than 1 max path end?)
-					if (j == READ_SIZE) {
-						if (nw_matrix[i][j].score > nw_matrix[max][j].score)
-							max = i;
-					}
-					
+				}
+#endif
+
+				// Determine if it's the new max path (TODO: allow more than 1 max path end?)
+				if (nw_matrix.score[i][READ_SIZE] > max_score) {
+					max = i;
+					max_score = nw_matrix.score[i][READ_SIZE];
 				}
 			}
 #ifdef DEBUG
