@@ -15,13 +15,17 @@ unsigned int needlemanWunsch(char reads[READ_SIZE], char ref_genome[REF_SIZE]) {
 	char score2[2][READ_SIZE+1];
 	unsigned int orig2[2][READ_SIZE+1];
 
+	for (i=0; i<READ_SIZE+2; i++) {
+
+	}
+
 
 
 	max = 0;
 	max_score = -READ_SIZE;
+	//score1[0] = nw_matrix
 
 	ROW: for (i=1; i<REF_SIZE+1; i++) { // Loop through each row
-
 
 		COL: for (j=1; j<READ_SIZE+1; j++) { // Loop through each column
 			// Get adjacent values
