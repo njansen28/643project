@@ -1,0 +1,738 @@
+
+
+================================================================
+== Vivado HLS Report for 'needlemanWunsch'
+================================================================
+* Date:           Thu Nov 12 17:05:20 2015
+
+* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Project:        643_PE
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.11|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +----------+----------+----------+----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |    min   |    max   |    min   |    max   |   Type  |
+    +----------+----------+----------+----------+---------+
+    |  22536730|  22536730|  22536731|  22536731|   none  |
+    +----------+----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+----------+----------+----------+-----------+-----------+-------+----------+
+        |             |       Latency       | Iteration|  Initiation Interval  |  Trip |          |
+        |  Loop Name  |    min   |    max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------+----------+----------+----------+-----------+-----------+-------+----------+
+        |- Loop 1     |  22536720|  22536720|      1108|          -|          -|  20340|    no    |
+        | + Loop 1.1  |      1100|      1100|        11|          -|          -|    100|    no    |
+        +-------------+----------+----------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      0|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
+N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 36
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+	28  / (exitcond1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / (!exitcond)
+	25  / (exitcond)
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / (!or_cond)
+	17  / (or_cond & !or_cond2)
+	21  / (or_cond & or_cond2)
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	6  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	16  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	16  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	2  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: stg_37 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([100 x i8]* %reads) nounwind, !map !22
+
+ST_1: stg_38 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([20340 x i8]* %ref_genome) nounwind, !map !26
+
+ST_1: stg_39 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !32
+
+ST_1: stg_40 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @needlemanWunsch_str) nounwind
+
+ST_1: stg_41 [1/1] 1.57ns
+:4  br label %1
+
+
+ <State 2>: 2.25ns
+ST_2: max_1 [1/1] 0.00ns
+:0  %max_1 = phi i15 [ 1, %0 ], [ %i, %._crit_edge ]
+
+ST_2: max [1/1] 0.00ns
+:1  %max = phi i32 [ 0, %0 ], [ %max_2_max, %._crit_edge ]
+
+ST_2: max_score [1/1] 0.00ns
+:2  %max_score = phi i32 [ -100, %0 ], [ %max_score_2_max_score, %._crit_edge ]
+
+ST_2: max_1_cast2 [1/1] 0.00ns
+:3  %max_1_cast2 = zext i15 %max_1 to i32
+
+ST_2: max_1_cast2_cast [1/1] 0.00ns
+:4  %max_1_cast2_cast = zext i15 %max_1 to i22
+
+ST_2: exitcond1 [1/1] 2.25ns
+:5  %exitcond1 = icmp eq i15 %max_1, -12427
+
+ST_2: empty [1/1] 0.00ns
+:6  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 20340, i64 20340, i64 20340) nounwind
+
+ST_2: stg_49 [1/1] 0.00ns
+:7  br i1 %exitcond1, label %9, label %.preheader.preheader
+
+ST_2: tmp_1 [1/1] 1.96ns
+.preheader.preheader:0  %tmp_1 = add i15 %max_1, -1
+
+ST_2: nw_matrix_orig_addr1 [5/5] 2.15ns
+:0  %nw_matrix_orig_addr1 = mul i32 %max, 101
+
+
+ <State 3>: 3.89ns
+ST_3: tmp_2_trn_cast [1/1] 0.00ns
+.preheader.preheader:3  %tmp_2_trn_cast = zext i15 %tmp_1 to i22
+
+ST_3: nw_matrix_score_addr3 [3/3] 3.89ns
+.preheader.preheader:4  %nw_matrix_score_addr3 = mul i22 %tmp_2_trn_cast, 101
+
+ST_3: nw_matrix_score_addr4 [3/3] 3.89ns
+.preheader.preheader:5  %nw_matrix_score_addr4 = mul i22 %max_1_cast2_cast, 101
+
+
+ <State 4>: 3.89ns
+ST_4: nw_matrix_score_addr3 [2/3] 3.89ns
+.preheader.preheader:4  %nw_matrix_score_addr3 = mul i22 %tmp_2_trn_cast, 101
+
+ST_4: nw_matrix_score_addr4 [2/3] 3.89ns
+.preheader.preheader:5  %nw_matrix_score_addr4 = mul i22 %max_1_cast2_cast, 101
+
+
+ <State 5>: 3.89ns
+ST_5: tmp_2 [1/1] 0.00ns
+.preheader.preheader:1  %tmp_2 = zext i15 %tmp_1 to i64
+
+ST_5: ref_genome_addr [1/1] 0.00ns
+.preheader.preheader:2  %ref_genome_addr = getelementptr [20340 x i8]* %ref_genome, i64 0, i64 %tmp_2
+
+ST_5: nw_matrix_score_addr3 [1/3] 3.89ns
+.preheader.preheader:4  %nw_matrix_score_addr3 = mul i22 %tmp_2_trn_cast, 101
+
+ST_5: nw_matrix_score_addr4 [1/3] 3.89ns
+.preheader.preheader:5  %nw_matrix_score_addr4 = mul i22 %max_1_cast2_cast, 101
+
+ST_5: stg_61 [1/1] 1.57ns
+.preheader.preheader:6  br label %.preheader
+
+
+ <State 6>: 2.71ns
+ST_6: j [1/1] 0.00ns
+.preheader:0  %j = phi i7 [ %j_1, %8 ], [ 1, %.preheader.preheader ]
+
+ST_6: exitcond [1/1] 1.97ns
+.preheader:1  %exitcond = icmp eq i7 %j, -27
+
+ST_6: empty_2 [1/1] 0.00ns
+.preheader:2  %empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100) nounwind
+
+ST_6: stg_65 [1/1] 0.00ns
+.preheader:3  br i1 %exitcond, label %._crit_edge, label %2
+
+ST_6: tmp_6_trn_cast [1/1] 0.00ns
+:0  %tmp_6_trn_cast = zext i7 %j to i22
+
+ST_6: nw_matrix_score_addr6 [1/1] 2.20ns
+:1  %nw_matrix_score_addr6 = add i22 %tmp_6_trn_cast, %nw_matrix_score_addr3
+
+ST_6: ref_genome_load [2/2] 2.71ns
+:19  %ref_genome_load = load i8* %ref_genome_addr, align 1
+
+ST_6: nw_matrix_score_addr2 [1/1] 2.20ns
+._crit_edge:0  %nw_matrix_score_addr2 = add i22 %nw_matrix_score_addr4, 100
+
+ST_6: i [1/1] 1.96ns
+._crit_edge:8  %i = add i15 %max_1, 1
+
+
+ <State 7>: 4.11ns
+ST_7: tmp_6 [1/1] 0.00ns
+:2  %tmp_6 = zext i22 %nw_matrix_score_addr6 to i64
+
+ST_7: nw_matrix_score_addr_1 [1/1] 0.00ns
+:3  %nw_matrix_score_addr_1 = getelementptr [2054441 x i8]* @nw_matrix_score, i64 0, i64 %tmp_6
+
+ST_7: nw_matrix_score_load_1 [2/2] 2.71ns
+:4  %nw_matrix_score_load_1 = load i8* %nw_matrix_score_addr_1, align 1
+
+ST_7: tmp_7 [1/1] 1.72ns
+:6  %tmp_7 = add i7 %j, -1
+
+ST_7: tmp_8 [1/1] 0.00ns
+:7  %tmp_8 = zext i7 %tmp_7 to i64
+
+ST_7: tmp_8_trn_cast [1/1] 0.00ns
+:8  %tmp_8_trn_cast = zext i7 %tmp_7 to i22
+
+ST_7: nw_matrix_score_addr7 [1/1] 2.20ns
+:9  %nw_matrix_score_addr7 = add i22 %tmp_8_trn_cast, %nw_matrix_score_addr4
+
+ST_7: nw_matrix_score_addr8 [1/1] 2.20ns
+:14  %nw_matrix_score_addr8 = add i22 %tmp_8_trn_cast, %nw_matrix_score_addr3
+
+ST_7: ref_genome_load [1/2] 2.71ns
+:19  %ref_genome_load = load i8* %ref_genome_addr, align 1
+
+ST_7: reads_addr [1/1] 0.00ns
+:20  %reads_addr = getelementptr [100 x i8]* %reads, i64 0, i64 %tmp_8
+
+ST_7: reads_load [2/2] 2.39ns
+:21  %reads_load = load i8* %reads_addr, align 1
+
+
+ <State 8>: 2.71ns
+ST_8: nw_matrix_score_load_1 [1/2] 2.71ns
+:4  %nw_matrix_score_load_1 = load i8* %nw_matrix_score_addr_1, align 1
+
+ST_8: tmp_12 [1/1] 0.00ns
+:10  %tmp_12 = zext i22 %nw_matrix_score_addr7 to i64
+
+ST_8: nw_matrix_score_addr_2 [1/1] 0.00ns
+:11  %nw_matrix_score_addr_2 = getelementptr [2054441 x i8]* @nw_matrix_score, i64 0, i64 %tmp_12
+
+ST_8: nw_matrix_score_load_2 [2/2] 2.71ns
+:12  %nw_matrix_score_load_2 = load i8* %nw_matrix_score_addr_2, align 1
+
+ST_8: tmp_13 [1/1] 0.00ns
+:15  %tmp_13 = zext i22 %nw_matrix_score_addr8 to i64
+
+ST_8: nw_matrix_score_addr_3 [1/1] 0.00ns
+:16  %nw_matrix_score_addr_3 = getelementptr [2054441 x i8]* @nw_matrix_score, i64 0, i64 %tmp_13
+
+ST_8: nw_matrix_score_load_3 [2/2] 2.71ns
+:17  %nw_matrix_score_load_3 = load i8* %nw_matrix_score_addr_3, align 1
+
+ST_8: reads_load [1/2] 2.39ns
+:21  %reads_load = load i8* %reads_addr, align 1
+
+
+ <State 9>: 2.71ns
+ST_9: nw_matrix_score_load_2 [1/2] 2.71ns
+:12  %nw_matrix_score_load_2 = load i8* %nw_matrix_score_addr_2, align 1
+
+ST_9: nw_matrix_score_load_3 [1/2] 2.71ns
+:17  %nw_matrix_score_load_3 = load i8* %nw_matrix_score_addr_3, align 1
+
+ST_9: tmp_9 [1/1] 2.00ns
+:22  %tmp_9 = icmp eq i8 %ref_genome_load, %reads_load
+
+
+ <State 10>: 3.21ns
+ST_10: up_cast [1/1] 0.00ns
+:5  %up_cast = sext i8 %nw_matrix_score_load_1 to i9
+
+ST_10: left_cast [1/1] 0.00ns
+:13  %left_cast = sext i8 %nw_matrix_score_load_2 to i9
+
+ST_10: diag_cast [1/1] 0.00ns
+:18  %diag_cast = sext i8 %nw_matrix_score_load_3 to i9
+
+ST_10: diag_score_0_v_cast_cast [1/1] 1.37ns
+:23  %diag_score_0_v_cast_cast = select i1 %tmp_9, i9 1, i9 -1
+
+ST_10: diag_score [1/1] 1.84ns
+:24  %diag_score = add i9 %diag_score_0_v_cast_cast, %diag_cast
+
+ST_10: left_score [1/1] 1.72ns
+:25  %left_score = add i9 %left_cast, -1
+
+ST_10: up_score [1/1] 1.72ns
+:26  %up_score = add i9 %up_cast, -1
+
+
+ <State 11>: 3.40ns
+ST_11: tmp_s [1/1] 2.03ns
+:27  %tmp_s = icmp slt i9 %diag_score, %left_score
+
+ST_11: tmp_4 [1/1] 2.03ns
+:28  %tmp_4 = icmp slt i9 %diag_score, %up_score
+
+ST_11: or_cond [1/1] 1.37ns
+:29  %or_cond = or i1 %tmp_s, %tmp_4
+
+ST_11: stg_103 [1/1] 0.00ns
+:30  br i1 %or_cond, label %4, label %3
+
+ST_11: tmp_14 [1/1] 0.00ns
+:0  %tmp_14 = trunc i9 %diag_score to i8
+
+ST_11: nw_matrix_orig_addr_1 [1/1] 0.00ns
+:5  %nw_matrix_orig_addr_1 = getelementptr [2054441 x i32]* @nw_matrix_orig, i64 0, i64 %tmp_13
+
+ST_11: nw_matrix_orig_load_1 [4/4] 2.61ns
+:6  %nw_matrix_orig_load_1 = load i32* %nw_matrix_orig_addr_1, align 4
+
+ST_11: tmp_10 [1/1] 2.03ns
+:0  %tmp_10 = icmp slt i9 %left_score, %diag_score
+
+ST_11: tmp_11 [1/1] 2.03ns
+:1  %tmp_11 = icmp slt i9 %left_score, %up_score
+
+ST_11: or_cond2 [1/1] 1.37ns
+:2  %or_cond2 = or i1 %tmp_10, %tmp_11
+
+ST_11: stg_110 [1/1] 0.00ns
+:3  br i1 %or_cond2, label %6, label %5
+
+ST_11: tmp_18 [1/1] 0.00ns
+:0  %tmp_18 = trunc i9 %left_score to i8
+
+ST_11: nw_matrix_orig_addr_5 [1/1] 0.00ns
+:5  %nw_matrix_orig_addr_5 = getelementptr [2054441 x i32]* @nw_matrix_orig, i64 0, i64 %tmp_12
+
+ST_11: nw_matrix_orig_load_3 [4/4] 2.61ns
+:6  %nw_matrix_orig_load_3 = load i32* %nw_matrix_orig_addr_5, align 4
+
+ST_11: tmp_16 [1/1] 0.00ns
+:0  %tmp_16 = trunc i9 %up_score to i8
+
+ST_11: nw_matrix_orig_addr_3 [1/1] 0.00ns
+:5  %nw_matrix_orig_addr_3 = getelementptr [2054441 x i32]* @nw_matrix_orig, i64 0, i64 %tmp_6
+
+ST_11: nw_matrix_orig_load_2 [4/4] 2.61ns
+:6  %nw_matrix_orig_load_2 = load i32* %nw_matrix_orig_addr_3, align 4
+
+
+ <State 12>: 2.61ns
+ST_12: nw_matrix_orig_load_1 [3/4] 2.61ns
+:6  %nw_matrix_orig_load_1 = load i32* %nw_matrix_orig_addr_1, align 4
+
+
+ <State 13>: 2.61ns
+ST_13: nw_matrix_orig_load_1 [2/4] 2.61ns
+:6  %nw_matrix_orig_load_1 = load i32* %nw_matrix_orig_addr_1, align 4
+
+
+ <State 14>: 2.61ns
+ST_14: nw_matrix_score_addr10 [1/1] 2.20ns
+:1  %nw_matrix_score_addr10 = add i22 %nw_matrix_score_addr4, %tmp_6_trn_cast
+
+ST_14: nw_matrix_orig_load_1 [1/4] 2.61ns
+:6  %nw_matrix_orig_load_1 = load i32* %nw_matrix_orig_addr_1, align 4
+
+
+ <State 15>: 2.71ns
+ST_15: tmp_15 [1/1] 0.00ns
+:2  %tmp_15 = zext i22 %nw_matrix_score_addr10 to i64
+
+ST_15: nw_matrix_score_addr_4 [1/1] 0.00ns
+:3  %nw_matrix_score_addr_4 = getelementptr [2054441 x i8]* @nw_matrix_score, i64 0, i64 %tmp_15
+
+ST_15: stg_123 [1/1] 2.71ns
+:4  store i8 %tmp_14, i8* %nw_matrix_score_addr_4, align 1
+
+ST_15: nw_matrix_orig_addr_2 [1/1] 0.00ns
+:7  %nw_matrix_orig_addr_2 = getelementptr [2054441 x i32]* @nw_matrix_orig, i64 0, i64 %tmp_15
+
+ST_15: stg_125 [2/2] 2.61ns
+:8  store i32 %nw_matrix_orig_load_1, i32* %nw_matrix_orig_addr_2, align 4
+
+
+ <State 16>: 2.61ns
+ST_16: stg_126 [1/2] 2.61ns
+:8  store i32 %nw_matrix_orig_load_1, i32* %nw_matrix_orig_addr_2, align 4
+
+ST_16: stg_127 [1/1] 0.00ns
+:9  br label %8
+
+ST_16: stg_128 [1/2] 2.61ns
+:8  store i32 %nw_matrix_orig_load_3, i32* %nw_matrix_orig_addr_6, align 4
+
+ST_16: stg_129 [1/1] 0.00ns
+:9  br label %7
+
+ST_16: stg_130 [1/2] 2.61ns
+:8  store i32 %nw_matrix_orig_load_2, i32* %nw_matrix_orig_addr_4, align 4
+
+ST_16: stg_131 [1/1] 0.00ns
+:9  br label %7
+
+ST_16: stg_132 [1/1] 0.00ns
+:0  br label %8
+
+ST_16: j_1 [1/1] 1.72ns
+:0  %j_1 = add i7 %j, 1
+
+ST_16: stg_134 [1/1] 0.00ns
+:1  br label %.preheader
+
+
+ <State 17>: 2.61ns
+ST_17: nw_matrix_orig_load_3 [3/4] 2.61ns
+:6  %nw_matrix_orig_load_3 = load i32* %nw_matrix_orig_addr_5, align 4
+
+
+ <State 18>: 2.61ns
+ST_18: nw_matrix_orig_load_3 [2/4] 2.61ns
+:6  %nw_matrix_orig_load_3 = load i32* %nw_matrix_orig_addr_5, align 4
+
+
+ <State 19>: 2.61ns
+ST_19: nw_matrix_score_addr9 [1/1] 2.20ns
+:1  %nw_matrix_score_addr9 = add i22 %nw_matrix_score_addr4, %tmp_6_trn_cast
+
+ST_19: nw_matrix_orig_load_3 [1/4] 2.61ns
+:6  %nw_matrix_orig_load_3 = load i32* %nw_matrix_orig_addr_5, align 4
+
+
+ <State 20>: 2.71ns
+ST_20: tmp_19 [1/1] 0.00ns
+:2  %tmp_19 = zext i22 %nw_matrix_score_addr9 to i64
+
+ST_20: nw_matrix_score_addr_6 [1/1] 0.00ns
+:3  %nw_matrix_score_addr_6 = getelementptr [2054441 x i8]* @nw_matrix_score, i64 0, i64 %tmp_19
+
+ST_20: stg_141 [1/1] 2.71ns
+:4  store i8 %tmp_18, i8* %nw_matrix_score_addr_6, align 1
+
+ST_20: nw_matrix_orig_addr_6 [1/1] 0.00ns
+:7  %nw_matrix_orig_addr_6 = getelementptr [2054441 x i32]* @nw_matrix_orig, i64 0, i64 %tmp_19
+
+ST_20: stg_143 [2/2] 2.61ns
+:8  store i32 %nw_matrix_orig_load_3, i32* %nw_matrix_orig_addr_6, align 4
+
+
+ <State 21>: 2.61ns
+ST_21: nw_matrix_orig_load_2 [3/4] 2.61ns
+:6  %nw_matrix_orig_load_2 = load i32* %nw_matrix_orig_addr_3, align 4
+
+
+ <State 22>: 2.61ns
+ST_22: nw_matrix_orig_load_2 [2/4] 2.61ns
+:6  %nw_matrix_orig_load_2 = load i32* %nw_matrix_orig_addr_3, align 4
+
+
+ <State 23>: 2.61ns
+ST_23: nw_matrix_score_addr5 [1/1] 2.20ns
+:1  %nw_matrix_score_addr5 = add i22 %nw_matrix_score_addr4, %tmp_6_trn_cast
+
+ST_23: nw_matrix_orig_load_2 [1/4] 2.61ns
+:6  %nw_matrix_orig_load_2 = load i32* %nw_matrix_orig_addr_3, align 4
+
+
+ <State 24>: 2.71ns
+ST_24: tmp_17 [1/1] 0.00ns
+:2  %tmp_17 = zext i22 %nw_matrix_score_addr5 to i64
+
+ST_24: nw_matrix_score_addr_5 [1/1] 0.00ns
+:3  %nw_matrix_score_addr_5 = getelementptr [2054441 x i8]* @nw_matrix_score, i64 0, i64 %tmp_17
+
+ST_24: stg_150 [1/1] 2.71ns
+:4  store i8 %tmp_16, i8* %nw_matrix_score_addr_5, align 1
+
+ST_24: nw_matrix_orig_addr_4 [1/1] 0.00ns
+:7  %nw_matrix_orig_addr_4 = getelementptr [2054441 x i32]* @nw_matrix_orig, i64 0, i64 %tmp_17
+
+ST_24: stg_152 [2/2] 2.61ns
+:8  store i32 %nw_matrix_orig_load_2, i32* %nw_matrix_orig_addr_4, align 4
+
+
+ <State 25>: 2.71ns
+ST_25: tmp_3 [1/1] 0.00ns
+._crit_edge:1  %tmp_3 = zext i22 %nw_matrix_score_addr2 to i64
+
+ST_25: nw_matrix_score_addr [1/1] 0.00ns
+._crit_edge:2  %nw_matrix_score_addr = getelementptr [2054441 x i8]* @nw_matrix_score, i64 0, i64 %tmp_3
+
+ST_25: nw_matrix_score_load [2/2] 2.71ns
+._crit_edge:3  %nw_matrix_score_load = load i8* %nw_matrix_score_addr, align 1
+
+
+ <State 26>: 2.71ns
+ST_26: nw_matrix_score_load [1/2] 2.71ns
+._crit_edge:3  %nw_matrix_score_load = load i8* %nw_matrix_score_addr, align 1
+
+
+ <State 27>: 3.89ns
+ST_27: max_score_1 [1/1] 0.00ns
+._crit_edge:4  %max_score_1 = sext i8 %nw_matrix_score_load to i32
+
+ST_27: tmp_5 [1/1] 2.52ns
+._crit_edge:5  %tmp_5 = icmp sgt i32 %max_score_1, %max_score
+
+ST_27: max_2_max [1/1] 1.37ns
+._crit_edge:6  %max_2_max = select i1 %tmp_5, i32 %max_1_cast2, i32 %max
+
+ST_27: max_score_2_max_score [1/1] 1.37ns
+._crit_edge:7  %max_score_2_max_score = select i1 %tmp_5, i32 %max_score_1, i32 %max_score
+
+ST_27: stg_161 [1/1] 0.00ns
+._crit_edge:9  br label %1
+
+
+ <State 28>: 2.15ns
+ST_28: nw_matrix_orig_addr1 [4/5] 2.15ns
+:0  %nw_matrix_orig_addr1 = mul i32 %max, 101
+
+
+ <State 29>: 2.15ns
+ST_29: nw_matrix_orig_addr1 [3/5] 2.15ns
+:0  %nw_matrix_orig_addr1 = mul i32 %max, 101
+
+
+ <State 30>: 2.15ns
+ST_30: nw_matrix_orig_addr1 [2/5] 2.15ns
+:0  %nw_matrix_orig_addr1 = mul i32 %max, 101
+
+
+ <State 31>: 2.15ns
+ST_31: nw_matrix_orig_addr1 [1/5] 2.15ns
+:0  %nw_matrix_orig_addr1 = mul i32 %max, 101
+
+
+ <State 32>: 2.44ns
+ST_32: nw_matrix_orig_addr2 [1/1] 2.44ns
+:1  %nw_matrix_orig_addr2 = add i32 %nw_matrix_orig_addr1, 100
+
+
+ <State 33>: 2.61ns
+ST_33: tmp [1/1] 0.00ns
+:2  %tmp = sext i32 %nw_matrix_orig_addr2 to i64
+
+ST_33: nw_matrix_orig_addr [1/1] 0.00ns
+:3  %nw_matrix_orig_addr = getelementptr [2054441 x i32]* @nw_matrix_orig, i64 0, i64 %tmp
+
+ST_33: nw_matrix_orig_load [4/4] 2.61ns
+:4  %nw_matrix_orig_load = load i32* %nw_matrix_orig_addr, align 4
+
+
+ <State 34>: 2.61ns
+ST_34: nw_matrix_orig_load [3/4] 2.61ns
+:4  %nw_matrix_orig_load = load i32* %nw_matrix_orig_addr, align 4
+
+
+ <State 35>: 2.61ns
+ST_35: nw_matrix_orig_load [2/4] 2.61ns
+:4  %nw_matrix_orig_load = load i32* %nw_matrix_orig_addr, align 4
+
+
+ <State 36>: 2.61ns
+ST_36: nw_matrix_orig_load [1/4] 2.61ns
+:4  %nw_matrix_orig_load = load i32* %nw_matrix_orig_addr, align 4
+
+ST_36: stg_173 [1/1] 0.00ns
+:5  ret i32 %nw_matrix_orig_load
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

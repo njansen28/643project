@@ -1,11 +1,12 @@
 #include "week3.h"
-#include <direct.h>
 
 char* genome_file = "../../../long_reference.fasta"; 	// File where reference genome is stored
 char* read_file = "../../../long_sequences.fastq";		// File where reference reads are stored
 
 char ref_genome[REF_SIZE+1];					// The reference genome
 char reads[NUM_READS][READ_SIZE+1];				// The reads to be sequenced
+
+NW_matrix nw_matrix;
 
 
 // Reads in reference genome and reads, initializes nw_matrix
@@ -77,14 +78,14 @@ void init() {
 	// Init column 1 to 0s and EDGE direction
 	for (i=0; i<REF_SIZE+1; i++) {
 		nw_matrix.score[i][0] = 0;
-		nw_matrix.dir[i][0] = EDGE;
+		nw_matrix.orig[i][0] = i;
 	}
 
 	// Init row 0 to decreasing values and LEFT direction (EDGE?)
 	int fill = 0;
 	for (i=0; i<READ_SIZE+1; i++) {
 		nw_matrix.score[0][i] = fill;
-		nw_matrix.dir[0][i] = LEFT;
+		nw_matrix.orig[0][i] = 0;
 		fill--;
 	}
 
@@ -132,14 +133,41 @@ void print_matrix(int read_num) {
 	fclose(matrix);
 }
 
+#if 0
+// Traces the path back to the first column to find where the best match starts (recursive function)
+int backTrack(unsigned int row, unsigned int column) {
+	direction dir;
+
+	if (column == 1) {
+		//printf("Best fit starts at index %d\n", row-1);
+		return row-1;
+	}
+	if (row == 0) return -1;
+
+	dir = nw_matrix.dir[row][column];
+	if (dir == UP) {
+		return backTrack(row-1, column);
+	}
+	else if (dir == LEFT) {
+		return backTrack(row, column-1);
+	}
+	else if (dir == DIAG) {
+		return backTrack(row-1, column-1);
+	}
+
+	return -1;
+}
+#endif
 
 int main() {
 	unsigned int k, i;		// loop variables
+	unsigned int max;
 	init();							// Should init count as part of the time?
 
 	for (k=0; k<NUM_READS; k++) { // Loop through each read
 		// Follow the best path back to the start
 		best_fits[k] = needlemanWunsch(reads[k], ref_genome);
+		//best_fits[k] = backTrack(max, READ_SIZE);
 	}
 
 
