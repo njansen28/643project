@@ -56,7 +56,6 @@ void init() {
 		exit(1);
 	}
 
-	fgets(ref_line, REF_LINE_SIZE*2, f); // Get rid garbage line at top
 	index = 0;
 
 	// Add each line to ref_genome[]

@@ -10,12 +10,12 @@
 
 #define REF_SIZE 1000000 	// Size of reference genome
 #define READ_SIZE 100		// Size of each read
-#define NUM_READS 2			// Number of reads in read file
+#define NUM_READS 100		// Number of reads in read file
 #define REF_LINE_SIZE 100	// Length of each line in file of reference genome
 
 
 // Direction type, EDGE means that entry is in 0th column, so we stop following
-typedef enum {UP, LEFT, DIAG, EDGE} direction;
+//typedef enum {UP, LEFT, DIAG, EDGE} direction;
 
 typedef struct {
 	char score[REF_SIZE+1][READ_SIZE+1];

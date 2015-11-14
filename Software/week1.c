@@ -8,9 +8,9 @@
 // Comment out for normal operation
 //#define DEBUG 1
 
-#define REF_SIZE 20340 		// Size of reference genome
+#define REF_SIZE 1000000 	// Size of reference genome
 #define READ_SIZE 100		// Size of each read
-#define NUM_READS 10000		// Number of reads in read file
+#define NUM_READS 100		// Number of reads in read file
 #define REF_LINE_SIZE 100	// Length of each line in file of reference genome
 
 #ifdef DEBUG
@@ -20,14 +20,14 @@
 #endif
 
 // Direction type, EDGE means that entry is in 0th column, so we stop following
-typedef enum {UP, LEFT, DIAG, EDGE} direction;
+//typedef enum {UP, LEFT, DIAG, EDGE} direction;
 
 char* genome_file = "long_reference.fasta"; 	// File where reference genome is stored
 char* read_file = "long_sequences.fastq";		// File where reference reads are stored
 
 struct {
 	char score[REF_SIZE+1][READ_SIZE+1];
-	char dir  [REF_SIZE+1][READ_SIZE+1];
+	unsigned int orig  [REF_SIZE+1][READ_SIZE+1];
 } nw_matrix;									// The NW matrix, as struct-of-arrays instead of array-of-structs
 char ref_genome[REF_SIZE+1];					// The reference genome
 char reads[NUM_READS][READ_SIZE+1];				// The reads to be sequenced
@@ -112,8 +112,6 @@ void init() {
 		printf("Could not open ref file, %d\n", errno);
 		exit(1);
 	}
-	
-	fgets(ref_line, REF_LINE_SIZE*2, f); // Get rid garbage line at top
 	index = 0;
 	
 	// Add each line to ref_genome[]
@@ -135,14 +133,14 @@ void init() {
 	// Init column 1 to 0s and EDGE direction
 	for (i=0; i<REF_SIZE+1; i++) {
 		nw_matrix.score[i][0] = 0;
-		nw_matrix.dir[i][0] = EDGE;
+		nw_matrix.orig[i][0] = i;
 	}
 	
 	// Init row 0 to decreasing values and LEFT direction (EDGE?)
 	int fill = 0;
 	for (i=0; i<READ_SIZE+1; i++) {
 		nw_matrix.score[0][i] = fill;
-		nw_matrix.dir[0][i] = LEFT;
+		nw_matrix.orig[0][i] = 0;
 		fill--;
 	}
 	
@@ -188,30 +186,6 @@ void print_matrix(int read_num) {
 	
 	fprintf(matrix, "\n\n\n\n");
 	fclose(matrix);
-}
-
-// Traces the path back to the first column to find where the best match starts (recursive function)
-int backTrack(unsigned int row, unsigned int column) {
-	direction dir;
-	
-	if (column == 1) {
-		//printf("Best fit starts at index %d\n", row-1);
-		return row-1;
-	}
-	if (row == 0) return -1;
-	
-	dir = nw_matrix.dir[row][column];
-	if (dir == UP) {
-		return backTrack(row-1, column);
-	}
-	else if (dir == LEFT) {
-		return backTrack(row, column-1);
-	}
-	else if (dir == DIAG) {
-		return backTrack(row-1, column-1);
-	}
-
-	return -1;
 }
 
 
@@ -309,15 +283,15 @@ int main() {
 					// Fill in current entry based on which score is best
 					if (diag_score >= left_score && diag_score >= up_score) {
 						nw_matrix.score[i][j] = diag_score;
-						nw_matrix.dir[i][j] = DIAG;
+						nw_matrix.orig[i][j] = nw_matrix.orig[i-1][j-1];
 					}
 					else if (left_score >= diag_score && left_score >= up_score) {
 						nw_matrix.score[i][j] = left_score; // pen is negative number
-						nw_matrix.dir[i][j] = LEFT;
+						nw_matrix.orig[i][j] = nw_matrix.orig[i][j-1];
 					}
 					else {
 						nw_matrix.score[i][j] = up_score; //pen is negative number
-						nw_matrix.dir[i][j] = UP;
+						nw_matrix.orig[i][j] = nw_matrix.orig[i-1][j];
 					}
 				}
 #endif
@@ -329,10 +303,10 @@ int main() {
 				}
 			}
 #ifdef DEBUG
-			print_matrix(k); // Only print matrices if debug
+			if (k==1) print_matrix(k); // Only print matrices if debug
 #endif
 			// Follow the best path back to the start
-			best_fits[l][k] = backTrack(max, READ_SIZE);
+			best_fits[l][k] = nw_matrix.orig[max][READ_SIZE];//backTrack(max, READ_SIZE);
 		}
 	}
 	
@@ -347,6 +321,7 @@ int main() {
 	for (j = 0; j<NUM_RUNS; j++) {
 		printf("Results from run %d:\n", j);
 		for (i=0; i<NUM_READS; i++) {
+			printf("%s\n", reads[i]);
 			printf("READ #%d - Best fit at index %d\n", i, best_fits[j][i]);
 		}
 	}
