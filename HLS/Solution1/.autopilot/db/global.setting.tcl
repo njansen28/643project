@@ -40,10 +40,10 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
-set SourceFiles {sc {} c ../week3.c}
+set SourceFiles {sc {} c S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.c}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {C:/Users/Nathaniel2/643_PE/solution1/solution1.directive}
-set TBFiles {verilog ../week3_test.c bc ../week3_test.c vhdl ../week3_test.c sc ../week3_test.c cas ../week3_test.c c {}}
+set DirectiveFile {C:/Users/Nathaniel/643_PE/solution1/solution1.directive}
+set TBFiles {verilog S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3_test.c bc S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3_test.c vhdl S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3_test.c sc S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3_test.c cas S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3_test.c c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

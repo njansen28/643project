@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'needlemanWunsch'" level="0">
-<item name = "Date">Thu Nov 12 17:05:20 2015
+<item name = "Date">Sun Nov 15 12:28:45 2015
 </item>
 <item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
 <item name = "Project">643_PE</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 4.11, 0.63</column>
+<column name="ap_clk">5.00, 7.51, 0.63</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">22536730, 22536730, 22536731, 22536731, none</column>
+<column name="">209, 210, 210, 211, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">22536720, 22536720, 1108, -, -, 20340, no</column>
-<column name=" + Loop 1.1">1100, 1100, 11, -, -, 100, no</column>
+<column name="- COL">204, 204, 7, 2, 1, 100, yes</column>
 </table>
 </item>
 </section>
@@ -48,23 +47,20 @@
 <section name = "Utilization Estimates" level="0">
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="Expression">-, -, 0, 316</column>
+<column name="Expression">-, -, 0, 88</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, 4, 0, 0</column>
+<column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 276</column>
-<column name="Register">-, -, 676, -</column>
+<column name="Multiplexer">-, -, -, 144</column>
+<column name="Register">-, -, 181, 7</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">0, 1, ~0, 1</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="needlemanWunsch_mul_15ns_8ns_22_3_U1">needlemanWunsch_mul_15ns_8ns_22_3, 0, 1, 0, 0</column>
-<column name="needlemanWunsch_mul_15ns_8ns_22_3_U2">needlemanWunsch_mul_15ns_8ns_22_3, 0, 1, 0, 0</column>
-<column name="needlemanWunsch_mul_32s_8ns_32_5_U0">needlemanWunsch_mul_32s_8ns_32_5, 0, 2, 0, 0</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -77,88 +73,66 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="diag_score_fu_384_p2">+, 0, 0, 9, 9, 9</column>
-<column name="grp_fu_244_p2">+, 0, 0, 22, 22, 22</column>
-<column name="i_fu_320_p2">+, 0, 0, 15, 15, 1</column>
-<column name="j_1_fu_445_p2">+, 0, 0, 7, 7, 1</column>
-<column name="left_score_fu_390_p2">+, 0, 0, 9, 9, 2</column>
-<column name="nw_matrix_orig_addr2_fu_492_p2">+, 0, 0, 32, 32, 7</column>
-<column name="nw_matrix_score_addr2_fu_315_p2">+, 0, 0, 22, 22, 7</column>
-<column name="nw_matrix_score_addr6_fu_310_p2">+, 0, 0, 22, 22, 22</column>
-<column name="nw_matrix_score_addr7_fu_345_p2">+, 0, 0, 22, 22, 22</column>
-<column name="nw_matrix_score_addr8_fu_350_p2">+, 0, 0, 22, 22, 22</column>
-<column name="tmp_1_fu_270_p2">+, 0, 0, 15, 15, 2</column>
-<column name="tmp_7_fu_330_p2">+, 0, 0, 7, 7, 2</column>
-<column name="up_score_fu_396_p2">+, 0, 0, 9, 9, 2</column>
-<column name="diag_score_0_v_cast_cast_fu_377_p3">Select, 0, 0, 2, 1, 1</column>
-<column name="max_2_max_fu_477_p3">Select, 0, 0, 32, 1, 32</column>
-<column name="max_score_2_max_score_fu_484_p3">Select, 0, 0, 32, 1, 32</column>
-<column name="exitcond1_fu_264_p2">icmp, 0, 0, 6, 15, 15</column>
-<column name="exitcond_fu_300_p2">icmp, 0, 0, 3, 7, 6</column>
-<column name="tmp_10_fu_419_p2">icmp, 0, 0, 3, 9, 9</column>
-<column name="tmp_11_fu_423_p2">icmp, 0, 0, 3, 9, 9</column>
-<column name="tmp_4_fu_406_p2">icmp, 0, 0, 3, 9, 9</column>
-<column name="tmp_5_fu_471_p2">icmp, 0, 0, 11, 32, 32</column>
-<column name="tmp_9_fu_363_p2">icmp, 0, 0, 3, 8, 8</column>
-<column name="tmp_s_fu_402_p2">icmp, 0, 0, 3, 9, 9</column>
-<column name="or_cond2_fu_427_p2">or, 0, 0, 1, 1, 1</column>
-<column name="or_cond_fu_410_p2">or, 0, 0, 1, 1, 1</column>
+<column name="diag_score_fu_302_p2">+, 0, 0, 9, 9, 9</column>
+<column name="j_1_fu_272_p2">+, 0, 0, 7, 7, 1</column>
+<column name="left_score_fu_318_p2">+, 0, 0, 9, 9, 2</column>
+<column name="tmp_3_fu_261_p2">+, 0, 0, 7, 7, 2</column>
+<column name="up_score_fu_308_p2">+, 0, 0, 9, 9, 2</column>
+<column name="diag_score_0_v_cast_cast_fu_295_p3">Select, 0, 0, 2, 1, 1</column>
+<column name="ap_sig_bdd_164">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_bdd_213">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_bdd_216">and, 0, 0, 1, 1, 1</column>
+<column name="exitcond_fu_255_p2">icmp, 0, 0, 3, 7, 6</column>
+<column name="tmp_2_fu_375_p2">icmp, 0, 0, 11, 32, 32</column>
+<column name="tmp_6_fu_283_p2">icmp, 0, 0, 3, 8, 8</column>
+<column name="tmp_7_fu_324_p2">icmp, 0, 0, 3, 9, 9</column>
+<column name="tmp_8_fu_329_p2">icmp, 0, 0, 3, 9, 9</column>
+<column name="tmp_9_fu_343_p2">icmp, 0, 0, 3, 9, 9</column>
+<column name="tmp_fu_237_p2">icmp, 0, 0, 11, 32, 1</column>
+<column name="tmp_s_fu_348_p2">icmp, 0, 0, 3, 9, 9</column>
+<column name="or_cond1_fu_353_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_cond_fu_333_p2">or, 0, 0, 1, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">66, 37, 1, 37</column>
-<column name="j_reg_232">7, 2, 7, 14</column>
-<column name="max_1_reg_196">15, 2, 15, 30</column>
-<column name="max_reg_208">32, 2, 32, 64</column>
-<column name="max_score_reg_220">32, 2, 32, 64</column>
-<column name="nw_matrix_orig_address0">42, 8, 21, 168</column>
-<column name="nw_matrix_orig_d0">32, 4, 32, 128</column>
-<column name="nw_matrix_score_address0">21, 5, 21, 105</column>
-<column name="nw_matrix_score_address1">21, 4, 21, 84</column>
-<column name="nw_matrix_score_d1">8, 3, 8, 24</column>
+<column name="ap_NS_fsm">4, 9, 1, 9</column>
+<column name="ap_reg_ppiten_pp0_it3">1, 2, 1, 2</column>
+<column name="j_phi_fu_224_p4">7, 2, 7, 14</column>
+<column name="j_reg_220">7, 2, 7, 14</column>
+<column name="max_orig">32, 2, 32, 64</column>
+<column name="max_score">32, 2, 32, 64</column>
+<column name="orig_in_address0">7, 3, 7, 21</column>
+<column name="orig_out_address0">7, 6, 7, 42</column>
+<column name="orig_out_d0">32, 3, 32, 96</column>
+<column name="score_out_address0">7, 6, 7, 42</column>
+<column name="score_out_d0">8, 4, 8, 32</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">36, 0, 36, 0</column>
-<column name="diag_score_reg_636">9, 0, 9, 0</column>
-<column name="i_reg_561">15, 0, 15, 0</column>
-<column name="j_reg_232">7, 0, 7, 0</column>
-<column name="left_score_reg_644">9, 0, 9, 0</column>
-<column name="max_1_cast2_cast_reg_506">15, 0, 22, 7</column>
-<column name="max_1_cast2_reg_501">15, 0, 32, 17</column>
-<column name="max_1_reg_196">15, 0, 15, 0</column>
-<column name="max_reg_208">32, 0, 32, 0</column>
-<column name="max_score_reg_220">32, 0, 32, 0</column>
-<column name="nw_matrix_orig_addr1_reg_747">32, 0, 32, 0</column>
-<column name="nw_matrix_orig_addr2_reg_752">32, 0, 32, 0</column>
-<column name="nw_matrix_orig_load_1_reg_697">32, 0, 32, 0</column>
-<column name="nw_matrix_orig_load_2_reg_722">32, 0, 32, 0</column>
-<column name="nw_matrix_orig_load_3_reg_712">32, 0, 32, 0</column>
-<column name="nw_matrix_score_addr2_reg_556">22, 0, 22, 0</column>
-<column name="nw_matrix_score_addr3_reg_530">22, 0, 22, 0</column>
-<column name="nw_matrix_score_addr4_reg_536">22, 0, 22, 0</column>
-<column name="nw_matrix_score_addr6_reg_551">22, 0, 22, 0</column>
-<column name="nw_matrix_score_addr7_reg_576">22, 0, 22, 0</column>
-<column name="nw_matrix_score_addr8_reg_581">22, 0, 22, 0</column>
-<column name="nw_matrix_score_load_2_reg_621">8, 0, 8, 0</column>
-<column name="nw_matrix_score_load_3_reg_626">8, 0, 8, 0</column>
-<column name="reads_load_reg_616">8, 0, 8, 0</column>
-<column name="ref_genome_addr_reg_525">15, 0, 15, 0</column>
-<column name="ref_genome_load_reg_586">8, 0, 8, 0</column>
-<column name="reg_248">8, 0, 8, 0</column>
-<column name="reg_252">22, 0, 22, 0</column>
-<column name="tmp_12_reg_596">22, 0, 64, 42</column>
-<column name="tmp_13_reg_606">22, 0, 64, 42</column>
-<column name="tmp_14_reg_663">8, 0, 8, 0</column>
-<column name="tmp_16_reg_687">8, 0, 8, 0</column>
-<column name="tmp_18_reg_677">8, 0, 8, 0</column>
-<column name="tmp_1_reg_514">15, 0, 15, 0</column>
-<column name="tmp_6_reg_566">22, 0, 64, 42</column>
-<column name="tmp_6_trn_cast_reg_546">7, 0, 22, 15</column>
-<column name="tmp_9_reg_631">1, 0, 1, 0</column>
-<column name="up_score_reg_652">9, 0, 9, 0</column>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
+<column name="ap_reg_ppiten_pp0_it0">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it1">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it2">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it3">1, 0, 1, 0</column>
+<column name="ap_reg_ppstg_tmp_5_reg_437_pp0_it2">7, 0, 64, 57</column>
+<column name="diag_score_reg_463">9, 0, 9, 0</column>
+<column name="exitcond_reg_405">1, 0, 1, 0</column>
+<column name="j_1_reg_427">7, 0, 7, 0</column>
+<column name="j_reg_220">7, 0, 7, 0</column>
+<column name="max_orig">32, 0, 32, 0</column>
+<column name="max_score">32, 0, 32, 0</column>
+<column name="or_cond1_reg_487">1, 0, 1, 0</column>
+<column name="or_cond_reg_478">1, 0, 1, 0</column>
+<column name="reads_load_reg_422">8, 0, 8, 0</column>
+<column name="reg_232">32, 0, 32, 0</column>
+<column name="score_out_load_reg_506">8, 0, 8, 0</column>
+<column name="tmp_4_reg_409">7, 0, 64, 57</column>
+<column name="tmp_5_reg_437">7, 0, 64, 57</column>
+<column name="tmp_6_reg_453">1, 0, 1, 0</column>
+<column name="up_score_reg_471">9, 0, 9, 0</column>
+<column name="tmp_4_reg_409">0, 7, 64, 57</column>
 </table>
 </item>
 </section>
@@ -178,24 +152,27 @@
 <column name="reads_address0">out, 7, ap_memory, reads, array</column>
 <column name="reads_ce0">out, 1, ap_memory, reads, array</column>
 <column name="reads_q0">in, 8, ap_memory, reads, array</column>
-<column name="ref_genome_address0">out, 15, ap_memory, ref_genome, array</column>
-<column name="ref_genome_ce0">out, 1, ap_memory, ref_genome, array</column>
-<column name="ref_genome_q0">in, 8, ap_memory, ref_genome, array</column>
-<column name="nw_matrix_score_address0">out, 21, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_ce0">out, 1, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_we0">out, 1, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_d0">out, 8, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_q0">in, 8, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_address1">out, 21, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_ce1">out, 1, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_we1">out, 1, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_d1">out, 8, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_score_q1">in, 8, ap_memory, nw_matrix_score, array</column>
-<column name="nw_matrix_orig_address0">out, 21, ap_memory, nw_matrix_orig, array</column>
-<column name="nw_matrix_orig_ce0">out, 1, ap_memory, nw_matrix_orig, array</column>
-<column name="nw_matrix_orig_we0">out, 1, ap_memory, nw_matrix_orig, array</column>
-<column name="nw_matrix_orig_d0">out, 32, ap_memory, nw_matrix_orig, array</column>
-<column name="nw_matrix_orig_q0">in, 32, ap_memory, nw_matrix_orig, array</column>
+<column name="ref_genome">in, 8, ap_none, ref_genome, scalar</column>
+<column name="orig_in_address0">out, 7, ap_memory, orig_in, array</column>
+<column name="orig_in_ce0">out, 1, ap_memory, orig_in, array</column>
+<column name="orig_in_q0">in, 32, ap_memory, orig_in, array</column>
+<column name="orig_out_address0">out, 7, ap_memory, orig_out, array</column>
+<column name="orig_out_ce0">out, 1, ap_memory, orig_out, array</column>
+<column name="orig_out_we0">out, 1, ap_memory, orig_out, array</column>
+<column name="orig_out_d0">out, 32, ap_memory, orig_out, array</column>
+<column name="orig_out_q0">in, 32, ap_memory, orig_out, array</column>
+<column name="score_in_address0">out, 7, ap_memory, score_in, array</column>
+<column name="score_in_ce0">out, 1, ap_memory, score_in, array</column>
+<column name="score_in_q0">in, 8, ap_memory, score_in, array</column>
+<column name="score_in_address1">out, 7, ap_memory, score_in, array</column>
+<column name="score_in_ce1">out, 1, ap_memory, score_in, array</column>
+<column name="score_in_q1">in, 8, ap_memory, score_in, array</column>
+<column name="score_out_address0">out, 7, ap_memory, score_out, array</column>
+<column name="score_out_ce0">out, 1, ap_memory, score_out, array</column>
+<column name="score_out_we0">out, 1, ap_memory, score_out, array</column>
+<column name="score_out_d0">out, 8, ap_memory, score_out, array</column>
+<column name="score_out_q0">in, 8, ap_memory, score_out, array</column>
+<column name="i">in, 32, ap_none, i, scalar</column>
 </table>
 </item>
 </section>

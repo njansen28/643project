@@ -1,5 +1,5 @@
-# 1 "C:/Users/Nathaniel2/643_PE/solution1/.autopilot/db/week3.pragma.1.c"
-# 1 "C:/Users/Nathaniel2/643_PE/solution1/.autopilot/db/week3.pragma.1.c" 1
+# 1 "C:/Users/Nathaniel/643_PE/solution1/.autopilot/db/week3.pragma.1.c"
+# 1 "C:/Users/Nathaniel/643_PE/solution1/.autopilot/db/week3.pragma.1.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
@@ -9,7 +9,7 @@
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2015 Xilinx, Inc. All rights reserved.
@@ -62,7 +62,7 @@
  *
  * $Id$
  */
-# 280 "C:/Xilinx/Vivado_HLS/2015.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+# 280 "S:/Xilinx/Vivado_HLS/2015.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -191,9 +191,9 @@
 #define _ssdm_op_Delayed(X) X */
 # 7 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "C:/Users/Nathaniel2/643_PE/solution1/.autopilot/db/week3.pragma.1.c" 2
-# 1 "643_PE/week3.c"
-# 1 "643_PE/week3.c" 1
+# 1 "C:/Users/Nathaniel/643_PE/solution1/.autopilot/db/week3.pragma.1.c" 2
+# 1 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.c"
+# 1 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 147 "<built-in>" 3
@@ -203,7 +203,7 @@
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
 /* autopilot_ssdm_op.h*/
 /*
 #-  (c) Copyright 2011-2015 Xilinx, Inc. All rights reserved.
@@ -256,7 +256,7 @@
  *
  * $Id$
  */
-# 280 "C:/Xilinx/Vivado_HLS/2015.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+# 280 "S:/Xilinx/Vivado_HLS/2015.2/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 /*#define AP_SPEC_ATTR __attribute__ ((pure))*/
 
 
@@ -385,9 +385,9 @@
 #define _ssdm_op_Delayed(X) X */
 # 7 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "643_PE/week3.c" 2
-# 1 "643_PE/week3.h" 1
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
+# 1 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.c" 2
+# 1 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.h" 1
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -398,7 +398,7 @@
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -410,13 +410,13 @@
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 18 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 3
+# 18 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 3
 /* mingw.org's version macros: these make gcc to define
    MINGW32_SUPPORTS_MT_EH and to use the _CRT_MT global
    and the __mingwthr_key_dtor() function from the MinGW
@@ -430,49 +430,49 @@
 /* As we have to support older gcc version, which are using underscores
    as symbol prefix for x64, we have to check here for the user label
    prefix defined by gcc.  */
-# 62 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 3
+# 62 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/_mingw_mac.h" 3
 /* Use alias for msvcr80 export of get/set_output_format.  */
 
 
 
 
 /* Set VC specific compiler target macros.  */
-# 10 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 10 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
 
 
 /* C/C++ specific language defines.  */
-# 32 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 32 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 /* Note the extern. This is needed to work around GCC's
 limitations in handling dllimport attribute.  */
-# 147 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 147 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 /* Attribute `nonnull' was valid as of gcc 3.3.  We don't use GCC's
    variadiac macro facility, because variadic macros cause syntax
    errors with  --traditional-cpp.  */
-# 225 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 225 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 /*  High byte is the major version, low byte is the minor. */
-# 247 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 247 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 /*typedef int __int128 __attribute__ ((__mode__ (TI)));*/
-# 277 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 1 3
+# 277 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 14 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 14 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 674 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h" 1 3
-# 674 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 674 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_directx.h" 1 3
+# 674 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h" 1 3
-# 675 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
-# 13 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 2 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include/sdks/_mingw_ddk.h" 1 3
+# 675 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 13 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 2 3
 
 
 #pragma pack(push,_CRT_PACKING)
@@ -492,31 +492,31 @@ limitations in handling dllimport attribute.  */
 
 
   typedef __gnuc_va_list va_list;
-# 46 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
+# 46 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
 /* Use GCC builtins */
-# 102 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
+# 102 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\vadefs.h" 3
 #pragma pack(pop)
-# 277 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
+# 277 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 2 3
 
 
 #pragma pack(push,_CRT_PACKING)
-# 316 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 316 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 /* We have to define _DLL for gcc based mingw version. This define is set
    by VC, when DLL-based runtime is used. So, gcc based runtime just have
    DLL-base runtime, therefore this define has to be set.
    As our headers are possibly used by windows compiler having a static
    C-runtime, we make this definition gnu compiler specific here.  */
-# 370 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 370 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef unsigned long long size_t;
-# 380 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 380 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef long long ssize_t;
-# 392 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 392 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef long long intptr_t;
-# 405 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 405 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef unsigned long long uintptr_t;
-# 418 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 418 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 __extension__ typedef long long ptrdiff_t;
-# 428 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 428 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 typedef unsigned short wchar_t;
 
 
@@ -527,7 +527,7 @@ typedef unsigned short wchar_t;
 
 typedef unsigned short wint_t;
 typedef unsigned short wctype_t;
-# 456 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 456 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 typedef int errno_t;
 
 
@@ -547,7 +547,7 @@ __extension__ typedef long long __time64_t;
 
 
 typedef __time64_t time_t;
-# 518 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 518 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 /* _dowildcard is an int that controls the globbing of the command line.
  * The MinGW32 (mingw.org) runtime calls it _CRT_glob, so we are adding
  * a compatibility definition here:  you can use either of _CRT_glob or
@@ -561,7 +561,7 @@ typedef __time64_t time_t;
  * setting it to -1, like so:
  * int _dowildcard = -1;
  */
-# 605 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
+# 605 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 3
 /* MSVC-isms: */
 
 struct threadlocaleinfostruct;
@@ -625,10 +625,10 @@ const char *__mingw_get_crt_info (void);
 
 
 #pragma pack(pop)
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_push.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_push.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -636,11 +636,11 @@ const char *__mingw_get_crt_info (void);
  */
 
 /* Undefine __mingw_<printf> macros.  */
-# 11 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
+# 11 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
 
 
 #pragma pack(push,_CRT_PACKING)
-# 26 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 26 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  struct _iobuf {
     char *_ptr;
     int _cnt;
@@ -652,7 +652,7 @@ const char *__mingw_get_crt_info (void);
     char *_tmpfname;
   };
   typedef struct _iobuf FILE;
-# 84 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 84 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  typedef long _off_t;
 
   typedef long off_t;
@@ -671,9 +671,9 @@ const char *__mingw_get_crt_info (void);
 
 
   __attribute__ ((__dllimport__)) FILE * __iob_func(void);
-# 120 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 120 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  __extension__ typedef long long fpos_t;
-# 157 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 157 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  __attribute__ ((__dllimport__)) int _filbuf(FILE *_File);
   __attribute__ ((__dllimport__)) int _flsbuf(int _Ch,FILE *_File);
 
@@ -819,7 +819,7 @@ const char *__mingw_get_crt_info (void);
   int vsnprintf(char * __restrict__ _DstBuf,size_t _MaxCount,const char * __restrict__ _Format,va_list _ArgList) ;
 
   int snprintf(char * __restrict__ s, size_t n, const char * __restrict__ format, ...);
-# 312 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 312 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  int vscanf(const char * __restrict__ Format, va_list argp);
   int vfscanf (FILE * __restrict__ fp, const char * __restrict__ Format,va_list argp);
   int vsscanf (const char * __restrict__ _Str,const char * __restrict__ Format,va_list argp);
@@ -827,7 +827,7 @@ const char *__mingw_get_crt_info (void);
   __attribute__ ((__dllimport__)) int _vscprintf(const char * __restrict__ _Format,va_list _ArgList);
   __attribute__ ((__dllimport__)) int _set_printf_count_output(int _Value);
   __attribute__ ((__dllimport__)) int _get_printf_count_output(void);
-# 330 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 330 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  __attribute__ ((__dllimport__)) FILE * _wfsopen(const wchar_t *_Filename,const wchar_t *_Mode,int _ShFlag);
 
 
@@ -863,7 +863,7 @@ const char *__mingw_get_crt_info (void);
 
   int snwprintf (wchar_t * __restrict__ s, size_t n, const wchar_t * __restrict__ format, ...);
   int vsnwprintf (wchar_t * __restrict__ , size_t, const wchar_t * __restrict__ , va_list);
-# 373 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 373 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  int vwscanf (const wchar_t * __restrict__ , va_list);
   int vfwscanf (FILE * __restrict__ ,const wchar_t * __restrict__ ,va_list);
   int vswscanf (const wchar_t * __restrict__ ,const wchar_t * __restrict__ ,va_list);
@@ -898,7 +898,7 @@ const char *__mingw_get_crt_info (void);
   __attribute__ ((__dllimport__)) int __swprintf_l(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,_locale_t _Plocinfo,...) ;
   __attribute__ ((__dllimport__)) int _vswprintf_l(wchar_t * __restrict__ buffer,size_t count,const wchar_t * __restrict__ format,_locale_t locale,va_list argptr) ;
   __attribute__ ((__dllimport__)) int __vswprintf_l(wchar_t * __restrict__ _Dest,const wchar_t * __restrict__ _Format,_locale_t _Plocinfo,va_list _Args) ;
-# 417 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 417 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  __attribute__ ((__dllimport__)) wchar_t * _wtempnam(const wchar_t *_Directory,const wchar_t *_FilePrefix);
   __attribute__ ((__dllimport__)) int _vscwprintf(const wchar_t * __restrict__ _Format,va_list _ArgList);
   __attribute__ ((__dllimport__)) int _vscwprintf_l(const wchar_t * __restrict__ _Format,_locale_t _Locale,va_list _ArgList);
@@ -928,7 +928,7 @@ const char *__mingw_get_crt_info (void);
   __attribute__ ((__dllimport__)) wint_t _fgetwc_nolock(FILE *_File);
   __attribute__ ((__dllimport__)) wint_t _fputwc_nolock(wchar_t _Ch,FILE *_File);
   __attribute__ ((__dllimport__)) wint_t _ungetwc_nolock(wint_t _Ch,FILE *_File);
-# 475 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
+# 475 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 3
  __attribute__ ((__dllimport__)) void _lock_file(FILE *_File);
   __attribute__ ((__dllimport__)) void _unlock_file(FILE *_File);
   __attribute__ ((__dllimport__)) int _fclose_nolock(FILE *_File);
@@ -965,7 +965,7 @@ const char *__mingw_get_crt_info (void);
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdio_s.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdio_s.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -976,17 +976,17 @@ const char *__mingw_get_crt_info (void);
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdio_s.h" 2 3
-# 509 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdio_s.h" 2 3
+# 509 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw_print_pop.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -994,9 +994,9 @@ const char *__mingw_get_crt_info (void);
  */
 
 /* Define __mingw_<printf> macros.  */
-# 511 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
-# 2 "643_PE/week3.h" 2
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/time.h" 1 3
+# 511 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdio.h" 2 3
+# 2 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.h" 2
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/time.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1008,7 +1008,7 @@ const char *__mingw_get_crt_info (void);
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1019,13 +1019,13 @@ const char *__mingw_get_crt_info (void);
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 2 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 2 3
 
 
 
@@ -1033,9 +1033,9 @@ const char *__mingw_get_crt_info (void);
 
 
 #pragma pack(push,_CRT_PACKING)
-# 51 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
+# 51 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
  typedef long clock_t;
-# 88 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
+# 88 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
  struct tm {
     int tm_sec;
     int tm_min;
@@ -1102,16 +1102,16 @@ const char *__mingw_get_crt_info (void);
 
 
   wchar_t * _wctime(const time_t *) ;
-# 167 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
+# 167 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
 double difftime(time_t _Time1,time_t _Time2);
 char * ctime(const time_t *_Time) ;
 struct tm * gmtime(const time_t *_Time) ;
 struct tm * localtime(const time_t *_Time) ;
-# 220 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
+# 220 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
 time_t mktime(struct tm *_Tm);
 time_t _mkgmtime(struct tm *_Tm);
 time_t time(time_t *_Time);
-# 250 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
+# 250 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 3
  __attribute__ ((__dllimport__)) extern int daylight;
   __attribute__ ((__dllimport__)) extern long timezone;
   __attribute__ ((__dllimport__)) extern char *tzname[2];
@@ -1120,7 +1120,7 @@ time_t time(time_t *_Time);
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_timeval.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_timeval.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1135,7 +1135,7 @@ struct timeval
  long tv_sec;
  long tv_usec;
 };
-# 256 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 2 3
+# 256 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 2 3
 
 
 
@@ -1156,7 +1156,7 @@ struct timezone {
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/time_s.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/time_s.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1167,20 +1167,20 @@ struct timezone {
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/time_s.h" 2 3
-# 274 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 2 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/time_s.h" 2 3
+# 274 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 2 3
 
 
 /* Adding timespec definition.  */
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1191,13 +1191,13 @@ struct timezone {
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 2 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 2 3
 
 
 
@@ -1205,7 +1205,7 @@ struct timezone {
 
 
 #pragma pack(push,_CRT_PACKING)
-# 53 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 3
+# 53 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 3
  struct __timeb32 {
     __time32_t time;
     unsigned short millitm;
@@ -1251,12 +1251,12 @@ struct itimerspec {
 
 
   void ftime (struct timeb *);
-# 117 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 3
+# 117 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 3
 #pragma pack(pop)
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/sys/timeb_s.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/sys/timeb_s.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1268,17 +1268,17 @@ struct itimerspec {
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 10 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/sys/timeb_s.h" 2 3
-# 119 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 2 3
-# 277 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 2 3
-# 10 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/time.h" 2 3
-# 33 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/time.h" 3
+# 10 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/sys/timeb_s.h" 2 3
+# 119 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/timeb.h" 2 3
+# 277 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\time.h" 2 3
+# 10 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/time.h" 2 3
+# 33 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sys/time.h" 3
 /*
    Implementation as per:
    The Open Group Base Specifications, Issue 6
@@ -1297,8 +1297,8 @@ int gettimeofday(struct timeval *__restrict__,
 
 
 /* Adding timespec definition.  */
-# 3 "643_PE/week3.h" 2
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
+# 3 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.h" 2
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1309,14 +1309,14 @@ int gettimeofday(struct timeval *__restrict__,
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 36 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
+# 36 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 3
  __attribute__ ((__dllimport__)) void * _memccpy(void *_Dst,const void *_Src,int _Val,size_t _MaxCount);
                 void * memchr(const void *_Buf ,int _Val,size_t _MaxCount);
   __attribute__ ((__dllimport__)) int _memicmp(const void *_Buf1,const void *_Buf2,size_t _Size);
@@ -1449,8 +1449,8 @@ int gettimeofday(struct timeval *__restrict__,
   wchar_t * wcslwr(wchar_t *_Str) ;
   wchar_t * wcsupr(wchar_t *_Str) ;
   int wcsicoll(const wchar_t *_Str1,const wchar_t *_Str2) ;
-# 176 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 3
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 1 3
+# 176 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1461,16 +1461,16 @@ int gettimeofday(struct timeval *__restrict__,
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
-# 175 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
-# 4 "643_PE/week3.h" 2
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/string_s.h" 2 3
+# 175 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\string.h" 2 3
+# 4 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.h" 2
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1481,15 +1481,15 @@ int gettimeofday(struct timeval *__restrict__,
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 1 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 1 3 4
 /*===---- limits.h - Standard header for integer sizes --------------------===*\
  *
  * Copyright (c) 2009 Chris Lattner
@@ -1529,7 +1529,7 @@ int gettimeofday(struct timeval *__restrict__,
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 1 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 1 3 4
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -1537,13 +1537,13 @@ int gettimeofday(struct timeval *__restrict__,
  */
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3 4
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 6 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 2 3 4
+# 6 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\limits.h" 2 3 4
 
 
 
@@ -1558,28 +1558,28 @@ int gettimeofday(struct timeval *__restrict__,
  *       are semantically identical, with a limit of 259 characters for the
  *       path name, plus one for a terminating NUL, for a total of 260.
  */
-# 38 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 2 3 4
+# 38 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 2 3 4
 
 
 
 /* Many system headers try to "help us out" by defining these.  No really, we
    know how big each datatype is. */
-# 60 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4
+# 60 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4
 /* C90/99 5.2.4.2.1 */
-# 90 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4
+# 90 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4
 /* C99 5.2.4.2.1: Added long long. */
-# 102 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4
+# 102 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\limits.h" 3 4
 /* LONG_LONG_MIN/LONG_LONG_MAX/ULONG_LONG_MAX are a GNU extension.  It's too bad
    that we don't have something like #pragma poison that could be used to
    deprecate a macro - the code should just use LLONG_MAX and friends.
  */
-# 10 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
+# 10 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
 
 
 #pragma pack(push,_CRT_PACKING)
-# 36 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 36 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  typedef int ( *_onexit_t)(void);
-# 46 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 46 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  typedef struct _div_t {
     int quot;
     int rem;
@@ -1624,7 +1624,7 @@ int gettimeofday(struct timeval *__restrict__,
     unsigned char ld12[12];
   } _LDBL12;
 #pragma pack()
-# 100 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 100 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern int * __imp___mb_cur_max;
 
 
@@ -1634,7 +1634,7 @@ int gettimeofday(struct timeval *__restrict__,
 
 
   extern int* __imp___mbcur_max;
-# 132 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 132 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  typedef void ( *_purecall_handler)(void);
 
   __attribute__ ((__dllimport__)) _purecall_handler _set_purecall_handler(_purecall_handler _Handler);
@@ -1661,7 +1661,7 @@ int gettimeofday(struct timeval *__restrict__,
 
   extern __attribute__ ((__dllimport__)) char *_sys_errlist[1];
   extern __attribute__ ((__dllimport__)) int _sys_nerr;
-# 172 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 172 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern int * __imp___argc;
 
 
@@ -1679,13 +1679,13 @@ int gettimeofday(struct timeval *__restrict__,
 
 
   extern wchar_t *** __imp___wargv;
-# 200 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 200 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern char *** __imp__environ;
-# 209 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 209 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern wchar_t *** __imp__wenviron;
-# 218 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 218 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern char ** __imp__pgmptr;
-# 227 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 227 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern wchar_t ** __imp__wpgmptr;
 
 
@@ -1708,13 +1708,13 @@ int gettimeofday(struct timeval *__restrict__,
 
 
   extern unsigned int * __imp__osplatform;
-# 257 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 257 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern unsigned int * __imp__osver;
-# 266 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 266 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern unsigned int * __imp__winver;
-# 275 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 275 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern unsigned int * __imp__winmajor;
-# 284 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 284 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  extern unsigned int * __imp__winminor;
 
 
@@ -1725,14 +1725,14 @@ int gettimeofday(struct timeval *__restrict__,
   errno_t _get_winver(unsigned int *_Value);
   errno_t _get_winmajor(unsigned int *_Value);
   errno_t _get_winminor(unsigned int *_Value);
-# 307 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 307 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  void __attribute__ ((__nothrow__)) exit(int _Code) __attribute__ ((__noreturn__));
   __attribute__ ((__dllimport__)) void __attribute__ ((__nothrow__)) _exit(int _Code) __attribute__ ((__noreturn__));
 
 
   /* C99 function name */
   void _Exit(int) __attribute__ ((__noreturn__));
-# 321 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 321 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  void __attribute__((noreturn)) abort(void);
 
 
@@ -1801,7 +1801,7 @@ int gettimeofday(struct timeval *__restrict__,
   /* libmingwex.a provides a c99-compliant strtod() exported as __strtod() */
   extern double __attribute__ ((__nothrow__))
   __strtod (const char * __restrict__ , char ** __restrict__);
-# 400 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 400 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  float __mingw_strtof (const char * __restrict__, char ** __restrict__);
   long double __mingw_strtold(const char * __restrict__, char ** __restrict__);
 
@@ -1956,7 +1956,7 @@ int gettimeofday(struct timeval *__restrict__,
   /* Not to be confused with  _set_error_mode (int).  */
   __attribute__ ((__dllimport__)) void _seterrormode(int _Mode) __attribute__ ((__deprecated__));
   __attribute__ ((__dllimport__)) void _sleep(unsigned long _Duration) __attribute__ ((__deprecated__));
-# 574 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 574 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
  char * ecvt(double _Val,int _NumOfDigits,int *_PtDec,int *_PtSign) ;
   char * fcvt(double _Val,int _NumOfDec,int *_PtDec,int *_PtSign) ;
   char * gcvt(double _Val,int _NumOfDigits,char *_DstBuf) ;
@@ -1994,12 +1994,12 @@ int gettimeofday(struct timeval *__restrict__,
   __extension__ wchar_t * ulltow (unsigned long long, wchar_t *, int);
 
   /* __CRT_INLINE using non-ansi functions */
-# 627 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
+# 627 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 3
 #pragma pack(pop)
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdlib_s.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdlib_s.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -2010,16 +2010,16 @@ int gettimeofday(struct timeval *__restrict__,
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdlib_s.h" 2 3
-# 629 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\sec_api/stdlib_s.h" 2 3
+# 629 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -2030,17 +2030,17 @@ int gettimeofday(struct timeval *__restrict__,
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 2 3
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 2 3
 
 
 #pragma pack(push,_CRT_PACKING)
-# 31 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
+# 31 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
 /* Return codes for _heapwalk()  */
 
 
@@ -2066,7 +2066,7 @@ int gettimeofday(struct timeval *__restrict__,
   extern unsigned int _amblksiz;
 
 /* Make sure that X86intrin.h doesn't produce here collisions.  */
-# 98 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
+# 98 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
 /* Users should really use MS provided versions */
 void * __mingw_aligned_malloc (size_t _Size, size_t _Alignment);
 void __mingw_aligned_free (void *_Memory);
@@ -2097,7 +2097,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
   __attribute__ ((__dllimport__)) int _heapwalk(_HEAPINFO *_EntryInfo);
   __attribute__ ((__dllimport__)) size_t _heapused(size_t *_Used,size_t *_Commit);
   __attribute__ ((__dllimport__)) intptr_t _get_heap_handle(void);
-# 140 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
+# 140 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
  static __inline void *_MarkAllocaS(void *_Ptr,unsigned int _Marker) {
     if(_Ptr) {
       *((unsigned int*)_Ptr) = _Marker;
@@ -2105,7 +2105,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
     }
     return _Ptr;
   }
-# 159 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
+# 159 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
  static __inline void _freea(void *_Memory) {
     unsigned int _Marker;
     if(_Memory) {
@@ -2121,11 +2121,11 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 
     }
   }
-# 205 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
+# 205 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\malloc.h" 3
 #pragma pack(pop)
-# 630 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
-# 5 "643_PE/week3.h" 2
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\errno.h" 1 3
+# 630 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\stdlib.h" 2 3
+# 5 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.h" 2
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\errno.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
@@ -2136,15 +2136,15 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\_mingw.h" 1 3
 /**
  * This file has no copyright assigned and is placed in the Public Domain.
  * This file is part of the w64 mingw-runtime package.
  * No warranty is given; refer to the file DISCLAIMER.PD within this package.
  */
-# 9 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\errno.h" 2 3
-# 6 "643_PE/week3.h" 2
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\x86intrin.h" 1 3 4
+# 9 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/../../../x86_64-w64-mingw32/include\\errno.h" 2 3
+# 6 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.h" 2
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\x86intrin.h" 1 3 4
 /*===---- x86intrin.h - X86 intrinsics -------------------------------------===
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2173,7 +2173,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\immintrin.h" 1 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\immintrin.h" 1 3 4
 /*===---- immintrin.h - Intel intrinsics -----------------------------------===
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2203,7 +2203,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\mmintrin.h" 1 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\mmintrin.h" 1 3 4
 /*===---- mmintrin.h - MMX intrinsics --------------------------------------===
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2226,7 +2226,7 @@ void * __mingw_aligned_realloc (void *_Memory, size_t _Size, size_t _Offset);
  *
  *===-----------------------------------------------------------------------===
  */
-# 31 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\mmintrin.h" 3 4
+# 31 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\mmintrin.h" 3 4
 typedef long long __m64 __attribute__((__vector_size__(8)));
 
 typedef int __v2si __attribute__((__vector_size__(8)));
@@ -2640,12 +2640,12 @@ _mm_setr_pi8(char __b0, char __b1, char __b2, char __b3, char __b4, char __b5,
 
 
 /* Aliases for compatibility. */
-# 28 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\immintrin.h" 2 3 4
+# 28 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\immintrin.h" 2 3 4
 
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 1 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 1 3 4
 /*===---- xmmintrin.h - SSE intrinsics -------------------------------------===
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2668,7 +2668,7 @@ _mm_setr_pi8(char __b0, char __b1, char __b2, char __b3, char __b4, char __b5,
  *
  *===-----------------------------------------------------------------------===
  */
-# 33 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 3 4
+# 33 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 3 4
 typedef int __v4si __attribute__((__vector_size__(16)));
 typedef float __v4sf __attribute__((__vector_size__(16)));
 typedef float __m128 __attribute__((__vector_size__(16)));
@@ -2678,7 +2678,7 @@ typedef float __m128 __attribute__((__vector_size__(16)));
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\mm_malloc.h" 1 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\mm_malloc.h" 1 3 4
 /*===---- mm_malloc.h - Allocating and Freeing Aligned Memory Blocks -------===
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2701,7 +2701,7 @@ typedef float __m128 __attribute__((__vector_size__(16)));
  *
  *===-----------------------------------------------------------------------===
  */
-# 40 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 2 3 4
+# 40 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 2 3 4
 
 
 
@@ -3439,7 +3439,7 @@ _mm_setcsr(unsigned int i)
 {
   __builtin_ia32_ldmxcsr(i);
 }
-# 786 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 3 4
+# 786 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 3 4
 static __inline__ __m128 __attribute__((__always_inline__, __nodebug__))
 _mm_unpackhi_ps(__m128 a, __m128 b)
 {
@@ -3568,14 +3568,14 @@ _mm_movemask_ps(__m128 a)
 {
   return __builtin_ia32_movmskps(a);
 }
-# 966 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 3 4
+# 966 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 3 4
 /* Aliases for compatibility. */
-# 983 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 3 4
+# 983 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 3 4
 /* Ugly hack for backwards-compatibility (compatible with gcc) */
 
 
 
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\emmintrin.h" 1 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\emmintrin.h" 1 3 4
 /*===---- emmintrin.h - SSE2 intrinsics ------------------------------------===
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -3598,8 +3598,8 @@ _mm_movemask_ps(__m128 a)
  *
  *===-----------------------------------------------------------------------===
  */
-# 31 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\emmintrin.h" 3 4
-# 1 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 1 3 4
+# 31 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\emmintrin.h" 3 4
+# 1 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 1 3 4
 /*===---- xmmintrin.h - SSE intrinsics -------------------------------------===
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -3622,7 +3622,7 @@ _mm_movemask_ps(__m128 a)
  *
  *===-----------------------------------------------------------------------===
  */
-# 31 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\emmintrin.h" 2 3 4
+# 31 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\emmintrin.h" 2 3 4
 
 
 typedef double __m128d __attribute__((__vector_size__(16)));
@@ -4858,7 +4858,7 @@ _mm_movemask_epi8(__m128i a)
 {
   return __builtin_ia32_pmovmskb128((__v16qi)a);
 }
-# 1289 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\emmintrin.h" 3 4
+# 1289 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\emmintrin.h" 3 4
 static __inline__ __m128i __attribute__((__always_inline__, __nodebug__))
 _mm_unpackhi_epi8(__m128i a, __m128i b)
 {
@@ -4989,12 +4989,12 @@ _mm_pause(void)
 {
   __asm__ volatile ("pause");
 }
-# 985 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 2 3 4
-# 32 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\immintrin.h" 2 3 4
-# 27 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\x86intrin.h" 2 3 4
-# 53 "C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\x86intrin.h" 3 4
+# 985 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\xmmintrin.h" 2 3 4
+# 32 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\immintrin.h" 2 3 4
+# 27 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\x86intrin.h" 2 3 4
+# 53 "S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin/../lib/clang/3.1/include\\x86intrin.h" 3 4
 // FIXME: SSE4A, XOP, LWP, ABM
-# 7 "643_PE/week3.h" 2
+# 7 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.h" 2
 
 // Comment out for normal operation
 //#define DEBUG 1
@@ -5006,71 +5006,94 @@ _mm_pause(void)
 
 
 // Direction type, EDGE means that entry is in 0th column, so we stop following
-typedef enum {UP, LEFT, DIAG, EDGE} direction;
+//typedef enum {UP, LEFT, DIAG, EDGE} direction;
 
 typedef struct {
- char score[20340 /* Size of reference genome*/+1][100 /* Size of each read*/+1];
- unsigned int orig [20340 /* Size of reference genome*/+1][100 /* Size of each read*/+1];
+ char score[1000000 /* Size of reference genome*/+1][100 /* Size of each read*/+1];
+ unsigned int orig [1000000 /* Size of reference genome*/+1][100 /* Size of each read*/+1];
 } NW_matrix;
 
 extern NW_matrix nw_matrix; // The NW matrix, as struct-of-arrays instead of array-of-structs
 //char ref_genome[REF_SIZE+1];					// The reference genome
 //char reads[NUM_READS][READ_SIZE+1];				// The reads to be sequenced
-unsigned int best_fits[100 /* Number of reads in read file*/]; // The best fit index for each read
+unsigned int best_fits[10 /* Number of reads in read file*/]; // The best fit index for each read
 
 
 // Scoring system
-# 2 "643_PE/week3.c" 2
+# 2 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.c" 2
 
-unsigned int needlemanWunsch(char reads[100 /* Size of each read*/], char ref_genome[20340 /* Size of reference genome*/]) {_ssdm_SpecArrayDimSize(ref_genome,20340);_ssdm_SpecArrayDimSize(reads,100);
+//NW_matrix nw_matrix;
+//char score[REF_SIZE+1][READ_SIZE+1];
+//unsigned int orig  [REF_SIZE+1][READ_SIZE+1];
 
- unsigned int i, j; // loop variables
+//unsigned int max;				// Index of maximum final column value
+unsigned int max_orig;
+int max_score; // Maximum final column value
+
+unsigned int needlemanWunsch(char reads[100 /* Size of each read*/], char ref_genome, unsigned int orig_in[100 /* Size of each read*/+1], unsigned int orig_out[100 /* Size of each read*/+1],
+        char score_in[100 /* Size of each read*/+1], char score_out[100 /* Size of each read*/+1], unsigned int i) {_ssdm_SpecArrayDimSize(orig_in,100 /* Size of each read*/+1);_ssdm_SpecArrayDimSize(reads,100);_ssdm_SpecArrayDimSize(score_out,100 /* Size of each read*/+1);_ssdm_SpecArrayDimSize(score_in,100 /* Size of each read*/+1);_ssdm_SpecArrayDimSize(orig_out,100 /* Size of each read*/+1);
+
+ unsigned int j; // loop variable
  int up, left, diag; // Values in boxes to left, diagonal, and up from current box
  int up_score, left_score, diag_score; // Score put in box for each of the different directions
  int match; // Is the current box a match
- unsigned int max; // Index of maximum final column value
- int max_score; // Maximum final column value
-
- max = 0;
- max_score = -100 /* Size of each read*/;
-
- for (i=1; i<20340 /* Size of reference genome*/+1; i++) { // Loop through each row
+ //unsigned int max;						// Index of maximum final column value
+ //int max_score;						// Maximum final column value
 
 
-  for (j=1; j<100 /* Size of each read*/+1; j++) { // Loop through each column
-   // Get adjacent values
-   up = nw_matrix.score[i-1][j];
-   left = nw_matrix.score[i][j-1];
-   diag = nw_matrix.score[i-1][j-1];
 
-   // Calculate each score
-   match = ref_genome[i-1] == reads[j-1];
-   if (match) diag_score = diag + 1;
-   else diag_score = diag + -1; // pen is negative
 
-   left_score = left + -1;
-   up_score = up + -1;
+ //max = 0;
+ //max_score = -READ_SIZE;
+ //score1[0] = nw_matrix
+ if (i == 1) {
+  //max = 0;
+  max_orig = 0;
+  max_score = -100 /* Size of each read*/;
+ }
+ //score_out[0] = 0;
+ //orig_out[0] = i-1;
 
-   // Fill in current entry based on which score is best
-   if (diag_score >= left_score && diag_score >= up_score) {
-    nw_matrix.score[i][j] = diag_score;
-    nw_matrix.orig[i][j] = nw_matrix.orig[i-1][j-1];
-   }
-   else if (left_score >= diag_score && left_score >= up_score) {
-    nw_matrix.score[i][j] = left_score; // pen is negative number
-    nw_matrix.orig[i][j] = nw_matrix.orig[i][j-1];
-   }
-   else {
-    nw_matrix.score[i][j] = up_score; //pen is negative number
-    nw_matrix.orig[i][j] = nw_matrix.orig[i-1][j];
-   }
+ //printf("%s, %c, %d\n", reads, ref_genome, i);
+
+ COL: for (j=1; j<100 /* Size of each read*/+1; j++) {
+_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+# 37 "S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.c"
+ // Loop through each column
+  // Get adjacent values
+  diag = score_in[j-1];
+  up = score_in[j];
+  left = score_out[j-1];
+
+  // Calculate each score
+  match = ref_genome == reads[j-1];
+  if (match) diag_score = diag + 1;
+  else diag_score = diag + -1; // pen is negative
+
+  left_score = left + -1;
+  up_score = up + -1;
+
+  // Fill in current entry based on which score is best
+  if (diag_score >= left_score && diag_score >= up_score) {
+   score_out[j] = diag_score;
+   orig_out[j] = orig_in[j-1];
   }
-
-  // Determine if it's the new max path (TODO: allow more than 1 max path end?)
-  if (nw_matrix.score[i][100 /* Size of each read*/] > max_score) {
-   max = i;
-   max_score = nw_matrix.score[i][100 /* Size of each read*/];
+  else if (left_score >= diag_score && left_score >= up_score) {
+   score_out[j] = left_score; // pen is negative number
+   orig_out[j] = orig_out[j-1];
+  }
+  else {
+   score_out[j] = up_score; //pen is negative number
+   orig_out[j] = orig_in[j];
   }
  }
- return nw_matrix.orig[max][100 /* Size of each read*/];
+
+ // Determine if it's the new max path (TODO: allow more than 1 max path end?)
+ if (score_out[100 /* Size of each read*/] > max_score) {
+  //max = i;
+  max_score = score_out[100 /* Size of each read*/];
+  max_orig = orig_out[100 /* Size of each read*/];
+  //printf("max_orig = %d %d %d %d\n", max_orig, i, max, max_score);
+ }
+ return max_orig;
 }

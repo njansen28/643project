@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'needlemanWunsch'" level="0">
-<item name = "Date">Thu Nov 12 17:05:20 2015
+<item name = "Date">Sun Nov 15 12:28:44 2015
 </item>
 <item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
 <item name = "Project">643_PE</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00, 4.11, 0.63</column>
+<column name="ap_clk">5.00, 7.51, 0.63</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">22536730, 22536730, 22536731, 22536731, none</column>
+<column name="">209, 210, 210, 211, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">22536720, 22536720, 1108, -, -, 20340, no</column>
-<column name=" + Loop 1.1">1100, 1100, 11, -, -, 100, no</column>
+<column name="- COL">204, 204, 7, 2, 1, 100, yes</column>
 </table>
 </item>
 </section>

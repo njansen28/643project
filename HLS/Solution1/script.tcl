@@ -5,9 +5,9 @@
 ############################################################
 open_project 643_PE
 set_top needlemanWunsch
-add_files 643_PE/week3.c
-add_files 643_PE/week3.h
-add_files -tb 643_PE/week3_test.c
+add_files S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.c
+add_files S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3.h
+add_files -tb S:/Documents/CMU/Masters-Fall/18643/643project/HLS/week3_test.c
 open_solution "solution1"
 set_part {xc7z020clg484-1}
 create_clock -period 5 -name default

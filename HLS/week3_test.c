@@ -9,6 +9,7 @@ char reads[NUM_READS][READ_SIZE+1];				// The reads to be sequenced
 NW_matrix nw_matrix;
 
 
+
 // Reads in reference genome and reads, initializes nw_matrix
 void init() {
 	int i, read_num, size;
@@ -165,8 +166,15 @@ int main() {
 
 	for (k=0; k<NUM_READS; k++) { // Loop through each read
 		// Follow the best path back to the start
-		best_fits[k] = needlemanWunsch(reads[k], ref_genome);
-		//best_fits[k] = backTrack(max, READ_SIZE);
+		//best_fits[k] = needlemanWunsch(reads[k], ref_genome);
+
+		for (i=1;i<REF_SIZE+1;i++) {
+			best_fits[k] = needlemanWunsch(reads[k], ref_genome[i-1], nw_matrix.orig[i-1], nw_matrix.orig[i], nw_matrix.score[i-1], nw_matrix.score[i], i);
+			//printf("ref_genome[%d] = %c\n", i, ref_genome[i]);
+			//if (i==10) exit(0);
+		}
+		//if (k==1) print_matrix(k);
+		//if (k==1) exit(0);
 	}
 
 
