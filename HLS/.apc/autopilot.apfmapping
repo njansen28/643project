@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="week3.c" path="S:\Documents\CMU\Masters-Fall\18643\643project\HLS\week3.c"/>
-    <originFiles name="week3.h" path="S:\Documents\CMU\Masters-Fall\18643\643project\HLS\week3.h"/>
+    <originFiles name="week3.c" path="D:\Vivado_Projects\project\643project\HLS\week3.c"/>
   </source>
   <testbench>
-    <originFiles name="week3_test.c" path="S:\Documents\CMU\Masters-Fall\18643\643project\HLS\week3_test.c"/>
+    <originFiles name="week3_test.c" path="D:\Vivado_Projects\project\643project\HLS\week3_test.c"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

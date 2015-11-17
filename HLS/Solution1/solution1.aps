@@ -55,7 +55,7 @@
         <value string="solution1"/>
     </name>
     <project>
-        <value string="643_PE"/>
+        <value string="HLS"/>
     </project>
     <targetInfo>
         <TargetInfo value="xc7z020:clg484:-1"/>
