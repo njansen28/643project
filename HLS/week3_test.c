@@ -6,7 +6,7 @@ char* read_file = "../../../long_sequences.fastq";		// File where reference read
 basepair_t ref_genome[REF_SIZE+1];        // The reference genome
 basepair_t reads[NUM_READS][READ_SIZE+1]; // The reads to be sequenced
 
-unsigned int best_fits[NUM_READS];	// The best fit index for each read
+orig_t best_fits[NUM_READS];	// The best fit index for each read
 
 void copy_base_pairs(basepair_t *dest, const char *src, int len) {
 	int i;

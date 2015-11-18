@@ -19,7 +19,7 @@
 
 typedef uint2 basepair_t;
 typedef int8 score_t;
-typedef uint64 orig_t;
+typedef uint20 orig_t;
 
 // Scoring system
 #define GAP_PEN       -1
