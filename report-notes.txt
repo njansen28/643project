@@ -1,0 +1,17 @@
+Things to have tables and/or graphs of:
+
+* II of ROW loop -> resource utilization and timing
+* II of COL loop -> resource utilization and timing
+* Overall speed data points:
+	* Non-SIMD software
+	* SIMD software
+	* Single element FPGA (ROW not pipelined)
+	* Single element FPGA (ROW pipelined)
+	* Many element FPGA
+
+Other things:
+
+* Recap of problem/algorithm
+* Explain our variant of algorithm
+* Screenshot of block diagram(s)
+
