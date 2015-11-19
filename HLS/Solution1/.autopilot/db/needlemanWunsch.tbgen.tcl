@@ -1,8 +1,9 @@
 set C_TypeInfoList {{ 
-"needlemanWunsch" : [[], {"return": [[], {"scalar": "unsigned int"}] }, [{"ExternC" : 0}], [ {"reads": [[], {"array": [ {"scalar": "char"}, [100]]}] }, {"ref_genome": [[], {"array": [ {"scalar": "char"}, [20340]]}] }],["0"],""],
- "0": [ "nw_matrix", [[],"1"],""], 
-"1": [ "NW_matrix", {"typedef": [[[],"2"],""]}], 
-"2": [ "", {"struct": [[{"pack": 0}],[],[{ "score":  {"array": [ {"scalar": "char"}, [20341,101]]}},{ "orig":  {"array": [ {"scalar": "unsigned int"}, [20341,101]]}}],""]}]
+"needlemanWunsch" : [[], {"return": [[],"0"] }, [{"ExternC" : 0}], [ {"read": [[], {"array": ["1", [100]]}] }, {"ref_genome": [[], {"array": ["1", [1000000]]}] }],[],""], 
+"1": [ "basepair_t", {"typedef": [[[],"2"],""]}], 
+"2": [ "uint2", {"typedef": [[[], {"scalar": "uint2"}],""]}], 
+"0": [ "orig_t", {"typedef": [[[],"3"],""]}], 
+"3": [ "uint20", {"typedef": [[[], {"scalar": "uint20"}],""]}]
 }}
 set moduleName needlemanWunsch
 set isCombinational 0
@@ -12,85 +13,83 @@ set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
 set isOneStateSeq 0
 set C_modelName {needlemanWunsch}
-set C_modelType { int 32 }
+set C_modelType { int 20 }
 set C_modelArgList { 
-	{ reads int 8 regular {array 100 { 1 3 } 1 1 }  }
-	{ ref_genome int 8 regular {array 20340 { 1 3 } 1 1 }  }
-	{ nw_matrix_score int 8 regular {array 2054441 { 2 2 } 1 1 } {global 2}  }
-	{ nw_matrix_orig int 32 regular {array 2054441 { 2 3 } 3 1 } {global 2}  }
+	{ read_r int 8 regular {bram 25 { 1 3 } 1 1 }  }
+	{ ref_genome int 8 regular {axi_s 0 volatile  { ref_genome data } }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "reads", "interface" : "memory", "bitwidth" : 8 ,"direction" : "READONLY" ,"bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "reads","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 99,"step" : 1}]}]}]} , 
- 	{ "Name" : "ref_genome", "interface" : "memory", "bitwidth" : 8 ,"direction" : "READONLY" ,"bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "ref_genome","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 20339,"step" : 1}]}]}]} , 
- 	{ "Name" : "nw_matrix_score", "interface" : "memory", "bitwidth" : 8 ,"direction" : "READWRITE" ,"bitSlice":[{"low":0,"up":7,"cElement": [{"cName": "nw_matrix.score","cData": "char","bit_use": { "low": 0,"up": 7},"cArray": [{"low" : 0,"up" : 20340,"step" : 1},{"low" : 0,"up" : 100,"step" : 1}]}]}],"extern" : 1} , 
- 	{ "Name" : "nw_matrix_orig", "interface" : "memory", "bitwidth" : 32 ,"direction" : "READWRITE" ,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "nw_matrix.orig","cData": "unsigned int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 20340,"step" : 1},{"low" : 0,"up" : 100,"step" : 1}]}]}],"extern" : 1} , 
- 	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 32,"bitSlice":[{"low":0,"up":31,"cElement": [{"cName": "return","cData": "unsigned int","bit_use": { "low": 0,"up": 31},"cArray": [{"low" : 0,"up" : 1,"step" : 0}]}]}]} ]}
+	{ "Name" : "read_r", "interface" : "bram", "bitwidth" : 8 ,"direction" : "READONLY" ,"bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 96,"step" : 4}]}]},{"low":2,"up":3,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 1,"up" : 97,"step" : 4}]}]},{"low":4,"up":5,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 2,"up" : 98,"step" : 4}]}]},{"low":6,"up":7,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 3,"up" : 99,"step" : 4}]}]}]} , 
+ 	{ "Name" : "ref_genome", "interface" : "axis", "bitwidth" : 8 ,"direction" : "READONLY" ,"bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "ref_genome","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 999996,"step" : 4}]}]},{"low":2,"up":3,"cElement": [{"cName": "ref_genome","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 1,"up" : 999997,"step" : 4}]}]},{"low":4,"up":5,"cElement": [{"cName": "ref_genome","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 2,"up" : 999998,"step" : 4}]}]},{"low":6,"up":7,"cElement": [{"cName": "ref_genome","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 3,"up" : 999999,"step" : 4}]}]}]} , 
+ 	{ "Name" : "ap_return", "interface" : "axi_slave", "bundle":"AXILiteS","type":"ap_none","bitwidth" : 20,"bitSlice":[{"low":0,"up":19,"cElement": [{"cName": "return","cData": "orig_t","bit_use": { "low": 0,"up": 19},"cArray": [{"low" : 0,"up" : 1,"step" : 0}]}]}], "offset" : {"out":16}} ]}
 # RTL Port declarations: 
-set portNum 28
+set portNum 30
 set portList { 
+	{ s_axi_AXILiteS_AWVALID sc_in sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_AWREADY sc_out sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_AWADDR sc_in sc_lv 5 signal -1 } 
+	{ s_axi_AXILiteS_WVALID sc_in sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_WREADY sc_out sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_WDATA sc_in sc_lv 32 signal -1 } 
+	{ s_axi_AXILiteS_WSTRB sc_in sc_lv 4 signal -1 } 
+	{ s_axi_AXILiteS_ARVALID sc_in sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_ARREADY sc_out sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_ARADDR sc_in sc_lv 5 signal -1 } 
+	{ s_axi_AXILiteS_RVALID sc_out sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_RREADY sc_in sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_RDATA sc_out sc_lv 32 signal -1 } 
+	{ s_axi_AXILiteS_RRESP sc_out sc_lv 2 signal -1 } 
+	{ s_axi_AXILiteS_BVALID sc_out sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_BREADY sc_in sc_logic 1 signal -1 } 
+	{ s_axi_AXILiteS_BRESP sc_out sc_lv 2 signal -1 } 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
-	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
-	{ ap_start sc_in sc_logic 1 start -1 } 
-	{ ap_done sc_out sc_logic 1 predone -1 } 
-	{ ap_idle sc_out sc_logic 1 done -1 } 
-	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ reads_address0 sc_out sc_lv 7 signal 0 } 
-	{ reads_ce0 sc_out sc_logic 1 signal 0 } 
-	{ reads_q0 sc_in sc_lv 8 signal 0 } 
-	{ ref_genome_address0 sc_out sc_lv 15 signal 1 } 
-	{ ref_genome_ce0 sc_out sc_logic 1 signal 1 } 
-	{ ref_genome_q0 sc_in sc_lv 8 signal 1 } 
-	{ nw_matrix_score_address0 sc_out sc_lv 21 signal 2 } 
-	{ nw_matrix_score_ce0 sc_out sc_logic 1 signal 2 } 
-	{ nw_matrix_score_we0 sc_out sc_logic 1 signal 2 } 
-	{ nw_matrix_score_d0 sc_out sc_lv 8 signal 2 } 
-	{ nw_matrix_score_q0 sc_in sc_lv 8 signal 2 } 
-	{ nw_matrix_score_address1 sc_out sc_lv 21 signal 2 } 
-	{ nw_matrix_score_ce1 sc_out sc_logic 1 signal 2 } 
-	{ nw_matrix_score_we1 sc_out sc_logic 1 signal 2 } 
-	{ nw_matrix_score_d1 sc_out sc_lv 8 signal 2 } 
-	{ nw_matrix_score_q1 sc_in sc_lv 8 signal 2 } 
-	{ nw_matrix_orig_address0 sc_out sc_lv 21 signal 3 } 
-	{ nw_matrix_orig_ce0 sc_out sc_logic 1 signal 3 } 
-	{ nw_matrix_orig_we0 sc_out sc_logic 1 signal 3 } 
-	{ nw_matrix_orig_d0 sc_out sc_lv 32 signal 3 } 
-	{ nw_matrix_orig_q0 sc_in sc_lv 32 signal 3 } 
-	{ ap_return sc_out sc_lv 32 signal -1 } 
+	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
+	{ read_r_Addr_A sc_out sc_lv 32 signal 0 } 
+	{ read_r_EN_A sc_out sc_logic 1 signal 0 } 
+	{ read_r_WEN_A sc_out sc_lv 1 signal 0 } 
+	{ read_r_Din_A sc_out sc_lv 8 signal 0 } 
+	{ read_r_Dout_A sc_in sc_lv 8 signal 0 } 
+	{ read_r_Clk_A sc_out sc_logic 1 signal 0 } 
+	{ read_r_Rst_A sc_out sc_logic 1 signal 0 } 
+	{ ref_genome_TDATA sc_in sc_lv 8 signal 1 } 
+	{ ref_genome_TVALID sc_in sc_logic 1 invld 1 } 
+	{ ref_genome_TREADY sc_out sc_logic 1 inacc 1 } 
+	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
- 	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }} , 
- 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
- 	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
- 	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
- 	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "reads_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "reads", "role": "address0" }} , 
- 	{ "name": "reads_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "reads", "role": "ce0" }} , 
- 	{ "name": "reads_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "reads", "role": "q0" }} , 
- 	{ "name": "ref_genome_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "ref_genome", "role": "address0" }} , 
- 	{ "name": "ref_genome_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "ref_genome", "role": "ce0" }} , 
- 	{ "name": "ref_genome_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "ref_genome", "role": "q0" }} , 
- 	{ "name": "nw_matrix_score_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":21, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "address0" }} , 
- 	{ "name": "nw_matrix_score_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "ce0" }} , 
- 	{ "name": "nw_matrix_score_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "we0" }} , 
- 	{ "name": "nw_matrix_score_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "d0" }} , 
- 	{ "name": "nw_matrix_score_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "q0" }} , 
- 	{ "name": "nw_matrix_score_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":21, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "address1" }} , 
- 	{ "name": "nw_matrix_score_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "ce1" }} , 
- 	{ "name": "nw_matrix_score_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "we1" }} , 
- 	{ "name": "nw_matrix_score_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "d1" }} , 
- 	{ "name": "nw_matrix_score_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "nw_matrix_score", "role": "q1" }} , 
- 	{ "name": "nw_matrix_orig_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":21, "type": "signal", "bundle":{"name": "nw_matrix_orig", "role": "address0" }} , 
- 	{ "name": "nw_matrix_orig_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "nw_matrix_orig", "role": "ce0" }} , 
- 	{ "name": "nw_matrix_orig_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "nw_matrix_orig", "role": "we0" }} , 
- 	{ "name": "nw_matrix_orig_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "nw_matrix_orig", "role": "d0" }} , 
- 	{ "name": "nw_matrix_orig_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "nw_matrix_orig", "role": "q0" }} , 
- 	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
+	{ "name": "s_axi_AXILiteS_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "AXILiteS", "role": "AWADDR" },"address":[{"name":"needlemanWunsch","role":"start","value":"0","valid_bit":"0"},{"name":"needlemanWunsch","role":"continue","value":"0","valid_bit":"4"},{"name":"needlemanWunsch","role":"auto_start","value":"0","valid_bit":"7"}] },
+	{ "name": "s_axi_AXILiteS_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "AWVALID" } },
+	{ "name": "s_axi_AXILiteS_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "AWREADY" } },
+	{ "name": "s_axi_AXILiteS_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "WVALID" } },
+	{ "name": "s_axi_AXILiteS_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "WREADY" } },
+	{ "name": "s_axi_AXILiteS_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "AXILiteS", "role": "WDATA" } },
+	{ "name": "s_axi_AXILiteS_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "AXILiteS", "role": "WSTRB" } },
+	{ "name": "s_axi_AXILiteS_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "AXILiteS", "role": "ARADDR" },"address":[{"name":"needlemanWunsch","role":"start","value":"0","valid_bit":"0"},{"name":"needlemanWunsch","role":"done","value":"0","valid_bit":"1"},{"name":"needlemanWunsch","role":"idle","value":"0","valid_bit":"2"},{"name":"needlemanWunsch","role":"ready","value":"0","valid_bit":"3"},{"name":"needlemanWunsch","role":"auto_start","value":"0","valid_bit":"7"},{"name":"return","role":"data","value":"16"}] },
+	{ "name": "s_axi_AXILiteS_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "ARVALID" } },
+	{ "name": "s_axi_AXILiteS_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "ARREADY" } },
+	{ "name": "s_axi_AXILiteS_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "RVALID" } },
+	{ "name": "s_axi_AXILiteS_RREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "RREADY" } },
+	{ "name": "s_axi_AXILiteS_RDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "AXILiteS", "role": "RDATA" } },
+	{ "name": "s_axi_AXILiteS_RRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "AXILiteS", "role": "RRESP" } },
+	{ "name": "s_axi_AXILiteS_BVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "BVALID" } },
+	{ "name": "s_axi_AXILiteS_BREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "AXILiteS", "role": "BREADY" } },
+	{ "name": "s_axi_AXILiteS_BRESP", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "AXILiteS", "role": "BRESP" } }, 
+ 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
+ 	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }} , 
+ 	{ "name": "read_r_Addr_A", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "read_r", "role": "Addr_A" }} , 
+ 	{ "name": "read_r_EN_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "EN_A" }} , 
+ 	{ "name": "read_r_WEN_A", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "WEN_A" }} , 
+ 	{ "name": "read_r_Din_A", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "read_r", "role": "Din_A" }} , 
+ 	{ "name": "read_r_Dout_A", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "read_r", "role": "Dout_A" }} , 
+ 	{ "name": "read_r_Clk_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "Clk_A" }} , 
+ 	{ "name": "read_r_Rst_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "Rst_A" }} , 
+ 	{ "name": "ref_genome_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "ref_genome", "role": "TDATA" }} , 
+ 	{ "name": "ref_genome_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "ref_genome", "role": "TVALID" }} , 
+ 	{ "name": "ref_genome_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "ref_genome", "role": "TREADY" }} , 
+ 	{ "name": "interrupt", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "interrupt", "role": "default" }}  ]}
 set Spec2ImplPortList { 
-	reads { ap_memory {  { reads_address0 mem_address 1 7 }  { reads_ce0 mem_ce 1 1 }  { reads_q0 mem_dout 0 8 } } }
-	ref_genome { ap_memory {  { ref_genome_address0 mem_address 1 15 }  { ref_genome_ce0 mem_ce 1 1 }  { ref_genome_q0 mem_dout 0 8 } } }
-	nw_matrix_score { ap_memory {  { nw_matrix_score_address0 mem_address 1 21 }  { nw_matrix_score_ce0 mem_ce 1 1 }  { nw_matrix_score_we0 mem_we 1 1 }  { nw_matrix_score_d0 mem_din 1 8 }  { nw_matrix_score_q0 mem_dout 0 8 }  { nw_matrix_score_address1 mem_address 1 21 }  { nw_matrix_score_ce1 mem_ce 1 1 }  { nw_matrix_score_we1 mem_we 1 1 }  { nw_matrix_score_d1 mem_din 1 8 }  { nw_matrix_score_q1 mem_dout 0 8 } } }
-	nw_matrix_orig { ap_memory {  { nw_matrix_orig_address0 mem_address 1 21 }  { nw_matrix_orig_ce0 mem_ce 1 1 }  { nw_matrix_orig_we0 mem_we 1 1 }  { nw_matrix_orig_d0 mem_din 1 32 }  { nw_matrix_orig_q0 mem_dout 0 32 } } }
+	read_r { bram {  { read_r_Addr_A mem_address 1 32 }  { read_r_EN_A mem_ce 1 1 }  { read_r_WEN_A mem_we 1 1 }  { read_r_Din_A mem_din 1 8 }  { read_r_Dout_A mem_dout 0 8 }  { read_r_Clk_A mem_clk 1 1 }  { read_r_Rst_A mem_rst 1 1 } } }
+	ref_genome { axis {  { ref_genome_TDATA in_data 0 8 }  { ref_genome_TVALID in_vld 0 1 }  { ref_genome_TREADY in_acc 1 1 } } }
 }
 
 # RTL port scheduling information:
@@ -107,5 +106,4 @@ set busWriteResLatencyList {
 
 # RTL array port load latency information:
 set memoryLoadLatencyList { 
-	{ nw_matrix_orig 3 }
 }

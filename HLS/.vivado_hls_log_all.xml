@@ -11,7 +11,25 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_Din_B' to 0." projectName="643_PE" solutionName="solution2" date="2015-11-18T21:00:16.978-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_WEN_B' to 0." projectName="643_PE" solutionName="solution2" date="2015-11-18T21:00:16.528-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_Din_A' to 0." projectName="643_PE" solutionName="solution2" date="2015-11-18T21:00:16.525-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_WEN_A' to 0." projectName="643_PE" solutionName="solution2" date="2015-11-18T21:00:16.522-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'needlemanWunsch/read' to 'needlemanWunsch/read_r' to avoid the conflict with HDL keywords or other object names." projectName="643_PE" solutionName="solution2" date="2015-11-18T20:59:42.378-0500" type="Warning"/>
+        <logs message="@W [XFORM-124] Array 'ref_genome' (643_PE/week3.c:74): may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="643_PE" solutionName="solution2" date="2015-11-18T20:59:39.639-0500" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'COL' (643_PE/week3.c:22) because its parent loop or function is pipelined." projectName="643_PE" solutionName="solution2" date="2015-11-18T20:59:37.131-0500" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'COL' (643_PE/week3.c:22) because its parent loop or function is pipelined." projectName="643_PE" solutionName="solution2" date="2015-11-18T20:59:37.128-0500" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'PIPELINE' cannot be applied: Label 'COL' does not exist in function 'needlemanWunsch'. " projectName="643_PE" solutionName="solution2" date="2015-11-18T20:59:36.908-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_Din_A' to 0." projectName="643_PE" solutionName="solution1" date="2015-11-18T20:20:22.789-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_WEN_A' to 0." projectName="643_PE" solutionName="solution1" date="2015-11-18T20:20:22.767-0500" type="Warning"/>
+        <logs message="@W [SCHED-21] The critical path consists of the following:&#xD;&#xA;&#x9;'add' operation ('prev_score_out_0_op_i1', 643_PE/week3.c:50->643_PE/week3.c:92) (1.72 ns)&#xD;&#xA;&#x9;'select' operation ('prev_score_out', 643_PE/week3.c:50->643_PE/week3.c:92) (1.37 ns)&#xD;&#xA;&#x9;'icmp' operation ('tmp_33', 643_PE/week3.c:58->643_PE/week3.c:92) (2 ns)&#xD;&#xA;&#x9;'or' operation ('or_cond1_i1', 643_PE/week3.c:58->643_PE/week3.c:92) (1.37 ns)&#xD;&#xA;&#x9;'select' operation ('prev_score_out', 643_PE/week3.c:58->643_PE/week3.c:92) (1.37 ns)" projectName="643_PE" solutionName="solution1" date="2015-11-18T20:20:22.430-0500" type="Warning"/>
+        <logs message="@W [SCHED-21] Estimated clock period (7.83ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.38ns)." projectName="643_PE" solutionName="solution1" date="2015-11-18T20:20:22.423-0500" type="Warning"/>
+        <logs message="@W [SYN-107] Renaming port name 'needlemanWunsch/read' to 'needlemanWunsch/read_r' to avoid the conflict with HDL keywords or other object names." projectName="643_PE" solutionName="solution1" date="2015-11-18T20:20:22.315-0500" type="Warning"/>
+        <logs message="@W [XFORM-542] Cannot flatten a loop nest 'ROW' (643_PE/week3.c:91:66) in function 'needlemanWunsch' : &#xD;&#xA;               more than one sub loop." projectName="643_PE" solutionName="solution1" date="2015-11-18T20:20:22.292-0500" type="Warning"/>
+        <logs message="@W [XFORM-124] Array 'ref_genome' (643_PE/week3.c:74): may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="643_PE" solutionName="solution1" date="2015-11-18T20:20:22.095-0500" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'PIPELINE' cannot be applied: Label 'COL' does not exist in function 'needlemanWunsch'. " projectName="643_PE" solutionName="solution1" date="2015-11-18T20:20:21.643-0500" type="Warning"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>

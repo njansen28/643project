@@ -3,11 +3,25 @@
 char* genome_file = "../../../long_reference.fasta"; 	// File where reference genome is stored
 char* read_file = "../../../long_sequences.fastq";		// File where reference reads are stored
 
-char ref_genome[REF_SIZE+1];					// The reference genome
-char reads[NUM_READS][READ_SIZE+1];				// The reads to be sequenced
+basepair_t ref_genome[REF_SIZE+1];        // The reference genome
+basepair_t reads[NUM_READS][READ_SIZE+1]; // The reads to be sequenced
 
-NW_matrix nw_matrix;
+orig_t best_fits[NUM_READS];	// The best fit index for each read
 
+void copy_base_pairs(basepair_t *dest, const char *src, int len) {
+	int i;
+	for (i = 0; i < len; i++) {
+		switch (src[i]) {
+		case 'A': dest[i] = BP_A; break;
+		case 'G': dest[i] = BP_G; break;
+		case 'C': dest[i] = BP_C; break;
+		case 'T': dest[i] = BP_T; break;
+		default:
+			printf("Unrecognized character %c", src[i]);
+			exit(1);
+		}
+	}
+}
 
 // Reads in reference genome and reads, initializes nw_matrix
 void init() {
@@ -39,7 +53,7 @@ void init() {
 			}
 		}
 		fgets(read_line, READ_SIZE*2, f); // Read in a read
-		strncpy(reads[i], read_line, READ_SIZE);
+		copy_base_pairs(&reads[i][0], &read_line[0], READ_SIZE);
 	}
 	fclose(f);
 
@@ -65,71 +79,10 @@ void init() {
 			printf("Input file too big!, i=%d, index=%lld, strlen(ref_line)=%lld\n", i, index, strlen(ref_line) - 1);
 			exit(1);
 		}
-		strncpy(&ref_genome[index], ref_line, REF_LINE_SIZE);
+		copy_base_pairs(&ref_genome[i*REF_LINE_SIZE], &ref_line[0], REF_LINE_SIZE);
 		index = index + REF_LINE_SIZE;
 	}
 	fclose(f);
-
-	//*********************************************
-	// Initialize NW matrix
-	//*********************************************
-
-	// Init column 1 to 0s and EDGE direction
-	for (i=0; i<REF_SIZE+1; i++) {
-		nw_matrix.score[i][0] = 0;
-		nw_matrix.orig[i][0] = i;
-	}
-
-	// Init row 0 to decreasing values and LEFT direction (EDGE?)
-	int fill = 0;
-	for (i=0; i<READ_SIZE+1; i++) {
-		nw_matrix.score[0][i] = fill;
-		nw_matrix.orig[0][i] = 0;
-		fill--;
-	}
-
-	//*********************************************
-	// Erase old matrix file
-	//*********************************************
-
-	f = fopen("matrix.txt", "w");
-	fclose(f);
-}
-
-
-// Prints the matrix in the format from the wikipedia page to the file matrix.txt
-void print_matrix(int read_num) {
-	FILE* matrix;
-	int i, j;
-
-	// Open matrix file
-	errno = 0;
-	matrix = fopen("matrix.txt", "a");
-	if (matrix == NULL) {
-		printf("Could not open ref file, %d\n", errno);
-		exit(1);
-	}
-
-
-	fprintf(matrix, "    ");
-	for (i=0; i < READ_SIZE; i++) {
-		fprintf(matrix, "   ");
-		fprintf(matrix, "%c", reads[read_num][i]);
-	}
-	fprintf(matrix, "\n");
-	for (i=0; i<REF_SIZE+1; i++) {
-		if (i == 0) fprintf(matrix, " ");
-		else fprintf(matrix, "%c", ref_genome[i-1]);
-
-		for (j=0; j<READ_SIZE+1; j++) {
-			fprintf(matrix, " ");
-			fprintf(matrix, "%3d", nw_matrix.score[i][j]);
-		}
-		fprintf(matrix, "\n");
-	}
-
-	fprintf(matrix, "\n\n\n\n");
-	fclose(matrix);
 }
 
 #if 0
@@ -164,15 +117,9 @@ int main() {
 	init();							// Should init count as part of the time?
 
 	for (k=0; k<NUM_READS; k++) { // Loop through each read
-		// Follow the best path back to the start
 		best_fits[k] = needlemanWunsch(reads[k], ref_genome);
-		//best_fits[k] = backTrack(max, READ_SIZE);
-	}
-
-
-	// Print the results
-	for (i=0; i<NUM_READS; i++) {
-		printf("READ #%d - Best fit at index %d\n", i, best_fits[i]);
+		// Print the results
+		printf("READ #%d - Best fit at index %d\n", k, best_fits[k]);
 	}
 
 	return 0;

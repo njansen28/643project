@@ -2,9 +2,6 @@
     <downStreamTool>
         <DownStreamTool name=""/>
     </downStreamTool>
-    <clockList>
-        <clock name="default" period="5"/>
-    </clockList>
     <config>
         <schedule model="needlemanWunsch"/>
     </config>
@@ -40,7 +37,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" formatName="ip_catalog" rtl="verilog">
+    <ExportDesign askAgain="true" evaluate="true" formatName="ip_catalog" rtl="verilog">
         <Format formatName="ip_catalog"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
@@ -67,5 +64,8 @@
         <library name="DefaultPlatform" value="xilinx/zynq/zynq"/>
         <library name="DefaultPlatform" value="xilinx/zynq/zynq_fpv6"/>
     </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="5"/>
+    </clockList>
 </solution>
 

@@ -28,6 +28,7 @@
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include/etc"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/win64/tools/systemc/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Nathaniel"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/win64/tools/auto_cc/include"/>
 								</option>
@@ -45,6 +46,7 @@
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include/etc"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/win64/tools/systemc/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Nathaniel"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/win64/tools/auto_cc/include"/>
 								</option>
@@ -79,7 +81,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="solution1|solution2|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -112,6 +114,7 @@
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include/etc"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/win64/tools/systemc/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Nathaniel"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/win64/tools/auto_cc/include"/>
 								</option>
@@ -124,6 +127,7 @@
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include/etc"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/win64/tools/systemc/include"/>
+									<listOptionValue builtIn="false" value="C:/Users/Nathaniel"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/include"/>
 									<listOptionValue builtIn="false" value="S:/Xilinx/Vivado_HLS/2015.2/win64/tools/auto_cc/include"/>
 								</option>
@@ -153,7 +157,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="solution1|solution2|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -161,14 +165,21 @@
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="643_PE.cdt.managedbuild.target.gnu.exe.543777119" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
+		<project id="643_PE.cdt.managedbuild.target.gnu.exe.671188086" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.876081624;cdt.managedbuild.config.gnu.exe.release.876081624.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1274418557;cdt.managedbuild.tool.gnu.cpp.compiler.input.406072060">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.69909226;cdt.managedbuild.config.gnu.exe.debug.69909226.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1056378279;cdt.managedbuild.tool.gnu.cpp.compiler.input.1816540852">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.876081624;cdt.managedbuild.config.gnu.exe.release.876081624.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.729854237;cdt.managedbuild.tool.gnu.c.compiler.input.184145152">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.816497317;cdt.managedbuild.config.gnu.exe.release.816497317.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.812579851;cdt.managedbuild.tool.gnu.c.compiler.input.1942540839">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.69909226;cdt.managedbuild.config.gnu.exe.debug.69909226.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.209351870;cdt.managedbuild.tool.gnu.c.compiler.input.1469728192">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.816497317;cdt.managedbuild.config.gnu.exe.release.816497317.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1492497714;cdt.managedbuild.tool.gnu.cpp.compiler.input.1182917987">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.258658256;cdt.managedbuild.config.gnu.exe.debug.258658256.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1126696063;cdt.managedbuild.tool.gnu.cpp.compiler.input.231616298">
@@ -178,5 +189,4 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>
