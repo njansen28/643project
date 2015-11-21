@@ -1,0 +1,10 @@
+verilog xil_defaultlib "AESL_autobram_read_r.v"
+verilog xil_defaultlib "AESL_axi_slave_AXILiteS.v"
+verilog xil_defaultlib "AESL_axi_s_ref_genome.v"
+verilog xil_defaultlib "AESL_fifo.v"
+verilog xil_defaultlib "needlemanWunsch.autotb.v"
+verilog xil_defaultlib "needlemanWunsch.v"
+verilog xil_defaultlib "needlemanWunsch_AXILiteS_s_axi.v"
+verilog xil_defaultlib "needlemanWunsch_orig1.v"
+verilog xil_defaultlib "needlemanWunsch_score1.v"
+

@@ -54,9 +54,6 @@
     <name>
         <value string="solution1"/>
     </name>
-    <project>
-        <value string="643_PE"/>
-    </project>
     <targetInfo>
         <TargetInfo value="xc7z020:clg484:-1"/>
     </targetInfo>
@@ -67,5 +64,8 @@
     <clockList>
         <clock default="false" name="default" period="5"/>
     </clockList>
+    <project>
+        <value string="hls1121"/>
+    </project>
 </solution>
 

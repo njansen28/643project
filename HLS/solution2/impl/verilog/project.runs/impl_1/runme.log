@@ -1,0 +1,1039 @@
+
+*** Running vivado
+    with args -log needlemanWunsch.vdi -applog -m64 -messageDb vivado.pb -mode batch -source needlemanWunsch.tcl -notrace
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source needlemanWunsch.tcl -notrace
+Command: open_checkpoint C:/Users/Nathaniel2/hls1121/solution2/impl/verilog/project.runs/impl_1/needlemanWunsch.dcp
+INFO: [Netlist 29-17] Analyzing 1210 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'needlemanWunsch' is not ideal for floorplanning, since the cellview 'needlemanWunsch' defined in file 'needlemanWunsch.edf' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Nathaniel2/hls1121/solution2/impl/verilog/project.runs/impl_1/.Xil/Vivado-12916-NATHANIEL2-HP/dcp/needlemanWunsch.xdc]
+Finished Parsing XDC File [C:/Users/Nathaniel2/hls1121/solution2/impl/verilog/project.runs/impl_1/.Xil/Vivado-12916-NATHANIEL2-HP/dcp/needlemanWunsch.xdc]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-484] Checkpoint was created with build 1266856
+open_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 560.555 ; gain = 364.957
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.676 . Memory (MB): peak = 560.555 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 4125df3d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1048.391 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 2 Constant Propagation | Checksum: 4125df3d
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1048.391 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 3624 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 3 Sweep | Checksum: e3a2a1c3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1048.391 ; gain = 0.000
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1048.391 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: e3a2a1c3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1048.391 ; gain = 0.000
+Implement Debug Cores | Checksum: d3c5aedd
+Logic Optimization | Checksum: d3c5aedd
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 3.13 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: e3a2a1c3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1066.273 ; gain = 0.000
+Ending Power Optimization Task | Checksum: e3a2a1c3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1066.273 ; gain = 17.883
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1066.273 ; gain = 505.719
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1096.922 ; gain = 30.648
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Nathaniel2/hls1121/solution2/impl/verilog/project.runs/impl_1/needlemanWunsch_drc_opted.rpt.
+report_drc: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1096.922 ; gain = 0.000
+INFO: [#UNDEF] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Runtime Estimator
+Phase 1 Placer Runtime Estimator | Checksum: 6c6f47bf
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.461 . Memory (MB): peak = 1098.371 ; gain = 0.000
+
+Phase 2 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1098.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1098.371 ; gain = 0.000
+
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 2.1.1 Pre-Place Cells
+Phase 2.1.1 Pre-Place Cells | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.843 . Memory (MB): peak = 1098.371 ; gain = 0.000
+
+Phase 2.1.2 IO & Clk Clean Up
+Phase 2.1.2 IO & Clk Clean Up | Checksum: 00000000
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1098.371 ; gain = 0.000
+
+Phase 2.1.3 Implementation Feasibility check On IDelay
+Phase 2.1.3 Implementation Feasibility check On IDelay | Checksum: 00000000
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1098.371 ; gain = 0.000
+
+Phase 2.1.4 Commit IO Placement
+Phase 2.1.4 Commit IO Placement | Checksum: 00000000
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1098.371 ; gain = 0.000
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d24043ba
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1098.371 ; gain = 0.000
+
+Phase 2.2 Build Placer Netlist Model
+
+Phase 2.2.1 Place Init Design
+
+Phase 2.2.1.1 Init Lut Pin Assignment
+Phase 2.2.1.1 Init Lut Pin Assignment | Checksum: 1b5a2060d
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1116.668 ; gain = 18.297
+Phase 2.2.1 Place Init Design | Checksum: 17faad80d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:46 . Memory (MB): peak = 1210.426 ; gain = 112.055
+Phase 2.2 Build Placer Netlist Model | Checksum: 17faad80d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:46 . Memory (MB): peak = 1210.426 ; gain = 112.055
+
+Phase 2.3 Constrain Clocks/Macros
+
+Phase 2.3.1 Constrain Global/Regional Clocks
+Phase 2.3.1 Constrain Global/Regional Clocks | Checksum: 17faad80d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:46 . Memory (MB): peak = 1210.426 ; gain = 112.055
+Phase 2.3 Constrain Clocks/Macros | Checksum: 17faad80d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:46 . Memory (MB): peak = 1210.426 ; gain = 112.055
+Phase 2 Placer Initialization | Checksum: 17faad80d
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:46 . Memory (MB): peak = 1210.426 ; gain = 112.055
+
+Phase 3 Global Placement
+Phase 3 Global Placement | Checksum: 1ab240f07
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:19 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4 Detail Placement
+
+Phase 4.1 Commit Multi Column Macros
+Phase 4.1 Commit Multi Column Macros | Checksum: 1ab240f07
+
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:19 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.2 Commit Most Macros & LUTRAMs
+Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 22e5ca04d
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:28 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.3 Area Swap Optimization
+Phase 4.3 Area Swap Optimization | Checksum: 1f4a963a5
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:28 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.4 updateClock Trees: DP
+Phase 4.4 updateClock Trees: DP | Checksum: 1f4a963a5
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:28 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.5 Timing Path Optimizer
+Phase 4.5 Timing Path Optimizer | Checksum: 1ed652bfe
+
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:31 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.6 Small Shape Detail Placement
+
+Phase 4.6.1 Commit Small Macros & Core Logic
+
+Phase 4.6.1.1 setBudgets
+Phase 4.6.1.1 setBudgets | Checksum: 1ee36914b
+
+Time (s): cpu = 00:02:03 ; elapsed = 00:01:31 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.6.1.2 Commit Slice Clusters
+Phase 4.6.1.2 Commit Slice Clusters | Checksum: 276019b41
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:44 . Memory (MB): peak = 1256.102 ; gain = 157.730
+Phase 4.6.1 Commit Small Macros & Core Logic | Checksum: 276019b41
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:44 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns | Checksum: 276019b41
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:44 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 276019b41
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1256.102 ; gain = 157.730
+Phase 4.6 Small Shape Detail Placement | Checksum: 276019b41
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 4.7 Re-assign LUT pins
+Phase 4.7 Re-assign LUT pins | Checksum: 276019b41
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:46 . Memory (MB): peak = 1256.102 ; gain = 157.730
+Phase 4 Detail Placement | Checksum: 276019b41
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:46 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 5 Post Placement Optimization and Clean-Up
+
+Phase 5.1 PCOPT Shape updates
+Phase 5.1 PCOPT Shape updates | Checksum: 21df12085
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:47 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 5.2 Post Commit Optimization
+
+Phase 5.2.1 updateClock Trees: PCOPT
+Phase 5.2.1 updateClock Trees: PCOPT | Checksum: 21df12085
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:47 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 5.2.2 Post Placement Optimization
+
+Phase 5.2.2.1 Post Placement Timing Optimization
+
+Phase 5.2.2.1.1 Restore Best Placement
+Phase 5.2.2.1.1 Restore Best Placement | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:07 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 5.2.2.1.2 updateTiming after Restore Best Placement
+Phase 5.2.2.1.2 updateTiming after Restore Best Placement | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:07 . Memory (MB): peak = 1256.102 ; gain = 157.730
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.969. For the most accurate timing information please run report_timing.
+Phase 5.2.2.1 Post Placement Timing Optimization | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+Phase 5.2.2 Post Placement Optimization | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+Phase 5.2 Post Commit Optimization | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 5.3 Sweep Clock Roots: Post-Placement
+Phase 5.3 Sweep Clock Roots: Post-Placement | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 5.4 Post Placement Cleanup
+Phase 5.4 Post Placement Cleanup | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 5.5 Placer Reporting
+
+Phase 5.5.1 Restore STA
+Phase 5.5.1 Restore STA | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+Phase 5.5 Placer Reporting | Checksum: 1b5e2f1d6
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+
+Phase 5.6 Final Placement Cleanup
+Phase 5.6 Final Placement Cleanup | Checksum: 195ccc247
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+Phase 5 Post Placement Optimization and Clean-Up | Checksum: 195ccc247
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+Ending Placer Task | Checksum: 1564b6c32
+
+Time (s): cpu = 00:02:45 ; elapsed = 00:02:08 . Memory (MB): peak = 1256.102 ; gain = 157.730
+INFO: [Common 17-83] Releasing license: Implementation
+38 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:59 ; elapsed = 00:02:19 . Memory (MB): peak = 1256.102 ; gain = 159.180
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 1256.102 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1256.102 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1256.102 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.553 . Memory (MB): peak = 1256.102 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1256.102 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+Phase 1 Physical Synthesis Initialization | Checksum: fa5c91c5
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1256.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1256.102 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.969 | TNS=-740.254 |
+
+Phase 2 Fanout Optimization
+INFO: [Physopt 32-76] Pass 1. Identified 25 candidate nets for fanout optimization.
+INFO: [Physopt 32-572] Net ap_reg_ppiten_pp0_it1_reg_rep__1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3645. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it1_reg_rep__0_n_0. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2589. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it0_reg_rep__1_n_0. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3322. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it1_reg_rep_n_0. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3269. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2720. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3170. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3432. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3215. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it0_reg_rep__0_n_0. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3001. Replicated 3 times.
+INFO: [Physopt 32-572] Net ap_sig_bdd_1157 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2544. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3090. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3301. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it0_reg_rep__2_n_0. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_557. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it0_reg_rep_n_0. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2816. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3354. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it0. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3247. Replicated 2 times.
+INFO: [Physopt 32-29] End Pass 1. Optimized 23 nets. Created 60 new instances.
+
+INFO: [Physopt 32-76] Pass 2. Identified 2 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it0_reg_rep__0_n_0_repN. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_21. Replicated 1 times.
+INFO: [Physopt 32-29] End Pass 2. Optimized 2 nets. Created 4 new instances.
+
+INFO: [Physopt 32-76] Pass 3. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-572] Net ap_reg_ppiten_pp0_it0_reg_rep__0_n_0_repN_repN was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-29] End Pass 3. Optimized 0 net. Created 0 new instance.
+
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.969 | TNS=-753.752 |
+Phase 2 Fanout Optimization | Checksum: 1f254f029
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 3 Placement Based Optimization
+INFO: [Physopt 32-660] Identified 100 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net ap_reg_ppiten_pp0_it1_reg_rep__1_n_0.  Did not re-place instance ap_reg_ppiten_pp0_it1_reg_rep__1
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_68.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_604
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_73.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_584
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_228__0_n_0.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_228__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_247__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_247__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_256__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_256__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_42__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_42__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_47__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_47__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_49__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_49__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_639__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_639__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_702__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_702__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11236_out.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_895__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1192_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1192
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_681__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_681__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_874__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_874__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_903__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_903__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_54.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_893
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1144_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1144
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_683__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_683__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11215_out.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_836__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_211__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_211__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_271__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_271__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_280__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_280__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_38__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_38__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_53__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_53__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_55__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_55__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_756__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_756__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11211_out.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1378
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_601__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_601__0
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_736__0_n_0.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_736__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_881__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_881__0
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_933__0_n_0.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_933__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_56.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_571
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_231__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_231__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_263__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_263__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_43__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_43__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_51__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_51__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1048_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1048
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_646__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_646__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_719__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_719__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_888__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_888__0
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_65.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_603
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_223__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_223__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_41__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_41__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1002_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1002
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_628__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_628__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_75.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_487
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_260__0_n_0.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_260__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_50__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_50__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_711__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_711__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1215_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1215
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11210_out.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_847
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_207__0_n_0.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_207__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_37__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_37__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_591__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_591__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_627__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_627__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_934__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_934__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_999_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_999
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11216_out.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_359__0
+INFO: [Physopt 32-663] Processed net ap_sig_bdd_3809.  Re-placed instance ap_CS_fsm_reg[87]
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_239__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_239__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_45__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_45__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_665__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_665__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1031_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1031
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_235__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_235__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_44__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_44__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1072_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1072
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_655__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_655__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_18.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_387
+INFO: [Physopt 32-663] Processed net ap_sig_bdd_2449.  Re-placed instance ap_CS_fsm_reg[33]
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1280_n_0.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1280
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_219__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_219__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_40__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_40__0
+INFO: [Physopt 32-663] Processed net prev_orig_out_2_i_90_reg_34535[1].  Re-placed instance prev_orig_out_2_i_90_reg_34535_reg[1]
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1330_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1330
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_618__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_618__0
+INFO: [Physopt 32-663] Processed net prev_score_out_2_i_64_reg_31867[0].  Re-placed instance prev_score_out_2_i_64_reg_31867_reg[0]
+INFO: [Physopt 32-662] Processed net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_163_n_0.  Did not re-place instance score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_163
+INFO: [Physopt 32-662] Processed net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_32_n_0.  Did not re-place instance score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_32
+INFO: [Physopt 32-662] Processed net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_829_n_0.  Did not re-place instance score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_829
+INFO: [Physopt 32-663] Processed net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_941_n_0.  Re-placed instance score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_941
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_645__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_645__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_43
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_311_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_311
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_283__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_283__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_336_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_336
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_56__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_56__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_85__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_85__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_8_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_8
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1347_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1347
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_763__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_763__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_267__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_267__0
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_52__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_52__0
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1255_n_0.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1255
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_727__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_727__0
+INFO: [Physopt 32-663] Processed net ap_sig_bdd_2354.  Re-placed instance ap_CS_fsm_reg[29]
+INFO: [Physopt 32-663] Processed net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_869_n_0.  Re-placed instance score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_869
+INFO: [Physopt 32-663] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1142_n_0.  Re-placed instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1142
+INFO: [Physopt 32-662] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_682__0_n_0.  Did not re-place instance orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_682__0
+INFO: [Physopt 32-663] Processed net ap_sig_bdd_3486.  Re-placed instance ap_CS_fsm_reg[75]
+INFO: [Physopt 32-661] Optimized 17 nets.  Re-placed 17 instances.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.969 | TNS=-753.151 |
+Phase 3 Placement Based Optimization | Checksum: 1cc103801
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:31 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 4 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-241] No nets found for rewiring (Signal Push) optimization.
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.430 . Memory (MB): peak = 1256.102 ; gain = 0.000
+Phase 4 Rewire | Checksum: 1c5f35523
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:31 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 5 Critical Cell Optimization
+INFO: [Physopt 32-46] Identified 99 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_68 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_73 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_56 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11215_out was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11210_out. Replicated 1 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_75 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_0. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_311_n_0. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_4032. Replicated 5 times.
+INFO: [Physopt 32-572] Net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_65_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net prev_score_out_2_i_64_reg_31867[2]. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_486. Replicated 6 times.
+INFO: [Physopt 32-572] Net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_198_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_81. Replicated 1 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_15 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_19 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net prev_score_out_2_i_64_reg_31867[7]. Replicated 1 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_13 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3978. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_35. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2953. Replicated 6 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_42 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_53 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3841. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_430. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_366. Replicated 5 times.
+INFO: [Physopt 32-572] Net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_199_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_62 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it1_reg_rep__0_n_0. Replicated 1 times.
+INFO: [Physopt 32-601] Processed net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_301__0_n_0. Net driver score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_301__0 was replaced.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3486. Replicated 6 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_61 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_26 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_45_n_0. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net ap_reg_ppiten_pp0_it2_reg_n_0. Replicated 3 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_18 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3922. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3956. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_257. Replicated 4 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_96_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_76 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_6 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3757. Replicated 4 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3809. Replicated 2 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_79 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3599. Replicated 4 times.
+INFO: [Physopt 32-572] Net score1_U/needlemanWunsch_score1_ram_U/ram_reg_i_386_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3056. Replicated 6 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_77_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net ap_reg_ppiten_pp0_it1_reg_rep_n_0_repN_1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2354. Replicated 4 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_794__0_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_382__0_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_65 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_37 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_60 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_34. Replicated 1 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3899. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2401. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_530. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_329_n_0. Replicated 2 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_58 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_314. Replicated 5 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_343_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_786__0_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2636. Replicated 5 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_72 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net prev_score_out_2_i_64_reg_31867[5]. Replicated 1 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_10 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_540. Replicated 3 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2306. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2449. Replicated 4 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_307__0_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_326_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_2863. Replicated 7 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3409. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_4167. Replicated 4 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_593. Replicated 3 times.
+INFO: [Physopt 32-572] Net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_31 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_3865. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_230. Replicated 5 times.
+INFO: [Physopt 32-81] Processed net ap_sig_bdd_648. Replicated 4 times.
+INFO: [Physopt 32-232] Optimized 45 nets. Created 155 new instances.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.969 | TNS=-724.196 |
+Phase 5 Critical Cell Optimization | Checksum: aedba170
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:31 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 6 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+Phase 6 DSP Register Optimization | Checksum: aedba170
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:31 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 7 BRAM Register Optimization
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+Phase 7 BRAM Register Optimization | Checksum: aedba170
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:32 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 8 Shift Register Optimization
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+Phase 8 Shift Register Optimization | Checksum: aedba170
+
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:32 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 9 Critical Pin Optimization
+INFO: [Physopt 32-606] Identified 100 candidate nets for critical-pin optimization.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_256__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-609] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11236_out.  Critical pin optimization did not optimize the net.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_874__0_n_0.  Swapped 7 critical pin.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1144_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_683__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_280__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11215_out.  Swapped 7 critical pin.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_719__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-609] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_888__0_n_0.  Critical pin optimization did not optimize the net.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_628__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_601__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_627__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_239__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11210_out.  Swapped 4 critical pin.
+INFO: [Physopt 32-609] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_75.  Critical pin optimization did not optimize the net.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_711__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_219__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_763__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_655__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1045_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_336_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-609] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_81.  Critical pin optimization did not optimize the net.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_268__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_881__0_n_0.  Swapped 7 critical pin.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_248__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_684__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_693__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_700__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-609] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_15.  Critical pin optimization did not optimize the net.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1282_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_737__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_718__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_19.  Swapped 6 critical pin.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_214__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/score1_address11224_out.  Swapped 6 critical pin.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_267__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_727__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_218__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-613] Processed net orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_611__0_n_0.  Swapped 1 critical pins.
+INFO: [Physopt 32-608] Optimized 35 nets.  Swapped 66 pins.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.912 | TNS=-722.632 |
+Phase 9 Critical Pin Optimization | Checksum: aedba170
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:33 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 10 Very High Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+Phase 10 Very High Fanout Optimization | Checksum: aedba170
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:33 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 11 BRAM Enable Optimization
+Phase 11 BRAM Enable Optimization | Checksum: aedba170
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:33 . Memory (MB): peak = 1256.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.450 . Memory (MB): peak = 1256.102 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-1.912 | TNS=-722.632 |
+Ending Physical Synthesis Task | Checksum: 1a6704eaa
+
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:35 . Memory (MB): peak = 1256.102 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+316 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:02:27 ; elapsed = 00:01:47 . Memory (MB): peak = 1256.102 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 1256.102 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1256.102 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+WARNING: [Route 35-198] Port "read_r_Dout_B[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_B[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_B[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_B[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_A[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_A[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_A[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_A[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_B[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_B[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_B[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_B[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_A[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_A[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_A[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_A[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_A[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_A[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_A[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_A[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_A[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_A[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_A[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_A[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_B[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_B[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_B[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_B[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_WVALID" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_WVALID". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_AWVALID" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_AWVALID". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_BREADY" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_BREADY". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_WDATA[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_WDATA[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_WSTRB[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_WSTRB[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_WDATA[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_WDATA[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_AWADDR[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_AWADDR[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_AWADDR[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_AWADDR[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_AWADDR[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_AWADDR[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_AWADDR[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_AWADDR[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_AWADDR[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_AWADDR[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_ARADDR[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_ARADDR[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_ARADDR[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_ARADDR[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_ARADDR[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_ARADDR[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_ARADDR[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_ARADDR[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_ARADDR[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_ARADDR[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ap_rst_n" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ap_rst_n". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_WDATA[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_WDATA[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_ARVALID" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_ARVALID". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "s_axi_AXILiteS_RREADY" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "s_axi_AXILiteS_RREADY". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_B[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_B[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "read_r_Dout_B[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "read_r_Dout_B[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TVALID" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TVALID". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TDATA[6]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TDATA[6]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TDATA[2]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TDATA[2]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TDATA[4]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TDATA[4]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TDATA[0]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TDATA[0]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TDATA[7]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TDATA[7]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TDATA[3]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TDATA[3]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TDATA[5]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TDATA[5]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "ref_genome_TDATA[1]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "ref_genome_TDATA[1]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+Phase 1 Build RT Design | Checksum: 14c3a7615
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 1256.102 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 14c3a7615
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:33 . Memory (MB): peak = 1257.078 ; gain = 0.977
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 14c3a7615
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:33 . Memory (MB): peak = 1265.063 ; gain = 8.961
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: a121a558
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:44 . Memory (MB): peak = 1310.961 ; gain = 54.859
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.902 | TNS=-545.907| WHS=-0.151 | THS=-209.378|
+
+Phase 2 Router Initialization | Checksum: 178ce35c0
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:48 . Memory (MB): peak = 1314.453 ; gain = 58.352
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1d66f6371
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:52 . Memory (MB): peak = 1314.453 ; gain = 58.352
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 9301
+ Number of Nodes with overlaps = 2094
+ Number of Nodes with overlaps = 830
+ Number of Nodes with overlaps = 276
+ Number of Nodes with overlaps = 91
+ Number of Nodes with overlaps = 65
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 1
+INFO: [Route 35-325] The following overlapped node exist in the design and there is low overall congestion. 
+1. INT_R_X51Y65/IMUX17
+Overlapping nets: 2
+	orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_964_n_0
+	orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_962_n_0
+
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 14a615b2f
+
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:52 . Memory (MB): peak = 1321.117 ; gain = 65.016
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.244 | TNS=-5716.726| WHS=N/A    | THS=N/A    |
+
+
+Phase 4.1.2 GlobIterForTiming
+
+Phase 4.1.2.1 Update Timing
+Phase 4.1.2.1 Update Timing | Checksum: e797b1c6
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:53 . Memory (MB): peak = 1321.117 ; gain = 65.016
+
+Phase 4.1.2.2 Fast Budgeting
+Phase 4.1.2.2 Fast Budgeting | Checksum: cfa3c299
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:01:54 . Memory (MB): peak = 1322.445 ; gain = 66.344
+Phase 4.1.2 GlobIterForTiming | Checksum: 11880e6f4
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:55 . Memory (MB): peak = 1322.445 ; gain = 66.344
+Phase 4.1 Global Iteration 0 | Checksum: 11880e6f4
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:55 . Memory (MB): peak = 1322.445 ; gain = 66.344
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 2496
+ Number of Nodes with overlaps = 1191
+ Number of Nodes with overlaps = 466
+ Number of Nodes with overlaps = 106
+ Number of Nodes with overlaps = 70
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 4
+INFO: [Route 35-325] The following overlapped nodes exist in the design and there is low overall congestion. 
+1. INT_R_X53Y70/IMUX20
+Overlapping nets: 2
+	score1_U/needlemanWunsch_score1_ram_U/ram_reg_6
+	orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_314_n_0
+2. INT_L_X42Y62/IMUX_L43
+Overlapping nets: 2
+	orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_73
+	orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_75
+3. INT_L_X42Y63/IMUX_L1
+Overlapping nets: 2
+	orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_73
+	prev_orig_out_2_i_90_reg_34535[17]
+4. INT_L_X54Y59/NN6BEG1
+Overlapping nets: 2
+	orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_884__0_n_0
+	orig1_U/needlemanWunsch_orig1_ram_U/ram_reg_i_1093_n_0
+
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+
+Phase 4.2.1 Update Timing
+Phase 4.2.1 Update Timing | Checksum: 15fdc153c
+
+Time (s): cpu = 00:03:58 ; elapsed = 00:02:42 . Memory (MB): peak = 1326.488 ; gain = 70.387
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.296 | TNS=-5607.555| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 18cca3812
+
+Time (s): cpu = 00:03:58 ; elapsed = 00:02:42 . Memory (MB): peak = 1326.488 ; gain = 70.387
+Phase 4 Rip-up And Reroute | Checksum: 18cca3812
+
+Time (s): cpu = 00:03:58 ; elapsed = 00:02:42 . Memory (MB): peak = 1326.488 ; gain = 70.387
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 14f52f90f
+
+Time (s): cpu = 00:04:01 ; elapsed = 00:02:44 . Memory (MB): peak = 1326.488 ; gain = 70.387
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.129 | TNS=-5120.625| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 22913f4a5
+
+Time (s): cpu = 00:04:35 ; elapsed = 00:03:02 . Memory (MB): peak = 1356.785 ; gain = 100.684
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 22913f4a5
+
+Time (s): cpu = 00:04:35 ; elapsed = 00:03:02 . Memory (MB): peak = 1356.785 ; gain = 100.684
+Phase 5 Delay and Skew Optimization | Checksum: 22913f4a5
+
+Time (s): cpu = 00:04:35 ; elapsed = 00:03:02 . Memory (MB): peak = 1356.785 ; gain = 100.684
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Update Timing
+Phase 6.1 Update Timing | Checksum: 2438afadc
+
+Time (s): cpu = 00:04:38 ; elapsed = 00:03:04 . Memory (MB): peak = 1356.785 ; gain = 100.684
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.129 | TNS=-4957.717| WHS=-0.032 | THS=-0.055 |
+
+Phase 6 Post Hold Fix | Checksum: 2676ca2cd
+
+Time (s): cpu = 00:04:38 ; elapsed = 00:03:04 . Memory (MB): peak = 1356.785 ; gain = 100.684
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 11.4682 %
+  Global Horizontal Routing Utilization  = 14.0219 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 92.7928%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_R_X63Y84 -> INT_R_X63Y84
+   INT_L_X62Y81 -> INT_L_X62Y81
+   INT_L_X54Y77 -> INT_L_X54Y77
+   INT_R_X59Y76 -> INT_R_X59Y76
+   INT_L_X38Y67 -> INT_L_X38Y67
+South Dir 1x1 Area, Max Cong = 100%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X42Y64 -> INT_L_X42Y64
+   INT_R_X39Y58 -> INT_R_X39Y58
+   INT_L_X38Y54 -> INT_L_X38Y54
+   INT_L_X40Y54 -> INT_L_X40Y54
+   INT_R_X39Y53 -> INT_R_X39Y53
+East Dir 2x2 Area, Max Cong = 90.8088%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X38Y74 -> INT_R_X39Y75
+   INT_L_X40Y74 -> INT_R_X41Y75
+   INT_L_X36Y68 -> INT_R_X37Y69
+   INT_L_X36Y64 -> INT_R_X37Y65
+   INT_L_X38Y62 -> INT_R_X39Y63
+West Dir 1x1 Area, Max Cong = 100%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X62Y88 -> INT_L_X62Y88
+   INT_R_X65Y77 -> INT_R_X65Y77
+   INT_R_X61Y76 -> INT_R_X61Y76
+   INT_R_X41Y75 -> INT_R_X41Y75
+   INT_R_X59Y75 -> INT_R_X59Y75
+Phase 7 Route finalize | Checksum: 1ddec980c
+
+Time (s): cpu = 00:04:39 ; elapsed = 00:03:04 . Memory (MB): peak = 1356.785 ; gain = 100.684
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1ddec980c
+
+Time (s): cpu = 00:04:39 ; elapsed = 00:03:04 . Memory (MB): peak = 1356.785 ; gain = 100.684
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 241835076
+
+Time (s): cpu = 00:04:42 ; elapsed = 00:03:07 . Memory (MB): peak = 1356.785 ; gain = 100.684
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 241835076
+
+Time (s): cpu = 00:04:44 ; elapsed = 00:03:08 . Memory (MB): peak = 1356.785 ; gain = 100.684
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.129 | TNS=-4957.724| WHS=0.049  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 241835076
+
+Time (s): cpu = 00:04:44 ; elapsed = 00:03:08 . Memory (MB): peak = 1356.785 ; gain = 100.684
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:04:44 ; elapsed = 00:03:09 . Memory (MB): peak = 1356.785 ; gain = 100.684
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+334 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:04:56 ; elapsed = 00:03:20 . Memory (MB): peak = 1356.785 ; gain = 100.684
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 1356.785 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 1356.785 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Nathaniel2/hls1121/solution2/impl/verilog/project.runs/impl_1/needlemanWunsch_drc_routed.rpt.
+report_drc: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 1360.309 ; gain = 3.523
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 1360.309 ; gain = 0.000
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1360.309 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 21 11:22:34 2015...

@@ -23,17 +23,17 @@ HLS_SOURCES = ../../../week3_test.c ../../../week3.c
 
 TARGET := csim.exe
 
-AUTOPILOT_ROOT := S:/Xilinx/Vivado_HLS/2015.2
+AUTOPILOT_ROOT := C:/Xilinx/Vivado_HLS/2015.2
 AUTOPILOT_MACH := win64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
   IFLAG += -m32
 endif
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := S:/Xilinx/Vivado_HLS/2015.2/msys/bin
+  AP_GCC_PATH := C:/Xilinx/Vivado_HLS/2015.2/msys/bin
 endif
 ifndef AP_CLANG_PATH
-  AP_CLANG_PATH := S:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin
+  AP_CLANG_PATH := C:/Xilinx/Vivado_HLS/2015.2/win64/tools/clang/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
 AUTOPILOT_TECH := ${AUTOPILOT_ROOT}/common/technology

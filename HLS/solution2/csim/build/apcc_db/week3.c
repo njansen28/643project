@@ -1155,7 +1155,6 @@ unsigned int needlemanWunsch( char *llvm_cbe_read,  char *llvm_cbe_ref_genome) {
   static  unsigned long long aesl_llvm_cbe__2e_1_count = 0;
   unsigned int llvm_cbe__2e_1;
   static  unsigned long long aesl_llvm_cbe_320_count = 0;
-  unsigned int llvm_cbe_tmp__65;
   static  unsigned long long aesl_llvm_cbe_321_count = 0;
   static  unsigned long long aesl_llvm_cbe_322_count = 0;
   static  unsigned long long aesl_llvm_cbe_323_count = 0;
@@ -1164,6 +1163,7 @@ unsigned int needlemanWunsch( char *llvm_cbe_read,  char *llvm_cbe_ref_genome) {
   static  unsigned long long aesl_llvm_cbe_326_count = 0;
   static  unsigned long long aesl_llvm_cbe_327_count = 0;
   static  unsigned long long aesl_llvm_cbe_328_count = 0;
+  unsigned int llvm_cbe_tmp__65;
   static  unsigned long long aesl_llvm_cbe_329_count = 0;
   unsigned long long llvm_cbe_tmp__66;
   static  unsigned long long aesl_llvm_cbe_330_count = 0;
@@ -1198,7 +1198,6 @@ unsigned int needlemanWunsch( char *llvm_cbe_read,  char *llvm_cbe_ref_genome) {
   unsigned int llvm_cbe_tmp__73;
   static  unsigned long long aesl_llvm_cbe_353_count = 0;
   static  unsigned long long aesl_llvm_cbe_354_count = 0;
-  unsigned int llvm_cbe_tmp__74;
   static  unsigned long long aesl_llvm_cbe_355_count = 0;
   static  unsigned long long aesl_llvm_cbe_356_count = 0;
   static  unsigned long long aesl_llvm_cbe_357_count = 0;
@@ -1209,7 +1208,6 @@ unsigned int needlemanWunsch( char *llvm_cbe_read,  char *llvm_cbe_ref_genome) {
   static  unsigned long long aesl_llvm_cbe_362_count = 0;
   static  unsigned long long aesl_llvm_cbe_363_count = 0;
   static  unsigned long long aesl_llvm_cbe_364_count = 0;
-  static  unsigned long long aesl_llvm_cbe_365_count = 0;
 
 const char* AESL_DEBUG_TRACE = getenv("DEBUG_TRACE");
 if (AESL_DEBUG_TRACE)
@@ -1250,20 +1248,20 @@ printf("\n  %%4 = getelementptr inbounds [100 x i20]* %%orig2, i64 0, i64 0, !db
 ]);
 if (AESL_DEBUG_TRACE) {
 }
-  llvm_cbe_storemerge2__PHI_TEMPORARY = (unsigned int )1u;   /* for PHI node */
+  llvm_cbe_storemerge2__PHI_TEMPORARY = (unsigned int )0u;   /* for PHI node */
   llvm_cbe_tmp__56__PHI_TEMPORARY = (unsigned int )((unsigned int )0);   /* for PHI node */
   llvm_cbe_tmp__57__PHI_TEMPORARY = (unsigned int )4294967196u;   /* for PHI node */
-  goto llvm_cbe_tmp__75;
+  goto llvm_cbe_tmp__74;
 
   do {     /* Syntactic loop '' to make GCC happy */
-llvm_cbe_tmp__75:
+llvm_cbe_tmp__74:
 if (AESL_DEBUG_TRACE)
-printf("\n  %%storemerge2 = phi i32 [ 1, %%0 ], [ %%26, %%5  for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_storemerge2_count);
+printf("\n  %%storemerge2 = phi i32 [ 0, %%0 ], [ %%16, %%5  for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_storemerge2_count);
   llvm_cbe_storemerge2 = (unsigned int )llvm_cbe_storemerge2__PHI_TEMPORARY;
 if (AESL_DEBUG_TRACE) {
 printf("\nstoremerge2 = 0x%X",llvm_cbe_storemerge2);
-printf("\n = 0x%X",1u);
-printf("\n = 0x%X",llvm_cbe_tmp__74);
+printf("\n = 0x%X",0u);
+printf("\n = 0x%X",llvm_cbe_tmp__65);
 }
 if (AESL_DEBUG_TRACE)
 printf("\n  %%6 = phi i20 [ 0, %%0 ], [ %%25, %%5  for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_297_count);
@@ -1282,13 +1280,13 @@ printf("\n = 0x%X",4294967196u);
 printf("\n = 0x%X",llvm_cbe_tmp__72);
 }
 if (AESL_DEBUG_TRACE)
-printf("\n  %%8 = add i32 %%storemerge2, -1, !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_299_count);
-  llvm_cbe_tmp__58 = (unsigned int )((unsigned int )(llvm_cbe_storemerge2&4294967295ull)) + ((unsigned int )(4294967295u&4294967295ull));
+printf("\n  %%8 = or i32 %%storemerge2, 1, !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_299_count);
+  llvm_cbe_tmp__58 = (unsigned int )llvm_cbe_storemerge2 | 1u;
 if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", ((unsigned int )(llvm_cbe_tmp__58&4294967295ull)));
+printf("\n = 0x%X\n", llvm_cbe_tmp__58);
 if (AESL_DEBUG_TRACE)
-printf("\n  %%9 = zext i32 %%8 to i64, !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_300_count);
-  llvm_cbe_tmp__59 = (unsigned long long )((unsigned long long )(unsigned int )llvm_cbe_tmp__58&4294967295U);
+printf("\n  %%9 = zext i32 %%storemerge2 to i64, !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_300_count);
+  llvm_cbe_tmp__59 = (unsigned long long )((unsigned long long )(unsigned int )llvm_cbe_storemerge2&4294967295U);
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%I64X\n", llvm_cbe_tmp__59);
 if (AESL_DEBUG_TRACE)
@@ -1303,10 +1301,10 @@ printf("\n  %%11 = load i2* %%10, align 1, !dbg !4 for 0x%I64xth hint within @ne
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__61);
 if (AESL_DEBUG_TRACE)
-printf("\n  %%12 = call zeroext i20 @doRow(i32 %%storemerge2, i2* %%read, i2 zeroext %%11, i8* %%1, i8* %%2, i20* %%3, i20* %%4, i8* %%score_out1), !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_303_count);
-  llvm_cbe_tmp__62 = (unsigned int )doRow(llvm_cbe_storemerge2, ( char *)llvm_cbe_read, llvm_cbe_tmp__61, ( char *)llvm_cbe_tmp__52, ( char *)llvm_cbe_tmp__53, (signed int *)llvm_cbe_tmp__54, (signed int *)llvm_cbe_tmp__55, ( char *)(&llvm_cbe_score_out1));
+printf("\n  %%12 = call zeroext i20 @doRow(i32 %%8, i2* %%read, i2 zeroext %%11, i8* %%1, i8* %%2, i20* %%3, i20* %%4, i8* %%score_out1), !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_303_count);
+  llvm_cbe_tmp__62 = (unsigned int )doRow(llvm_cbe_tmp__58, ( char *)llvm_cbe_read, llvm_cbe_tmp__61, ( char *)llvm_cbe_tmp__52, ( char *)llvm_cbe_tmp__53, (signed int *)llvm_cbe_tmp__54, (signed int *)llvm_cbe_tmp__55, ( char *)(&llvm_cbe_score_out1));
 if (AESL_DEBUG_TRACE) {
-printf("\nArgument storemerge2 = 0x%X",llvm_cbe_storemerge2);
+printf("\nArgument  = 0x%X",llvm_cbe_tmp__58);
 printf("\nArgument  = 0x%X",llvm_cbe_tmp__61);
 printf("\nReturn  = 0x%X",llvm_cbe_tmp__62);
 }
@@ -1331,13 +1329,13 @@ printf("\n  %%.1 = select i1 %%15, i20 %%12, i20 %%6, !dbg !7 for 0x%I64xth hint
 if (AESL_DEBUG_TRACE)
 printf("\n.1 = 0x%X\n", llvm_cbe__2e_1);
 if (AESL_DEBUG_TRACE)
-printf("\n  %%16 = add i32 %%storemerge2, 1, !dbg !7 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_320_count);
-  llvm_cbe_tmp__65 = (unsigned int )((unsigned int )(llvm_cbe_storemerge2&4294967295ull)) + ((unsigned int )(1u&4294967295ull));
+printf("\n  %%16 = add i32 %%storemerge2, 2, !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_328_count);
+  llvm_cbe_tmp__65 = (unsigned int )((unsigned int )(llvm_cbe_storemerge2&4294967295ull)) + ((unsigned int )(2u&4294967295ull));
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", ((unsigned int )(llvm_cbe_tmp__65&4294967295ull)));
 if (AESL_DEBUG_TRACE)
-printf("\n  %%17 = zext i32 %%storemerge2 to i64, !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_329_count);
-  llvm_cbe_tmp__66 = (unsigned long long )((unsigned long long )(unsigned int )llvm_cbe_storemerge2&4294967295U);
+printf("\n  %%17 = zext i32 %%8 to i64, !dbg !4 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_329_count);
+  llvm_cbe_tmp__66 = (unsigned long long )((unsigned long long )(unsigned int )llvm_cbe_tmp__58&4294967295U);
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%I64X\n", llvm_cbe_tmp__66);
 if (AESL_DEBUG_TRACE)
@@ -1379,22 +1377,17 @@ printf("\n  %%25 = select i1 %%23, i20 %%20, i20 %%.1, !dbg !7 for 0x%I64xth hin
   llvm_cbe_tmp__73 = (unsigned int )(((((signed int )llvm_cbe_tmp__71) > ((signed int )llvm_cbe__2e_))) ? ((unsigned int )llvm_cbe_tmp__69) : ((unsigned int )llvm_cbe__2e_1));
 if (AESL_DEBUG_TRACE)
 printf("\n = 0x%X\n", llvm_cbe_tmp__73);
-if (AESL_DEBUG_TRACE)
-printf("\n  %%26 = add i32 %%storemerge2, 2, !dbg !7 for 0x%I64xth hint within @needlemanWunsch  --> \n", ++aesl_llvm_cbe_354_count);
-  llvm_cbe_tmp__74 = (unsigned int )((unsigned int )(llvm_cbe_storemerge2&4294967295ull)) + ((unsigned int )(2u&4294967295ull));
-if (AESL_DEBUG_TRACE)
-printf("\n = 0x%X\n", ((unsigned int )(llvm_cbe_tmp__74&4294967295ull)));
-  if ((((unsigned int )llvm_cbe_tmp__74&4294967295U) < ((unsigned int )1000001u&4294967295U))) {
-    llvm_cbe_storemerge2__PHI_TEMPORARY = (unsigned int )llvm_cbe_tmp__74;   /* for PHI node */
+  if ((((unsigned int )llvm_cbe_tmp__65&4294967295U) < ((unsigned int )1000000u&4294967295U))) {
+    llvm_cbe_storemerge2__PHI_TEMPORARY = (unsigned int )llvm_cbe_tmp__65;   /* for PHI node */
     llvm_cbe_tmp__56__PHI_TEMPORARY = (unsigned int )llvm_cbe_tmp__73;   /* for PHI node */
     llvm_cbe_tmp__57__PHI_TEMPORARY = (unsigned int )llvm_cbe_tmp__72;   /* for PHI node */
-    goto llvm_cbe_tmp__75;
+    goto llvm_cbe_tmp__74;
   } else {
-    goto llvm_cbe_tmp__76;
+    goto llvm_cbe_tmp__75;
   }
 
   } while (1); /* end of syntactic loop '' */
-llvm_cbe_tmp__76:
+llvm_cbe_tmp__75:
   if (AESL_DEBUG_TRACE)
       printf("\nEND @needlemanWunsch}\n");
   return llvm_cbe_tmp__73;

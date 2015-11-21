@@ -15,15 +15,15 @@ set isOneStateSeq 0
 set C_modelName {needlemanWunsch}
 set C_modelType { int 20 }
 set C_modelArgList { 
-	{ read_r int 8 regular {bram 25 { 1 1 } 1 1 }  }
+	{ read_r int 32 regular {bram 7 { 1 } 1 1 }  }
 	{ ref_genome int 8 regular {axi_s 0 volatile  { ref_genome data } }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "read_r", "interface" : "bram", "bitwidth" : 8 ,"direction" : "READONLY" ,"bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 96,"step" : 4}]}]},{"low":2,"up":3,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 1,"up" : 97,"step" : 4}]}]},{"low":4,"up":5,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 2,"up" : 98,"step" : 4}]}]},{"low":6,"up":7,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 3,"up" : 99,"step" : 4}]}]}]} , 
+	{ "Name" : "read_r", "interface" : "bram", "bitwidth" : 32 ,"direction" : "READONLY" ,"bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 96,"step" : 16}]}]},{"low":2,"up":3,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 1,"up" : 97,"step" : 16}]}]},{"low":4,"up":5,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 2,"up" : 98,"step" : 16}]}]},{"low":6,"up":7,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 3,"up" : 99,"step" : 16}]}]},{"low":8,"up":9,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 4,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":10,"up":11,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 5,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":12,"up":13,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 6,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":14,"up":15,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 7,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":16,"up":17,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 8,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":18,"up":19,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 9,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":20,"up":21,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 10,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":22,"up":23,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 11,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":24,"up":25,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 12,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":26,"up":27,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 13,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":28,"up":29,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 14,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]},{"low":30,"up":31,"cElement": [{"cName": "read","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 15,"up" : 99,"step" : 16}]},{"cName": "","cData": "","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "ref_genome", "interface" : "axis", "bitwidth" : 8 ,"direction" : "READONLY" ,"bitSlice":[{"low":0,"up":1,"cElement": [{"cName": "ref_genome","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 0,"up" : 999996,"step" : 4}]}]},{"low":2,"up":3,"cElement": [{"cName": "ref_genome","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 1,"up" : 999997,"step" : 4}]}]},{"low":4,"up":5,"cElement": [{"cName": "ref_genome","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 2,"up" : 999998,"step" : 4}]}]},{"low":6,"up":7,"cElement": [{"cName": "ref_genome","cData": "uint2","bit_use": { "low": 0,"up": 1},"cArray": [{"low" : 3,"up" : 999999,"step" : 4}]}]}]} , 
  	{ "Name" : "ap_return", "interface" : "axi_slave", "bundle":"AXILiteS","type":"ap_none","bitwidth" : 20,"bitSlice":[{"low":0,"up":19,"cElement": [{"cName": "return","cData": "orig_t","bit_use": { "low": 0,"up": 19},"cArray": [{"low" : 0,"up" : 1,"step" : 0}]}]}], "offset" : {"out":16}} ]}
 # RTL Port declarations: 
-set portNum 37
+set portNum 30
 set portList { 
 	{ s_axi_AXILiteS_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_AXILiteS_AWREADY sc_out sc_logic 1 signal -1 } 
@@ -46,18 +46,11 @@ set portList {
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
 	{ read_r_Addr_A sc_out sc_lv 32 signal 0 } 
 	{ read_r_EN_A sc_out sc_logic 1 signal 0 } 
-	{ read_r_WEN_A sc_out sc_lv 1 signal 0 } 
-	{ read_r_Din_A sc_out sc_lv 8 signal 0 } 
-	{ read_r_Dout_A sc_in sc_lv 8 signal 0 } 
+	{ read_r_WEN_A sc_out sc_lv 4 signal 0 } 
+	{ read_r_Din_A sc_out sc_lv 32 signal 0 } 
+	{ read_r_Dout_A sc_in sc_lv 32 signal 0 } 
 	{ read_r_Clk_A sc_out sc_logic 1 signal 0 } 
 	{ read_r_Rst_A sc_out sc_logic 1 signal 0 } 
-	{ read_r_Addr_B sc_out sc_lv 32 signal 0 } 
-	{ read_r_EN_B sc_out sc_logic 1 signal 0 } 
-	{ read_r_WEN_B sc_out sc_lv 1 signal 0 } 
-	{ read_r_Din_B sc_out sc_lv 8 signal 0 } 
-	{ read_r_Dout_B sc_in sc_lv 8 signal 0 } 
-	{ read_r_Clk_B sc_out sc_logic 1 signal 0 } 
-	{ read_r_Rst_B sc_out sc_logic 1 signal 0 } 
 	{ ref_genome_TDATA sc_in sc_lv 8 signal 1 } 
 	{ ref_genome_TVALID sc_in sc_logic 1 invld 1 } 
 	{ ref_genome_TREADY sc_out sc_logic 1 inacc 1 } 
@@ -85,24 +78,17 @@ set NewPortList {[
  	{ "name": "ap_rst_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst_n", "role": "default" }} , 
  	{ "name": "read_r_Addr_A", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "read_r", "role": "Addr_A" }} , 
  	{ "name": "read_r_EN_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "EN_A" }} , 
- 	{ "name": "read_r_WEN_A", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "WEN_A" }} , 
- 	{ "name": "read_r_Din_A", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "read_r", "role": "Din_A" }} , 
- 	{ "name": "read_r_Dout_A", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "read_r", "role": "Dout_A" }} , 
+ 	{ "name": "read_r_WEN_A", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "read_r", "role": "WEN_A" }} , 
+ 	{ "name": "read_r_Din_A", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "read_r", "role": "Din_A" }} , 
+ 	{ "name": "read_r_Dout_A", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "read_r", "role": "Dout_A" }} , 
  	{ "name": "read_r_Clk_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "Clk_A" }} , 
  	{ "name": "read_r_Rst_A", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "Rst_A" }} , 
- 	{ "name": "read_r_Addr_B", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "read_r", "role": "Addr_B" }} , 
- 	{ "name": "read_r_EN_B", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "EN_B" }} , 
- 	{ "name": "read_r_WEN_B", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "WEN_B" }} , 
- 	{ "name": "read_r_Din_B", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "read_r", "role": "Din_B" }} , 
- 	{ "name": "read_r_Dout_B", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "read_r", "role": "Dout_B" }} , 
- 	{ "name": "read_r_Clk_B", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "Clk_B" }} , 
- 	{ "name": "read_r_Rst_B", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "read_r", "role": "Rst_B" }} , 
  	{ "name": "ref_genome_TDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "ref_genome", "role": "TDATA" }} , 
  	{ "name": "ref_genome_TVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "invld", "bundle":{"name": "ref_genome", "role": "TVALID" }} , 
  	{ "name": "ref_genome_TREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "inacc", "bundle":{"name": "ref_genome", "role": "TREADY" }} , 
  	{ "name": "interrupt", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "interrupt", "role": "default" }}  ]}
 set Spec2ImplPortList { 
-	read_r { bram {  { read_r_Addr_A mem_address 1 32 }  { read_r_EN_A mem_ce 1 1 }  { read_r_WEN_A mem_we 1 1 }  { read_r_Din_A mem_din 1 8 }  { read_r_Dout_A mem_dout 0 8 }  { read_r_Clk_A mem_clk 1 1 }  { read_r_Rst_A mem_rst 1 1 }  { read_r_Addr_B mem_address 1 32 }  { read_r_EN_B mem_ce 1 1 }  { read_r_WEN_B mem_we 1 1 }  { read_r_Din_B mem_din 1 8 }  { read_r_Dout_B mem_dout 0 8 }  { read_r_Clk_B mem_clk 1 1 }  { read_r_Rst_B mem_rst 1 1 } } }
+	read_r { bram {  { read_r_Addr_A mem_address 1 32 }  { read_r_EN_A mem_ce 1 1 }  { read_r_WEN_A mem_we 1 4 }  { read_r_Din_A mem_din 1 32 }  { read_r_Dout_A mem_dout 0 32 }  { read_r_Clk_A mem_clk 1 1 }  { read_r_Rst_A mem_rst 1 1 } } }
 	ref_genome { axis {  { ref_genome_TDATA in_data 0 8 }  { ref_genome_TVALID in_vld 0 1 }  { ref_genome_TREADY in_acc 1 1 } } }
 }
 

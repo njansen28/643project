@@ -1,0 +1,8 @@
+<project>
+  <core name="" type="" target="">
+    <kernel name="needlemanWunsch" language="clc" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="256">
+      <port name="s_axi_AXILiteS" mode="slave" range="0x1000" datawidth="20" portType="addressable" base="0x0"/>
+      <compileWorkGroupSize x="0" y="0" z="0"/>
+    </kernel>
+  </core>
+</project>

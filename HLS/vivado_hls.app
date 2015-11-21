@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="643_PE" top="needlemanWunsch">
+<project xmlns="com.autoesl.autopilot.project" name="hls1121" top="needlemanWunsch">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -6,8 +6,8 @@
     </Simulation>
     <files xmlns="">
         <file name="../week3_test.c" sc="0" tb="1" cflags=" "/>
-        <file name="643_PE/week3.c" sc="0" tb="false" cflags=""/>
-        <file name="643_PE/week3.h" sc="0" tb="false" cflags=""/>
+        <file name="hls1121/week3.h" sc="0" tb="false" cflags=""/>
+        <file name="hls1121/week3.c" sc="0" tb="false" cflags=""/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="inactive"/>

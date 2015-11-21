@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>643_PE</name>
+	<name>hls1121</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -29,67 +29,67 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/Nathaniel/643_PE/.apc/.src</location>
+			<location>C:/Users/Nathaniel2/hls1121/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/Nathaniel/643_PE/.apc/.tb</location>
+			<location>C:/Users/Nathaniel2/hls1121/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/Users/Nathaniel/643_PE/solution1/.tcls</location>
+			<location>C:/Users/Nathaniel2/hls1121/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>solution2/constraints</name>
 			<type>2</type>
-			<location>C:/Users/Nathaniel/643_PE/solution2/.tcls</location>
+			<location>C:/Users/Nathaniel2/hls1121/solution2/.tcls</location>
 		</link>
 		<link>
 			<name>source/week3.c</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/week3.c</location>
+			<location>C:/Users/Nathaniel2/hls1121/week3.c</location>
 		</link>
 		<link>
 			<name>source/week3.h</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/week3.h</location>
+			<location>C:/Users/Nathaniel2/hls1121/week3.h</location>
 		</link>
 		<link>
 			<name>testbench/week3_test.c</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/week3_test.c</location>
+			<location>C:/Users/Nathaniel2/hls1121/week3_test.c</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/solution1/solution1.directive</location>
+			<location>C:/Users/Nathaniel2/hls1121/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/solution1/directives.tcl</location>
+			<location>C:/Users/Nathaniel2/hls1121/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/solution1/script.tcl</location>
+			<location>C:/Users/Nathaniel2/hls1121/solution1/script.tcl</location>
 		</link>
 		<link>
 			<name>solution2/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/solution2/solution2.directive</location>
+			<location>C:/Users/Nathaniel2/hls1121/solution2/solution2.directive</location>
 		</link>
 		<link>
 			<name>solution2/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/solution2/directives.tcl</location>
+			<location>C:/Users/Nathaniel2/hls1121/solution2/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution2/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/Nathaniel/643_PE/solution2/script.tcl</location>
+			<location>C:/Users/Nathaniel2/hls1121/solution2/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

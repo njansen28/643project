@@ -1,0 +1,28 @@
+   Build using "C:/Xilinx/Vivado_HLS/2015.2/msys/bin/g++.exe"
+   Compiling apatb_needlemanWunsch.cpp
+   Compiling (apcc) week3.c_pre.c.tb.c
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Running 'c:/Xilinx/Vivado_HLS/2015.2/bin/unwrapped/win64.o/apcc.exe'
+            for user 'Nathaniel2' on host 'nathaniel2-hp' (Windows NT_amd64 version 6.1) on Sat Nov 21 16:37:54 -0500 2015
+            in directory 'C:/Users/Nathaniel2/hls1121/solution2/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+@I [APCC-3] Tmp directory is apcc_db
+@I [APCC-1] APCC is done.
+@I [LIC-101] Checked in feature [HLS]
+   Compiling (apcc) week3_test.c_pre.c.tb.c
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Running 'c:/Xilinx/Vivado_HLS/2015.2/bin/unwrapped/win64.o/apcc.exe'
+            for user 'Nathaniel2' on host 'nathaniel2-hp' (Windows NT_amd64 version 6.1) on Sat Nov 21 16:38:03 -0500 2015
+            in directory 'C:/Users/Nathaniel2/hls1121/solution2/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+C:/Users/Nathaniel2/hls1121/week3_test.c:79:71: warning: format specifies type 'long long' but the argument has type 'unsigned int' [-Wformat]
+   printf("Input file too big!, i=%d, index=%lld, strlen(ref_line)=%lld\n", i, index, strlen(ref_line) - 1);
+                                                                   ~~~^               ~~~~~~~~~~~~~~~~~~~~
+                                                                   %d
+1 warning generated.
+@I [APCC-3] Tmp directory is apcc_db
+@I [APCC-1] APCC is done.
+@I [LIC-101] Checked in feature [HLS]
+   Generating cosim.tv.exe

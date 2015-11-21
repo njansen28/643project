@@ -10,7 +10,7 @@
             <pragma name="ARRAY_RESHAPE">
                 <option name="variable" value="read" positionalBoolean="4"/>
                 <option name="cyclic" value="" positionalBoolean="type"/>
-                <option name="factor" value="4"/>
+                <option name="factor" value="16"/>
                 <option name="dim" value="1"/>
             </pragma>
         </directive>
@@ -46,6 +46,12 @@
         <directive functionName="needlemanWunsch" label="ROW" functionLabel="">
             <pragma name="PIPELINE">
                 <option name="II" value="100"/>
+            </pragma>
+        </directive>
+        <directive functionName="needlemanWunsch" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="read" positionalBoolean="4"/>
+                <option name="core" value="RAM_1P_BRAM"/>
             </pragma>
         </directive>
     </sourceFile>

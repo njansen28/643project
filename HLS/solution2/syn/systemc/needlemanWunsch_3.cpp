@@ -42,13 +42,6 @@ void needlemanWunsch::thread_hdltv_gen() {
         mHdltvinHandle << " , " <<  " \"read_r_Dout_A\" :  \"" << read_r_Dout_A.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"read_r_Clk_A\" :  \"" << read_r_Clk_A.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"read_r_Rst_A\" :  \"" << read_r_Rst_A.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"read_r_Addr_B\" :  \"" << read_r_Addr_B.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"read_r_EN_B\" :  \"" << read_r_EN_B.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"read_r_WEN_B\" :  \"" << read_r_WEN_B.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"read_r_Din_B\" :  \"" << read_r_Din_B.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"read_r_Dout_B\" :  \"" << read_r_Dout_B.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"read_r_Clk_B\" :  \"" << read_r_Clk_B.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"read_r_Rst_B\" :  \"" << read_r_Rst_B.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"ref_genome_TDATA\" :  \"" << ref_genome_TDATA.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"ref_genome_TVALID\" :  \"" << ref_genome_TVALID.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"ref_genome_TREADY\" :  \"" << ref_genome_TREADY.read() << "\" ";

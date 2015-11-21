@@ -1,0 +1,4 @@
+Running: xsim.dir/needlemanWunsch/xsimk.exe -maxdeltaid 10000 -simmode gui -wdb needlemanWunsch.wdb -simrunnum 0 -socket 54532
+Design successfully loaded
+Design Loading Memory Usage: 26760 KB (Peak: 26760 KB)
+Design Loading CPU Usage: 92 ms

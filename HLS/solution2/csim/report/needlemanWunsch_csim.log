@@ -1,16 +1,8 @@
-   Compiling(apcc) ../../../week3_test.c in debug mode
-@I [LIC-101] Checked out feature [HLS]
-@I [HLS-10] Running 's:/Xilinx/Vivado_HLS/2015.2/bin/unwrapped/win64.o/apcc.exe'
-            for user 'Nathaniel' on host 'nathaniel-luxe' (Windows NT_amd64 version 6.1) on Wed Nov 18 20:21:26 -0500 2015
-            in directory 'C:/Users/Nathaniel/643_PE/solution2/csim/build'
-@I [APCC-3] Tmp directory is apcc_db
-@I [APCC-1] APCC is done.
-@I [LIC-101] Checked in feature [HLS]
    Compiling(apcc) ../../../week3.c in debug mode
 @I [LIC-101] Checked out feature [HLS]
-@I [HLS-10] Running 's:/Xilinx/Vivado_HLS/2015.2/bin/unwrapped/win64.o/apcc.exe'
-            for user 'Nathaniel' on host 'nathaniel-luxe' (Windows NT_amd64 version 6.1) on Wed Nov 18 20:21:30 -0500 2015
-            in directory 'C:/Users/Nathaniel/643_PE/solution2/csim/build'
+@I [HLS-10] Running 'c:/Xilinx/Vivado_HLS/2015.2/bin/unwrapped/win64.o/apcc.exe'
+            for user 'Nathaniel2' on host 'nathaniel2-hp' (Windows NT_amd64 version 6.1) on Sat Nov 21 17:07:20 -0500 2015
+            in directory 'C:/Users/Nathaniel2/hls1121/solution2/csim/build'
 @I [APCC-3] Tmp directory is apcc_db
 @I [APCC-1] APCC is done.
 @I [LIC-101] Checked in feature [HLS]
