@@ -59,7 +59,7 @@ with open(filename_out, 'w') as file_out:
 
     file_out.write('\n')
 
-    file_out.write('unsigned char reads[NUM_READS][READ_SIZE/4] = {\n')
+    file_out.write('unsigned int reads[NUM_READS][(READ_SIZE-1)/16+1] = {\n')
     with open(filename_reads, 'r') as file_reads:
         for line in file_reads:
             line = line.strip()
@@ -69,10 +69,10 @@ with open(filename_out, 'w') as file_out:
                 file_out.write('  {\n')
                 i = 0
                 while i < len(line):
-                    string = line[i:min(i+4,len(line))]
+                    string = line[i:min(i+16,len(line))]
                     num = base_pair_quartet(string)
-                    file_out.write('    0x%02x, // %s\n'%(num, string))
-                    i += 4
+                    file_out.write('    0x%08x, // %s\n'%(num, string))
+                    i += 16
                 file_out.write('  },\n')
     file_out.write('};\n')
 
