@@ -38,19 +38,19 @@ with open(filename_out, 'w') as file_out:
 
     file_out.write('\n')
 
-    file_out.write('#define REF_SIZE 1000000\n')
+    file_out.write('#define REF_SIZE 1000\n')
     file_out.write('#define READ_SIZE 100\n')
-    file_out.write('#define NUM_READS 10000\n')
+    file_out.write('#define NUM_READS 1\n')
 
     file_out.write('\n')
 
-    file_out.write('unsigned char __attribute__((aligned(128))) ref_genome[REF_SIZE/4] = {\n')
+    file_out.write('unsigned char __attribute__((aligned(128))) ref_genome[REF_SIZE] = {\n')
     with open(filename_ref_genome, 'r') as file_ref_genome:
         while True:
             string = ''
-            for i in range(4):
-                base_pair = next_base_pair(file_ref_genome)
-                string += base_pair
+            #for i in range(4):
+            base_pair = next_base_pair(file_ref_genome)
+            string += base_pair
             if string == '':
                 break
             num = base_pair_quartet(string)
@@ -59,7 +59,7 @@ with open(filename_out, 'w') as file_out:
 
     file_out.write('\n')
 
-    file_out.write('unsigned char reads[NUM_READS][READ_SIZE/4] = {\n')
+    file_out.write('unsigned char reads[NUM_READS][READ_SIZE] = {\n')
     with open(filename_reads, 'r') as file_reads:
         for line in file_reads:
             line = line.strip()
@@ -69,10 +69,10 @@ with open(filename_out, 'w') as file_out:
                 file_out.write('  {\n')
                 i = 0
                 while i < len(line):
-                    string = line[i:min(i+4,len(line))]
+                    string = line[i:min(i+1,len(line))]
                     num = base_pair_quartet(string)
                     file_out.write('    0x%02x, // %s\n'%(num, string))
-                    i += 4
+                    i += 1
                 file_out.write('  },\n')
     file_out.write('};\n')
 

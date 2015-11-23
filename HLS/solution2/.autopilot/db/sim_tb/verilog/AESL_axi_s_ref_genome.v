@@ -29,17 +29,17 @@ input ready;
 input done;
 
 //------------------------Local signal-------------------
-reg [7 : 0] mem_ref_genome_TDATA [250000 : 0];
+reg [7 : 0] mem_ref_genome_TDATA [100000 : 0];
 initial begin : initialize_mem_ref_genome_TDATA
 	integer i;
-	for (i = 0; i < 250000; i = i + 1) begin
+	for (i = 0; i < 100000; i = i + 1) begin
 		mem_ref_genome_TDATA[i] = 0;
 	end
 end
 wire ref_genome_TDATA_empty;
 wire ref_genome_TDATA_full;
-reg [19 : 0] ref_genome_TDATA_mInPtr = 0;
-reg [19 : 0] ref_genome_TDATA_mOutPtr = 0;
+reg [18 : 0] ref_genome_TDATA_mInPtr = 0;
+reg [18 : 0] ref_genome_TDATA_mOutPtr = 0;
 reg ref_genome_TDATA_mFlag_nEF_hint = 0; // 0: empty hint, 1: full hint
 
 assign TRAN_ref_genome_TDATA = mem_ref_genome_TDATA[ref_genome_TDATA_mOutPtr];
@@ -128,7 +128,7 @@ initial begin : ref_genome_TDATA_read_file_process
       ref_genome_TDATA_mInPtr = 0;
       while (token != "[[/transaction]]"
       ) begin
-          if (ref_genome_TDATA_mInPtr >= 250000) begin
+          if (ref_genome_TDATA_mInPtr >= 100000) begin
               $display("Fifo overflow!");
   	        $finish;
           end

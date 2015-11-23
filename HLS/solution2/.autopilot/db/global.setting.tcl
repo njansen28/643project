@@ -42,7 +42,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
 set SourceFiles {sc {} c ../week3.c}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {C:/Users/Nathaniel2/hls1121/solution2/solution2.directive}
+set DirectiveFile {C:/Users/Nathaniel/643_PE/solution2/solution2.directive}
 set TBFiles {verilog ../week3_test.c bc ../week3_test.c vhdl ../week3_test.c sc ../week3_test.c cas ../week3_test.c c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

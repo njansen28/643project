@@ -2,9 +2,9 @@
 # Webtalk v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # 
-# Start of session at: Sat Nov 21 14:00:47 2015
-# Process ID: 3736
-# Log file: C:/Users/Nathaniel2/Desktop/TOM/SinglePE/SinglePE.sdk/webtalk/webtalk.log
-# Journal file: C:/Users/Nathaniel2/Desktop/TOM/SinglePE/SinglePE.sdk/webtalk\webtalk.jou
+# Start of session at: Sun Nov 22 15:08:45 2015
+# Process ID: 13324
+# Log file: S:/Documents/CMU/Masters-Fall/18643/643project/SinglePE/SinglePE.sdk/webtalk/webtalk.log
+# Journal file: S:/Documents/CMU/Masters-Fall/18643/643project/SinglePE/SinglePE.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

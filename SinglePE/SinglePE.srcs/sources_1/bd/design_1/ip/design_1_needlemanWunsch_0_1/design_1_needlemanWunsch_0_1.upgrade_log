@@ -1,4 +1,301 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Sun Nov 22 19:09:53 2015
+| Host         : Nathaniel-Luxe running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_needlemanWunsch_0_1 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511221846) to (Rev. 1511221908)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Sun Nov 22 18:47:11 2015
+| Host         : Nathaniel-Luxe running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_needlemanWunsch_0_1 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511221801) to (Rev. 1511221846)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Sun Nov 22 18:03:35 2015
+| Host         : Nathaniel-Luxe running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_needlemanWunsch_0_1 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511221732) to (Rev. 1511221801)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Sun Nov 22 17:38:11 2015
+| Host         : Nathaniel-Luxe running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_needlemanWunsch_0_1 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511221648) to (Rev. 1511221732)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Sun Nov 22 16:49:33 2015
+| Host         : Nathaniel-Luxe running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_needlemanWunsch_0_1 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511221409) to (Rev. 1511221648)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_needlemanWunsch_0_1'. These changes may impact your design.
+
+
+-upgraded port 'read_r_Din_A' width 32 differs from original width 128
+-upgraded port 'read_r_Dout_A' width 32 differs from original width 128
+-upgraded port 'read_r_WEN_A' width 4 differs from original width 16
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Sun Nov 22 14:10:41 2015
+| Host         : Nathaniel-Luxe running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_needlemanWunsch_0_1 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511221228) to (Rev. 1511221409)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'design_1_needlemanWunsch_0_1'.
+
+
+-upgrade has removed interface 'ap_ctrl'
+-upgrade has removed interface 'ap_return'
+-upgrade has removed interface 'ap_rst'
+-upgrade has removed interface 'read_r_address0'
+-upgrade has removed interface 'read_r_q0'
+-upgrade has removed interface 'ref_genome_address0'
+-upgrade has removed interface 'ref_genome_q0'
+-upgrade has added interface 'ap_rst_n'
+-upgrade has added interface 'interrupt'
+-upgrade has added interface 'read_r_PORTA'
+-upgrade has added interface 'ref_genome'
+-upgrade has added interface 's_axi_AXILiteS'
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_needlemanWunsch_0_1'. These changes may impact your design.
+
+
+-upgrade has removed port 'ap_done'
+-upgrade has removed port 'ap_idle'
+-upgrade has removed port 'ap_ready'
+-upgrade has removed port 'ap_return'
+-upgrade has removed port 'ap_rst'
+-upgrade has removed port 'ap_start'
+-upgrade has removed port 'read_r_address0'
+-upgrade has removed port 'read_r_ce0'
+-upgrade has removed port 'read_r_q0'
+-upgrade has removed port 'ref_genome_address0'
+-upgrade has removed port 'ref_genome_ce0'
+-upgrade has removed port 'ref_genome_q0'
+-upgrade has added port 'ap_rst_n'
+-upgrade has added port 'interrupt'
+-upgrade has added port 'read_r_Addr_A'
+-upgrade has added port 'read_r_Clk_A'
+-upgrade has added port 'read_r_Din_A'
+-upgrade has added port 'read_r_Dout_A'
+-upgrade has added port 'read_r_EN_A'
+-upgrade has added port 'read_r_Rst_A'
+-upgrade has added port 'read_r_WEN_A'
+-upgrade has added port 'ref_genome_TDATA'
+-upgrade has added port 'ref_genome_TREADY'
+-upgrade has added port 'ref_genome_TVALID'
+-upgrade has added port 's_axi_AXILiteS_ARADDR'
+-upgrade has added port 's_axi_AXILiteS_ARREADY'
+-upgrade has added port 's_axi_AXILiteS_ARVALID'
+-upgrade has added port 's_axi_AXILiteS_AWADDR'
+-upgrade has added port 's_axi_AXILiteS_AWREADY'
+-upgrade has added port 's_axi_AXILiteS_AWVALID'
+-upgrade has added port 's_axi_AXILiteS_BREADY'
+-upgrade has added port 's_axi_AXILiteS_BRESP'
+-upgrade has added port 's_axi_AXILiteS_BVALID'
+-upgrade has added port 's_axi_AXILiteS_RDATA'
+-upgrade has added port 's_axi_AXILiteS_RREADY'
+-upgrade has added port 's_axi_AXILiteS_RRESP'
+-upgrade has added port 's_axi_AXILiteS_RVALID'
+-upgrade has added port 's_axi_AXILiteS_WDATA'
+-upgrade has added port 's_axi_AXILiteS_WREADY'
+-upgrade has added port 's_axi_AXILiteS_WSTRB'
+-upgrade has added port 's_axi_AXILiteS_WVALID'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date         : Sun Nov 22 12:31:25 2015
+| Host         : Nathaniel-Luxe running 64-bit Service Pack 1  (build 7601)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_needlemanWunsch_0_1 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511211155) to (Rev. 1511221228)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'design_1_needlemanWunsch_0_1'.
+
+
+-upgrade has removed interface 'ap_rst_n'
+-upgrade has removed interface 'interrupt'
+-upgrade has removed interface 'read_r_PORTA'
+-upgrade has removed interface 'ref_genome'
+-upgrade has removed interface 's_axi_AXILiteS'
+-upgrade has added interface 'ap_ctrl'
+-upgrade has added interface 'ap_return'
+-upgrade has added interface 'ap_rst'
+-upgrade has added interface 'read_r_address0'
+-upgrade has added interface 'read_r_q0'
+-upgrade has added interface 'ref_genome_address0'
+-upgrade has added interface 'ref_genome_q0'
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_needlemanWunsch_0_1'. These changes may impact your design.
+
+
+-upgrade has removed port 'ap_rst_n'
+-upgrade has removed port 'interrupt'
+-upgrade has removed port 'read_r_Addr_A'
+-upgrade has removed port 'read_r_Clk_A'
+-upgrade has removed port 'read_r_Din_A'
+-upgrade has removed port 'read_r_Dout_A'
+-upgrade has removed port 'read_r_EN_A'
+-upgrade has removed port 'read_r_Rst_A'
+-upgrade has removed port 'read_r_WEN_A'
+-upgrade has removed port 'ref_genome_TDATA'
+-upgrade has removed port 'ref_genome_TREADY'
+-upgrade has removed port 'ref_genome_TVALID'
+-upgrade has removed port 's_axi_AXILiteS_ARADDR'
+-upgrade has removed port 's_axi_AXILiteS_ARREADY'
+-upgrade has removed port 's_axi_AXILiteS_ARVALID'
+-upgrade has removed port 's_axi_AXILiteS_AWADDR'
+-upgrade has removed port 's_axi_AXILiteS_AWREADY'
+-upgrade has removed port 's_axi_AXILiteS_AWVALID'
+-upgrade has removed port 's_axi_AXILiteS_BREADY'
+-upgrade has removed port 's_axi_AXILiteS_BRESP'
+-upgrade has removed port 's_axi_AXILiteS_BVALID'
+-upgrade has removed port 's_axi_AXILiteS_RDATA'
+-upgrade has removed port 's_axi_AXILiteS_RREADY'
+-upgrade has removed port 's_axi_AXILiteS_RRESP'
+-upgrade has removed port 's_axi_AXILiteS_RVALID'
+-upgrade has removed port 's_axi_AXILiteS_WDATA'
+-upgrade has removed port 's_axi_AXILiteS_WREADY'
+-upgrade has removed port 's_axi_AXILiteS_WSTRB'
+-upgrade has removed port 's_axi_AXILiteS_WVALID'
+-upgrade has added port 'ap_done'
+-upgrade has added port 'ap_idle'
+-upgrade has added port 'ap_ready'
+-upgrade has added port 'ap_return'
+-upgrade has added port 'ap_rst'
+-upgrade has added port 'ap_start'
+-upgrade has added port 'read_r_address0'
+-upgrade has added port 'read_r_ce0'
+-upgrade has added port 'read_r_q0'
+-upgrade has added port 'ref_genome_address0'
+-upgrade has added port 'ref_genome_ce0'
+-upgrade has added port 'ref_genome_q0'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
 | Date         : Sat Nov 21 11:57:59 2015

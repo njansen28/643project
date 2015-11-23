@@ -20,6 +20,8 @@
 #define TIMER_PRESCALE  1
 #define TIMER_PERIOD    3.0e-9 // 333.3MHz = 3 nanoseconds
 
+#define ACTUAL_READS 1000
+
 XAxiDma AxiDma;
 XScuTimer Timer;		/* Cortex A9 SCU Private Timer Instance */
 XNeedlemanwunsch PE;
@@ -35,9 +37,10 @@ int main(void) {
     xil_printf("Starting\r\n");
 
     int Status;
+    int i;
     u32 start_time;
     u32 end_time;
-    u32 return_val;
+    u32 return_val[ACTUAL_READS];
 
     // Initialize DMA
     Status = DMA_init(DMA_DEV_ID);
@@ -53,6 +56,8 @@ int main(void) {
         return XST_FAILURE;
     }
 
+    XNeedlemanwunsch_DisableAutoRestart(&PE);
+
     // Initialize timer with maximum value so we can see how far down it
     // goes. It should last about 12 seconds before hitting zero.
     Timer_init(TIMER_DEV_ID);
@@ -66,45 +71,53 @@ int main(void) {
 
 
     XScuTimer_Start(&Timer);
-    DMA_send();
-    writeRead(0, 0);
 
-    // TODO try single read
+    for (i=0; i<ACTUAL_READS; i++) {
+    	DMA_send();
+    	writeRead(0, i);
+
+		while(!XNeedlemanwunsch_IsIdle(&PE) && !XNeedlemanwunsch_IsReady(&PE)) {
+			xil_printf("Waiting for idle/ready\r\n");
+		}
+		XNeedlemanwunsch_Start(&PE);
+		//if (XNeedlemanwunsch_IsIdle(&PE) || XNeedlemanwunsch_IsReady(&PE)) {
+			//xil_printf("Is still idle/ready\r\n");
+		//}
+		while(!XNeedlemanwunsch_IsDone(&PE) /*&& !XNeedlemanwunsch_IsIdle(&PE) && !XNeedlemanwunsch_IsReady(&PE)*/) {
+
+		}
+
+		return_val[i] = XNeedlemanwunsch_Get_return(&PE);
+    }
 
     XScuTimer_Stop(&Timer);
     end_time = XScuTimer_GetCounterValue(&Timer);
 
-    // TODO read result, check correctness
-    while(!XNeedlemanwunsch_IsIdle(&PE) && !XNeedlemanwunsch_IsReady(&PE)) {
-    	xil_printf("Waiting for idle/ready\r\n");
+    xil_printf("Done\r\n");
+    for (i=0; i<ACTUAL_READS; i++) {
+    	xil_printf("read %d best fit at %d\r\n", i, return_val[i]);
     }
-    XNeedlemanwunsch_Start(&PE);
-    if (XNeedlemanwunsch_IsIdle(&PE) || XNeedlemanwunsch_IsReady(&PE)) {
-    	xil_printf("Is still idle/ready\r\n");
-    }
-    while(!XNeedlemanwunsch_IsDone(&PE) && !XNeedlemanwunsch_IsIdle(&PE) && !XNeedlemanwunsch_IsReady(&PE)) {
-
-    }
-    return_val = XNeedlemanwunsch_Get_return(&PE);
-
 
     print_time(start_time, end_time);
-
-    xil_printf("Done %d\r\n", return_val);
     return 0;
 }
 
 void writeRead(int pe_num, int read_num) {
 	int i;
-	for (i=0; i<7;i++) {
-		XBram_Out32(XPAR_BRAM_0_BASEADDR + i*4, reads[read_num][i]);
+	for (i=0; i<100;i++) {
+		XBram_Out8(XPAR_BRAM_0_BASEADDR + i, reads[read_num][i]);
 	}
 }
 
 void print_time(u32 start_time, u32 end_time) {
-	u32 length = start_time - end_time;
+	int whole, thousandths;
+
+
+	u32 length = (u32)(0xFFFFFFFF) - end_time;
 	float time = length * TIMER_PERIOD;
-	xil_printf("Time: %g seconds", time);
+	whole = time;
+	thousandths = (time - (float)whole)*1000.0;
+	xil_printf("Time: %d.%03d seconds\r\n", whole, thousandths);
 }
 
 int DMA_send(void) {
@@ -113,11 +126,11 @@ int DMA_send(void) {
     //DMA_wait();
 
     Status = XAxiDma_SimpleTransfer(&AxiDma,(u32)&(ref_genome[0]),
-            sizeof(ref_genome), XAXIDMA_DMA_TO_DEVICE);
+            100000/*sizeof(ref_genome)*/, XAXIDMA_DMA_TO_DEVICE);
 
     if (Status != XST_SUCCESS) {
     	xil_printf("address = %X\r\n", (u32)&(ref_genome[0]));
-    	xil_printf("size = %d\r\n", sizeof(ref_genome)*4);
+    	xil_printf("size = %d\r\n", sizeof(ref_genome));
         xil_printf("DMA_send failed: %d\r\n", Status);
         return XST_FAILURE;
     }

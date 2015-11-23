@@ -1,13 +1,13 @@
-; ModuleID = 'C:/Users/Nathaniel2/hls1121/solution2/.autopilot/db/a.o.2.bc'
+; ModuleID = 'C:/Users/Nathaniel/643_PE/solution2/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-w64-mingw32"
 
 @p_str = private unnamed_addr constant [1 x i8] zeroinitializer, align 1
 @p_str2 = private unnamed_addr constant [12 x i8] c"RAM_1P_BRAM\00", align 1
-@p_str4 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
-@p_str5 = private unnamed_addr constant [10 x i8] c"s_axilite\00", align 1
+@p_str3 = private unnamed_addr constant [5 x i8] c"bram\00", align 1
+@p_str4 = private unnamed_addr constant [10 x i8] c"s_axilite\00", align 1
 @p_str6 = private unnamed_addr constant [5 x i8] c"axis\00", align 1
-@p_str7 = private unnamed_addr constant [4 x i8] c"ROW\00", align 1
+@p_str8 = private unnamed_addr constant [4 x i8] c"ROW\00", align 1
 @needlemanWunsch_str = internal unnamed_addr constant [16 x i8] c"needlemanWunsch\00"
 
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
@@ -59,27 +59,27 @@ entry:
   ret i32 0
 }
 
-define weak i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32, i32, i32) nounwind readnone {
+define weak i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32, i32, i32) nounwind readnone {
 entry:
   %empty = call i32 @llvm.part.select.i32(i32 %0, i32 %1, i32 %2)
-  %empty_7 = trunc i32 %empty to i2
-  ret i2 %empty_7
+  %empty_5 = trunc i32 %empty to i8
+  ret i8 %empty_5
 }
 
-define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
-  call void (...)* @_ssdm_op_SpecBitsMap([7 x i32]* %read_r), !map !0
-  call void (...)* @_ssdm_op_SpecBitsMap(i8* %ref_genome), !map !84
-  call void (...)* @_ssdm_op_SpecBitsMap(i20 0) nounwind, !map !105
+define i20 @needlemanWunsch([25 x i32]* %read_r, i8* %ref_genome) {
+  call void (...)* @_ssdm_op_SpecBitsMap([25 x i32]* %read_r), !map !0
+  call void (...)* @_ssdm_op_SpecBitsMap(i8* %ref_genome), !map !21
+  call void (...)* @_ssdm_op_SpecBitsMap(i20 0) nounwind, !map !27
   call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @needlemanWunsch_str) nounwind
   %score1 = alloca [100 x i8], align 16
   %orig1 = alloca [100 x i20], align 16
-  call void (...)* @_ssdm_op_SpecMemCore([7 x i32]* %read_r, [1 x i8]* @p_str, [12 x i8]* @p_str2, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
-  call void (...)* @_ssdm_op_SpecInterface([7 x i32]* %read_r, [5 x i8]* @p_str4, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str5, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
-  call void (...)* @_ssdm_op_SpecInterface(i8* %ref_genome, [5 x i8]* @p_str6, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+  call void (...)* @_ssdm_op_SpecMemCore([25 x i32]* %read_r, [1 x i8]* @p_str, [12 x i8]* @p_str2, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+  call void (...)* @_ssdm_op_SpecInterface([25 x i32]* %read_r, [5 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str4, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+  call void (...)* @_ssdm_op_SpecInterface(i8* %ref_genome, [5 x i8]* @p_str6, i32 0, i32 0, i32 0, i32 1000000, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
   %score1_addr = getelementptr [100 x i8]* %score1, i64 0, i64 0
   %orig1_addr = getelementptr [100 x i20]* %orig1, i64 0, i64 0
-  %read_addr = getelementptr [7 x i32]* %read_r, i64 0, i64 0
+  %read_r_addr = getelementptr [25 x i32]* %read_r, i64 0, i64 0
   %score1_addr_1 = getelementptr [100 x i8]* %score1, i64 0, i64 1
   %orig1_addr_1 = getelementptr [100 x i20]* %orig1, i64 0, i64 1
   %score1_addr_2 = getelementptr [100 x i8]* %score1, i64 0, i64 2
@@ -88,6 +88,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_3 = getelementptr [100 x i20]* %orig1, i64 0, i64 3
   %score1_addr_4 = getelementptr [100 x i8]* %score1, i64 0, i64 4
   %orig1_addr_4 = getelementptr [100 x i20]* %orig1, i64 0, i64 4
+  %read_r_addr_1 = getelementptr [25 x i32]* %read_r, i64 0, i64 1
   %score1_addr_5 = getelementptr [100 x i8]* %score1, i64 0, i64 5
   %orig1_addr_5 = getelementptr [100 x i20]* %orig1, i64 0, i64 5
   %score1_addr_6 = getelementptr [100 x i8]* %score1, i64 0, i64 6
@@ -96,6 +97,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_7 = getelementptr [100 x i20]* %orig1, i64 0, i64 7
   %score1_addr_8 = getelementptr [100 x i8]* %score1, i64 0, i64 8
   %orig1_addr_8 = getelementptr [100 x i20]* %orig1, i64 0, i64 8
+  %read_r_addr_2 = getelementptr [25 x i32]* %read_r, i64 0, i64 2
   %score1_addr_9 = getelementptr [100 x i8]* %score1, i64 0, i64 9
   %orig1_addr_9 = getelementptr [100 x i20]* %orig1, i64 0, i64 9
   %score1_addr_10 = getelementptr [100 x i8]* %score1, i64 0, i64 10
@@ -104,6 +106,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_11 = getelementptr [100 x i20]* %orig1, i64 0, i64 11
   %score1_addr_12 = getelementptr [100 x i8]* %score1, i64 0, i64 12
   %orig1_addr_12 = getelementptr [100 x i20]* %orig1, i64 0, i64 12
+  %read_r_addr_3 = getelementptr [25 x i32]* %read_r, i64 0, i64 3
   %score1_addr_13 = getelementptr [100 x i8]* %score1, i64 0, i64 13
   %orig1_addr_13 = getelementptr [100 x i20]* %orig1, i64 0, i64 13
   %score1_addr_14 = getelementptr [100 x i8]* %score1, i64 0, i64 14
@@ -112,7 +115,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_15 = getelementptr [100 x i20]* %orig1, i64 0, i64 15
   %score1_addr_16 = getelementptr [100 x i8]* %score1, i64 0, i64 16
   %orig1_addr_16 = getelementptr [100 x i20]* %orig1, i64 0, i64 16
-  %read_addr_1 = getelementptr [7 x i32]* %read_r, i64 0, i64 1
+  %read_r_addr_4 = getelementptr [25 x i32]* %read_r, i64 0, i64 4
   %score1_addr_17 = getelementptr [100 x i8]* %score1, i64 0, i64 17
   %orig1_addr_17 = getelementptr [100 x i20]* %orig1, i64 0, i64 17
   %score1_addr_18 = getelementptr [100 x i8]* %score1, i64 0, i64 18
@@ -121,6 +124,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_19 = getelementptr [100 x i20]* %orig1, i64 0, i64 19
   %score1_addr_20 = getelementptr [100 x i8]* %score1, i64 0, i64 20
   %orig1_addr_20 = getelementptr [100 x i20]* %orig1, i64 0, i64 20
+  %read_r_addr_5 = getelementptr [25 x i32]* %read_r, i64 0, i64 5
   %score1_addr_21 = getelementptr [100 x i8]* %score1, i64 0, i64 21
   %orig1_addr_21 = getelementptr [100 x i20]* %orig1, i64 0, i64 21
   %score1_addr_22 = getelementptr [100 x i8]* %score1, i64 0, i64 22
@@ -129,6 +133,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_23 = getelementptr [100 x i20]* %orig1, i64 0, i64 23
   %score1_addr_24 = getelementptr [100 x i8]* %score1, i64 0, i64 24
   %orig1_addr_24 = getelementptr [100 x i20]* %orig1, i64 0, i64 24
+  %read_r_addr_6 = getelementptr [25 x i32]* %read_r, i64 0, i64 6
   %score1_addr_25 = getelementptr [100 x i8]* %score1, i64 0, i64 25
   %orig1_addr_25 = getelementptr [100 x i20]* %orig1, i64 0, i64 25
   %score1_addr_26 = getelementptr [100 x i8]* %score1, i64 0, i64 26
@@ -137,6 +142,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_27 = getelementptr [100 x i20]* %orig1, i64 0, i64 27
   %score1_addr_28 = getelementptr [100 x i8]* %score1, i64 0, i64 28
   %orig1_addr_28 = getelementptr [100 x i20]* %orig1, i64 0, i64 28
+  %read_r_addr_7 = getelementptr [25 x i32]* %read_r, i64 0, i64 7
   %score1_addr_29 = getelementptr [100 x i8]* %score1, i64 0, i64 29
   %orig1_addr_29 = getelementptr [100 x i20]* %orig1, i64 0, i64 29
   %score1_addr_30 = getelementptr [100 x i8]* %score1, i64 0, i64 30
@@ -145,7 +151,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_31 = getelementptr [100 x i20]* %orig1, i64 0, i64 31
   %score1_addr_32 = getelementptr [100 x i8]* %score1, i64 0, i64 32
   %orig1_addr_32 = getelementptr [100 x i20]* %orig1, i64 0, i64 32
-  %read_addr_2 = getelementptr [7 x i32]* %read_r, i64 0, i64 2
+  %read_r_addr_8 = getelementptr [25 x i32]* %read_r, i64 0, i64 8
   %score1_addr_33 = getelementptr [100 x i8]* %score1, i64 0, i64 33
   %orig1_addr_33 = getelementptr [100 x i20]* %orig1, i64 0, i64 33
   %score1_addr_34 = getelementptr [100 x i8]* %score1, i64 0, i64 34
@@ -154,6 +160,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_35 = getelementptr [100 x i20]* %orig1, i64 0, i64 35
   %score1_addr_36 = getelementptr [100 x i8]* %score1, i64 0, i64 36
   %orig1_addr_36 = getelementptr [100 x i20]* %orig1, i64 0, i64 36
+  %read_r_addr_9 = getelementptr [25 x i32]* %read_r, i64 0, i64 9
   %score1_addr_37 = getelementptr [100 x i8]* %score1, i64 0, i64 37
   %orig1_addr_37 = getelementptr [100 x i20]* %orig1, i64 0, i64 37
   %score1_addr_38 = getelementptr [100 x i8]* %score1, i64 0, i64 38
@@ -162,6 +169,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_39 = getelementptr [100 x i20]* %orig1, i64 0, i64 39
   %score1_addr_40 = getelementptr [100 x i8]* %score1, i64 0, i64 40
   %orig1_addr_40 = getelementptr [100 x i20]* %orig1, i64 0, i64 40
+  %read_r_addr_10 = getelementptr [25 x i32]* %read_r, i64 0, i64 10
   %score1_addr_41 = getelementptr [100 x i8]* %score1, i64 0, i64 41
   %orig1_addr_41 = getelementptr [100 x i20]* %orig1, i64 0, i64 41
   %score1_addr_42 = getelementptr [100 x i8]* %score1, i64 0, i64 42
@@ -170,6 +178,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_43 = getelementptr [100 x i20]* %orig1, i64 0, i64 43
   %score1_addr_44 = getelementptr [100 x i8]* %score1, i64 0, i64 44
   %orig1_addr_44 = getelementptr [100 x i20]* %orig1, i64 0, i64 44
+  %read_r_addr_11 = getelementptr [25 x i32]* %read_r, i64 0, i64 11
   %score1_addr_45 = getelementptr [100 x i8]* %score1, i64 0, i64 45
   %orig1_addr_45 = getelementptr [100 x i20]* %orig1, i64 0, i64 45
   %score1_addr_46 = getelementptr [100 x i8]* %score1, i64 0, i64 46
@@ -178,7 +187,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_47 = getelementptr [100 x i20]* %orig1, i64 0, i64 47
   %score1_addr_48 = getelementptr [100 x i8]* %score1, i64 0, i64 48
   %orig1_addr_48 = getelementptr [100 x i20]* %orig1, i64 0, i64 48
-  %read_addr_3 = getelementptr [7 x i32]* %read_r, i64 0, i64 3
+  %read_r_addr_12 = getelementptr [25 x i32]* %read_r, i64 0, i64 12
   %score1_addr_49 = getelementptr [100 x i8]* %score1, i64 0, i64 49
   %orig1_addr_49 = getelementptr [100 x i20]* %orig1, i64 0, i64 49
   %score1_addr_50 = getelementptr [100 x i8]* %score1, i64 0, i64 50
@@ -187,6 +196,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_51 = getelementptr [100 x i20]* %orig1, i64 0, i64 51
   %score1_addr_52 = getelementptr [100 x i8]* %score1, i64 0, i64 52
   %orig1_addr_52 = getelementptr [100 x i20]* %orig1, i64 0, i64 52
+  %read_r_addr_13 = getelementptr [25 x i32]* %read_r, i64 0, i64 13
   %score1_addr_53 = getelementptr [100 x i8]* %score1, i64 0, i64 53
   %orig1_addr_53 = getelementptr [100 x i20]* %orig1, i64 0, i64 53
   %score1_addr_54 = getelementptr [100 x i8]* %score1, i64 0, i64 54
@@ -195,6 +205,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_55 = getelementptr [100 x i20]* %orig1, i64 0, i64 55
   %score1_addr_56 = getelementptr [100 x i8]* %score1, i64 0, i64 56
   %orig1_addr_56 = getelementptr [100 x i20]* %orig1, i64 0, i64 56
+  %read_r_addr_14 = getelementptr [25 x i32]* %read_r, i64 0, i64 14
   %score1_addr_57 = getelementptr [100 x i8]* %score1, i64 0, i64 57
   %orig1_addr_57 = getelementptr [100 x i20]* %orig1, i64 0, i64 57
   %score1_addr_58 = getelementptr [100 x i8]* %score1, i64 0, i64 58
@@ -203,6 +214,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_59 = getelementptr [100 x i20]* %orig1, i64 0, i64 59
   %score1_addr_60 = getelementptr [100 x i8]* %score1, i64 0, i64 60
   %orig1_addr_60 = getelementptr [100 x i20]* %orig1, i64 0, i64 60
+  %read_r_addr_15 = getelementptr [25 x i32]* %read_r, i64 0, i64 15
   %score1_addr_61 = getelementptr [100 x i8]* %score1, i64 0, i64 61
   %orig1_addr_61 = getelementptr [100 x i20]* %orig1, i64 0, i64 61
   %score1_addr_62 = getelementptr [100 x i8]* %score1, i64 0, i64 62
@@ -211,7 +223,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_63 = getelementptr [100 x i20]* %orig1, i64 0, i64 63
   %score1_addr_64 = getelementptr [100 x i8]* %score1, i64 0, i64 64
   %orig1_addr_64 = getelementptr [100 x i20]* %orig1, i64 0, i64 64
-  %read_addr_4 = getelementptr [7 x i32]* %read_r, i64 0, i64 4
+  %read_r_addr_16 = getelementptr [25 x i32]* %read_r, i64 0, i64 16
   %score1_addr_65 = getelementptr [100 x i8]* %score1, i64 0, i64 65
   %orig1_addr_65 = getelementptr [100 x i20]* %orig1, i64 0, i64 65
   %score1_addr_66 = getelementptr [100 x i8]* %score1, i64 0, i64 66
@@ -220,6 +232,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_67 = getelementptr [100 x i20]* %orig1, i64 0, i64 67
   %score1_addr_68 = getelementptr [100 x i8]* %score1, i64 0, i64 68
   %orig1_addr_68 = getelementptr [100 x i20]* %orig1, i64 0, i64 68
+  %read_r_addr_17 = getelementptr [25 x i32]* %read_r, i64 0, i64 17
   %score1_addr_69 = getelementptr [100 x i8]* %score1, i64 0, i64 69
   %orig1_addr_69 = getelementptr [100 x i20]* %orig1, i64 0, i64 69
   %score1_addr_70 = getelementptr [100 x i8]* %score1, i64 0, i64 70
@@ -228,6 +241,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_71 = getelementptr [100 x i20]* %orig1, i64 0, i64 71
   %score1_addr_72 = getelementptr [100 x i8]* %score1, i64 0, i64 72
   %orig1_addr_72 = getelementptr [100 x i20]* %orig1, i64 0, i64 72
+  %read_r_addr_18 = getelementptr [25 x i32]* %read_r, i64 0, i64 18
   %score1_addr_73 = getelementptr [100 x i8]* %score1, i64 0, i64 73
   %orig1_addr_73 = getelementptr [100 x i20]* %orig1, i64 0, i64 73
   %score1_addr_74 = getelementptr [100 x i8]* %score1, i64 0, i64 74
@@ -236,6 +250,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_75 = getelementptr [100 x i20]* %orig1, i64 0, i64 75
   %score1_addr_76 = getelementptr [100 x i8]* %score1, i64 0, i64 76
   %orig1_addr_76 = getelementptr [100 x i20]* %orig1, i64 0, i64 76
+  %read_r_addr_19 = getelementptr [25 x i32]* %read_r, i64 0, i64 19
   %score1_addr_77 = getelementptr [100 x i8]* %score1, i64 0, i64 77
   %orig1_addr_77 = getelementptr [100 x i20]* %orig1, i64 0, i64 77
   %score1_addr_78 = getelementptr [100 x i8]* %score1, i64 0, i64 78
@@ -244,7 +259,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_79 = getelementptr [100 x i20]* %orig1, i64 0, i64 79
   %score1_addr_80 = getelementptr [100 x i8]* %score1, i64 0, i64 80
   %orig1_addr_80 = getelementptr [100 x i20]* %orig1, i64 0, i64 80
-  %read_addr_5 = getelementptr [7 x i32]* %read_r, i64 0, i64 5
+  %read_r_addr_20 = getelementptr [25 x i32]* %read_r, i64 0, i64 20
   %score1_addr_81 = getelementptr [100 x i8]* %score1, i64 0, i64 81
   %orig1_addr_81 = getelementptr [100 x i20]* %orig1, i64 0, i64 81
   %score1_addr_82 = getelementptr [100 x i8]* %score1, i64 0, i64 82
@@ -253,6 +268,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_83 = getelementptr [100 x i20]* %orig1, i64 0, i64 83
   %score1_addr_84 = getelementptr [100 x i8]* %score1, i64 0, i64 84
   %orig1_addr_84 = getelementptr [100 x i20]* %orig1, i64 0, i64 84
+  %read_r_addr_21 = getelementptr [25 x i32]* %read_r, i64 0, i64 21
   %score1_addr_85 = getelementptr [100 x i8]* %score1, i64 0, i64 85
   %orig1_addr_85 = getelementptr [100 x i20]* %orig1, i64 0, i64 85
   %score1_addr_86 = getelementptr [100 x i8]* %score1, i64 0, i64 86
@@ -261,6 +277,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_87 = getelementptr [100 x i20]* %orig1, i64 0, i64 87
   %score1_addr_88 = getelementptr [100 x i8]* %score1, i64 0, i64 88
   %orig1_addr_88 = getelementptr [100 x i20]* %orig1, i64 0, i64 88
+  %read_r_addr_22 = getelementptr [25 x i32]* %read_r, i64 0, i64 22
   %score1_addr_89 = getelementptr [100 x i8]* %score1, i64 0, i64 89
   %orig1_addr_89 = getelementptr [100 x i20]* %orig1, i64 0, i64 89
   %score1_addr_90 = getelementptr [100 x i8]* %score1, i64 0, i64 90
@@ -269,6 +286,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_91 = getelementptr [100 x i20]* %orig1, i64 0, i64 91
   %score1_addr_92 = getelementptr [100 x i8]* %score1, i64 0, i64 92
   %orig1_addr_92 = getelementptr [100 x i20]* %orig1, i64 0, i64 92
+  %read_r_addr_23 = getelementptr [25 x i32]* %read_r, i64 0, i64 23
   %score1_addr_93 = getelementptr [100 x i8]* %score1, i64 0, i64 93
   %orig1_addr_93 = getelementptr [100 x i20]* %orig1, i64 0, i64 93
   %score1_addr_94 = getelementptr [100 x i8]* %score1, i64 0, i64 94
@@ -277,7 +295,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %orig1_addr_95 = getelementptr [100 x i20]* %orig1, i64 0, i64 95
   %score1_addr_96 = getelementptr [100 x i8]* %score1, i64 0, i64 96
   %orig1_addr_96 = getelementptr [100 x i20]* %orig1, i64 0, i64 96
-  %read_addr_6 = getelementptr [7 x i32]* %read_r, i64 0, i64 6
+  %read_r_addr_24 = getelementptr [25 x i32]* %read_r, i64 0, i64 24
   %score1_addr_97 = getelementptr [100 x i8]* %score1, i64 0, i64 97
   %orig1_addr_97 = getelementptr [100 x i20]* %orig1, i64 0, i64 97
   %score1_addr_98 = getelementptr [100 x i8]* %score1, i64 0, i64 98
@@ -287,62 +305,45 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   br label %1
 
 ; <label>:1                                       ; preds = %._crit_edge_ifconv, %0
-  %i = phi i20 [ 0, %0 ], [ %i_2, %._crit_edge_ifconv ]
+  %i = phi i17 [ 0, %0 ], [ %i_2, %._crit_edge_ifconv ]
   %max_orig = phi i20 [ 0, %0 ], [ %max_orig_2, %._crit_edge_ifconv ]
   %max_score = phi i32 [ -100, %0 ], [ %max_score_2, %._crit_edge_ifconv ]
-  %tmp = icmp ult i20 %i, -48576
+  %tmp = icmp ult i17 %i, -31072
   br i1 %tmp, label %._crit_edge_ifconv, label %2
 
 ._crit_edge_ifconv:                               ; preds = %1
-  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 500000, i64 500000, i64 500000) nounwind
-  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str7) nounwind
-  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str7) nounwind
+  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 50000, i64 50000, i64 50000) nounwind
+  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str8) nounwind
+  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str8) nounwind
   call void (...)* @_ssdm_op_SpecPipeline(i32 100, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
-  %i_1 = or i20 %i, 1
+  %i_1 = or i17 %i, 1
   %ref_genome_read = call i8 @_ssdm_op_Read.axis.volatile.i8P(i8* %ref_genome)
-  %tmp_4 = trunc i20 %i to i2
-  %tmp_2 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %tmp_4, i1 false)
-  %tmp_9 = or i3 %tmp_2, 1
-  %tmp_29 = icmp ugt i3 %tmp_2, %tmp_9
-  %tmp_45 = zext i3 %tmp_2 to i4
-  %tmp_61 = zext i3 %tmp_9 to i4
-  %tmp_77 = call i8 @llvm.part.select.i8(i8 %ref_genome_read, i32 7, i32 0)
-  %tmp_93 = sub i4 %tmp_45, %tmp_61
-  %tmp_109 = xor i4 %tmp_45, 7
-  %tmp_212 = sub i4 %tmp_61, %tmp_45
-  %tmp_213 = select i1 %tmp_29, i4 %tmp_93, i4 %tmp_212
-  %tmp_214 = select i1 %tmp_29, i8 %tmp_77, i8 %ref_genome_read
-  %tmp_215 = select i1 %tmp_29, i4 %tmp_109, i4 %tmp_45
-  %tmp_216 = sub i4 7, %tmp_213
-  %tmp_217 = zext i4 %tmp_215 to i8
-  %tmp_218 = zext i4 %tmp_216 to i8
-  %tmp_219 = lshr i8 %tmp_214, %tmp_217
-  %tmp_220 = lshr i8 -1, %tmp_218
-  %tmp_221 = and i8 %tmp_219, %tmp_220
-  %tmp_222 = trunc i8 %tmp_221 to i2
-  %tmp_5 = icmp eq i20 %i_1, 1
+  %tmp_3 = zext i17 %i_1 to i20
+  %tmp_5 = icmp eq i17 %i_1, 1
+  %p_cast = zext i17 %i_1 to i18
   %score1_load = load i8* %score1_addr, align 16
   %orig1_load = load i20* %orig1_addr, align 16
   %phitmp = add i8 -1, %score1_load
-  %tmp_3 = select i1 %tmp_5, i8 -2, i8 %phitmp
-  %prev_orig_out_s = add i20 -1, %i_1
+  %tmp_s = select i1 %tmp_5, i8 -2, i8 %phitmp
+  %prev_orig_out_s = add i18 -1, %p_cast
+  %prev_orig_out_cast = sext i18 %prev_orig_out_s to i20
   %up_orig = select i1 %tmp_5, i20 0, i20 %orig1_load
-  %read_load = load i32* %read_addr, align 4
-  %tmp_223 = trunc i32 %read_load to i2
-  %tmp_6 = icmp eq i2 %tmp_223, %tmp_222
-  %diag_score_0_v_i1_cast_cast = select i1 %tmp_6, i8 1, i8 -1
-  %tmp_7 = icmp slt i8 %diag_score_0_v_i1_cast_cast, %tmp_3
-  %score2_load_1_1 = select i1 %tmp_7, i8 %tmp_3, i8 %diag_score_0_v_i1_cast_cast
-  %orig2_load_1_1 = select i1 %tmp_7, i20 %up_orig, i20 %prev_orig_out_s
+  %read_r_load = load i32* %read_r_addr, align 4
+  %tmp_7 = trunc i32 %read_r_load to i8
+  %tmp_2 = icmp eq i8 %tmp_7, %ref_genome_read
+  %diag_score_0_v_i1_cast_cast = select i1 %tmp_2, i8 1, i8 -1
+  %tmp_4 = icmp slt i8 %diag_score_0_v_i1_cast_cast, %tmp_s
+  %score2_load_1_1 = select i1 %tmp_4, i8 %tmp_s, i8 %diag_score_0_v_i1_cast_cast
+  %orig2_load_1_1 = select i1 %tmp_4, i20 %up_orig, i20 %prev_orig_out_cast
   %score1_load_1 = load i8* %score1_addr_1, align 1
   %orig1_load_1 = load i20* %orig1_addr_1, align 4
   %p_score1_load = select i1 %tmp_5, i8 -1, i8 %score1_load
   %phitmp1 = add i8 -1, %score1_load_1
   %tmp_29_1 = select i1 %tmp_5, i8 -3, i8 %phitmp1
-  %tmp_10 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load
+  %tmp_6 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load
   %up_orig_s = select i1 %tmp_5, i20 0, i20 %orig1_load_1
-  %tmp_11 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 2, i32 3)
-  %tmp_49_1 = icmp eq i2 %tmp_11, %tmp_222
+  %tmp_9 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load, i32 8, i32 15)
+  %tmp_49_1 = icmp eq i8 %tmp_9, %ref_genome_read
   %diag_score_0_v_i1_1_cast_cast = select i1 %tmp_49_1, i8 1, i8 -1
   %prev_score_out_6_1 = add i8 %p_score1_load, %diag_score_0_v_i1_1_cast_cast
   %prev_score_out_0_op_i1_1 = add i8 -1, %score2_load_1_1
@@ -355,16 +356,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_1 = select i1 %or_cond1_i1_1, i8 %tmp_29_1, i8 %prev_score_out_0_op_i1_1
   %prev_orig_out_7_1 = select i1 %or_cond1_i1_1, i20 %up_orig_s, i20 %orig2_load_1_1
   %score2_load_1_2 = select i1 %or_cond_i1_1, i8 %prev_score_out_1_1, i8 %prev_score_out_6_1
-  %orig2_load_1_2 = select i1 %or_cond_i1_1, i20 %prev_orig_out_7_1, i20 %tmp_10
+  %orig2_load_1_2 = select i1 %or_cond_i1_1, i20 %prev_orig_out_7_1, i20 %tmp_6
   %score1_load_2 = load i8* %score1_addr_2, align 2
   %orig1_load_2 = load i20* %orig1_addr_2, align 8
   %p_score1_load_1 = select i1 %tmp_5, i8 -2, i8 %score1_load_1
   %phitmp2 = add i8 -1, %score1_load_2
   %tmp_29_2 = select i1 %tmp_5, i8 -4, i8 %phitmp2
-  %tmp_12 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_1
+  %tmp_13 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_1
   %up_orig_2 = select i1 %tmp_5, i20 0, i20 %orig1_load_2
-  %tmp_13 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 4, i32 5)
-  %tmp_49_2 = icmp eq i2 %tmp_13, %tmp_222
+  %tmp_10 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load, i32 16, i32 23)
+  %tmp_49_2 = icmp eq i8 %tmp_10, %ref_genome_read
   %diag_score_0_v_i1_2_cast_cast = select i1 %tmp_49_2, i8 1, i8 -1
   %prev_score_out_6_2 = add i8 %p_score1_load_1, %diag_score_0_v_i1_2_cast_cast
   %prev_score_out_0_op_i1_2 = add i8 -1, %score2_load_1_2
@@ -377,16 +378,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_2 = select i1 %or_cond1_i1_2, i8 %tmp_29_2, i8 %prev_score_out_0_op_i1_2
   %prev_orig_out_7_2 = select i1 %or_cond1_i1_2, i20 %up_orig_2, i20 %orig2_load_1_2
   %score2_load_1_3 = select i1 %or_cond_i1_2, i8 %prev_score_out_1_2, i8 %prev_score_out_6_2
-  %orig2_load_1_3 = select i1 %or_cond_i1_2, i20 %prev_orig_out_7_2, i20 %tmp_12
+  %orig2_load_1_3 = select i1 %or_cond_i1_2, i20 %prev_orig_out_7_2, i20 %tmp_13
   %score1_load_3 = load i8* %score1_addr_3, align 1
   %orig1_load_3 = load i20* %orig1_addr_3, align 4
   %p_score1_load_2 = select i1 %tmp_5, i8 -3, i8 %score1_load_2
   %phitmp3 = add i8 -1, %score1_load_3
   %tmp_29_3 = select i1 %tmp_5, i8 -5, i8 %phitmp3
-  %tmp_14 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_2
+  %tmp_17 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_2
   %up_orig_3 = select i1 %tmp_5, i20 0, i20 %orig1_load_3
-  %tmp_15 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 6, i32 7)
-  %tmp_49_3 = icmp eq i2 %tmp_15, %tmp_222
+  %tmp_11 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load, i32 24, i32 31)
+  %tmp_49_3 = icmp eq i8 %tmp_11, %ref_genome_read
   %diag_score_0_v_i1_3_cast_cast = select i1 %tmp_49_3, i8 1, i8 -1
   %prev_score_out_6_3 = add i8 %p_score1_load_2, %diag_score_0_v_i1_3_cast_cast
   %prev_score_out_0_op_i1_3 = add i8 -1, %score2_load_1_3
@@ -399,16 +400,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_3 = select i1 %or_cond1_i1_3, i8 %tmp_29_3, i8 %prev_score_out_0_op_i1_3
   %prev_orig_out_7_3 = select i1 %or_cond1_i1_3, i20 %up_orig_3, i20 %orig2_load_1_3
   %score2_load_1_4 = select i1 %or_cond_i1_3, i8 %prev_score_out_1_3, i8 %prev_score_out_6_3
-  %orig2_load_1_4 = select i1 %or_cond_i1_3, i20 %prev_orig_out_7_3, i20 %tmp_14
+  %orig2_load_1_4 = select i1 %or_cond_i1_3, i20 %prev_orig_out_7_3, i20 %tmp_17
   %score1_load_4 = load i8* %score1_addr_4, align 4
   %orig1_load_4 = load i20* %orig1_addr_4, align 16
   %p_score1_load_3 = select i1 %tmp_5, i8 -4, i8 %score1_load_3
   %phitmp4 = add i8 -1, %score1_load_4
   %tmp_29_4 = select i1 %tmp_5, i8 -6, i8 %phitmp4
-  %tmp_16 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_3
+  %tmp_21 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_3
   %up_orig_4 = select i1 %tmp_5, i20 0, i20 %orig1_load_4
-  %tmp_17 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 8, i32 9)
-  %tmp_49_4 = icmp eq i2 %tmp_17, %tmp_222
+  %read_r_load_1 = load i32* %read_r_addr_1, align 4
+  %tmp_25 = trunc i32 %read_r_load_1 to i8
+  %tmp_49_4 = icmp eq i8 %tmp_25, %ref_genome_read
   %diag_score_0_v_i1_4_cast_cast = select i1 %tmp_49_4, i8 1, i8 -1
   %prev_score_out_6_4 = add i8 %p_score1_load_3, %diag_score_0_v_i1_4_cast_cast
   %prev_score_out_0_op_i1_4 = add i8 -1, %score2_load_1_4
@@ -421,16 +423,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_4 = select i1 %or_cond1_i1_4, i8 %tmp_29_4, i8 %prev_score_out_0_op_i1_4
   %prev_orig_out_7_4 = select i1 %or_cond1_i1_4, i20 %up_orig_4, i20 %orig2_load_1_4
   %score2_load_1_5 = select i1 %or_cond_i1_4, i8 %prev_score_out_1_4, i8 %prev_score_out_6_4
-  %orig2_load_1_5 = select i1 %or_cond_i1_4, i20 %prev_orig_out_7_4, i20 %tmp_16
+  %orig2_load_1_5 = select i1 %or_cond_i1_4, i20 %prev_orig_out_7_4, i20 %tmp_21
   %score1_load_5 = load i8* %score1_addr_5, align 1
   %orig1_load_5 = load i20* %orig1_addr_5, align 4
   %p_score1_load_4 = select i1 %tmp_5, i8 -5, i8 %score1_load_4
   %phitmp5 = add i8 -1, %score1_load_5
   %tmp_29_5 = select i1 %tmp_5, i8 -7, i8 %phitmp5
-  %tmp_113 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_4
+  %tmp_29 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_4
   %up_orig_5 = select i1 %tmp_5, i20 0, i20 %orig1_load_5
-  %tmp_18 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 10, i32 11)
-  %tmp_49_5 = icmp eq i2 %tmp_18, %tmp_222
+  %tmp_14 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_1, i32 8, i32 15)
+  %tmp_49_5 = icmp eq i8 %tmp_14, %ref_genome_read
   %diag_score_0_v_i1_5_cast_cast = select i1 %tmp_49_5, i8 1, i8 -1
   %prev_score_out_6_5 = add i8 %p_score1_load_4, %diag_score_0_v_i1_5_cast_cast
   %prev_score_out_0_op_i1_5 = add i8 -1, %score2_load_1_5
@@ -443,16 +445,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_5 = select i1 %or_cond1_i1_5, i8 %tmp_29_5, i8 %prev_score_out_0_op_i1_5
   %prev_orig_out_7_5 = select i1 %or_cond1_i1_5, i20 %up_orig_5, i20 %orig2_load_1_5
   %score2_load_1_6 = select i1 %or_cond_i1_5, i8 %prev_score_out_1_5, i8 %prev_score_out_6_5
-  %orig2_load_1_6 = select i1 %or_cond_i1_5, i20 %prev_orig_out_7_5, i20 %tmp_113
+  %orig2_load_1_6 = select i1 %or_cond_i1_5, i20 %prev_orig_out_7_5, i20 %tmp_29
   %score1_load_6 = load i8* %score1_addr_6, align 2
   %orig1_load_6 = load i20* %orig1_addr_6, align 8
   %p_score1_load_5 = select i1 %tmp_5, i8 -6, i8 %score1_load_5
   %phitmp6 = add i8 -1, %score1_load_6
   %tmp_29_6 = select i1 %tmp_5, i8 -8, i8 %phitmp6
-  %tmp_115 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_5
+  %tmp_33 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_5
   %up_orig_6 = select i1 %tmp_5, i20 0, i20 %orig1_load_6
-  %tmp_19 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 12, i32 13)
-  %tmp_49_6 = icmp eq i2 %tmp_19, %tmp_222
+  %tmp_15 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_1, i32 16, i32 23)
+  %tmp_49_6 = icmp eq i8 %tmp_15, %ref_genome_read
   %diag_score_0_v_i1_6_cast_cast = select i1 %tmp_49_6, i8 1, i8 -1
   %prev_score_out_6_6 = add i8 %p_score1_load_5, %diag_score_0_v_i1_6_cast_cast
   %prev_score_out_0_op_i1_6 = add i8 -1, %score2_load_1_6
@@ -465,16 +467,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_6 = select i1 %or_cond1_i1_6, i8 %tmp_29_6, i8 %prev_score_out_0_op_i1_6
   %prev_orig_out_7_6 = select i1 %or_cond1_i1_6, i20 %up_orig_6, i20 %orig2_load_1_6
   %score2_load_1_7 = select i1 %or_cond_i1_6, i8 %prev_score_out_1_6, i8 %prev_score_out_6_6
-  %orig2_load_1_7 = select i1 %or_cond_i1_6, i20 %prev_orig_out_7_6, i20 %tmp_115
+  %orig2_load_1_7 = select i1 %or_cond_i1_6, i20 %prev_orig_out_7_6, i20 %tmp_33
   %score1_load_7 = load i8* %score1_addr_7, align 1
   %orig1_load_7 = load i20* %orig1_addr_7, align 4
   %p_score1_load_6 = select i1 %tmp_5, i8 -7, i8 %score1_load_6
   %phitmp7 = add i8 -1, %score1_load_7
   %tmp_29_7 = select i1 %tmp_5, i8 -9, i8 %phitmp7
-  %tmp_119 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_6
+  %tmp_37 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_6
   %up_orig_7 = select i1 %tmp_5, i20 0, i20 %orig1_load_7
-  %tmp_20 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 14, i32 15)
-  %tmp_49_7 = icmp eq i2 %tmp_20, %tmp_222
+  %tmp_16 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_1, i32 24, i32 31)
+  %tmp_49_7 = icmp eq i8 %tmp_16, %ref_genome_read
   %diag_score_0_v_i1_7_cast_cast = select i1 %tmp_49_7, i8 1, i8 -1
   %prev_score_out_6_7 = add i8 %p_score1_load_6, %diag_score_0_v_i1_7_cast_cast
   %prev_score_out_0_op_i1_7 = add i8 -1, %score2_load_1_7
@@ -487,16 +489,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_7 = select i1 %or_cond1_i1_7, i8 %tmp_29_7, i8 %prev_score_out_0_op_i1_7
   %prev_orig_out_7_7 = select i1 %or_cond1_i1_7, i20 %up_orig_7, i20 %orig2_load_1_7
   %score2_load_1_8 = select i1 %or_cond_i1_7, i8 %prev_score_out_1_7, i8 %prev_score_out_6_7
-  %orig2_load_1_8 = select i1 %or_cond_i1_7, i20 %prev_orig_out_7_7, i20 %tmp_119
+  %orig2_load_1_8 = select i1 %or_cond_i1_7, i20 %prev_orig_out_7_7, i20 %tmp_37
   %score1_load_8 = load i8* %score1_addr_8, align 8
   %orig1_load_8 = load i20* %orig1_addr_8, align 16
   %p_score1_load_7 = select i1 %tmp_5, i8 -8, i8 %score1_load_7
   %phitmp8 = add i8 -1, %score1_load_8
   %tmp_29_8 = select i1 %tmp_5, i8 -10, i8 %phitmp8
-  %tmp_120 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_7
+  %tmp_41 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_7
   %up_orig_8 = select i1 %tmp_5, i20 0, i20 %orig1_load_8
-  %tmp_21 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 16, i32 17)
-  %tmp_49_8 = icmp eq i2 %tmp_21, %tmp_222
+  %read_r_load_2 = load i32* %read_r_addr_2, align 4
+  %tmp_45 = trunc i32 %read_r_load_2 to i8
+  %tmp_49_8 = icmp eq i8 %tmp_45, %ref_genome_read
   %diag_score_0_v_i1_8_cast_cast = select i1 %tmp_49_8, i8 1, i8 -1
   %prev_score_out_6_8 = add i8 %p_score1_load_7, %diag_score_0_v_i1_8_cast_cast
   %prev_score_out_0_op_i1_8 = add i8 -1, %score2_load_1_8
@@ -509,16 +512,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_8 = select i1 %or_cond1_i1_8, i8 %tmp_29_8, i8 %prev_score_out_0_op_i1_8
   %prev_orig_out_7_8 = select i1 %or_cond1_i1_8, i20 %up_orig_8, i20 %orig2_load_1_8
   %score2_load_1_9 = select i1 %or_cond_i1_8, i8 %prev_score_out_1_8, i8 %prev_score_out_6_8
-  %orig2_load_1_9 = select i1 %or_cond_i1_8, i20 %prev_orig_out_7_8, i20 %tmp_120
+  %orig2_load_1_9 = select i1 %or_cond_i1_8, i20 %prev_orig_out_7_8, i20 %tmp_41
   %score1_load_9 = load i8* %score1_addr_9, align 1
   %orig1_load_9 = load i20* %orig1_addr_9, align 4
   %p_score1_load_8 = select i1 %tmp_5, i8 -9, i8 %score1_load_8
   %phitmp9 = add i8 -1, %score1_load_9
   %tmp_29_9 = select i1 %tmp_5, i8 -11, i8 %phitmp9
-  %tmp_121 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_8
+  %tmp_49 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_8
   %up_orig_9 = select i1 %tmp_5, i20 0, i20 %orig1_load_9
-  %tmp_22 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 18, i32 19)
-  %tmp_49_9 = icmp eq i2 %tmp_22, %tmp_222
+  %tmp_18 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_2, i32 8, i32 15)
+  %tmp_49_9 = icmp eq i8 %tmp_18, %ref_genome_read
   %diag_score_0_v_i1_9_cast_cast = select i1 %tmp_49_9, i8 1, i8 -1
   %prev_score_out_6_9 = add i8 %p_score1_load_8, %diag_score_0_v_i1_9_cast_cast
   %prev_score_out_0_op_i1_9 = add i8 -1, %score2_load_1_9
@@ -531,18 +534,18 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_9 = select i1 %or_cond1_i1_9, i8 %tmp_29_9, i8 %prev_score_out_0_op_i1_9
   %prev_orig_out_7_9 = select i1 %or_cond1_i1_9, i20 %up_orig_9, i20 %orig2_load_1_9
   %score2_load_1_s = select i1 %or_cond_i1_9, i8 %prev_score_out_1_9, i8 %prev_score_out_6_9
-  %orig2_load_1_s = select i1 %or_cond_i1_9, i20 %prev_orig_out_7_9, i20 %tmp_121
+  %orig2_load_1_s = select i1 %or_cond_i1_9, i20 %prev_orig_out_7_9, i20 %tmp_49
   %score1_load_10 = load i8* %score1_addr_10, align 2
   %orig1_load_10 = load i20* %orig1_addr_10, align 8
   %p_score1_load_9 = select i1 %tmp_5, i8 -10, i8 %score1_load_9
   %phitmp10 = add i8 -1, %score1_load_10
   %tmp_29_s = select i1 %tmp_5, i8 -12, i8 %phitmp10
-  %tmp_122 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_9
+  %tmp_53 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_9
   %up_orig_1 = select i1 %tmp_5, i20 0, i20 %orig1_load_10
-  %tmp_23 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 20, i32 21)
-  %tmp_49_s = icmp eq i2 %tmp_23, %tmp_222
-  %diag_score_0_v_i1_cast_cast_8 = select i1 %tmp_49_s, i8 1, i8 -1
-  %prev_score_out_6_s = add i8 %p_score1_load_9, %diag_score_0_v_i1_cast_cast_8
+  %tmp_19 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_2, i32 16, i32 23)
+  %tmp_49_s = icmp eq i8 %tmp_19, %ref_genome_read
+  %diag_score_0_v_i1_cast_cast_6 = select i1 %tmp_49_s, i8 1, i8 -1
+  %prev_score_out_6_s = add i8 %p_score1_load_9, %diag_score_0_v_i1_cast_cast_6
   %prev_score_out_0_op_i1_s = add i8 -1, %score2_load_1_s
   %tmp_50_s = icmp slt i8 %prev_score_out_6_s, %prev_score_out_0_op_i1_s
   %tmp_51_s = icmp slt i8 %prev_score_out_6_s, %tmp_29_s
@@ -553,16 +556,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_s = select i1 %or_cond1_i1_s, i8 %tmp_29_s, i8 %prev_score_out_0_op_i1_s
   %prev_orig_out_7_s = select i1 %or_cond1_i1_s, i20 %up_orig_1, i20 %orig2_load_1_s
   %score2_load_1_10 = select i1 %or_cond_i1_s, i8 %prev_score_out_1_s, i8 %prev_score_out_6_s
-  %orig2_load_1_10 = select i1 %or_cond_i1_s, i20 %prev_orig_out_7_s, i20 %tmp_122
+  %orig2_load_1_10 = select i1 %or_cond_i1_s, i20 %prev_orig_out_7_s, i20 %tmp_53
   %score1_load_11 = load i8* %score1_addr_11, align 1
   %orig1_load_11 = load i20* %orig1_addr_11, align 4
   %p_score1_load_s = select i1 %tmp_5, i8 -11, i8 %score1_load_10
   %phitmp11 = add i8 -1, %score1_load_11
   %tmp_29_10 = select i1 %tmp_5, i8 -13, i8 %phitmp11
-  %tmp_123 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_10
+  %tmp_57 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_10
   %up_orig_10 = select i1 %tmp_5, i20 0, i20 %orig1_load_11
-  %tmp_24 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 22, i32 23)
-  %tmp_49_10 = icmp eq i2 %tmp_24, %tmp_222
+  %tmp_20 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_2, i32 24, i32 31)
+  %tmp_49_10 = icmp eq i8 %tmp_20, %ref_genome_read
   %diag_score_0_v_i1_10_cast_cast = select i1 %tmp_49_10, i8 1, i8 -1
   %prev_score_out_6_10 = add i8 %p_score1_load_s, %diag_score_0_v_i1_10_cast_cast
   %prev_score_out_0_op_i1_10 = add i8 -1, %score2_load_1_10
@@ -575,16 +578,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_10 = select i1 %or_cond1_i1_10, i8 %tmp_29_10, i8 %prev_score_out_0_op_i1_10
   %prev_orig_out_7_10 = select i1 %or_cond1_i1_10, i20 %up_orig_10, i20 %orig2_load_1_10
   %score2_load_1_11 = select i1 %or_cond_i1_10, i8 %prev_score_out_1_10, i8 %prev_score_out_6_10
-  %orig2_load_1_11 = select i1 %or_cond_i1_10, i20 %prev_orig_out_7_10, i20 %tmp_123
+  %orig2_load_1_11 = select i1 %or_cond_i1_10, i20 %prev_orig_out_7_10, i20 %tmp_57
   %score1_load_12 = load i8* %score1_addr_12, align 4
   %orig1_load_12 = load i20* %orig1_addr_12, align 16
   %p_score1_load_10 = select i1 %tmp_5, i8 -12, i8 %score1_load_11
   %phitmp12 = add i8 -1, %score1_load_12
   %tmp_29_11 = select i1 %tmp_5, i8 -14, i8 %phitmp12
-  %tmp_124 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_11
+  %tmp_61 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_11
   %up_orig_11 = select i1 %tmp_5, i20 0, i20 %orig1_load_12
-  %tmp_25 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 24, i32 25)
-  %tmp_49_11 = icmp eq i2 %tmp_25, %tmp_222
+  %read_r_load_3 = load i32* %read_r_addr_3, align 4
+  %tmp_65 = trunc i32 %read_r_load_3 to i8
+  %tmp_49_11 = icmp eq i8 %tmp_65, %ref_genome_read
   %diag_score_0_v_i1_11_cast_cast = select i1 %tmp_49_11, i8 1, i8 -1
   %prev_score_out_6_11 = add i8 %p_score1_load_10, %diag_score_0_v_i1_11_cast_cast
   %prev_score_out_0_op_i1_11 = add i8 -1, %score2_load_1_11
@@ -597,16 +601,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_11 = select i1 %or_cond1_i1_11, i8 %tmp_29_11, i8 %prev_score_out_0_op_i1_11
   %prev_orig_out_7_11 = select i1 %or_cond1_i1_11, i20 %up_orig_11, i20 %orig2_load_1_11
   %score2_load_1_12 = select i1 %or_cond_i1_11, i8 %prev_score_out_1_11, i8 %prev_score_out_6_11
-  %orig2_load_1_12 = select i1 %or_cond_i1_11, i20 %prev_orig_out_7_11, i20 %tmp_124
+  %orig2_load_1_12 = select i1 %or_cond_i1_11, i20 %prev_orig_out_7_11, i20 %tmp_61
   %score1_load_13 = load i8* %score1_addr_13, align 1
   %orig1_load_13 = load i20* %orig1_addr_13, align 4
   %p_score1_load_11 = select i1 %tmp_5, i8 -13, i8 %score1_load_12
   %phitmp13 = add i8 -1, %score1_load_13
   %tmp_29_12 = select i1 %tmp_5, i8 -15, i8 %phitmp13
-  %tmp_125 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_12
+  %tmp_69 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_12
   %up_orig_12 = select i1 %tmp_5, i20 0, i20 %orig1_load_13
-  %tmp_26 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 26, i32 27)
-  %tmp_49_12 = icmp eq i2 %tmp_26, %tmp_222
+  %tmp_22 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_3, i32 8, i32 15)
+  %tmp_49_12 = icmp eq i8 %tmp_22, %ref_genome_read
   %diag_score_0_v_i1_12_cast_cast = select i1 %tmp_49_12, i8 1, i8 -1
   %prev_score_out_6_12 = add i8 %p_score1_load_11, %diag_score_0_v_i1_12_cast_cast
   %prev_score_out_0_op_i1_12 = add i8 -1, %score2_load_1_12
@@ -619,16 +623,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_12 = select i1 %or_cond1_i1_12, i8 %tmp_29_12, i8 %prev_score_out_0_op_i1_12
   %prev_orig_out_7_12 = select i1 %or_cond1_i1_12, i20 %up_orig_12, i20 %orig2_load_1_12
   %score2_load_1_13 = select i1 %or_cond_i1_12, i8 %prev_score_out_1_12, i8 %prev_score_out_6_12
-  %orig2_load_1_13 = select i1 %or_cond_i1_12, i20 %prev_orig_out_7_12, i20 %tmp_125
+  %orig2_load_1_13 = select i1 %or_cond_i1_12, i20 %prev_orig_out_7_12, i20 %tmp_69
   %score1_load_14 = load i8* %score1_addr_14, align 2
   %orig1_load_14 = load i20* %orig1_addr_14, align 8
   %p_score1_load_12 = select i1 %tmp_5, i8 -14, i8 %score1_load_13
   %phitmp14 = add i8 -1, %score1_load_14
   %tmp_29_13 = select i1 %tmp_5, i8 -16, i8 %phitmp14
-  %tmp_126 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_13
+  %tmp_73 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_13
   %up_orig_13 = select i1 %tmp_5, i20 0, i20 %orig1_load_14
-  %tmp_27 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 28, i32 29)
-  %tmp_49_13 = icmp eq i2 %tmp_27, %tmp_222
+  %tmp_23 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_3, i32 16, i32 23)
+  %tmp_49_13 = icmp eq i8 %tmp_23, %ref_genome_read
   %diag_score_0_v_i1_13_cast_cast = select i1 %tmp_49_13, i8 1, i8 -1
   %prev_score_out_6_13 = add i8 %p_score1_load_12, %diag_score_0_v_i1_13_cast_cast
   %prev_score_out_0_op_i1_13 = add i8 -1, %score2_load_1_13
@@ -641,16 +645,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_13 = select i1 %or_cond1_i1_13, i8 %tmp_29_13, i8 %prev_score_out_0_op_i1_13
   %prev_orig_out_7_13 = select i1 %or_cond1_i1_13, i20 %up_orig_13, i20 %orig2_load_1_13
   %score2_load_1_14 = select i1 %or_cond_i1_13, i8 %prev_score_out_1_13, i8 %prev_score_out_6_13
-  %orig2_load_1_14 = select i1 %or_cond_i1_13, i20 %prev_orig_out_7_13, i20 %tmp_126
+  %orig2_load_1_14 = select i1 %or_cond_i1_13, i20 %prev_orig_out_7_13, i20 %tmp_73
   %score1_load_15 = load i8* %score1_addr_15, align 1
   %orig1_load_15 = load i20* %orig1_addr_15, align 4
   %p_score1_load_13 = select i1 %tmp_5, i8 -15, i8 %score1_load_14
   %phitmp15 = add i8 -1, %score1_load_15
   %tmp_29_14 = select i1 %tmp_5, i8 -17, i8 %phitmp15
-  %tmp_127 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_14
+  %tmp_77 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_14
   %up_orig_14 = select i1 %tmp_5, i20 0, i20 %orig1_load_15
-  %tmp_28 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load, i32 30, i32 31)
-  %tmp_49_14 = icmp eq i2 %tmp_28, %tmp_222
+  %tmp_24 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_3, i32 24, i32 31)
+  %tmp_49_14 = icmp eq i8 %tmp_24, %ref_genome_read
   %diag_score_0_v_i1_14_cast_cast = select i1 %tmp_49_14, i8 1, i8 -1
   %prev_score_out_6_14 = add i8 %p_score1_load_13, %diag_score_0_v_i1_14_cast_cast
   %prev_score_out_0_op_i1_14 = add i8 -1, %score2_load_1_14
@@ -663,17 +667,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_14 = select i1 %or_cond1_i1_14, i8 %tmp_29_14, i8 %prev_score_out_0_op_i1_14
   %prev_orig_out_7_14 = select i1 %or_cond1_i1_14, i20 %up_orig_14, i20 %orig2_load_1_14
   %score2_load_1_15 = select i1 %or_cond_i1_14, i8 %prev_score_out_1_14, i8 %prev_score_out_6_14
-  %orig2_load_1_15 = select i1 %or_cond_i1_14, i20 %prev_orig_out_7_14, i20 %tmp_127
+  %orig2_load_1_15 = select i1 %or_cond_i1_14, i20 %prev_orig_out_7_14, i20 %tmp_77
   %score1_load_16 = load i8* %score1_addr_16, align 16
   %orig1_load_16 = load i20* %orig1_addr_16, align 16
   %p_score1_load_14 = select i1 %tmp_5, i8 -16, i8 %score1_load_15
   %phitmp16 = add i8 -1, %score1_load_16
   %tmp_29_15 = select i1 %tmp_5, i8 -18, i8 %phitmp16
-  %tmp_128 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_15
+  %tmp_81 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_15
   %up_orig_15 = select i1 %tmp_5, i20 0, i20 %orig1_load_16
-  %read_load_1 = load i32* %read_addr_1, align 4
-  %tmp_224 = trunc i32 %read_load_1 to i2
-  %tmp_49_15 = icmp eq i2 %tmp_224, %tmp_222
+  %read_r_load_4 = load i32* %read_r_addr_4, align 4
+  %tmp_85 = trunc i32 %read_r_load_4 to i8
+  %tmp_49_15 = icmp eq i8 %tmp_85, %ref_genome_read
   %diag_score_0_v_i1_15_cast_cast = select i1 %tmp_49_15, i8 1, i8 -1
   %prev_score_out_6_15 = add i8 %p_score1_load_14, %diag_score_0_v_i1_15_cast_cast
   %prev_score_out_0_op_i1_15 = add i8 -1, %score2_load_1_15
@@ -686,16 +690,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_15 = select i1 %or_cond1_i1_15, i8 %tmp_29_15, i8 %prev_score_out_0_op_i1_15
   %prev_orig_out_7_15 = select i1 %or_cond1_i1_15, i20 %up_orig_15, i20 %orig2_load_1_15
   %score2_load_1_16 = select i1 %or_cond_i1_15, i8 %prev_score_out_1_15, i8 %prev_score_out_6_15
-  %orig2_load_1_16 = select i1 %or_cond_i1_15, i20 %prev_orig_out_7_15, i20 %tmp_128
+  %orig2_load_1_16 = select i1 %or_cond_i1_15, i20 %prev_orig_out_7_15, i20 %tmp_81
   %score1_load_17 = load i8* %score1_addr_17, align 1
   %orig1_load_17 = load i20* %orig1_addr_17, align 4
   %p_score1_load_15 = select i1 %tmp_5, i8 -17, i8 %score1_load_16
   %phitmp17 = add i8 -1, %score1_load_17
   %tmp_29_16 = select i1 %tmp_5, i8 -19, i8 %phitmp17
-  %tmp_129 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_16
+  %tmp_89 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_16
   %up_orig_16 = select i1 %tmp_5, i20 0, i20 %orig1_load_17
-  %tmp_30 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 2, i32 3)
-  %tmp_49_16 = icmp eq i2 %tmp_30, %tmp_222
+  %tmp_26 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_4, i32 8, i32 15)
+  %tmp_49_16 = icmp eq i8 %tmp_26, %ref_genome_read
   %diag_score_0_v_i1_16_cast_cast = select i1 %tmp_49_16, i8 1, i8 -1
   %prev_score_out_6_16 = add i8 %p_score1_load_15, %diag_score_0_v_i1_16_cast_cast
   %prev_score_out_0_op_i1_16 = add i8 -1, %score2_load_1_16
@@ -708,16 +712,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_16 = select i1 %or_cond1_i1_16, i8 %tmp_29_16, i8 %prev_score_out_0_op_i1_16
   %prev_orig_out_7_16 = select i1 %or_cond1_i1_16, i20 %up_orig_16, i20 %orig2_load_1_16
   %score2_load_1_17 = select i1 %or_cond_i1_16, i8 %prev_score_out_1_16, i8 %prev_score_out_6_16
-  %orig2_load_1_17 = select i1 %or_cond_i1_16, i20 %prev_orig_out_7_16, i20 %tmp_129
+  %orig2_load_1_17 = select i1 %or_cond_i1_16, i20 %prev_orig_out_7_16, i20 %tmp_89
   %score1_load_18 = load i8* %score1_addr_18, align 2
   %orig1_load_18 = load i20* %orig1_addr_18, align 8
   %p_score1_load_16 = select i1 %tmp_5, i8 -18, i8 %score1_load_17
   %phitmp18 = add i8 -1, %score1_load_18
   %tmp_29_17 = select i1 %tmp_5, i8 -20, i8 %phitmp18
-  %tmp_130 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_17
+  %tmp_93 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_17
   %up_orig_17 = select i1 %tmp_5, i20 0, i20 %orig1_load_18
-  %tmp_31 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 4, i32 5)
-  %tmp_49_17 = icmp eq i2 %tmp_31, %tmp_222
+  %tmp_27 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_4, i32 16, i32 23)
+  %tmp_49_17 = icmp eq i8 %tmp_27, %ref_genome_read
   %diag_score_0_v_i1_17_cast_cast = select i1 %tmp_49_17, i8 1, i8 -1
   %prev_score_out_6_17 = add i8 %p_score1_load_16, %diag_score_0_v_i1_17_cast_cast
   %prev_score_out_0_op_i1_17 = add i8 -1, %score2_load_1_17
@@ -730,16 +734,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_17 = select i1 %or_cond1_i1_17, i8 %tmp_29_17, i8 %prev_score_out_0_op_i1_17
   %prev_orig_out_7_17 = select i1 %or_cond1_i1_17, i20 %up_orig_17, i20 %orig2_load_1_17
   %score2_load_1_18 = select i1 %or_cond_i1_17, i8 %prev_score_out_1_17, i8 %prev_score_out_6_17
-  %orig2_load_1_18 = select i1 %or_cond_i1_17, i20 %prev_orig_out_7_17, i20 %tmp_130
+  %orig2_load_1_18 = select i1 %or_cond_i1_17, i20 %prev_orig_out_7_17, i20 %tmp_93
   %score1_load_19 = load i8* %score1_addr_19, align 1
   %orig1_load_19 = load i20* %orig1_addr_19, align 4
   %p_score1_load_17 = select i1 %tmp_5, i8 -19, i8 %score1_load_18
   %phitmp19 = add i8 -1, %score1_load_19
   %tmp_29_18 = select i1 %tmp_5, i8 -21, i8 %phitmp19
-  %tmp_131 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_18
+  %tmp_97 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_18
   %up_orig_18 = select i1 %tmp_5, i20 0, i20 %orig1_load_19
-  %tmp_32 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 6, i32 7)
-  %tmp_49_18 = icmp eq i2 %tmp_32, %tmp_222
+  %tmp_28 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_4, i32 24, i32 31)
+  %tmp_49_18 = icmp eq i8 %tmp_28, %ref_genome_read
   %diag_score_0_v_i1_18_cast_cast = select i1 %tmp_49_18, i8 1, i8 -1
   %prev_score_out_6_18 = add i8 %p_score1_load_17, %diag_score_0_v_i1_18_cast_cast
   %prev_score_out_0_op_i1_18 = add i8 -1, %score2_load_1_18
@@ -752,16 +756,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_18 = select i1 %or_cond1_i1_18, i8 %tmp_29_18, i8 %prev_score_out_0_op_i1_18
   %prev_orig_out_7_18 = select i1 %or_cond1_i1_18, i20 %up_orig_18, i20 %orig2_load_1_18
   %score2_load_1_19 = select i1 %or_cond_i1_18, i8 %prev_score_out_1_18, i8 %prev_score_out_6_18
-  %orig2_load_1_19 = select i1 %or_cond_i1_18, i20 %prev_orig_out_7_18, i20 %tmp_131
+  %orig2_load_1_19 = select i1 %or_cond_i1_18, i20 %prev_orig_out_7_18, i20 %tmp_97
   %score1_load_20 = load i8* %score1_addr_20, align 4
   %orig1_load_20 = load i20* %orig1_addr_20, align 16
   %p_score1_load_18 = select i1 %tmp_5, i8 -20, i8 %score1_load_19
   %phitmp20 = add i8 -1, %score1_load_20
   %tmp_29_19 = select i1 %tmp_5, i8 -22, i8 %phitmp20
-  %tmp_132 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_19
+  %tmp_101 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_19
   %up_orig_19 = select i1 %tmp_5, i20 0, i20 %orig1_load_20
-  %tmp_33 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 8, i32 9)
-  %tmp_49_19 = icmp eq i2 %tmp_33, %tmp_222
+  %read_r_load_5 = load i32* %read_r_addr_5, align 4
+  %tmp_105 = trunc i32 %read_r_load_5 to i8
+  %tmp_49_19 = icmp eq i8 %tmp_105, %ref_genome_read
   %diag_score_0_v_i1_19_cast_cast = select i1 %tmp_49_19, i8 1, i8 -1
   %prev_score_out_6_19 = add i8 %p_score1_load_18, %diag_score_0_v_i1_19_cast_cast
   %prev_score_out_0_op_i1_19 = add i8 -1, %score2_load_1_19
@@ -774,16 +779,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_19 = select i1 %or_cond1_i1_19, i8 %tmp_29_19, i8 %prev_score_out_0_op_i1_19
   %prev_orig_out_7_19 = select i1 %or_cond1_i1_19, i20 %up_orig_19, i20 %orig2_load_1_19
   %score2_load_1_20 = select i1 %or_cond_i1_19, i8 %prev_score_out_1_19, i8 %prev_score_out_6_19
-  %orig2_load_1_20 = select i1 %or_cond_i1_19, i20 %prev_orig_out_7_19, i20 %tmp_132
+  %orig2_load_1_20 = select i1 %or_cond_i1_19, i20 %prev_orig_out_7_19, i20 %tmp_101
   %score1_load_21 = load i8* %score1_addr_21, align 1
   %orig1_load_21 = load i20* %orig1_addr_21, align 4
   %p_score1_load_19 = select i1 %tmp_5, i8 -21, i8 %score1_load_20
   %phitmp21 = add i8 -1, %score1_load_21
   %tmp_29_20 = select i1 %tmp_5, i8 -23, i8 %phitmp21
-  %tmp_133 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_20
+  %tmp_111 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_20
   %up_orig_20 = select i1 %tmp_5, i20 0, i20 %orig1_load_21
-  %tmp_34 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 10, i32 11)
-  %tmp_49_20 = icmp eq i2 %tmp_34, %tmp_222
+  %tmp_30 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_5, i32 8, i32 15)
+  %tmp_49_20 = icmp eq i8 %tmp_30, %ref_genome_read
   %diag_score_0_v_i1_20_cast_cast = select i1 %tmp_49_20, i8 1, i8 -1
   %prev_score_out_6_20 = add i8 %p_score1_load_19, %diag_score_0_v_i1_20_cast_cast
   %prev_score_out_0_op_i1_20 = add i8 -1, %score2_load_1_20
@@ -796,16 +801,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_20 = select i1 %or_cond1_i1_20, i8 %tmp_29_20, i8 %prev_score_out_0_op_i1_20
   %prev_orig_out_7_20 = select i1 %or_cond1_i1_20, i20 %up_orig_20, i20 %orig2_load_1_20
   %score2_load_1_21 = select i1 %or_cond_i1_20, i8 %prev_score_out_1_20, i8 %prev_score_out_6_20
-  %orig2_load_1_21 = select i1 %or_cond_i1_20, i20 %prev_orig_out_7_20, i20 %tmp_133
+  %orig2_load_1_21 = select i1 %or_cond_i1_20, i20 %prev_orig_out_7_20, i20 %tmp_111
   %score1_load_22 = load i8* %score1_addr_22, align 2
   %orig1_load_22 = load i20* %orig1_addr_22, align 8
   %p_score1_load_20 = select i1 %tmp_5, i8 -22, i8 %score1_load_21
   %phitmp22 = add i8 -1, %score1_load_22
   %tmp_29_21 = select i1 %tmp_5, i8 -24, i8 %phitmp22
-  %tmp_134 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_21
+  %tmp_112 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_21
   %up_orig_21 = select i1 %tmp_5, i20 0, i20 %orig1_load_22
-  %tmp_35 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 12, i32 13)
-  %tmp_49_21 = icmp eq i2 %tmp_35, %tmp_222
+  %tmp_31 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_5, i32 16, i32 23)
+  %tmp_49_21 = icmp eq i8 %tmp_31, %ref_genome_read
   %diag_score_0_v_i1_21_cast_cast = select i1 %tmp_49_21, i8 1, i8 -1
   %prev_score_out_6_21 = add i8 %p_score1_load_20, %diag_score_0_v_i1_21_cast_cast
   %prev_score_out_0_op_i1_21 = add i8 -1, %score2_load_1_21
@@ -818,16 +823,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_21 = select i1 %or_cond1_i1_21, i8 %tmp_29_21, i8 %prev_score_out_0_op_i1_21
   %prev_orig_out_7_21 = select i1 %or_cond1_i1_21, i20 %up_orig_21, i20 %orig2_load_1_21
   %score2_load_1_22 = select i1 %or_cond_i1_21, i8 %prev_score_out_1_21, i8 %prev_score_out_6_21
-  %orig2_load_1_22 = select i1 %or_cond_i1_21, i20 %prev_orig_out_7_21, i20 %tmp_134
+  %orig2_load_1_22 = select i1 %or_cond_i1_21, i20 %prev_orig_out_7_21, i20 %tmp_112
   %score1_load_23 = load i8* %score1_addr_23, align 1
   %orig1_load_23 = load i20* %orig1_addr_23, align 4
   %p_score1_load_21 = select i1 %tmp_5, i8 -23, i8 %score1_load_22
   %phitmp23 = add i8 -1, %score1_load_23
   %tmp_29_22 = select i1 %tmp_5, i8 -25, i8 %phitmp23
-  %tmp_135 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_22
+  %tmp_113 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_22
   %up_orig_22 = select i1 %tmp_5, i20 0, i20 %orig1_load_23
-  %tmp_36 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 14, i32 15)
-  %tmp_49_22 = icmp eq i2 %tmp_36, %tmp_222
+  %tmp_32 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_5, i32 24, i32 31)
+  %tmp_49_22 = icmp eq i8 %tmp_32, %ref_genome_read
   %diag_score_0_v_i1_22_cast_cast = select i1 %tmp_49_22, i8 1, i8 -1
   %prev_score_out_6_22 = add i8 %p_score1_load_21, %diag_score_0_v_i1_22_cast_cast
   %prev_score_out_0_op_i1_22 = add i8 -1, %score2_load_1_22
@@ -840,16 +845,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_22 = select i1 %or_cond1_i1_22, i8 %tmp_29_22, i8 %prev_score_out_0_op_i1_22
   %prev_orig_out_7_22 = select i1 %or_cond1_i1_22, i20 %up_orig_22, i20 %orig2_load_1_22
   %score2_load_1_23 = select i1 %or_cond_i1_22, i8 %prev_score_out_1_22, i8 %prev_score_out_6_22
-  %orig2_load_1_23 = select i1 %or_cond_i1_22, i20 %prev_orig_out_7_22, i20 %tmp_135
+  %orig2_load_1_23 = select i1 %or_cond_i1_22, i20 %prev_orig_out_7_22, i20 %tmp_113
   %score1_load_24 = load i8* %score1_addr_24, align 8
   %orig1_load_24 = load i20* %orig1_addr_24, align 16
   %p_score1_load_22 = select i1 %tmp_5, i8 -24, i8 %score1_load_23
   %phitmp24 = add i8 -1, %score1_load_24
   %tmp_29_23 = select i1 %tmp_5, i8 -26, i8 %phitmp24
-  %tmp_136 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_23
+  %tmp_114 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_23
   %up_orig_23 = select i1 %tmp_5, i20 0, i20 %orig1_load_24
-  %tmp_37 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 16, i32 17)
-  %tmp_49_23 = icmp eq i2 %tmp_37, %tmp_222
+  %read_r_load_6 = load i32* %read_r_addr_6, align 4
+  %tmp_115 = trunc i32 %read_r_load_6 to i8
+  %tmp_49_23 = icmp eq i8 %tmp_115, %ref_genome_read
   %diag_score_0_v_i1_23_cast_cast = select i1 %tmp_49_23, i8 1, i8 -1
   %prev_score_out_6_23 = add i8 %p_score1_load_22, %diag_score_0_v_i1_23_cast_cast
   %prev_score_out_0_op_i1_23 = add i8 -1, %score2_load_1_23
@@ -862,16 +868,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_23 = select i1 %or_cond1_i1_23, i8 %tmp_29_23, i8 %prev_score_out_0_op_i1_23
   %prev_orig_out_7_23 = select i1 %or_cond1_i1_23, i20 %up_orig_23, i20 %orig2_load_1_23
   %score2_load_1_24 = select i1 %or_cond_i1_23, i8 %prev_score_out_1_23, i8 %prev_score_out_6_23
-  %orig2_load_1_24 = select i1 %or_cond_i1_23, i20 %prev_orig_out_7_23, i20 %tmp_136
+  %orig2_load_1_24 = select i1 %or_cond_i1_23, i20 %prev_orig_out_7_23, i20 %tmp_114
   %score1_load_25 = load i8* %score1_addr_25, align 1
   %orig1_load_25 = load i20* %orig1_addr_25, align 4
   %p_score1_load_23 = select i1 %tmp_5, i8 -25, i8 %score1_load_24
   %phitmp25 = add i8 -1, %score1_load_25
   %tmp_29_24 = select i1 %tmp_5, i8 -27, i8 %phitmp25
-  %tmp_137 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_24
+  %tmp_116 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_24
   %up_orig_24 = select i1 %tmp_5, i20 0, i20 %orig1_load_25
-  %tmp_38 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 18, i32 19)
-  %tmp_49_24 = icmp eq i2 %tmp_38, %tmp_222
+  %tmp_34 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_6, i32 8, i32 15)
+  %tmp_49_24 = icmp eq i8 %tmp_34, %ref_genome_read
   %diag_score_0_v_i1_24_cast_cast = select i1 %tmp_49_24, i8 1, i8 -1
   %prev_score_out_6_24 = add i8 %p_score1_load_23, %diag_score_0_v_i1_24_cast_cast
   %prev_score_out_0_op_i1_24 = add i8 -1, %score2_load_1_24
@@ -884,16 +890,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_24 = select i1 %or_cond1_i1_24, i8 %tmp_29_24, i8 %prev_score_out_0_op_i1_24
   %prev_orig_out_7_24 = select i1 %or_cond1_i1_24, i20 %up_orig_24, i20 %orig2_load_1_24
   %score2_load_1_25 = select i1 %or_cond_i1_24, i8 %prev_score_out_1_24, i8 %prev_score_out_6_24
-  %orig2_load_1_25 = select i1 %or_cond_i1_24, i20 %prev_orig_out_7_24, i20 %tmp_137
+  %orig2_load_1_25 = select i1 %or_cond_i1_24, i20 %prev_orig_out_7_24, i20 %tmp_116
   %score1_load_26 = load i8* %score1_addr_26, align 2
   %orig1_load_26 = load i20* %orig1_addr_26, align 8
   %p_score1_load_24 = select i1 %tmp_5, i8 -26, i8 %score1_load_25
   %phitmp26 = add i8 -1, %score1_load_26
   %tmp_29_25 = select i1 %tmp_5, i8 -28, i8 %phitmp26
-  %tmp_138 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_25
+  %tmp_117 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_25
   %up_orig_25 = select i1 %tmp_5, i20 0, i20 %orig1_load_26
-  %tmp_39 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 20, i32 21)
-  %tmp_49_25 = icmp eq i2 %tmp_39, %tmp_222
+  %tmp_35 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_6, i32 16, i32 23)
+  %tmp_49_25 = icmp eq i8 %tmp_35, %ref_genome_read
   %diag_score_0_v_i1_25_cast_cast = select i1 %tmp_49_25, i8 1, i8 -1
   %prev_score_out_6_25 = add i8 %p_score1_load_24, %diag_score_0_v_i1_25_cast_cast
   %prev_score_out_0_op_i1_25 = add i8 -1, %score2_load_1_25
@@ -906,16 +912,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_25 = select i1 %or_cond1_i1_25, i8 %tmp_29_25, i8 %prev_score_out_0_op_i1_25
   %prev_orig_out_7_25 = select i1 %or_cond1_i1_25, i20 %up_orig_25, i20 %orig2_load_1_25
   %score2_load_1_26 = select i1 %or_cond_i1_25, i8 %prev_score_out_1_25, i8 %prev_score_out_6_25
-  %orig2_load_1_26 = select i1 %or_cond_i1_25, i20 %prev_orig_out_7_25, i20 %tmp_138
+  %orig2_load_1_26 = select i1 %or_cond_i1_25, i20 %prev_orig_out_7_25, i20 %tmp_117
   %score1_load_27 = load i8* %score1_addr_27, align 1
   %orig1_load_27 = load i20* %orig1_addr_27, align 4
   %p_score1_load_25 = select i1 %tmp_5, i8 -27, i8 %score1_load_26
   %phitmp27 = add i8 -1, %score1_load_27
   %tmp_29_26 = select i1 %tmp_5, i8 -29, i8 %phitmp27
-  %tmp_139 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_26
+  %tmp_118 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_26
   %up_orig_26 = select i1 %tmp_5, i20 0, i20 %orig1_load_27
-  %tmp_40 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 22, i32 23)
-  %tmp_49_26 = icmp eq i2 %tmp_40, %tmp_222
+  %tmp_36 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_6, i32 24, i32 31)
+  %tmp_49_26 = icmp eq i8 %tmp_36, %ref_genome_read
   %diag_score_0_v_i1_26_cast_cast = select i1 %tmp_49_26, i8 1, i8 -1
   %prev_score_out_6_26 = add i8 %p_score1_load_25, %diag_score_0_v_i1_26_cast_cast
   %prev_score_out_0_op_i1_26 = add i8 -1, %score2_load_1_26
@@ -928,16 +934,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_26 = select i1 %or_cond1_i1_26, i8 %tmp_29_26, i8 %prev_score_out_0_op_i1_26
   %prev_orig_out_7_26 = select i1 %or_cond1_i1_26, i20 %up_orig_26, i20 %orig2_load_1_26
   %score2_load_1_27 = select i1 %or_cond_i1_26, i8 %prev_score_out_1_26, i8 %prev_score_out_6_26
-  %orig2_load_1_27 = select i1 %or_cond_i1_26, i20 %prev_orig_out_7_26, i20 %tmp_139
+  %orig2_load_1_27 = select i1 %or_cond_i1_26, i20 %prev_orig_out_7_26, i20 %tmp_118
   %score1_load_28 = load i8* %score1_addr_28, align 4
   %orig1_load_28 = load i20* %orig1_addr_28, align 16
   %p_score1_load_26 = select i1 %tmp_5, i8 -28, i8 %score1_load_27
   %phitmp28 = add i8 -1, %score1_load_28
   %tmp_29_27 = select i1 %tmp_5, i8 -30, i8 %phitmp28
-  %tmp_140 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_27
+  %tmp_119 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_27
   %up_orig_27 = select i1 %tmp_5, i20 0, i20 %orig1_load_28
-  %tmp_41 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 24, i32 25)
-  %tmp_49_27 = icmp eq i2 %tmp_41, %tmp_222
+  %read_r_load_7 = load i32* %read_r_addr_7, align 4
+  %tmp_120 = trunc i32 %read_r_load_7 to i8
+  %tmp_49_27 = icmp eq i8 %tmp_120, %ref_genome_read
   %diag_score_0_v_i1_27_cast_cast = select i1 %tmp_49_27, i8 1, i8 -1
   %prev_score_out_6_27 = add i8 %p_score1_load_26, %diag_score_0_v_i1_27_cast_cast
   %prev_score_out_0_op_i1_27 = add i8 -1, %score2_load_1_27
@@ -950,16 +957,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_27 = select i1 %or_cond1_i1_27, i8 %tmp_29_27, i8 %prev_score_out_0_op_i1_27
   %prev_orig_out_7_27 = select i1 %or_cond1_i1_27, i20 %up_orig_27, i20 %orig2_load_1_27
   %score2_load_1_28 = select i1 %or_cond_i1_27, i8 %prev_score_out_1_27, i8 %prev_score_out_6_27
-  %orig2_load_1_28 = select i1 %or_cond_i1_27, i20 %prev_orig_out_7_27, i20 %tmp_140
+  %orig2_load_1_28 = select i1 %or_cond_i1_27, i20 %prev_orig_out_7_27, i20 %tmp_119
   %score1_load_29 = load i8* %score1_addr_29, align 1
   %orig1_load_29 = load i20* %orig1_addr_29, align 4
   %p_score1_load_27 = select i1 %tmp_5, i8 -29, i8 %score1_load_28
   %phitmp29 = add i8 -1, %score1_load_29
   %tmp_29_28 = select i1 %tmp_5, i8 -31, i8 %phitmp29
-  %tmp_141 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_28
+  %tmp_121 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_28
   %up_orig_28 = select i1 %tmp_5, i20 0, i20 %orig1_load_29
-  %tmp_42 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 26, i32 27)
-  %tmp_49_28 = icmp eq i2 %tmp_42, %tmp_222
+  %tmp_38 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_7, i32 8, i32 15)
+  %tmp_49_28 = icmp eq i8 %tmp_38, %ref_genome_read
   %diag_score_0_v_i1_28_cast_cast = select i1 %tmp_49_28, i8 1, i8 -1
   %prev_score_out_6_28 = add i8 %p_score1_load_27, %diag_score_0_v_i1_28_cast_cast
   %prev_score_out_0_op_i1_28 = add i8 -1, %score2_load_1_28
@@ -972,16 +979,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_28 = select i1 %or_cond1_i1_28, i8 %tmp_29_28, i8 %prev_score_out_0_op_i1_28
   %prev_orig_out_7_28 = select i1 %or_cond1_i1_28, i20 %up_orig_28, i20 %orig2_load_1_28
   %score2_load_1_29 = select i1 %or_cond_i1_28, i8 %prev_score_out_1_28, i8 %prev_score_out_6_28
-  %orig2_load_1_29 = select i1 %or_cond_i1_28, i20 %prev_orig_out_7_28, i20 %tmp_141
+  %orig2_load_1_29 = select i1 %or_cond_i1_28, i20 %prev_orig_out_7_28, i20 %tmp_121
   %score1_load_30 = load i8* %score1_addr_30, align 2
   %orig1_load_30 = load i20* %orig1_addr_30, align 8
   %p_score1_load_28 = select i1 %tmp_5, i8 -30, i8 %score1_load_29
   %phitmp30 = add i8 -1, %score1_load_30
   %tmp_29_29 = select i1 %tmp_5, i8 -32, i8 %phitmp30
-  %tmp_142 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_29
+  %tmp_122 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_29
   %up_orig_29 = select i1 %tmp_5, i20 0, i20 %orig1_load_30
-  %tmp_43 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 28, i32 29)
-  %tmp_49_29 = icmp eq i2 %tmp_43, %tmp_222
+  %tmp_39 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_7, i32 16, i32 23)
+  %tmp_49_29 = icmp eq i8 %tmp_39, %ref_genome_read
   %diag_score_0_v_i1_29_cast_cast = select i1 %tmp_49_29, i8 1, i8 -1
   %prev_score_out_6_29 = add i8 %p_score1_load_28, %diag_score_0_v_i1_29_cast_cast
   %prev_score_out_0_op_i1_29 = add i8 -1, %score2_load_1_29
@@ -994,16 +1001,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_29 = select i1 %or_cond1_i1_29, i8 %tmp_29_29, i8 %prev_score_out_0_op_i1_29
   %prev_orig_out_7_29 = select i1 %or_cond1_i1_29, i20 %up_orig_29, i20 %orig2_load_1_29
   %score2_load_1_30 = select i1 %or_cond_i1_29, i8 %prev_score_out_1_29, i8 %prev_score_out_6_29
-  %orig2_load_1_30 = select i1 %or_cond_i1_29, i20 %prev_orig_out_7_29, i20 %tmp_142
+  %orig2_load_1_30 = select i1 %or_cond_i1_29, i20 %prev_orig_out_7_29, i20 %tmp_122
   %score1_load_31 = load i8* %score1_addr_31, align 1
   %orig1_load_31 = load i20* %orig1_addr_31, align 4
   %p_score1_load_29 = select i1 %tmp_5, i8 -31, i8 %score1_load_30
   %phitmp31 = add i8 -1, %score1_load_31
   %tmp_29_30 = select i1 %tmp_5, i8 -33, i8 %phitmp31
-  %tmp_143 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_30
+  %tmp_123 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_30
   %up_orig_30 = select i1 %tmp_5, i20 0, i20 %orig1_load_31
-  %tmp_44 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_1, i32 30, i32 31)
-  %tmp_49_30 = icmp eq i2 %tmp_44, %tmp_222
+  %tmp_40 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_7, i32 24, i32 31)
+  %tmp_49_30 = icmp eq i8 %tmp_40, %ref_genome_read
   %diag_score_0_v_i1_30_cast_cast = select i1 %tmp_49_30, i8 1, i8 -1
   %prev_score_out_6_30 = add i8 %p_score1_load_29, %diag_score_0_v_i1_30_cast_cast
   %prev_score_out_0_op_i1_30 = add i8 -1, %score2_load_1_30
@@ -1016,17 +1023,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_30 = select i1 %or_cond1_i1_30, i8 %tmp_29_30, i8 %prev_score_out_0_op_i1_30
   %prev_orig_out_7_30 = select i1 %or_cond1_i1_30, i20 %up_orig_30, i20 %orig2_load_1_30
   %score2_load_1_31 = select i1 %or_cond_i1_30, i8 %prev_score_out_1_30, i8 %prev_score_out_6_30
-  %orig2_load_1_31 = select i1 %or_cond_i1_30, i20 %prev_orig_out_7_30, i20 %tmp_143
+  %orig2_load_1_31 = select i1 %or_cond_i1_30, i20 %prev_orig_out_7_30, i20 %tmp_123
   %score1_load_32 = load i8* %score1_addr_32, align 16
   %orig1_load_32 = load i20* %orig1_addr_32, align 16
   %p_score1_load_30 = select i1 %tmp_5, i8 -32, i8 %score1_load_31
   %phitmp32 = add i8 -1, %score1_load_32
   %tmp_29_31 = select i1 %tmp_5, i8 -34, i8 %phitmp32
-  %tmp_144 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_31
+  %tmp_124 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_31
   %up_orig_31 = select i1 %tmp_5, i20 0, i20 %orig1_load_32
-  %read_load_2 = load i32* %read_addr_2, align 4
-  %tmp_225 = trunc i32 %read_load_2 to i2
-  %tmp_49_31 = icmp eq i2 %tmp_225, %tmp_222
+  %read_r_load_8 = load i32* %read_r_addr_8, align 4
+  %tmp_125 = trunc i32 %read_r_load_8 to i8
+  %tmp_49_31 = icmp eq i8 %tmp_125, %ref_genome_read
   %diag_score_0_v_i1_31_cast_cast = select i1 %tmp_49_31, i8 1, i8 -1
   %prev_score_out_6_31 = add i8 %p_score1_load_30, %diag_score_0_v_i1_31_cast_cast
   %prev_score_out_0_op_i1_31 = add i8 -1, %score2_load_1_31
@@ -1039,16 +1046,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_31 = select i1 %or_cond1_i1_31, i8 %tmp_29_31, i8 %prev_score_out_0_op_i1_31
   %prev_orig_out_7_31 = select i1 %or_cond1_i1_31, i20 %up_orig_31, i20 %orig2_load_1_31
   %score2_load_1_32 = select i1 %or_cond_i1_31, i8 %prev_score_out_1_31, i8 %prev_score_out_6_31
-  %orig2_load_1_32 = select i1 %or_cond_i1_31, i20 %prev_orig_out_7_31, i20 %tmp_144
+  %orig2_load_1_32 = select i1 %or_cond_i1_31, i20 %prev_orig_out_7_31, i20 %tmp_124
   %score1_load_33 = load i8* %score1_addr_33, align 1
   %orig1_load_33 = load i20* %orig1_addr_33, align 4
   %p_score1_load_31 = select i1 %tmp_5, i8 -33, i8 %score1_load_32
   %phitmp33 = add i8 -1, %score1_load_33
   %tmp_29_32 = select i1 %tmp_5, i8 -35, i8 %phitmp33
-  %tmp_145 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_32
+  %tmp_126 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_32
   %up_orig_32 = select i1 %tmp_5, i20 0, i20 %orig1_load_33
-  %tmp_46 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 2, i32 3)
-  %tmp_49_32 = icmp eq i2 %tmp_46, %tmp_222
+  %tmp_42 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_8, i32 8, i32 15)
+  %tmp_49_32 = icmp eq i8 %tmp_42, %ref_genome_read
   %diag_score_0_v_i1_32_cast_cast = select i1 %tmp_49_32, i8 1, i8 -1
   %prev_score_out_6_32 = add i8 %p_score1_load_31, %diag_score_0_v_i1_32_cast_cast
   %prev_score_out_0_op_i1_32 = add i8 -1, %score2_load_1_32
@@ -1061,16 +1068,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_32 = select i1 %or_cond1_i1_32, i8 %tmp_29_32, i8 %prev_score_out_0_op_i1_32
   %prev_orig_out_7_32 = select i1 %or_cond1_i1_32, i20 %up_orig_32, i20 %orig2_load_1_32
   %score2_load_1_33 = select i1 %or_cond_i1_32, i8 %prev_score_out_1_32, i8 %prev_score_out_6_32
-  %orig2_load_1_33 = select i1 %or_cond_i1_32, i20 %prev_orig_out_7_32, i20 %tmp_145
+  %orig2_load_1_33 = select i1 %or_cond_i1_32, i20 %prev_orig_out_7_32, i20 %tmp_126
   %score1_load_34 = load i8* %score1_addr_34, align 2
   %orig1_load_34 = load i20* %orig1_addr_34, align 8
   %p_score1_load_32 = select i1 %tmp_5, i8 -34, i8 %score1_load_33
   %phitmp34 = add i8 -1, %score1_load_34
   %tmp_29_33 = select i1 %tmp_5, i8 -36, i8 %phitmp34
-  %tmp_146 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_33
+  %tmp_127 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_33
   %up_orig_33 = select i1 %tmp_5, i20 0, i20 %orig1_load_34
-  %tmp_47 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 4, i32 5)
-  %tmp_49_33 = icmp eq i2 %tmp_47, %tmp_222
+  %tmp_43 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_8, i32 16, i32 23)
+  %tmp_49_33 = icmp eq i8 %tmp_43, %ref_genome_read
   %diag_score_0_v_i1_33_cast_cast = select i1 %tmp_49_33, i8 1, i8 -1
   %prev_score_out_6_33 = add i8 %p_score1_load_32, %diag_score_0_v_i1_33_cast_cast
   %prev_score_out_0_op_i1_33 = add i8 -1, %score2_load_1_33
@@ -1083,16 +1090,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_33 = select i1 %or_cond1_i1_33, i8 %tmp_29_33, i8 %prev_score_out_0_op_i1_33
   %prev_orig_out_7_33 = select i1 %or_cond1_i1_33, i20 %up_orig_33, i20 %orig2_load_1_33
   %score2_load_1_34 = select i1 %or_cond_i1_33, i8 %prev_score_out_1_33, i8 %prev_score_out_6_33
-  %orig2_load_1_34 = select i1 %or_cond_i1_33, i20 %prev_orig_out_7_33, i20 %tmp_146
+  %orig2_load_1_34 = select i1 %or_cond_i1_33, i20 %prev_orig_out_7_33, i20 %tmp_127
   %score1_load_35 = load i8* %score1_addr_35, align 1
   %orig1_load_35 = load i20* %orig1_addr_35, align 4
   %p_score1_load_33 = select i1 %tmp_5, i8 -35, i8 %score1_load_34
   %phitmp35 = add i8 -1, %score1_load_35
   %tmp_29_34 = select i1 %tmp_5, i8 -37, i8 %phitmp35
-  %tmp_147 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_34
+  %tmp_128 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_34
   %up_orig_34 = select i1 %tmp_5, i20 0, i20 %orig1_load_35
-  %tmp_48 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 6, i32 7)
-  %tmp_49_34 = icmp eq i2 %tmp_48, %tmp_222
+  %tmp_44 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_8, i32 24, i32 31)
+  %tmp_49_34 = icmp eq i8 %tmp_44, %ref_genome_read
   %diag_score_0_v_i1_34_cast_cast = select i1 %tmp_49_34, i8 1, i8 -1
   %prev_score_out_6_34 = add i8 %p_score1_load_33, %diag_score_0_v_i1_34_cast_cast
   %prev_score_out_0_op_i1_34 = add i8 -1, %score2_load_1_34
@@ -1105,16 +1112,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_34 = select i1 %or_cond1_i1_34, i8 %tmp_29_34, i8 %prev_score_out_0_op_i1_34
   %prev_orig_out_7_34 = select i1 %or_cond1_i1_34, i20 %up_orig_34, i20 %orig2_load_1_34
   %score2_load_1_35 = select i1 %or_cond_i1_34, i8 %prev_score_out_1_34, i8 %prev_score_out_6_34
-  %orig2_load_1_35 = select i1 %or_cond_i1_34, i20 %prev_orig_out_7_34, i20 %tmp_147
+  %orig2_load_1_35 = select i1 %or_cond_i1_34, i20 %prev_orig_out_7_34, i20 %tmp_128
   %score1_load_36 = load i8* %score1_addr_36, align 4
   %orig1_load_36 = load i20* %orig1_addr_36, align 16
   %p_score1_load_34 = select i1 %tmp_5, i8 -36, i8 %score1_load_35
   %phitmp36 = add i8 -1, %score1_load_36
   %tmp_29_35 = select i1 %tmp_5, i8 -38, i8 %phitmp36
-  %tmp_148 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_35
+  %tmp_129 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_35
   %up_orig_35 = select i1 %tmp_5, i20 0, i20 %orig1_load_36
-  %tmp_49 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 8, i32 9)
-  %tmp_49_35 = icmp eq i2 %tmp_49, %tmp_222
+  %read_r_load_9 = load i32* %read_r_addr_9, align 4
+  %tmp_130 = trunc i32 %read_r_load_9 to i8
+  %tmp_49_35 = icmp eq i8 %tmp_130, %ref_genome_read
   %diag_score_0_v_i1_35_cast_cast = select i1 %tmp_49_35, i8 1, i8 -1
   %prev_score_out_6_35 = add i8 %p_score1_load_34, %diag_score_0_v_i1_35_cast_cast
   %prev_score_out_0_op_i1_35 = add i8 -1, %score2_load_1_35
@@ -1127,16 +1135,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_35 = select i1 %or_cond1_i1_35, i8 %tmp_29_35, i8 %prev_score_out_0_op_i1_35
   %prev_orig_out_7_35 = select i1 %or_cond1_i1_35, i20 %up_orig_35, i20 %orig2_load_1_35
   %score2_load_1_36 = select i1 %or_cond_i1_35, i8 %prev_score_out_1_35, i8 %prev_score_out_6_35
-  %orig2_load_1_36 = select i1 %or_cond_i1_35, i20 %prev_orig_out_7_35, i20 %tmp_148
+  %orig2_load_1_36 = select i1 %or_cond_i1_35, i20 %prev_orig_out_7_35, i20 %tmp_129
   %score1_load_37 = load i8* %score1_addr_37, align 1
   %orig1_load_37 = load i20* %orig1_addr_37, align 4
   %p_score1_load_35 = select i1 %tmp_5, i8 -37, i8 %score1_load_36
   %phitmp37 = add i8 -1, %score1_load_37
   %tmp_29_36 = select i1 %tmp_5, i8 -39, i8 %phitmp37
-  %tmp_149 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_36
+  %tmp_131 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_36
   %up_orig_36 = select i1 %tmp_5, i20 0, i20 %orig1_load_37
-  %tmp_50 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 10, i32 11)
-  %tmp_49_36 = icmp eq i2 %tmp_50, %tmp_222
+  %tmp_46 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_9, i32 8, i32 15)
+  %tmp_49_36 = icmp eq i8 %tmp_46, %ref_genome_read
   %diag_score_0_v_i1_36_cast_cast = select i1 %tmp_49_36, i8 1, i8 -1
   %prev_score_out_6_36 = add i8 %p_score1_load_35, %diag_score_0_v_i1_36_cast_cast
   %prev_score_out_0_op_i1_36 = add i8 -1, %score2_load_1_36
@@ -1149,16 +1157,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_36 = select i1 %or_cond1_i1_36, i8 %tmp_29_36, i8 %prev_score_out_0_op_i1_36
   %prev_orig_out_7_36 = select i1 %or_cond1_i1_36, i20 %up_orig_36, i20 %orig2_load_1_36
   %score2_load_1_37 = select i1 %or_cond_i1_36, i8 %prev_score_out_1_36, i8 %prev_score_out_6_36
-  %orig2_load_1_37 = select i1 %or_cond_i1_36, i20 %prev_orig_out_7_36, i20 %tmp_149
+  %orig2_load_1_37 = select i1 %or_cond_i1_36, i20 %prev_orig_out_7_36, i20 %tmp_131
   %score1_load_38 = load i8* %score1_addr_38, align 2
   %orig1_load_38 = load i20* %orig1_addr_38, align 8
   %p_score1_load_36 = select i1 %tmp_5, i8 -38, i8 %score1_load_37
   %phitmp38 = add i8 -1, %score1_load_38
   %tmp_29_37 = select i1 %tmp_5, i8 -40, i8 %phitmp38
-  %tmp_150 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_37
+  %tmp_132 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_37
   %up_orig_37 = select i1 %tmp_5, i20 0, i20 %orig1_load_38
-  %tmp_51 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 12, i32 13)
-  %tmp_49_37 = icmp eq i2 %tmp_51, %tmp_222
+  %tmp_47 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_9, i32 16, i32 23)
+  %tmp_49_37 = icmp eq i8 %tmp_47, %ref_genome_read
   %diag_score_0_v_i1_37_cast_cast = select i1 %tmp_49_37, i8 1, i8 -1
   %prev_score_out_6_37 = add i8 %p_score1_load_36, %diag_score_0_v_i1_37_cast_cast
   %prev_score_out_0_op_i1_37 = add i8 -1, %score2_load_1_37
@@ -1171,16 +1179,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_37 = select i1 %or_cond1_i1_37, i8 %tmp_29_37, i8 %prev_score_out_0_op_i1_37
   %prev_orig_out_7_37 = select i1 %or_cond1_i1_37, i20 %up_orig_37, i20 %orig2_load_1_37
   %score2_load_1_38 = select i1 %or_cond_i1_37, i8 %prev_score_out_1_37, i8 %prev_score_out_6_37
-  %orig2_load_1_38 = select i1 %or_cond_i1_37, i20 %prev_orig_out_7_37, i20 %tmp_150
+  %orig2_load_1_38 = select i1 %or_cond_i1_37, i20 %prev_orig_out_7_37, i20 %tmp_132
   %score1_load_39 = load i8* %score1_addr_39, align 1
   %orig1_load_39 = load i20* %orig1_addr_39, align 4
   %p_score1_load_37 = select i1 %tmp_5, i8 -39, i8 %score1_load_38
   %phitmp39 = add i8 -1, %score1_load_39
   %tmp_29_38 = select i1 %tmp_5, i8 -41, i8 %phitmp39
-  %tmp_151 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_38
+  %tmp_133 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_38
   %up_orig_38 = select i1 %tmp_5, i20 0, i20 %orig1_load_39
-  %tmp_52 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 14, i32 15)
-  %tmp_49_38 = icmp eq i2 %tmp_52, %tmp_222
+  %tmp_48 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_9, i32 24, i32 31)
+  %tmp_49_38 = icmp eq i8 %tmp_48, %ref_genome_read
   %diag_score_0_v_i1_38_cast_cast = select i1 %tmp_49_38, i8 1, i8 -1
   %prev_score_out_6_38 = add i8 %p_score1_load_37, %diag_score_0_v_i1_38_cast_cast
   %prev_score_out_0_op_i1_38 = add i8 -1, %score2_load_1_38
@@ -1193,16 +1201,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_38 = select i1 %or_cond1_i1_38, i8 %tmp_29_38, i8 %prev_score_out_0_op_i1_38
   %prev_orig_out_7_38 = select i1 %or_cond1_i1_38, i20 %up_orig_38, i20 %orig2_load_1_38
   %score2_load_1_39 = select i1 %or_cond_i1_38, i8 %prev_score_out_1_38, i8 %prev_score_out_6_38
-  %orig2_load_1_39 = select i1 %or_cond_i1_38, i20 %prev_orig_out_7_38, i20 %tmp_151
+  %orig2_load_1_39 = select i1 %or_cond_i1_38, i20 %prev_orig_out_7_38, i20 %tmp_133
   %score1_load_40 = load i8* %score1_addr_40, align 8
   %orig1_load_40 = load i20* %orig1_addr_40, align 16
   %p_score1_load_38 = select i1 %tmp_5, i8 -40, i8 %score1_load_39
   %phitmp40 = add i8 -1, %score1_load_40
   %tmp_29_39 = select i1 %tmp_5, i8 -42, i8 %phitmp40
-  %tmp_152 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_39
+  %tmp_134 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_39
   %up_orig_39 = select i1 %tmp_5, i20 0, i20 %orig1_load_40
-  %tmp_53 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 16, i32 17)
-  %tmp_49_39 = icmp eq i2 %tmp_53, %tmp_222
+  %read_r_load_10 = load i32* %read_r_addr_10, align 4
+  %tmp_135 = trunc i32 %read_r_load_10 to i8
+  %tmp_49_39 = icmp eq i8 %tmp_135, %ref_genome_read
   %diag_score_0_v_i1_39_cast_cast = select i1 %tmp_49_39, i8 1, i8 -1
   %prev_score_out_6_39 = add i8 %p_score1_load_38, %diag_score_0_v_i1_39_cast_cast
   %prev_score_out_0_op_i1_39 = add i8 -1, %score2_load_1_39
@@ -1215,16 +1224,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_39 = select i1 %or_cond1_i1_39, i8 %tmp_29_39, i8 %prev_score_out_0_op_i1_39
   %prev_orig_out_7_39 = select i1 %or_cond1_i1_39, i20 %up_orig_39, i20 %orig2_load_1_39
   %score2_load_1_40 = select i1 %or_cond_i1_39, i8 %prev_score_out_1_39, i8 %prev_score_out_6_39
-  %orig2_load_1_40 = select i1 %or_cond_i1_39, i20 %prev_orig_out_7_39, i20 %tmp_152
+  %orig2_load_1_40 = select i1 %or_cond_i1_39, i20 %prev_orig_out_7_39, i20 %tmp_134
   %score1_load_41 = load i8* %score1_addr_41, align 1
   %orig1_load_41 = load i20* %orig1_addr_41, align 4
   %p_score1_load_39 = select i1 %tmp_5, i8 -41, i8 %score1_load_40
   %phitmp41 = add i8 -1, %score1_load_41
   %tmp_29_40 = select i1 %tmp_5, i8 -43, i8 %phitmp41
-  %tmp_153 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_40
+  %tmp_136 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_40
   %up_orig_40 = select i1 %tmp_5, i20 0, i20 %orig1_load_41
-  %tmp_54 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 18, i32 19)
-  %tmp_49_40 = icmp eq i2 %tmp_54, %tmp_222
+  %tmp_50 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_10, i32 8, i32 15)
+  %tmp_49_40 = icmp eq i8 %tmp_50, %ref_genome_read
   %diag_score_0_v_i1_40_cast_cast = select i1 %tmp_49_40, i8 1, i8 -1
   %prev_score_out_6_40 = add i8 %p_score1_load_39, %diag_score_0_v_i1_40_cast_cast
   %prev_score_out_0_op_i1_40 = add i8 -1, %score2_load_1_40
@@ -1237,16 +1246,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_40 = select i1 %or_cond1_i1_40, i8 %tmp_29_40, i8 %prev_score_out_0_op_i1_40
   %prev_orig_out_7_40 = select i1 %or_cond1_i1_40, i20 %up_orig_40, i20 %orig2_load_1_40
   %score2_load_1_41 = select i1 %or_cond_i1_40, i8 %prev_score_out_1_40, i8 %prev_score_out_6_40
-  %orig2_load_1_41 = select i1 %or_cond_i1_40, i20 %prev_orig_out_7_40, i20 %tmp_153
+  %orig2_load_1_41 = select i1 %or_cond_i1_40, i20 %prev_orig_out_7_40, i20 %tmp_136
   %score1_load_42 = load i8* %score1_addr_42, align 2
   %orig1_load_42 = load i20* %orig1_addr_42, align 8
   %p_score1_load_40 = select i1 %tmp_5, i8 -42, i8 %score1_load_41
   %phitmp42 = add i8 -1, %score1_load_42
   %tmp_29_41 = select i1 %tmp_5, i8 -44, i8 %phitmp42
-  %tmp_154 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_41
+  %tmp_137 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_41
   %up_orig_41 = select i1 %tmp_5, i20 0, i20 %orig1_load_42
-  %tmp_55 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 20, i32 21)
-  %tmp_49_41 = icmp eq i2 %tmp_55, %tmp_222
+  %tmp_51 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_10, i32 16, i32 23)
+  %tmp_49_41 = icmp eq i8 %tmp_51, %ref_genome_read
   %diag_score_0_v_i1_41_cast_cast = select i1 %tmp_49_41, i8 1, i8 -1
   %prev_score_out_6_41 = add i8 %p_score1_load_40, %diag_score_0_v_i1_41_cast_cast
   %prev_score_out_0_op_i1_41 = add i8 -1, %score2_load_1_41
@@ -1259,16 +1268,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_41 = select i1 %or_cond1_i1_41, i8 %tmp_29_41, i8 %prev_score_out_0_op_i1_41
   %prev_orig_out_7_41 = select i1 %or_cond1_i1_41, i20 %up_orig_41, i20 %orig2_load_1_41
   %score2_load_1_42 = select i1 %or_cond_i1_41, i8 %prev_score_out_1_41, i8 %prev_score_out_6_41
-  %orig2_load_1_42 = select i1 %or_cond_i1_41, i20 %prev_orig_out_7_41, i20 %tmp_154
+  %orig2_load_1_42 = select i1 %or_cond_i1_41, i20 %prev_orig_out_7_41, i20 %tmp_137
   %score1_load_43 = load i8* %score1_addr_43, align 1
   %orig1_load_43 = load i20* %orig1_addr_43, align 4
   %p_score1_load_41 = select i1 %tmp_5, i8 -43, i8 %score1_load_42
   %phitmp43 = add i8 -1, %score1_load_43
   %tmp_29_42 = select i1 %tmp_5, i8 -45, i8 %phitmp43
-  %tmp_155 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_42
+  %tmp_138 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_42
   %up_orig_42 = select i1 %tmp_5, i20 0, i20 %orig1_load_43
-  %tmp_56 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 22, i32 23)
-  %tmp_49_42 = icmp eq i2 %tmp_56, %tmp_222
+  %tmp_52 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_10, i32 24, i32 31)
+  %tmp_49_42 = icmp eq i8 %tmp_52, %ref_genome_read
   %diag_score_0_v_i1_42_cast_cast = select i1 %tmp_49_42, i8 1, i8 -1
   %prev_score_out_6_42 = add i8 %p_score1_load_41, %diag_score_0_v_i1_42_cast_cast
   %prev_score_out_0_op_i1_42 = add i8 -1, %score2_load_1_42
@@ -1281,16 +1290,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_42 = select i1 %or_cond1_i1_42, i8 %tmp_29_42, i8 %prev_score_out_0_op_i1_42
   %prev_orig_out_7_42 = select i1 %or_cond1_i1_42, i20 %up_orig_42, i20 %orig2_load_1_42
   %score2_load_1_43 = select i1 %or_cond_i1_42, i8 %prev_score_out_1_42, i8 %prev_score_out_6_42
-  %orig2_load_1_43 = select i1 %or_cond_i1_42, i20 %prev_orig_out_7_42, i20 %tmp_155
+  %orig2_load_1_43 = select i1 %or_cond_i1_42, i20 %prev_orig_out_7_42, i20 %tmp_138
   %score1_load_44 = load i8* %score1_addr_44, align 4
   %orig1_load_44 = load i20* %orig1_addr_44, align 16
   %p_score1_load_42 = select i1 %tmp_5, i8 -44, i8 %score1_load_43
   %phitmp44 = add i8 -1, %score1_load_44
   %tmp_29_43 = select i1 %tmp_5, i8 -46, i8 %phitmp44
-  %tmp_156 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_43
+  %tmp_139 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_43
   %up_orig_43 = select i1 %tmp_5, i20 0, i20 %orig1_load_44
-  %tmp_57 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 24, i32 25)
-  %tmp_49_43 = icmp eq i2 %tmp_57, %tmp_222
+  %read_r_load_11 = load i32* %read_r_addr_11, align 4
+  %tmp_140 = trunc i32 %read_r_load_11 to i8
+  %tmp_49_43 = icmp eq i8 %tmp_140, %ref_genome_read
   %diag_score_0_v_i1_43_cast_cast = select i1 %tmp_49_43, i8 1, i8 -1
   %prev_score_out_6_43 = add i8 %p_score1_load_42, %diag_score_0_v_i1_43_cast_cast
   %prev_score_out_0_op_i1_43 = add i8 -1, %score2_load_1_43
@@ -1303,16 +1313,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_43 = select i1 %or_cond1_i1_43, i8 %tmp_29_43, i8 %prev_score_out_0_op_i1_43
   %prev_orig_out_7_43 = select i1 %or_cond1_i1_43, i20 %up_orig_43, i20 %orig2_load_1_43
   %score2_load_1_44 = select i1 %or_cond_i1_43, i8 %prev_score_out_1_43, i8 %prev_score_out_6_43
-  %orig2_load_1_44 = select i1 %or_cond_i1_43, i20 %prev_orig_out_7_43, i20 %tmp_156
+  %orig2_load_1_44 = select i1 %or_cond_i1_43, i20 %prev_orig_out_7_43, i20 %tmp_139
   %score1_load_45 = load i8* %score1_addr_45, align 1
   %orig1_load_45 = load i20* %orig1_addr_45, align 4
   %p_score1_load_43 = select i1 %tmp_5, i8 -45, i8 %score1_load_44
   %phitmp45 = add i8 -1, %score1_load_45
   %tmp_29_44 = select i1 %tmp_5, i8 -47, i8 %phitmp45
-  %tmp_157 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_44
+  %tmp_141 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_44
   %up_orig_44 = select i1 %tmp_5, i20 0, i20 %orig1_load_45
-  %tmp_58 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 26, i32 27)
-  %tmp_49_44 = icmp eq i2 %tmp_58, %tmp_222
+  %tmp_54 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_11, i32 8, i32 15)
+  %tmp_49_44 = icmp eq i8 %tmp_54, %ref_genome_read
   %diag_score_0_v_i1_44_cast_cast = select i1 %tmp_49_44, i8 1, i8 -1
   %prev_score_out_6_44 = add i8 %p_score1_load_43, %diag_score_0_v_i1_44_cast_cast
   %prev_score_out_0_op_i1_44 = add i8 -1, %score2_load_1_44
@@ -1325,16 +1335,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_44 = select i1 %or_cond1_i1_44, i8 %tmp_29_44, i8 %prev_score_out_0_op_i1_44
   %prev_orig_out_7_44 = select i1 %or_cond1_i1_44, i20 %up_orig_44, i20 %orig2_load_1_44
   %score2_load_1_45 = select i1 %or_cond_i1_44, i8 %prev_score_out_1_44, i8 %prev_score_out_6_44
-  %orig2_load_1_45 = select i1 %or_cond_i1_44, i20 %prev_orig_out_7_44, i20 %tmp_157
+  %orig2_load_1_45 = select i1 %or_cond_i1_44, i20 %prev_orig_out_7_44, i20 %tmp_141
   %score1_load_46 = load i8* %score1_addr_46, align 2
   %orig1_load_46 = load i20* %orig1_addr_46, align 8
   %p_score1_load_44 = select i1 %tmp_5, i8 -46, i8 %score1_load_45
   %phitmp46 = add i8 -1, %score1_load_46
   %tmp_29_45 = select i1 %tmp_5, i8 -48, i8 %phitmp46
-  %tmp_158 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_45
+  %tmp_142 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_45
   %up_orig_45 = select i1 %tmp_5, i20 0, i20 %orig1_load_46
-  %tmp_59 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 28, i32 29)
-  %tmp_49_45 = icmp eq i2 %tmp_59, %tmp_222
+  %tmp_55 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_11, i32 16, i32 23)
+  %tmp_49_45 = icmp eq i8 %tmp_55, %ref_genome_read
   %diag_score_0_v_i1_45_cast_cast = select i1 %tmp_49_45, i8 1, i8 -1
   %prev_score_out_6_45 = add i8 %p_score1_load_44, %diag_score_0_v_i1_45_cast_cast
   %prev_score_out_0_op_i1_45 = add i8 -1, %score2_load_1_45
@@ -1347,16 +1357,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_45 = select i1 %or_cond1_i1_45, i8 %tmp_29_45, i8 %prev_score_out_0_op_i1_45
   %prev_orig_out_7_45 = select i1 %or_cond1_i1_45, i20 %up_orig_45, i20 %orig2_load_1_45
   %score2_load_1_46 = select i1 %or_cond_i1_45, i8 %prev_score_out_1_45, i8 %prev_score_out_6_45
-  %orig2_load_1_46 = select i1 %or_cond_i1_45, i20 %prev_orig_out_7_45, i20 %tmp_158
+  %orig2_load_1_46 = select i1 %or_cond_i1_45, i20 %prev_orig_out_7_45, i20 %tmp_142
   %score1_load_47 = load i8* %score1_addr_47, align 1
   %orig1_load_47 = load i20* %orig1_addr_47, align 4
   %p_score1_load_45 = select i1 %tmp_5, i8 -47, i8 %score1_load_46
   %phitmp47 = add i8 -1, %score1_load_47
   %tmp_29_46 = select i1 %tmp_5, i8 -49, i8 %phitmp47
-  %tmp_159 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_46
+  %tmp_143 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_46
   %up_orig_46 = select i1 %tmp_5, i20 0, i20 %orig1_load_47
-  %tmp_60 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_2, i32 30, i32 31)
-  %tmp_49_46 = icmp eq i2 %tmp_60, %tmp_222
+  %tmp_56 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_11, i32 24, i32 31)
+  %tmp_49_46 = icmp eq i8 %tmp_56, %ref_genome_read
   %diag_score_0_v_i1_46_cast_cast = select i1 %tmp_49_46, i8 1, i8 -1
   %prev_score_out_6_46 = add i8 %p_score1_load_45, %diag_score_0_v_i1_46_cast_cast
   %prev_score_out_0_op_i1_46 = add i8 -1, %score2_load_1_46
@@ -1369,17 +1379,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_46 = select i1 %or_cond1_i1_46, i8 %tmp_29_46, i8 %prev_score_out_0_op_i1_46
   %prev_orig_out_7_46 = select i1 %or_cond1_i1_46, i20 %up_orig_46, i20 %orig2_load_1_46
   %score2_load_1_47 = select i1 %or_cond_i1_46, i8 %prev_score_out_1_46, i8 %prev_score_out_6_46
-  %orig2_load_1_47 = select i1 %or_cond_i1_46, i20 %prev_orig_out_7_46, i20 %tmp_159
+  %orig2_load_1_47 = select i1 %or_cond_i1_46, i20 %prev_orig_out_7_46, i20 %tmp_143
   %score1_load_48 = load i8* %score1_addr_48, align 16
   %orig1_load_48 = load i20* %orig1_addr_48, align 16
   %p_score1_load_46 = select i1 %tmp_5, i8 -48, i8 %score1_load_47
   %phitmp48 = add i8 -1, %score1_load_48
   %tmp_29_47 = select i1 %tmp_5, i8 -50, i8 %phitmp48
-  %tmp_160 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_47
+  %tmp_144 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_47
   %up_orig_47 = select i1 %tmp_5, i20 0, i20 %orig1_load_48
-  %read_load_3 = load i32* %read_addr_3, align 4
-  %tmp_226 = trunc i32 %read_load_3 to i2
-  %tmp_49_47 = icmp eq i2 %tmp_226, %tmp_222
+  %read_r_load_12 = load i32* %read_r_addr_12, align 4
+  %tmp_145 = trunc i32 %read_r_load_12 to i8
+  %tmp_49_47 = icmp eq i8 %tmp_145, %ref_genome_read
   %diag_score_0_v_i1_47_cast_cast = select i1 %tmp_49_47, i8 1, i8 -1
   %prev_score_out_6_47 = add i8 %p_score1_load_46, %diag_score_0_v_i1_47_cast_cast
   %prev_score_out_0_op_i1_47 = add i8 -1, %score2_load_1_47
@@ -1392,16 +1402,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_47 = select i1 %or_cond1_i1_47, i8 %tmp_29_47, i8 %prev_score_out_0_op_i1_47
   %prev_orig_out_7_47 = select i1 %or_cond1_i1_47, i20 %up_orig_47, i20 %orig2_load_1_47
   %score2_load_1_48 = select i1 %or_cond_i1_47, i8 %prev_score_out_1_47, i8 %prev_score_out_6_47
-  %orig2_load_1_48 = select i1 %or_cond_i1_47, i20 %prev_orig_out_7_47, i20 %tmp_160
+  %orig2_load_1_48 = select i1 %or_cond_i1_47, i20 %prev_orig_out_7_47, i20 %tmp_144
   %score1_load_49 = load i8* %score1_addr_49, align 1
   %orig1_load_49 = load i20* %orig1_addr_49, align 4
   %p_score1_load_47 = select i1 %tmp_5, i8 -49, i8 %score1_load_48
   %phitmp49 = add i8 -1, %score1_load_49
   %tmp_29_48 = select i1 %tmp_5, i8 -51, i8 %phitmp49
-  %tmp_161 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_48
+  %tmp_146 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_48
   %up_orig_48 = select i1 %tmp_5, i20 0, i20 %orig1_load_49
-  %tmp_62 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 2, i32 3)
-  %tmp_49_48 = icmp eq i2 %tmp_62, %tmp_222
+  %tmp_58 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_12, i32 8, i32 15)
+  %tmp_49_48 = icmp eq i8 %tmp_58, %ref_genome_read
   %diag_score_0_v_i1_48_cast_cast = select i1 %tmp_49_48, i8 1, i8 -1
   %prev_score_out_6_48 = add i8 %p_score1_load_47, %diag_score_0_v_i1_48_cast_cast
   %prev_score_out_0_op_i1_48 = add i8 -1, %score2_load_1_48
@@ -1414,16 +1424,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_48 = select i1 %or_cond1_i1_48, i8 %tmp_29_48, i8 %prev_score_out_0_op_i1_48
   %prev_orig_out_7_48 = select i1 %or_cond1_i1_48, i20 %up_orig_48, i20 %orig2_load_1_48
   %score2_load_1_49 = select i1 %or_cond_i1_48, i8 %prev_score_out_1_48, i8 %prev_score_out_6_48
-  %orig2_load_1_49 = select i1 %or_cond_i1_48, i20 %prev_orig_out_7_48, i20 %tmp_161
+  %orig2_load_1_49 = select i1 %or_cond_i1_48, i20 %prev_orig_out_7_48, i20 %tmp_146
   %score1_load_50 = load i8* %score1_addr_50, align 2
   %orig1_load_50 = load i20* %orig1_addr_50, align 8
   %p_score1_load_48 = select i1 %tmp_5, i8 -50, i8 %score1_load_49
   %phitmp50 = add i8 -1, %score1_load_50
   %tmp_29_49 = select i1 %tmp_5, i8 -52, i8 %phitmp50
-  %tmp_162 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_49
+  %tmp_147 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_49
   %up_orig_49 = select i1 %tmp_5, i20 0, i20 %orig1_load_50
-  %tmp_63 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 4, i32 5)
-  %tmp_49_49 = icmp eq i2 %tmp_63, %tmp_222
+  %tmp_59 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_12, i32 16, i32 23)
+  %tmp_49_49 = icmp eq i8 %tmp_59, %ref_genome_read
   %diag_score_0_v_i1_49_cast_cast = select i1 %tmp_49_49, i8 1, i8 -1
   %prev_score_out_6_49 = add i8 %p_score1_load_48, %diag_score_0_v_i1_49_cast_cast
   %prev_score_out_0_op_i1_49 = add i8 -1, %score2_load_1_49
@@ -1436,16 +1446,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_49 = select i1 %or_cond1_i1_49, i8 %tmp_29_49, i8 %prev_score_out_0_op_i1_49
   %prev_orig_out_7_49 = select i1 %or_cond1_i1_49, i20 %up_orig_49, i20 %orig2_load_1_49
   %score2_load_1_50 = select i1 %or_cond_i1_49, i8 %prev_score_out_1_49, i8 %prev_score_out_6_49
-  %orig2_load_1_50 = select i1 %or_cond_i1_49, i20 %prev_orig_out_7_49, i20 %tmp_162
+  %orig2_load_1_50 = select i1 %or_cond_i1_49, i20 %prev_orig_out_7_49, i20 %tmp_147
   %score1_load_51 = load i8* %score1_addr_51, align 1
   %orig1_load_51 = load i20* %orig1_addr_51, align 4
   %p_score1_load_49 = select i1 %tmp_5, i8 -51, i8 %score1_load_50
   %phitmp51 = add i8 -1, %score1_load_51
   %tmp_29_50 = select i1 %tmp_5, i8 -53, i8 %phitmp51
-  %tmp_163 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_50
+  %tmp_148 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_50
   %up_orig_50 = select i1 %tmp_5, i20 0, i20 %orig1_load_51
-  %tmp_64 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 6, i32 7)
-  %tmp_49_50 = icmp eq i2 %tmp_64, %tmp_222
+  %tmp_60 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_12, i32 24, i32 31)
+  %tmp_49_50 = icmp eq i8 %tmp_60, %ref_genome_read
   %diag_score_0_v_i1_50_cast_cast = select i1 %tmp_49_50, i8 1, i8 -1
   %prev_score_out_6_50 = add i8 %p_score1_load_49, %diag_score_0_v_i1_50_cast_cast
   %prev_score_out_0_op_i1_50 = add i8 -1, %score2_load_1_50
@@ -1458,16 +1468,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_50 = select i1 %or_cond1_i1_50, i8 %tmp_29_50, i8 %prev_score_out_0_op_i1_50
   %prev_orig_out_7_50 = select i1 %or_cond1_i1_50, i20 %up_orig_50, i20 %orig2_load_1_50
   %score2_load_1_51 = select i1 %or_cond_i1_50, i8 %prev_score_out_1_50, i8 %prev_score_out_6_50
-  %orig2_load_1_51 = select i1 %or_cond_i1_50, i20 %prev_orig_out_7_50, i20 %tmp_163
+  %orig2_load_1_51 = select i1 %or_cond_i1_50, i20 %prev_orig_out_7_50, i20 %tmp_148
   %score1_load_52 = load i8* %score1_addr_52, align 4
   %orig1_load_52 = load i20* %orig1_addr_52, align 16
   %p_score1_load_50 = select i1 %tmp_5, i8 -52, i8 %score1_load_51
   %phitmp52 = add i8 -1, %score1_load_52
   %tmp_29_51 = select i1 %tmp_5, i8 -54, i8 %phitmp52
-  %tmp_164 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_51
+  %tmp_149 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_51
   %up_orig_51 = select i1 %tmp_5, i20 0, i20 %orig1_load_52
-  %tmp_65 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 8, i32 9)
-  %tmp_49_51 = icmp eq i2 %tmp_65, %tmp_222
+  %read_r_load_13 = load i32* %read_r_addr_13, align 4
+  %tmp_150 = trunc i32 %read_r_load_13 to i8
+  %tmp_49_51 = icmp eq i8 %tmp_150, %ref_genome_read
   %diag_score_0_v_i1_51_cast_cast = select i1 %tmp_49_51, i8 1, i8 -1
   %prev_score_out_6_51 = add i8 %p_score1_load_50, %diag_score_0_v_i1_51_cast_cast
   %prev_score_out_0_op_i1_51 = add i8 -1, %score2_load_1_51
@@ -1480,16 +1491,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_51 = select i1 %or_cond1_i1_51, i8 %tmp_29_51, i8 %prev_score_out_0_op_i1_51
   %prev_orig_out_7_51 = select i1 %or_cond1_i1_51, i20 %up_orig_51, i20 %orig2_load_1_51
   %score2_load_1_52 = select i1 %or_cond_i1_51, i8 %prev_score_out_1_51, i8 %prev_score_out_6_51
-  %orig2_load_1_52 = select i1 %or_cond_i1_51, i20 %prev_orig_out_7_51, i20 %tmp_164
+  %orig2_load_1_52 = select i1 %or_cond_i1_51, i20 %prev_orig_out_7_51, i20 %tmp_149
   %score1_load_53 = load i8* %score1_addr_53, align 1
   %orig1_load_53 = load i20* %orig1_addr_53, align 4
   %p_score1_load_51 = select i1 %tmp_5, i8 -53, i8 %score1_load_52
   %phitmp53 = add i8 -1, %score1_load_53
   %tmp_29_52 = select i1 %tmp_5, i8 -55, i8 %phitmp53
-  %tmp_165 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_52
+  %tmp_151 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_52
   %up_orig_52 = select i1 %tmp_5, i20 0, i20 %orig1_load_53
-  %tmp_66 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 10, i32 11)
-  %tmp_49_52 = icmp eq i2 %tmp_66, %tmp_222
+  %tmp_62 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_13, i32 8, i32 15)
+  %tmp_49_52 = icmp eq i8 %tmp_62, %ref_genome_read
   %diag_score_0_v_i1_52_cast_cast = select i1 %tmp_49_52, i8 1, i8 -1
   %prev_score_out_6_52 = add i8 %p_score1_load_51, %diag_score_0_v_i1_52_cast_cast
   %prev_score_out_0_op_i1_52 = add i8 -1, %score2_load_1_52
@@ -1502,16 +1513,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_52 = select i1 %or_cond1_i1_52, i8 %tmp_29_52, i8 %prev_score_out_0_op_i1_52
   %prev_orig_out_7_52 = select i1 %or_cond1_i1_52, i20 %up_orig_52, i20 %orig2_load_1_52
   %score2_load_1_53 = select i1 %or_cond_i1_52, i8 %prev_score_out_1_52, i8 %prev_score_out_6_52
-  %orig2_load_1_53 = select i1 %or_cond_i1_52, i20 %prev_orig_out_7_52, i20 %tmp_165
+  %orig2_load_1_53 = select i1 %or_cond_i1_52, i20 %prev_orig_out_7_52, i20 %tmp_151
   %score1_load_54 = load i8* %score1_addr_54, align 2
   %orig1_load_54 = load i20* %orig1_addr_54, align 8
   %p_score1_load_52 = select i1 %tmp_5, i8 -54, i8 %score1_load_53
   %phitmp54 = add i8 -1, %score1_load_54
   %tmp_29_53 = select i1 %tmp_5, i8 -56, i8 %phitmp54
-  %tmp_166 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_53
+  %tmp_152 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_53
   %up_orig_53 = select i1 %tmp_5, i20 0, i20 %orig1_load_54
-  %tmp_67 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 12, i32 13)
-  %tmp_49_53 = icmp eq i2 %tmp_67, %tmp_222
+  %tmp_63 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_13, i32 16, i32 23)
+  %tmp_49_53 = icmp eq i8 %tmp_63, %ref_genome_read
   %diag_score_0_v_i1_53_cast_cast = select i1 %tmp_49_53, i8 1, i8 -1
   %prev_score_out_6_53 = add i8 %p_score1_load_52, %diag_score_0_v_i1_53_cast_cast
   %prev_score_out_0_op_i1_53 = add i8 -1, %score2_load_1_53
@@ -1524,16 +1535,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_53 = select i1 %or_cond1_i1_53, i8 %tmp_29_53, i8 %prev_score_out_0_op_i1_53
   %prev_orig_out_7_53 = select i1 %or_cond1_i1_53, i20 %up_orig_53, i20 %orig2_load_1_53
   %score2_load_1_54 = select i1 %or_cond_i1_53, i8 %prev_score_out_1_53, i8 %prev_score_out_6_53
-  %orig2_load_1_54 = select i1 %or_cond_i1_53, i20 %prev_orig_out_7_53, i20 %tmp_166
+  %orig2_load_1_54 = select i1 %or_cond_i1_53, i20 %prev_orig_out_7_53, i20 %tmp_152
   %score1_load_55 = load i8* %score1_addr_55, align 1
   %orig1_load_55 = load i20* %orig1_addr_55, align 4
   %p_score1_load_53 = select i1 %tmp_5, i8 -55, i8 %score1_load_54
   %phitmp55 = add i8 -1, %score1_load_55
   %tmp_29_54 = select i1 %tmp_5, i8 -57, i8 %phitmp55
-  %tmp_167 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_54
+  %tmp_153 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_54
   %up_orig_54 = select i1 %tmp_5, i20 0, i20 %orig1_load_55
-  %tmp_68 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 14, i32 15)
-  %tmp_49_54 = icmp eq i2 %tmp_68, %tmp_222
+  %tmp_64 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_13, i32 24, i32 31)
+  %tmp_49_54 = icmp eq i8 %tmp_64, %ref_genome_read
   %diag_score_0_v_i1_54_cast_cast = select i1 %tmp_49_54, i8 1, i8 -1
   %prev_score_out_6_54 = add i8 %p_score1_load_53, %diag_score_0_v_i1_54_cast_cast
   %prev_score_out_0_op_i1_54 = add i8 -1, %score2_load_1_54
@@ -1546,16 +1557,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_54 = select i1 %or_cond1_i1_54, i8 %tmp_29_54, i8 %prev_score_out_0_op_i1_54
   %prev_orig_out_7_54 = select i1 %or_cond1_i1_54, i20 %up_orig_54, i20 %orig2_load_1_54
   %score2_load_1_55 = select i1 %or_cond_i1_54, i8 %prev_score_out_1_54, i8 %prev_score_out_6_54
-  %orig2_load_1_55 = select i1 %or_cond_i1_54, i20 %prev_orig_out_7_54, i20 %tmp_167
+  %orig2_load_1_55 = select i1 %or_cond_i1_54, i20 %prev_orig_out_7_54, i20 %tmp_153
   %score1_load_56 = load i8* %score1_addr_56, align 8
   %orig1_load_56 = load i20* %orig1_addr_56, align 16
   %p_score1_load_54 = select i1 %tmp_5, i8 -56, i8 %score1_load_55
   %phitmp56 = add i8 -1, %score1_load_56
   %tmp_29_55 = select i1 %tmp_5, i8 -58, i8 %phitmp56
-  %tmp_168 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_55
+  %tmp_154 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_55
   %up_orig_55 = select i1 %tmp_5, i20 0, i20 %orig1_load_56
-  %tmp_69 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 16, i32 17)
-  %tmp_49_55 = icmp eq i2 %tmp_69, %tmp_222
+  %read_r_load_14 = load i32* %read_r_addr_14, align 4
+  %tmp_155 = trunc i32 %read_r_load_14 to i8
+  %tmp_49_55 = icmp eq i8 %tmp_155, %ref_genome_read
   %diag_score_0_v_i1_55_cast_cast = select i1 %tmp_49_55, i8 1, i8 -1
   %prev_score_out_6_55 = add i8 %p_score1_load_54, %diag_score_0_v_i1_55_cast_cast
   %prev_score_out_0_op_i1_55 = add i8 -1, %score2_load_1_55
@@ -1568,16 +1580,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_55 = select i1 %or_cond1_i1_55, i8 %tmp_29_55, i8 %prev_score_out_0_op_i1_55
   %prev_orig_out_7_55 = select i1 %or_cond1_i1_55, i20 %up_orig_55, i20 %orig2_load_1_55
   %score2_load_1_56 = select i1 %or_cond_i1_55, i8 %prev_score_out_1_55, i8 %prev_score_out_6_55
-  %orig2_load_1_56 = select i1 %or_cond_i1_55, i20 %prev_orig_out_7_55, i20 %tmp_168
+  %orig2_load_1_56 = select i1 %or_cond_i1_55, i20 %prev_orig_out_7_55, i20 %tmp_154
   %score1_load_57 = load i8* %score1_addr_57, align 1
   %orig1_load_57 = load i20* %orig1_addr_57, align 4
   %p_score1_load_55 = select i1 %tmp_5, i8 -57, i8 %score1_load_56
   %phitmp57 = add i8 -1, %score1_load_57
   %tmp_29_56 = select i1 %tmp_5, i8 -59, i8 %phitmp57
-  %tmp_169 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_56
+  %tmp_156 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_56
   %up_orig_56 = select i1 %tmp_5, i20 0, i20 %orig1_load_57
-  %tmp_70 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 18, i32 19)
-  %tmp_49_56 = icmp eq i2 %tmp_70, %tmp_222
+  %tmp_66 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_14, i32 8, i32 15)
+  %tmp_49_56 = icmp eq i8 %tmp_66, %ref_genome_read
   %diag_score_0_v_i1_56_cast_cast = select i1 %tmp_49_56, i8 1, i8 -1
   %prev_score_out_6_56 = add i8 %p_score1_load_55, %diag_score_0_v_i1_56_cast_cast
   %prev_score_out_0_op_i1_56 = add i8 -1, %score2_load_1_56
@@ -1590,16 +1602,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_56 = select i1 %or_cond1_i1_56, i8 %tmp_29_56, i8 %prev_score_out_0_op_i1_56
   %prev_orig_out_7_56 = select i1 %or_cond1_i1_56, i20 %up_orig_56, i20 %orig2_load_1_56
   %score2_load_1_57 = select i1 %or_cond_i1_56, i8 %prev_score_out_1_56, i8 %prev_score_out_6_56
-  %orig2_load_1_57 = select i1 %or_cond_i1_56, i20 %prev_orig_out_7_56, i20 %tmp_169
+  %orig2_load_1_57 = select i1 %or_cond_i1_56, i20 %prev_orig_out_7_56, i20 %tmp_156
   %score1_load_58 = load i8* %score1_addr_58, align 2
   %orig1_load_58 = load i20* %orig1_addr_58, align 8
   %p_score1_load_56 = select i1 %tmp_5, i8 -58, i8 %score1_load_57
   %phitmp58 = add i8 -1, %score1_load_58
   %tmp_29_57 = select i1 %tmp_5, i8 -60, i8 %phitmp58
-  %tmp_170 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_57
+  %tmp_157 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_57
   %up_orig_57 = select i1 %tmp_5, i20 0, i20 %orig1_load_58
-  %tmp_71 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 20, i32 21)
-  %tmp_49_57 = icmp eq i2 %tmp_71, %tmp_222
+  %tmp_67 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_14, i32 16, i32 23)
+  %tmp_49_57 = icmp eq i8 %tmp_67, %ref_genome_read
   %diag_score_0_v_i1_57_cast_cast = select i1 %tmp_49_57, i8 1, i8 -1
   %prev_score_out_6_57 = add i8 %p_score1_load_56, %diag_score_0_v_i1_57_cast_cast
   %prev_score_out_0_op_i1_57 = add i8 -1, %score2_load_1_57
@@ -1612,16 +1624,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_57 = select i1 %or_cond1_i1_57, i8 %tmp_29_57, i8 %prev_score_out_0_op_i1_57
   %prev_orig_out_7_57 = select i1 %or_cond1_i1_57, i20 %up_orig_57, i20 %orig2_load_1_57
   %score2_load_1_58 = select i1 %or_cond_i1_57, i8 %prev_score_out_1_57, i8 %prev_score_out_6_57
-  %orig2_load_1_58 = select i1 %or_cond_i1_57, i20 %prev_orig_out_7_57, i20 %tmp_170
+  %orig2_load_1_58 = select i1 %or_cond_i1_57, i20 %prev_orig_out_7_57, i20 %tmp_157
   %score1_load_59 = load i8* %score1_addr_59, align 1
   %orig1_load_59 = load i20* %orig1_addr_59, align 4
   %p_score1_load_57 = select i1 %tmp_5, i8 -59, i8 %score1_load_58
   %phitmp59 = add i8 -1, %score1_load_59
   %tmp_29_58 = select i1 %tmp_5, i8 -61, i8 %phitmp59
-  %tmp_171 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_58
+  %tmp_158 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_58
   %up_orig_58 = select i1 %tmp_5, i20 0, i20 %orig1_load_59
-  %tmp_72 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 22, i32 23)
-  %tmp_49_58 = icmp eq i2 %tmp_72, %tmp_222
+  %tmp_68 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_14, i32 24, i32 31)
+  %tmp_49_58 = icmp eq i8 %tmp_68, %ref_genome_read
   %diag_score_0_v_i1_58_cast_cast = select i1 %tmp_49_58, i8 1, i8 -1
   %prev_score_out_6_58 = add i8 %p_score1_load_57, %diag_score_0_v_i1_58_cast_cast
   %prev_score_out_0_op_i1_58 = add i8 -1, %score2_load_1_58
@@ -1634,16 +1646,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_58 = select i1 %or_cond1_i1_58, i8 %tmp_29_58, i8 %prev_score_out_0_op_i1_58
   %prev_orig_out_7_58 = select i1 %or_cond1_i1_58, i20 %up_orig_58, i20 %orig2_load_1_58
   %score2_load_1_59 = select i1 %or_cond_i1_58, i8 %prev_score_out_1_58, i8 %prev_score_out_6_58
-  %orig2_load_1_59 = select i1 %or_cond_i1_58, i20 %prev_orig_out_7_58, i20 %tmp_171
+  %orig2_load_1_59 = select i1 %or_cond_i1_58, i20 %prev_orig_out_7_58, i20 %tmp_158
   %score1_load_60 = load i8* %score1_addr_60, align 4
   %orig1_load_60 = load i20* %orig1_addr_60, align 16
   %p_score1_load_58 = select i1 %tmp_5, i8 -60, i8 %score1_load_59
   %phitmp60 = add i8 -1, %score1_load_60
   %tmp_29_59 = select i1 %tmp_5, i8 -62, i8 %phitmp60
-  %tmp_172 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_59
+  %tmp_159 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_59
   %up_orig_59 = select i1 %tmp_5, i20 0, i20 %orig1_load_60
-  %tmp_73 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 24, i32 25)
-  %tmp_49_59 = icmp eq i2 %tmp_73, %tmp_222
+  %read_r_load_15 = load i32* %read_r_addr_15, align 4
+  %tmp_160 = trunc i32 %read_r_load_15 to i8
+  %tmp_49_59 = icmp eq i8 %tmp_160, %ref_genome_read
   %diag_score_0_v_i1_59_cast_cast = select i1 %tmp_49_59, i8 1, i8 -1
   %prev_score_out_6_59 = add i8 %p_score1_load_58, %diag_score_0_v_i1_59_cast_cast
   %prev_score_out_0_op_i1_59 = add i8 -1, %score2_load_1_59
@@ -1656,16 +1669,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_59 = select i1 %or_cond1_i1_59, i8 %tmp_29_59, i8 %prev_score_out_0_op_i1_59
   %prev_orig_out_7_59 = select i1 %or_cond1_i1_59, i20 %up_orig_59, i20 %orig2_load_1_59
   %score2_load_1_60 = select i1 %or_cond_i1_59, i8 %prev_score_out_1_59, i8 %prev_score_out_6_59
-  %orig2_load_1_60 = select i1 %or_cond_i1_59, i20 %prev_orig_out_7_59, i20 %tmp_172
+  %orig2_load_1_60 = select i1 %or_cond_i1_59, i20 %prev_orig_out_7_59, i20 %tmp_159
   %score1_load_61 = load i8* %score1_addr_61, align 1
   %orig1_load_61 = load i20* %orig1_addr_61, align 4
   %p_score1_load_59 = select i1 %tmp_5, i8 -61, i8 %score1_load_60
   %phitmp61 = add i8 -1, %score1_load_61
   %tmp_29_60 = select i1 %tmp_5, i8 -63, i8 %phitmp61
-  %tmp_173 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_60
+  %tmp_161 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_60
   %up_orig_60 = select i1 %tmp_5, i20 0, i20 %orig1_load_61
-  %tmp_74 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 26, i32 27)
-  %tmp_49_60 = icmp eq i2 %tmp_74, %tmp_222
+  %tmp_70 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_15, i32 8, i32 15)
+  %tmp_49_60 = icmp eq i8 %tmp_70, %ref_genome_read
   %diag_score_0_v_i1_60_cast_cast = select i1 %tmp_49_60, i8 1, i8 -1
   %prev_score_out_6_60 = add i8 %p_score1_load_59, %diag_score_0_v_i1_60_cast_cast
   %prev_score_out_0_op_i1_60 = add i8 -1, %score2_load_1_60
@@ -1678,16 +1691,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_60 = select i1 %or_cond1_i1_60, i8 %tmp_29_60, i8 %prev_score_out_0_op_i1_60
   %prev_orig_out_7_60 = select i1 %or_cond1_i1_60, i20 %up_orig_60, i20 %orig2_load_1_60
   %score2_load_1_61 = select i1 %or_cond_i1_60, i8 %prev_score_out_1_60, i8 %prev_score_out_6_60
-  %orig2_load_1_61 = select i1 %or_cond_i1_60, i20 %prev_orig_out_7_60, i20 %tmp_173
+  %orig2_load_1_61 = select i1 %or_cond_i1_60, i20 %prev_orig_out_7_60, i20 %tmp_161
   %score1_load_62 = load i8* %score1_addr_62, align 2
   %orig1_load_62 = load i20* %orig1_addr_62, align 8
   %p_score1_load_60 = select i1 %tmp_5, i8 -62, i8 %score1_load_61
   %phitmp62 = add i8 -1, %score1_load_62
   %tmp_29_61 = select i1 %tmp_5, i8 -64, i8 %phitmp62
-  %tmp_174 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_61
+  %tmp_162 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_61
   %up_orig_61 = select i1 %tmp_5, i20 0, i20 %orig1_load_62
-  %tmp_75 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 28, i32 29)
-  %tmp_49_61 = icmp eq i2 %tmp_75, %tmp_222
+  %tmp_71 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_15, i32 16, i32 23)
+  %tmp_49_61 = icmp eq i8 %tmp_71, %ref_genome_read
   %diag_score_0_v_i1_61_cast_cast = select i1 %tmp_49_61, i8 1, i8 -1
   %prev_score_out_6_61 = add i8 %p_score1_load_60, %diag_score_0_v_i1_61_cast_cast
   %prev_score_out_0_op_i1_61 = add i8 -1, %score2_load_1_61
@@ -1700,16 +1713,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_61 = select i1 %or_cond1_i1_61, i8 %tmp_29_61, i8 %prev_score_out_0_op_i1_61
   %prev_orig_out_7_61 = select i1 %or_cond1_i1_61, i20 %up_orig_61, i20 %orig2_load_1_61
   %score2_load_1_62 = select i1 %or_cond_i1_61, i8 %prev_score_out_1_61, i8 %prev_score_out_6_61
-  %orig2_load_1_62 = select i1 %or_cond_i1_61, i20 %prev_orig_out_7_61, i20 %tmp_174
+  %orig2_load_1_62 = select i1 %or_cond_i1_61, i20 %prev_orig_out_7_61, i20 %tmp_162
   %score1_load_63 = load i8* %score1_addr_63, align 1
   %orig1_load_63 = load i20* %orig1_addr_63, align 4
   %p_score1_load_61 = select i1 %tmp_5, i8 -63, i8 %score1_load_62
   %phitmp63 = add i8 -1, %score1_load_63
   %tmp_29_62 = select i1 %tmp_5, i8 -65, i8 %phitmp63
-  %tmp_175 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_62
+  %tmp_163 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_62
   %up_orig_62 = select i1 %tmp_5, i20 0, i20 %orig1_load_63
-  %tmp_76 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_3, i32 30, i32 31)
-  %tmp_49_62 = icmp eq i2 %tmp_76, %tmp_222
+  %tmp_72 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_15, i32 24, i32 31)
+  %tmp_49_62 = icmp eq i8 %tmp_72, %ref_genome_read
   %diag_score_0_v_i1_62_cast_cast = select i1 %tmp_49_62, i8 1, i8 -1
   %prev_score_out_6_62 = add i8 %p_score1_load_61, %diag_score_0_v_i1_62_cast_cast
   %prev_score_out_0_op_i1_62 = add i8 -1, %score2_load_1_62
@@ -1722,17 +1735,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_62 = select i1 %or_cond1_i1_62, i8 %tmp_29_62, i8 %prev_score_out_0_op_i1_62
   %prev_orig_out_7_62 = select i1 %or_cond1_i1_62, i20 %up_orig_62, i20 %orig2_load_1_62
   %score2_load_1_63 = select i1 %or_cond_i1_62, i8 %prev_score_out_1_62, i8 %prev_score_out_6_62
-  %orig2_load_1_63 = select i1 %or_cond_i1_62, i20 %prev_orig_out_7_62, i20 %tmp_175
+  %orig2_load_1_63 = select i1 %or_cond_i1_62, i20 %prev_orig_out_7_62, i20 %tmp_163
   %score1_load_64 = load i8* %score1_addr_64, align 16
   %orig1_load_64 = load i20* %orig1_addr_64, align 16
   %p_score1_load_62 = select i1 %tmp_5, i8 -64, i8 %score1_load_63
   %phitmp64 = add i8 -1, %score1_load_64
   %tmp_29_63 = select i1 %tmp_5, i8 -66, i8 %phitmp64
-  %tmp_176 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_63
+  %tmp_164 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_63
   %up_orig_63 = select i1 %tmp_5, i20 0, i20 %orig1_load_64
-  %read_load_4 = load i32* %read_addr_4, align 4
-  %tmp_227 = trunc i32 %read_load_4 to i2
-  %tmp_49_63 = icmp eq i2 %tmp_227, %tmp_222
+  %read_r_load_16 = load i32* %read_r_addr_16, align 4
+  %tmp_165 = trunc i32 %read_r_load_16 to i8
+  %tmp_49_63 = icmp eq i8 %tmp_165, %ref_genome_read
   %diag_score_0_v_i1_63_cast_cast = select i1 %tmp_49_63, i8 1, i8 -1
   %prev_score_out_6_63 = add i8 %p_score1_load_62, %diag_score_0_v_i1_63_cast_cast
   %prev_score_out_0_op_i1_63 = add i8 -1, %score2_load_1_63
@@ -1745,16 +1758,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_63 = select i1 %or_cond1_i1_63, i8 %tmp_29_63, i8 %prev_score_out_0_op_i1_63
   %prev_orig_out_7_63 = select i1 %or_cond1_i1_63, i20 %up_orig_63, i20 %orig2_load_1_63
   %score2_load_1_64 = select i1 %or_cond_i1_63, i8 %prev_score_out_1_63, i8 %prev_score_out_6_63
-  %orig2_load_1_64 = select i1 %or_cond_i1_63, i20 %prev_orig_out_7_63, i20 %tmp_176
+  %orig2_load_1_64 = select i1 %or_cond_i1_63, i20 %prev_orig_out_7_63, i20 %tmp_164
   %score1_load_65 = load i8* %score1_addr_65, align 1
   %orig1_load_65 = load i20* %orig1_addr_65, align 4
   %p_score1_load_63 = select i1 %tmp_5, i8 -65, i8 %score1_load_64
   %phitmp65 = add i8 -1, %score1_load_65
   %tmp_29_64 = select i1 %tmp_5, i8 -67, i8 %phitmp65
-  %tmp_177 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_64
+  %tmp_166 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_64
   %up_orig_64 = select i1 %tmp_5, i20 0, i20 %orig1_load_65
-  %tmp_78 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 2, i32 3)
-  %tmp_49_64 = icmp eq i2 %tmp_78, %tmp_222
+  %tmp_74 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_16, i32 8, i32 15)
+  %tmp_49_64 = icmp eq i8 %tmp_74, %ref_genome_read
   %diag_score_0_v_i1_64_cast_cast = select i1 %tmp_49_64, i8 1, i8 -1
   %prev_score_out_6_64 = add i8 %p_score1_load_63, %diag_score_0_v_i1_64_cast_cast
   %prev_score_out_0_op_i1_64 = add i8 -1, %score2_load_1_64
@@ -1767,16 +1780,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_64 = select i1 %or_cond1_i1_64, i8 %tmp_29_64, i8 %prev_score_out_0_op_i1_64
   %prev_orig_out_7_64 = select i1 %or_cond1_i1_64, i20 %up_orig_64, i20 %orig2_load_1_64
   %score2_load_1_65 = select i1 %or_cond_i1_64, i8 %prev_score_out_1_64, i8 %prev_score_out_6_64
-  %orig2_load_1_65 = select i1 %or_cond_i1_64, i20 %prev_orig_out_7_64, i20 %tmp_177
+  %orig2_load_1_65 = select i1 %or_cond_i1_64, i20 %prev_orig_out_7_64, i20 %tmp_166
   %score1_load_66 = load i8* %score1_addr_66, align 2
   %orig1_load_66 = load i20* %orig1_addr_66, align 8
   %p_score1_load_64 = select i1 %tmp_5, i8 -66, i8 %score1_load_65
   %phitmp66 = add i8 -1, %score1_load_66
   %tmp_29_65 = select i1 %tmp_5, i8 -68, i8 %phitmp66
-  %tmp_178 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_65
+  %tmp_167 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_65
   %up_orig_65 = select i1 %tmp_5, i20 0, i20 %orig1_load_66
-  %tmp_79 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 4, i32 5)
-  %tmp_49_65 = icmp eq i2 %tmp_79, %tmp_222
+  %tmp_75 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_16, i32 16, i32 23)
+  %tmp_49_65 = icmp eq i8 %tmp_75, %ref_genome_read
   %diag_score_0_v_i1_65_cast_cast = select i1 %tmp_49_65, i8 1, i8 -1
   %prev_score_out_6_65 = add i8 %p_score1_load_64, %diag_score_0_v_i1_65_cast_cast
   %prev_score_out_0_op_i1_65 = add i8 -1, %score2_load_1_65
@@ -1789,16 +1802,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_65 = select i1 %or_cond1_i1_65, i8 %tmp_29_65, i8 %prev_score_out_0_op_i1_65
   %prev_orig_out_7_65 = select i1 %or_cond1_i1_65, i20 %up_orig_65, i20 %orig2_load_1_65
   %score2_load_1_66 = select i1 %or_cond_i1_65, i8 %prev_score_out_1_65, i8 %prev_score_out_6_65
-  %orig2_load_1_66 = select i1 %or_cond_i1_65, i20 %prev_orig_out_7_65, i20 %tmp_178
+  %orig2_load_1_66 = select i1 %or_cond_i1_65, i20 %prev_orig_out_7_65, i20 %tmp_167
   %score1_load_67 = load i8* %score1_addr_67, align 1
   %orig1_load_67 = load i20* %orig1_addr_67, align 4
   %p_score1_load_65 = select i1 %tmp_5, i8 -67, i8 %score1_load_66
   %phitmp67 = add i8 -1, %score1_load_67
   %tmp_29_66 = select i1 %tmp_5, i8 -69, i8 %phitmp67
-  %tmp_179 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_66
+  %tmp_168 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_66
   %up_orig_66 = select i1 %tmp_5, i20 0, i20 %orig1_load_67
-  %tmp_80 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 6, i32 7)
-  %tmp_49_66 = icmp eq i2 %tmp_80, %tmp_222
+  %tmp_76 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_16, i32 24, i32 31)
+  %tmp_49_66 = icmp eq i8 %tmp_76, %ref_genome_read
   %diag_score_0_v_i1_66_cast_cast = select i1 %tmp_49_66, i8 1, i8 -1
   %prev_score_out_6_66 = add i8 %p_score1_load_65, %diag_score_0_v_i1_66_cast_cast
   %prev_score_out_0_op_i1_66 = add i8 -1, %score2_load_1_66
@@ -1811,16 +1824,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_66 = select i1 %or_cond1_i1_66, i8 %tmp_29_66, i8 %prev_score_out_0_op_i1_66
   %prev_orig_out_7_66 = select i1 %or_cond1_i1_66, i20 %up_orig_66, i20 %orig2_load_1_66
   %score2_load_1_67 = select i1 %or_cond_i1_66, i8 %prev_score_out_1_66, i8 %prev_score_out_6_66
-  %orig2_load_1_67 = select i1 %or_cond_i1_66, i20 %prev_orig_out_7_66, i20 %tmp_179
+  %orig2_load_1_67 = select i1 %or_cond_i1_66, i20 %prev_orig_out_7_66, i20 %tmp_168
   %score1_load_68 = load i8* %score1_addr_68, align 4
   %orig1_load_68 = load i20* %orig1_addr_68, align 16
   %p_score1_load_66 = select i1 %tmp_5, i8 -68, i8 %score1_load_67
   %phitmp68 = add i8 -1, %score1_load_68
   %tmp_29_67 = select i1 %tmp_5, i8 -70, i8 %phitmp68
-  %tmp_180 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_67
+  %tmp_169 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_67
   %up_orig_67 = select i1 %tmp_5, i20 0, i20 %orig1_load_68
-  %tmp_81 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 8, i32 9)
-  %tmp_49_67 = icmp eq i2 %tmp_81, %tmp_222
+  %read_r_load_17 = load i32* %read_r_addr_17, align 4
+  %tmp_170 = trunc i32 %read_r_load_17 to i8
+  %tmp_49_67 = icmp eq i8 %tmp_170, %ref_genome_read
   %diag_score_0_v_i1_67_cast_cast = select i1 %tmp_49_67, i8 1, i8 -1
   %prev_score_out_6_67 = add i8 %p_score1_load_66, %diag_score_0_v_i1_67_cast_cast
   %prev_score_out_0_op_i1_67 = add i8 -1, %score2_load_1_67
@@ -1833,16 +1847,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_67 = select i1 %or_cond1_i1_67, i8 %tmp_29_67, i8 %prev_score_out_0_op_i1_67
   %prev_orig_out_7_67 = select i1 %or_cond1_i1_67, i20 %up_orig_67, i20 %orig2_load_1_67
   %score2_load_1_68 = select i1 %or_cond_i1_67, i8 %prev_score_out_1_67, i8 %prev_score_out_6_67
-  %orig2_load_1_68 = select i1 %or_cond_i1_67, i20 %prev_orig_out_7_67, i20 %tmp_180
+  %orig2_load_1_68 = select i1 %or_cond_i1_67, i20 %prev_orig_out_7_67, i20 %tmp_169
   %score1_load_69 = load i8* %score1_addr_69, align 1
   %orig1_load_69 = load i20* %orig1_addr_69, align 4
   %p_score1_load_67 = select i1 %tmp_5, i8 -69, i8 %score1_load_68
   %phitmp69 = add i8 -1, %score1_load_69
   %tmp_29_68 = select i1 %tmp_5, i8 -71, i8 %phitmp69
-  %tmp_181 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_68
+  %tmp_171 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_68
   %up_orig_68 = select i1 %tmp_5, i20 0, i20 %orig1_load_69
-  %tmp_82 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 10, i32 11)
-  %tmp_49_68 = icmp eq i2 %tmp_82, %tmp_222
+  %tmp_78 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_17, i32 8, i32 15)
+  %tmp_49_68 = icmp eq i8 %tmp_78, %ref_genome_read
   %diag_score_0_v_i1_68_cast_cast = select i1 %tmp_49_68, i8 1, i8 -1
   %prev_score_out_6_68 = add i8 %p_score1_load_67, %diag_score_0_v_i1_68_cast_cast
   %prev_score_out_0_op_i1_68 = add i8 -1, %score2_load_1_68
@@ -1855,16 +1869,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_68 = select i1 %or_cond1_i1_68, i8 %tmp_29_68, i8 %prev_score_out_0_op_i1_68
   %prev_orig_out_7_68 = select i1 %or_cond1_i1_68, i20 %up_orig_68, i20 %orig2_load_1_68
   %score2_load_1_69 = select i1 %or_cond_i1_68, i8 %prev_score_out_1_68, i8 %prev_score_out_6_68
-  %orig2_load_1_69 = select i1 %or_cond_i1_68, i20 %prev_orig_out_7_68, i20 %tmp_181
+  %orig2_load_1_69 = select i1 %or_cond_i1_68, i20 %prev_orig_out_7_68, i20 %tmp_171
   %score1_load_70 = load i8* %score1_addr_70, align 2
   %orig1_load_70 = load i20* %orig1_addr_70, align 8
   %p_score1_load_68 = select i1 %tmp_5, i8 -70, i8 %score1_load_69
   %phitmp70 = add i8 -1, %score1_load_70
   %tmp_29_69 = select i1 %tmp_5, i8 -72, i8 %phitmp70
-  %tmp_182 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_69
+  %tmp_172 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_69
   %up_orig_69 = select i1 %tmp_5, i20 0, i20 %orig1_load_70
-  %tmp_83 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 12, i32 13)
-  %tmp_49_69 = icmp eq i2 %tmp_83, %tmp_222
+  %tmp_79 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_17, i32 16, i32 23)
+  %tmp_49_69 = icmp eq i8 %tmp_79, %ref_genome_read
   %diag_score_0_v_i1_69_cast_cast = select i1 %tmp_49_69, i8 1, i8 -1
   %prev_score_out_6_69 = add i8 %p_score1_load_68, %diag_score_0_v_i1_69_cast_cast
   %prev_score_out_0_op_i1_69 = add i8 -1, %score2_load_1_69
@@ -1877,16 +1891,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_69 = select i1 %or_cond1_i1_69, i8 %tmp_29_69, i8 %prev_score_out_0_op_i1_69
   %prev_orig_out_7_69 = select i1 %or_cond1_i1_69, i20 %up_orig_69, i20 %orig2_load_1_69
   %score2_load_1_70 = select i1 %or_cond_i1_69, i8 %prev_score_out_1_69, i8 %prev_score_out_6_69
-  %orig2_load_1_70 = select i1 %or_cond_i1_69, i20 %prev_orig_out_7_69, i20 %tmp_182
+  %orig2_load_1_70 = select i1 %or_cond_i1_69, i20 %prev_orig_out_7_69, i20 %tmp_172
   %score1_load_71 = load i8* %score1_addr_71, align 1
   %orig1_load_71 = load i20* %orig1_addr_71, align 4
   %p_score1_load_69 = select i1 %tmp_5, i8 -71, i8 %score1_load_70
   %phitmp71 = add i8 -1, %score1_load_71
   %tmp_29_70 = select i1 %tmp_5, i8 -73, i8 %phitmp71
-  %tmp_183 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_70
+  %tmp_173 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_70
   %up_orig_70 = select i1 %tmp_5, i20 0, i20 %orig1_load_71
-  %tmp_84 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 14, i32 15)
-  %tmp_49_70 = icmp eq i2 %tmp_84, %tmp_222
+  %tmp_80 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_17, i32 24, i32 31)
+  %tmp_49_70 = icmp eq i8 %tmp_80, %ref_genome_read
   %diag_score_0_v_i1_70_cast_cast = select i1 %tmp_49_70, i8 1, i8 -1
   %prev_score_out_6_70 = add i8 %p_score1_load_69, %diag_score_0_v_i1_70_cast_cast
   %prev_score_out_0_op_i1_70 = add i8 -1, %score2_load_1_70
@@ -1899,16 +1913,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_70 = select i1 %or_cond1_i1_70, i8 %tmp_29_70, i8 %prev_score_out_0_op_i1_70
   %prev_orig_out_7_70 = select i1 %or_cond1_i1_70, i20 %up_orig_70, i20 %orig2_load_1_70
   %score2_load_1_71 = select i1 %or_cond_i1_70, i8 %prev_score_out_1_70, i8 %prev_score_out_6_70
-  %orig2_load_1_71 = select i1 %or_cond_i1_70, i20 %prev_orig_out_7_70, i20 %tmp_183
+  %orig2_load_1_71 = select i1 %or_cond_i1_70, i20 %prev_orig_out_7_70, i20 %tmp_173
   %score1_load_72 = load i8* %score1_addr_72, align 8
   %orig1_load_72 = load i20* %orig1_addr_72, align 16
   %p_score1_load_70 = select i1 %tmp_5, i8 -72, i8 %score1_load_71
   %phitmp72 = add i8 -1, %score1_load_72
   %tmp_29_71 = select i1 %tmp_5, i8 -74, i8 %phitmp72
-  %tmp_184 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_71
+  %tmp_174 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_71
   %up_orig_71 = select i1 %tmp_5, i20 0, i20 %orig1_load_72
-  %tmp_85 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 16, i32 17)
-  %tmp_49_71 = icmp eq i2 %tmp_85, %tmp_222
+  %read_r_load_18 = load i32* %read_r_addr_18, align 4
+  %tmp_175 = trunc i32 %read_r_load_18 to i8
+  %tmp_49_71 = icmp eq i8 %tmp_175, %ref_genome_read
   %diag_score_0_v_i1_71_cast_cast = select i1 %tmp_49_71, i8 1, i8 -1
   %prev_score_out_6_71 = add i8 %p_score1_load_70, %diag_score_0_v_i1_71_cast_cast
   %prev_score_out_0_op_i1_71 = add i8 -1, %score2_load_1_71
@@ -1921,16 +1936,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_71 = select i1 %or_cond1_i1_71, i8 %tmp_29_71, i8 %prev_score_out_0_op_i1_71
   %prev_orig_out_7_71 = select i1 %or_cond1_i1_71, i20 %up_orig_71, i20 %orig2_load_1_71
   %score2_load_1_72 = select i1 %or_cond_i1_71, i8 %prev_score_out_1_71, i8 %prev_score_out_6_71
-  %orig2_load_1_72 = select i1 %or_cond_i1_71, i20 %prev_orig_out_7_71, i20 %tmp_184
+  %orig2_load_1_72 = select i1 %or_cond_i1_71, i20 %prev_orig_out_7_71, i20 %tmp_174
   %score1_load_73 = load i8* %score1_addr_73, align 1
   %orig1_load_73 = load i20* %orig1_addr_73, align 4
   %p_score1_load_71 = select i1 %tmp_5, i8 -73, i8 %score1_load_72
   %phitmp73 = add i8 -1, %score1_load_73
   %tmp_29_72 = select i1 %tmp_5, i8 -75, i8 %phitmp73
-  %tmp_185 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_72
+  %tmp_176 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_72
   %up_orig_72 = select i1 %tmp_5, i20 0, i20 %orig1_load_73
-  %tmp_86 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 18, i32 19)
-  %tmp_49_72 = icmp eq i2 %tmp_86, %tmp_222
+  %tmp_82 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_18, i32 8, i32 15)
+  %tmp_49_72 = icmp eq i8 %tmp_82, %ref_genome_read
   %diag_score_0_v_i1_72_cast_cast = select i1 %tmp_49_72, i8 1, i8 -1
   %prev_score_out_6_72 = add i8 %p_score1_load_71, %diag_score_0_v_i1_72_cast_cast
   %prev_score_out_0_op_i1_72 = add i8 -1, %score2_load_1_72
@@ -1943,16 +1958,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_72 = select i1 %or_cond1_i1_72, i8 %tmp_29_72, i8 %prev_score_out_0_op_i1_72
   %prev_orig_out_7_72 = select i1 %or_cond1_i1_72, i20 %up_orig_72, i20 %orig2_load_1_72
   %score2_load_1_73 = select i1 %or_cond_i1_72, i8 %prev_score_out_1_72, i8 %prev_score_out_6_72
-  %orig2_load_1_73 = select i1 %or_cond_i1_72, i20 %prev_orig_out_7_72, i20 %tmp_185
+  %orig2_load_1_73 = select i1 %or_cond_i1_72, i20 %prev_orig_out_7_72, i20 %tmp_176
   %score1_load_74 = load i8* %score1_addr_74, align 2
   %orig1_load_74 = load i20* %orig1_addr_74, align 8
   %p_score1_load_72 = select i1 %tmp_5, i8 -74, i8 %score1_load_73
   %phitmp74 = add i8 -1, %score1_load_74
   %tmp_29_73 = select i1 %tmp_5, i8 -76, i8 %phitmp74
-  %tmp_186 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_73
+  %tmp_177 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_73
   %up_orig_73 = select i1 %tmp_5, i20 0, i20 %orig1_load_74
-  %tmp_87 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 20, i32 21)
-  %tmp_49_73 = icmp eq i2 %tmp_87, %tmp_222
+  %tmp_83 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_18, i32 16, i32 23)
+  %tmp_49_73 = icmp eq i8 %tmp_83, %ref_genome_read
   %diag_score_0_v_i1_73_cast_cast = select i1 %tmp_49_73, i8 1, i8 -1
   %prev_score_out_6_73 = add i8 %p_score1_load_72, %diag_score_0_v_i1_73_cast_cast
   %prev_score_out_0_op_i1_73 = add i8 -1, %score2_load_1_73
@@ -1965,16 +1980,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_73 = select i1 %or_cond1_i1_73, i8 %tmp_29_73, i8 %prev_score_out_0_op_i1_73
   %prev_orig_out_7_73 = select i1 %or_cond1_i1_73, i20 %up_orig_73, i20 %orig2_load_1_73
   %score2_load_1_74 = select i1 %or_cond_i1_73, i8 %prev_score_out_1_73, i8 %prev_score_out_6_73
-  %orig2_load_1_74 = select i1 %or_cond_i1_73, i20 %prev_orig_out_7_73, i20 %tmp_186
+  %orig2_load_1_74 = select i1 %or_cond_i1_73, i20 %prev_orig_out_7_73, i20 %tmp_177
   %score1_load_75 = load i8* %score1_addr_75, align 1
   %orig1_load_75 = load i20* %orig1_addr_75, align 4
   %p_score1_load_73 = select i1 %tmp_5, i8 -75, i8 %score1_load_74
   %phitmp75 = add i8 -1, %score1_load_75
   %tmp_29_74 = select i1 %tmp_5, i8 -77, i8 %phitmp75
-  %tmp_187 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_74
+  %tmp_178 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_74
   %up_orig_74 = select i1 %tmp_5, i20 0, i20 %orig1_load_75
-  %tmp_88 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 22, i32 23)
-  %tmp_49_74 = icmp eq i2 %tmp_88, %tmp_222
+  %tmp_84 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_18, i32 24, i32 31)
+  %tmp_49_74 = icmp eq i8 %tmp_84, %ref_genome_read
   %diag_score_0_v_i1_74_cast_cast = select i1 %tmp_49_74, i8 1, i8 -1
   %prev_score_out_6_74 = add i8 %p_score1_load_73, %diag_score_0_v_i1_74_cast_cast
   %prev_score_out_0_op_i1_74 = add i8 -1, %score2_load_1_74
@@ -1987,16 +2002,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_74 = select i1 %or_cond1_i1_74, i8 %tmp_29_74, i8 %prev_score_out_0_op_i1_74
   %prev_orig_out_7_74 = select i1 %or_cond1_i1_74, i20 %up_orig_74, i20 %orig2_load_1_74
   %score2_load_1_75 = select i1 %or_cond_i1_74, i8 %prev_score_out_1_74, i8 %prev_score_out_6_74
-  %orig2_load_1_75 = select i1 %or_cond_i1_74, i20 %prev_orig_out_7_74, i20 %tmp_187
+  %orig2_load_1_75 = select i1 %or_cond_i1_74, i20 %prev_orig_out_7_74, i20 %tmp_178
   %score1_load_76 = load i8* %score1_addr_76, align 4
   %orig1_load_76 = load i20* %orig1_addr_76, align 16
   %p_score1_load_74 = select i1 %tmp_5, i8 -76, i8 %score1_load_75
   %phitmp76 = add i8 -1, %score1_load_76
   %tmp_29_75 = select i1 %tmp_5, i8 -78, i8 %phitmp76
-  %tmp_188 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_75
+  %tmp_179 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_75
   %up_orig_75 = select i1 %tmp_5, i20 0, i20 %orig1_load_76
-  %tmp_89 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 24, i32 25)
-  %tmp_49_75 = icmp eq i2 %tmp_89, %tmp_222
+  %read_r_load_19 = load i32* %read_r_addr_19, align 4
+  %tmp_180 = trunc i32 %read_r_load_19 to i8
+  %tmp_49_75 = icmp eq i8 %tmp_180, %ref_genome_read
   %diag_score_0_v_i1_75_cast_cast = select i1 %tmp_49_75, i8 1, i8 -1
   %prev_score_out_6_75 = add i8 %p_score1_load_74, %diag_score_0_v_i1_75_cast_cast
   %prev_score_out_0_op_i1_75 = add i8 -1, %score2_load_1_75
@@ -2009,16 +2025,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_75 = select i1 %or_cond1_i1_75, i8 %tmp_29_75, i8 %prev_score_out_0_op_i1_75
   %prev_orig_out_7_75 = select i1 %or_cond1_i1_75, i20 %up_orig_75, i20 %orig2_load_1_75
   %score2_load_1_76 = select i1 %or_cond_i1_75, i8 %prev_score_out_1_75, i8 %prev_score_out_6_75
-  %orig2_load_1_76 = select i1 %or_cond_i1_75, i20 %prev_orig_out_7_75, i20 %tmp_188
+  %orig2_load_1_76 = select i1 %or_cond_i1_75, i20 %prev_orig_out_7_75, i20 %tmp_179
   %score1_load_77 = load i8* %score1_addr_77, align 1
   %orig1_load_77 = load i20* %orig1_addr_77, align 4
   %p_score1_load_75 = select i1 %tmp_5, i8 -77, i8 %score1_load_76
   %phitmp77 = add i8 -1, %score1_load_77
   %tmp_29_76 = select i1 %tmp_5, i8 -79, i8 %phitmp77
-  %tmp_189 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_76
+  %tmp_181 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_76
   %up_orig_76 = select i1 %tmp_5, i20 0, i20 %orig1_load_77
-  %tmp_90 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 26, i32 27)
-  %tmp_49_76 = icmp eq i2 %tmp_90, %tmp_222
+  %tmp_86 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_19, i32 8, i32 15)
+  %tmp_49_76 = icmp eq i8 %tmp_86, %ref_genome_read
   %diag_score_0_v_i1_76_cast_cast = select i1 %tmp_49_76, i8 1, i8 -1
   %prev_score_out_6_76 = add i8 %p_score1_load_75, %diag_score_0_v_i1_76_cast_cast
   %prev_score_out_0_op_i1_76 = add i8 -1, %score2_load_1_76
@@ -2031,16 +2047,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_76 = select i1 %or_cond1_i1_76, i8 %tmp_29_76, i8 %prev_score_out_0_op_i1_76
   %prev_orig_out_7_76 = select i1 %or_cond1_i1_76, i20 %up_orig_76, i20 %orig2_load_1_76
   %score2_load_1_77 = select i1 %or_cond_i1_76, i8 %prev_score_out_1_76, i8 %prev_score_out_6_76
-  %orig2_load_1_77 = select i1 %or_cond_i1_76, i20 %prev_orig_out_7_76, i20 %tmp_189
+  %orig2_load_1_77 = select i1 %or_cond_i1_76, i20 %prev_orig_out_7_76, i20 %tmp_181
   %score1_load_78 = load i8* %score1_addr_78, align 2
   %orig1_load_78 = load i20* %orig1_addr_78, align 8
   %p_score1_load_76 = select i1 %tmp_5, i8 -78, i8 %score1_load_77
   %phitmp78 = add i8 -1, %score1_load_78
   %tmp_29_77 = select i1 %tmp_5, i8 -80, i8 %phitmp78
-  %tmp_190 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_77
+  %tmp_182 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_77
   %up_orig_77 = select i1 %tmp_5, i20 0, i20 %orig1_load_78
-  %tmp_91 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 28, i32 29)
-  %tmp_49_77 = icmp eq i2 %tmp_91, %tmp_222
+  %tmp_87 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_19, i32 16, i32 23)
+  %tmp_49_77 = icmp eq i8 %tmp_87, %ref_genome_read
   %diag_score_0_v_i1_77_cast_cast = select i1 %tmp_49_77, i8 1, i8 -1
   %prev_score_out_6_77 = add i8 %p_score1_load_76, %diag_score_0_v_i1_77_cast_cast
   %prev_score_out_0_op_i1_77 = add i8 -1, %score2_load_1_77
@@ -2053,16 +2069,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_77 = select i1 %or_cond1_i1_77, i8 %tmp_29_77, i8 %prev_score_out_0_op_i1_77
   %prev_orig_out_7_77 = select i1 %or_cond1_i1_77, i20 %up_orig_77, i20 %orig2_load_1_77
   %score2_load_1_78 = select i1 %or_cond_i1_77, i8 %prev_score_out_1_77, i8 %prev_score_out_6_77
-  %orig2_load_1_78 = select i1 %or_cond_i1_77, i20 %prev_orig_out_7_77, i20 %tmp_190
+  %orig2_load_1_78 = select i1 %or_cond_i1_77, i20 %prev_orig_out_7_77, i20 %tmp_182
   %score1_load_79 = load i8* %score1_addr_79, align 1
   %orig1_load_79 = load i20* %orig1_addr_79, align 4
   %p_score1_load_77 = select i1 %tmp_5, i8 -79, i8 %score1_load_78
   %phitmp79 = add i8 -1, %score1_load_79
   %tmp_29_78 = select i1 %tmp_5, i8 -81, i8 %phitmp79
-  %tmp_191 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_78
+  %tmp_183 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_78
   %up_orig_78 = select i1 %tmp_5, i20 0, i20 %orig1_load_79
-  %tmp_92 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_4, i32 30, i32 31)
-  %tmp_49_78 = icmp eq i2 %tmp_92, %tmp_222
+  %tmp_88 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_19, i32 24, i32 31)
+  %tmp_49_78 = icmp eq i8 %tmp_88, %ref_genome_read
   %diag_score_0_v_i1_78_cast_cast = select i1 %tmp_49_78, i8 1, i8 -1
   %prev_score_out_6_78 = add i8 %p_score1_load_77, %diag_score_0_v_i1_78_cast_cast
   %prev_score_out_0_op_i1_78 = add i8 -1, %score2_load_1_78
@@ -2075,17 +2091,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_78 = select i1 %or_cond1_i1_78, i8 %tmp_29_78, i8 %prev_score_out_0_op_i1_78
   %prev_orig_out_7_78 = select i1 %or_cond1_i1_78, i20 %up_orig_78, i20 %orig2_load_1_78
   %score2_load_1_79 = select i1 %or_cond_i1_78, i8 %prev_score_out_1_78, i8 %prev_score_out_6_78
-  %orig2_load_1_79 = select i1 %or_cond_i1_78, i20 %prev_orig_out_7_78, i20 %tmp_191
+  %orig2_load_1_79 = select i1 %or_cond_i1_78, i20 %prev_orig_out_7_78, i20 %tmp_183
   %score1_load_80 = load i8* %score1_addr_80, align 16
   %orig1_load_80 = load i20* %orig1_addr_80, align 16
   %p_score1_load_78 = select i1 %tmp_5, i8 -80, i8 %score1_load_79
   %phitmp80 = add i8 -1, %score1_load_80
   %tmp_29_79 = select i1 %tmp_5, i8 -82, i8 %phitmp80
-  %tmp_192 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_79
+  %tmp_184 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_79
   %up_orig_79 = select i1 %tmp_5, i20 0, i20 %orig1_load_80
-  %read_load_5 = load i32* %read_addr_5, align 4
-  %tmp_228 = trunc i32 %read_load_5 to i2
-  %tmp_49_79 = icmp eq i2 %tmp_228, %tmp_222
+  %read_r_load_20 = load i32* %read_r_addr_20, align 4
+  %tmp_185 = trunc i32 %read_r_load_20 to i8
+  %tmp_49_79 = icmp eq i8 %tmp_185, %ref_genome_read
   %diag_score_0_v_i1_79_cast_cast = select i1 %tmp_49_79, i8 1, i8 -1
   %prev_score_out_6_79 = add i8 %p_score1_load_78, %diag_score_0_v_i1_79_cast_cast
   %prev_score_out_0_op_i1_79 = add i8 -1, %score2_load_1_79
@@ -2098,16 +2114,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_79 = select i1 %or_cond1_i1_79, i8 %tmp_29_79, i8 %prev_score_out_0_op_i1_79
   %prev_orig_out_7_79 = select i1 %or_cond1_i1_79, i20 %up_orig_79, i20 %orig2_load_1_79
   %score2_load_1_80 = select i1 %or_cond_i1_79, i8 %prev_score_out_1_79, i8 %prev_score_out_6_79
-  %orig2_load_1_80 = select i1 %or_cond_i1_79, i20 %prev_orig_out_7_79, i20 %tmp_192
+  %orig2_load_1_80 = select i1 %or_cond_i1_79, i20 %prev_orig_out_7_79, i20 %tmp_184
   %score1_load_81 = load i8* %score1_addr_81, align 1
   %orig1_load_81 = load i20* %orig1_addr_81, align 4
   %p_score1_load_79 = select i1 %tmp_5, i8 -81, i8 %score1_load_80
   %phitmp81 = add i8 -1, %score1_load_81
   %tmp_29_80 = select i1 %tmp_5, i8 -83, i8 %phitmp81
-  %tmp_193 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_80
+  %tmp_186 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_80
   %up_orig_80 = select i1 %tmp_5, i20 0, i20 %orig1_load_81
-  %tmp_94 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 2, i32 3)
-  %tmp_49_80 = icmp eq i2 %tmp_94, %tmp_222
+  %tmp_90 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_20, i32 8, i32 15)
+  %tmp_49_80 = icmp eq i8 %tmp_90, %ref_genome_read
   %diag_score_0_v_i1_80_cast_cast = select i1 %tmp_49_80, i8 1, i8 -1
   %prev_score_out_6_80 = add i8 %p_score1_load_79, %diag_score_0_v_i1_80_cast_cast
   %prev_score_out_0_op_i1_80 = add i8 -1, %score2_load_1_80
@@ -2120,16 +2136,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_80 = select i1 %or_cond1_i1_80, i8 %tmp_29_80, i8 %prev_score_out_0_op_i1_80
   %prev_orig_out_7_80 = select i1 %or_cond1_i1_80, i20 %up_orig_80, i20 %orig2_load_1_80
   %score2_load_1_81 = select i1 %or_cond_i1_80, i8 %prev_score_out_1_80, i8 %prev_score_out_6_80
-  %orig2_load_1_81 = select i1 %or_cond_i1_80, i20 %prev_orig_out_7_80, i20 %tmp_193
+  %orig2_load_1_81 = select i1 %or_cond_i1_80, i20 %prev_orig_out_7_80, i20 %tmp_186
   %score1_load_82 = load i8* %score1_addr_82, align 2
   %orig1_load_82 = load i20* %orig1_addr_82, align 8
   %p_score1_load_80 = select i1 %tmp_5, i8 -82, i8 %score1_load_81
   %phitmp82 = add i8 -1, %score1_load_82
   %tmp_29_81 = select i1 %tmp_5, i8 -84, i8 %phitmp82
-  %tmp_194 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_81
+  %tmp_187 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_81
   %up_orig_81 = select i1 %tmp_5, i20 0, i20 %orig1_load_82
-  %tmp_95 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 4, i32 5)
-  %tmp_49_81 = icmp eq i2 %tmp_95, %tmp_222
+  %tmp_91 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_20, i32 16, i32 23)
+  %tmp_49_81 = icmp eq i8 %tmp_91, %ref_genome_read
   %diag_score_0_v_i1_81_cast_cast = select i1 %tmp_49_81, i8 1, i8 -1
   %prev_score_out_6_81 = add i8 %p_score1_load_80, %diag_score_0_v_i1_81_cast_cast
   %prev_score_out_0_op_i1_81 = add i8 -1, %score2_load_1_81
@@ -2142,16 +2158,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_81 = select i1 %or_cond1_i1_81, i8 %tmp_29_81, i8 %prev_score_out_0_op_i1_81
   %prev_orig_out_7_81 = select i1 %or_cond1_i1_81, i20 %up_orig_81, i20 %orig2_load_1_81
   %score2_load_1_82 = select i1 %or_cond_i1_81, i8 %prev_score_out_1_81, i8 %prev_score_out_6_81
-  %orig2_load_1_82 = select i1 %or_cond_i1_81, i20 %prev_orig_out_7_81, i20 %tmp_194
+  %orig2_load_1_82 = select i1 %or_cond_i1_81, i20 %prev_orig_out_7_81, i20 %tmp_187
   %score1_load_83 = load i8* %score1_addr_83, align 1
   %orig1_load_83 = load i20* %orig1_addr_83, align 4
   %p_score1_load_81 = select i1 %tmp_5, i8 -83, i8 %score1_load_82
   %phitmp83 = add i8 -1, %score1_load_83
   %tmp_29_82 = select i1 %tmp_5, i8 -85, i8 %phitmp83
-  %tmp_195 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_82
+  %tmp_188 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_82
   %up_orig_82 = select i1 %tmp_5, i20 0, i20 %orig1_load_83
-  %tmp_96 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 6, i32 7)
-  %tmp_49_82 = icmp eq i2 %tmp_96, %tmp_222
+  %tmp_92 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_20, i32 24, i32 31)
+  %tmp_49_82 = icmp eq i8 %tmp_92, %ref_genome_read
   %diag_score_0_v_i1_82_cast_cast = select i1 %tmp_49_82, i8 1, i8 -1
   %prev_score_out_6_82 = add i8 %p_score1_load_81, %diag_score_0_v_i1_82_cast_cast
   %prev_score_out_0_op_i1_82 = add i8 -1, %score2_load_1_82
@@ -2164,16 +2180,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_82 = select i1 %or_cond1_i1_82, i8 %tmp_29_82, i8 %prev_score_out_0_op_i1_82
   %prev_orig_out_7_82 = select i1 %or_cond1_i1_82, i20 %up_orig_82, i20 %orig2_load_1_82
   %score2_load_1_83 = select i1 %or_cond_i1_82, i8 %prev_score_out_1_82, i8 %prev_score_out_6_82
-  %orig2_load_1_83 = select i1 %or_cond_i1_82, i20 %prev_orig_out_7_82, i20 %tmp_195
+  %orig2_load_1_83 = select i1 %or_cond_i1_82, i20 %prev_orig_out_7_82, i20 %tmp_188
   %score1_load_84 = load i8* %score1_addr_84, align 4
   %orig1_load_84 = load i20* %orig1_addr_84, align 16
   %p_score1_load_82 = select i1 %tmp_5, i8 -84, i8 %score1_load_83
   %phitmp84 = add i8 -1, %score1_load_84
   %tmp_29_83 = select i1 %tmp_5, i8 -86, i8 %phitmp84
-  %tmp_196 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_83
+  %tmp_189 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_83
   %up_orig_83 = select i1 %tmp_5, i20 0, i20 %orig1_load_84
-  %tmp_97 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 8, i32 9)
-  %tmp_49_83 = icmp eq i2 %tmp_97, %tmp_222
+  %read_r_load_21 = load i32* %read_r_addr_21, align 4
+  %tmp_190 = trunc i32 %read_r_load_21 to i8
+  %tmp_49_83 = icmp eq i8 %tmp_190, %ref_genome_read
   %diag_score_0_v_i1_83_cast_cast = select i1 %tmp_49_83, i8 1, i8 -1
   %prev_score_out_6_83 = add i8 %p_score1_load_82, %diag_score_0_v_i1_83_cast_cast
   %prev_score_out_0_op_i1_83 = add i8 -1, %score2_load_1_83
@@ -2186,16 +2203,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_83 = select i1 %or_cond1_i1_83, i8 %tmp_29_83, i8 %prev_score_out_0_op_i1_83
   %prev_orig_out_7_83 = select i1 %or_cond1_i1_83, i20 %up_orig_83, i20 %orig2_load_1_83
   %score2_load_1_84 = select i1 %or_cond_i1_83, i8 %prev_score_out_1_83, i8 %prev_score_out_6_83
-  %orig2_load_1_84 = select i1 %or_cond_i1_83, i20 %prev_orig_out_7_83, i20 %tmp_196
+  %orig2_load_1_84 = select i1 %or_cond_i1_83, i20 %prev_orig_out_7_83, i20 %tmp_189
   %score1_load_85 = load i8* %score1_addr_85, align 1
   %orig1_load_85 = load i20* %orig1_addr_85, align 4
   %p_score1_load_83 = select i1 %tmp_5, i8 -85, i8 %score1_load_84
   %phitmp85 = add i8 -1, %score1_load_85
   %tmp_29_84 = select i1 %tmp_5, i8 -87, i8 %phitmp85
-  %tmp_197 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_84
+  %tmp_191 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_84
   %up_orig_84 = select i1 %tmp_5, i20 0, i20 %orig1_load_85
-  %tmp_98 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 10, i32 11)
-  %tmp_49_84 = icmp eq i2 %tmp_98, %tmp_222
+  %tmp_94 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_21, i32 8, i32 15)
+  %tmp_49_84 = icmp eq i8 %tmp_94, %ref_genome_read
   %diag_score_0_v_i1_84_cast_cast = select i1 %tmp_49_84, i8 1, i8 -1
   %prev_score_out_6_84 = add i8 %p_score1_load_83, %diag_score_0_v_i1_84_cast_cast
   %prev_score_out_0_op_i1_84 = add i8 -1, %score2_load_1_84
@@ -2208,16 +2225,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_84 = select i1 %or_cond1_i1_84, i8 %tmp_29_84, i8 %prev_score_out_0_op_i1_84
   %prev_orig_out_7_84 = select i1 %or_cond1_i1_84, i20 %up_orig_84, i20 %orig2_load_1_84
   %score2_load_1_85 = select i1 %or_cond_i1_84, i8 %prev_score_out_1_84, i8 %prev_score_out_6_84
-  %orig2_load_1_85 = select i1 %or_cond_i1_84, i20 %prev_orig_out_7_84, i20 %tmp_197
+  %orig2_load_1_85 = select i1 %or_cond_i1_84, i20 %prev_orig_out_7_84, i20 %tmp_191
   %score1_load_86 = load i8* %score1_addr_86, align 2
   %orig1_load_86 = load i20* %orig1_addr_86, align 8
   %p_score1_load_84 = select i1 %tmp_5, i8 -86, i8 %score1_load_85
   %phitmp86 = add i8 -1, %score1_load_86
   %tmp_29_85 = select i1 %tmp_5, i8 -88, i8 %phitmp86
-  %tmp_198 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_85
+  %tmp_192 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_85
   %up_orig_85 = select i1 %tmp_5, i20 0, i20 %orig1_load_86
-  %tmp_99 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 12, i32 13)
-  %tmp_49_85 = icmp eq i2 %tmp_99, %tmp_222
+  %tmp_95 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_21, i32 16, i32 23)
+  %tmp_49_85 = icmp eq i8 %tmp_95, %ref_genome_read
   %diag_score_0_v_i1_85_cast_cast = select i1 %tmp_49_85, i8 1, i8 -1
   %prev_score_out_6_85 = add i8 %p_score1_load_84, %diag_score_0_v_i1_85_cast_cast
   %prev_score_out_0_op_i1_85 = add i8 -1, %score2_load_1_85
@@ -2230,16 +2247,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_85 = select i1 %or_cond1_i1_85, i8 %tmp_29_85, i8 %prev_score_out_0_op_i1_85
   %prev_orig_out_7_85 = select i1 %or_cond1_i1_85, i20 %up_orig_85, i20 %orig2_load_1_85
   %score2_load_1_86 = select i1 %or_cond_i1_85, i8 %prev_score_out_1_85, i8 %prev_score_out_6_85
-  %orig2_load_1_86 = select i1 %or_cond_i1_85, i20 %prev_orig_out_7_85, i20 %tmp_198
+  %orig2_load_1_86 = select i1 %or_cond_i1_85, i20 %prev_orig_out_7_85, i20 %tmp_192
   %score1_load_87 = load i8* %score1_addr_87, align 1
   %orig1_load_87 = load i20* %orig1_addr_87, align 4
   %p_score1_load_85 = select i1 %tmp_5, i8 -87, i8 %score1_load_86
   %phitmp87 = add i8 -1, %score1_load_87
   %tmp_29_86 = select i1 %tmp_5, i8 -89, i8 %phitmp87
-  %tmp_199 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_86
+  %tmp_193 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_86
   %up_orig_86 = select i1 %tmp_5, i20 0, i20 %orig1_load_87
-  %tmp_100 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 14, i32 15)
-  %tmp_49_86 = icmp eq i2 %tmp_100, %tmp_222
+  %tmp_96 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_21, i32 24, i32 31)
+  %tmp_49_86 = icmp eq i8 %tmp_96, %ref_genome_read
   %diag_score_0_v_i1_86_cast_cast = select i1 %tmp_49_86, i8 1, i8 -1
   %prev_score_out_6_86 = add i8 %p_score1_load_85, %diag_score_0_v_i1_86_cast_cast
   %prev_score_out_0_op_i1_86 = add i8 -1, %score2_load_1_86
@@ -2252,16 +2269,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_86 = select i1 %or_cond1_i1_86, i8 %tmp_29_86, i8 %prev_score_out_0_op_i1_86
   %prev_orig_out_7_86 = select i1 %or_cond1_i1_86, i20 %up_orig_86, i20 %orig2_load_1_86
   %score2_load_1_87 = select i1 %or_cond_i1_86, i8 %prev_score_out_1_86, i8 %prev_score_out_6_86
-  %orig2_load_1_87 = select i1 %or_cond_i1_86, i20 %prev_orig_out_7_86, i20 %tmp_199
+  %orig2_load_1_87 = select i1 %or_cond_i1_86, i20 %prev_orig_out_7_86, i20 %tmp_193
   %score1_load_88 = load i8* %score1_addr_88, align 8
   %orig1_load_88 = load i20* %orig1_addr_88, align 16
   %p_score1_load_86 = select i1 %tmp_5, i8 -88, i8 %score1_load_87
   %phitmp88 = add i8 -1, %score1_load_88
   %tmp_29_87 = select i1 %tmp_5, i8 -90, i8 %phitmp88
-  %tmp_200 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_87
+  %tmp_194 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_87
   %up_orig_87 = select i1 %tmp_5, i20 0, i20 %orig1_load_88
-  %tmp_101 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 16, i32 17)
-  %tmp_49_87 = icmp eq i2 %tmp_101, %tmp_222
+  %read_r_load_22 = load i32* %read_r_addr_22, align 4
+  %tmp_195 = trunc i32 %read_r_load_22 to i8
+  %tmp_49_87 = icmp eq i8 %tmp_195, %ref_genome_read
   %diag_score_0_v_i1_87_cast_cast = select i1 %tmp_49_87, i8 1, i8 -1
   %prev_score_out_6_87 = add i8 %p_score1_load_86, %diag_score_0_v_i1_87_cast_cast
   %prev_score_out_0_op_i1_87 = add i8 -1, %score2_load_1_87
@@ -2274,16 +2292,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_87 = select i1 %or_cond1_i1_87, i8 %tmp_29_87, i8 %prev_score_out_0_op_i1_87
   %prev_orig_out_7_87 = select i1 %or_cond1_i1_87, i20 %up_orig_87, i20 %orig2_load_1_87
   %score2_load_1_88 = select i1 %or_cond_i1_87, i8 %prev_score_out_1_87, i8 %prev_score_out_6_87
-  %orig2_load_1_88 = select i1 %or_cond_i1_87, i20 %prev_orig_out_7_87, i20 %tmp_200
+  %orig2_load_1_88 = select i1 %or_cond_i1_87, i20 %prev_orig_out_7_87, i20 %tmp_194
   %score1_load_89 = load i8* %score1_addr_89, align 1
   %orig1_load_89 = load i20* %orig1_addr_89, align 4
   %p_score1_load_87 = select i1 %tmp_5, i8 -89, i8 %score1_load_88
   %phitmp89 = add i8 -1, %score1_load_89
   %tmp_29_88 = select i1 %tmp_5, i8 -91, i8 %phitmp89
-  %tmp_201 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_88
+  %tmp_196 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_88
   %up_orig_88 = select i1 %tmp_5, i20 0, i20 %orig1_load_89
-  %tmp_102 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 18, i32 19)
-  %tmp_49_88 = icmp eq i2 %tmp_102, %tmp_222
+  %tmp_98 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_22, i32 8, i32 15)
+  %tmp_49_88 = icmp eq i8 %tmp_98, %ref_genome_read
   %diag_score_0_v_i1_88_cast_cast = select i1 %tmp_49_88, i8 1, i8 -1
   %prev_score_out_6_88 = add i8 %p_score1_load_87, %diag_score_0_v_i1_88_cast_cast
   %prev_score_out_0_op_i1_88 = add i8 -1, %score2_load_1_88
@@ -2296,16 +2314,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_88 = select i1 %or_cond1_i1_88, i8 %tmp_29_88, i8 %prev_score_out_0_op_i1_88
   %prev_orig_out_7_88 = select i1 %or_cond1_i1_88, i20 %up_orig_88, i20 %orig2_load_1_88
   %score2_load_1_89 = select i1 %or_cond_i1_88, i8 %prev_score_out_1_88, i8 %prev_score_out_6_88
-  %orig2_load_1_89 = select i1 %or_cond_i1_88, i20 %prev_orig_out_7_88, i20 %tmp_201
+  %orig2_load_1_89 = select i1 %or_cond_i1_88, i20 %prev_orig_out_7_88, i20 %tmp_196
   %score1_load_90 = load i8* %score1_addr_90, align 2
   %orig1_load_90 = load i20* %orig1_addr_90, align 8
   %p_score1_load_88 = select i1 %tmp_5, i8 -90, i8 %score1_load_89
   %phitmp90 = add i8 -1, %score1_load_90
   %tmp_29_89 = select i1 %tmp_5, i8 -92, i8 %phitmp90
-  %tmp_202 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_89
+  %tmp_197 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_89
   %up_orig_89 = select i1 %tmp_5, i20 0, i20 %orig1_load_90
-  %tmp_103 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 20, i32 21)
-  %tmp_49_89 = icmp eq i2 %tmp_103, %tmp_222
+  %tmp_99 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_22, i32 16, i32 23)
+  %tmp_49_89 = icmp eq i8 %tmp_99, %ref_genome_read
   %diag_score_0_v_i1_89_cast_cast = select i1 %tmp_49_89, i8 1, i8 -1
   %prev_score_out_6_89 = add i8 %p_score1_load_88, %diag_score_0_v_i1_89_cast_cast
   %prev_score_out_0_op_i1_89 = add i8 -1, %score2_load_1_89
@@ -2318,16 +2336,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_89 = select i1 %or_cond1_i1_89, i8 %tmp_29_89, i8 %prev_score_out_0_op_i1_89
   %prev_orig_out_7_89 = select i1 %or_cond1_i1_89, i20 %up_orig_89, i20 %orig2_load_1_89
   %score2_load_1_90 = select i1 %or_cond_i1_89, i8 %prev_score_out_1_89, i8 %prev_score_out_6_89
-  %orig2_load_1_90 = select i1 %or_cond_i1_89, i20 %prev_orig_out_7_89, i20 %tmp_202
+  %orig2_load_1_90 = select i1 %or_cond_i1_89, i20 %prev_orig_out_7_89, i20 %tmp_197
   %score1_load_91 = load i8* %score1_addr_91, align 1
   %orig1_load_91 = load i20* %orig1_addr_91, align 4
   %p_score1_load_89 = select i1 %tmp_5, i8 -91, i8 %score1_load_90
   %phitmp91 = add i8 -1, %score1_load_91
   %tmp_29_90 = select i1 %tmp_5, i8 -93, i8 %phitmp91
-  %tmp_203 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_90
+  %tmp_198 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_90
   %up_orig_90 = select i1 %tmp_5, i20 0, i20 %orig1_load_91
-  %tmp_104 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 22, i32 23)
-  %tmp_49_90 = icmp eq i2 %tmp_104, %tmp_222
+  %tmp_100 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_22, i32 24, i32 31)
+  %tmp_49_90 = icmp eq i8 %tmp_100, %ref_genome_read
   %diag_score_0_v_i1_90_cast_cast = select i1 %tmp_49_90, i8 1, i8 -1
   %prev_score_out_6_90 = add i8 %p_score1_load_89, %diag_score_0_v_i1_90_cast_cast
   %prev_score_out_0_op_i1_90 = add i8 -1, %score2_load_1_90
@@ -2340,16 +2358,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_90 = select i1 %or_cond1_i1_90, i8 %tmp_29_90, i8 %prev_score_out_0_op_i1_90
   %prev_orig_out_7_90 = select i1 %or_cond1_i1_90, i20 %up_orig_90, i20 %orig2_load_1_90
   %score2_load_1_91 = select i1 %or_cond_i1_90, i8 %prev_score_out_1_90, i8 %prev_score_out_6_90
-  %orig2_load_1_91 = select i1 %or_cond_i1_90, i20 %prev_orig_out_7_90, i20 %tmp_203
+  %orig2_load_1_91 = select i1 %or_cond_i1_90, i20 %prev_orig_out_7_90, i20 %tmp_198
   %score1_load_92 = load i8* %score1_addr_92, align 4
   %orig1_load_92 = load i20* %orig1_addr_92, align 16
   %p_score1_load_90 = select i1 %tmp_5, i8 -92, i8 %score1_load_91
   %phitmp92 = add i8 -1, %score1_load_92
   %tmp_29_91 = select i1 %tmp_5, i8 -94, i8 %phitmp92
-  %tmp_204 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_91
+  %tmp_199 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_91
   %up_orig_91 = select i1 %tmp_5, i20 0, i20 %orig1_load_92
-  %tmp_105 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 24, i32 25)
-  %tmp_49_91 = icmp eq i2 %tmp_105, %tmp_222
+  %read_r_load_23 = load i32* %read_r_addr_23, align 4
+  %tmp_200 = trunc i32 %read_r_load_23 to i8
+  %tmp_49_91 = icmp eq i8 %tmp_200, %ref_genome_read
   %diag_score_0_v_i1_91_cast_cast = select i1 %tmp_49_91, i8 1, i8 -1
   %prev_score_out_6_91 = add i8 %p_score1_load_90, %diag_score_0_v_i1_91_cast_cast
   %prev_score_out_0_op_i1_91 = add i8 -1, %score2_load_1_91
@@ -2362,16 +2381,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_91 = select i1 %or_cond1_i1_91, i8 %tmp_29_91, i8 %prev_score_out_0_op_i1_91
   %prev_orig_out_7_91 = select i1 %or_cond1_i1_91, i20 %up_orig_91, i20 %orig2_load_1_91
   %score2_load_1_92 = select i1 %or_cond_i1_91, i8 %prev_score_out_1_91, i8 %prev_score_out_6_91
-  %orig2_load_1_92 = select i1 %or_cond_i1_91, i20 %prev_orig_out_7_91, i20 %tmp_204
+  %orig2_load_1_92 = select i1 %or_cond_i1_91, i20 %prev_orig_out_7_91, i20 %tmp_199
   %score1_load_93 = load i8* %score1_addr_93, align 1
   %orig1_load_93 = load i20* %orig1_addr_93, align 4
   %p_score1_load_91 = select i1 %tmp_5, i8 -93, i8 %score1_load_92
   %phitmp93 = add i8 -1, %score1_load_93
   %tmp_29_92 = select i1 %tmp_5, i8 -95, i8 %phitmp93
-  %tmp_205 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_92
+  %tmp_201 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_92
   %up_orig_92 = select i1 %tmp_5, i20 0, i20 %orig1_load_93
-  %tmp_106 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 26, i32 27)
-  %tmp_49_92 = icmp eq i2 %tmp_106, %tmp_222
+  %tmp_102 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_23, i32 8, i32 15)
+  %tmp_49_92 = icmp eq i8 %tmp_102, %ref_genome_read
   %diag_score_0_v_i1_92_cast_cast = select i1 %tmp_49_92, i8 1, i8 -1
   %prev_score_out_6_92 = add i8 %p_score1_load_91, %diag_score_0_v_i1_92_cast_cast
   %prev_score_out_0_op_i1_92 = add i8 -1, %score2_load_1_92
@@ -2384,16 +2403,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_92 = select i1 %or_cond1_i1_92, i8 %tmp_29_92, i8 %prev_score_out_0_op_i1_92
   %prev_orig_out_7_92 = select i1 %or_cond1_i1_92, i20 %up_orig_92, i20 %orig2_load_1_92
   %score2_load_1_93 = select i1 %or_cond_i1_92, i8 %prev_score_out_1_92, i8 %prev_score_out_6_92
-  %orig2_load_1_93 = select i1 %or_cond_i1_92, i20 %prev_orig_out_7_92, i20 %tmp_205
+  %orig2_load_1_93 = select i1 %or_cond_i1_92, i20 %prev_orig_out_7_92, i20 %tmp_201
   %score1_load_94 = load i8* %score1_addr_94, align 2
   %orig1_load_94 = load i20* %orig1_addr_94, align 8
   %p_score1_load_92 = select i1 %tmp_5, i8 -94, i8 %score1_load_93
   %phitmp94 = add i8 -1, %score1_load_94
   %tmp_29_93 = select i1 %tmp_5, i8 -96, i8 %phitmp94
-  %tmp_206 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_93
+  %tmp_202 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_93
   %up_orig_93 = select i1 %tmp_5, i20 0, i20 %orig1_load_94
-  %tmp_107 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 28, i32 29)
-  %tmp_49_93 = icmp eq i2 %tmp_107, %tmp_222
+  %tmp_103 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_23, i32 16, i32 23)
+  %tmp_49_93 = icmp eq i8 %tmp_103, %ref_genome_read
   %diag_score_0_v_i1_93_cast_cast = select i1 %tmp_49_93, i8 1, i8 -1
   %prev_score_out_6_93 = add i8 %p_score1_load_92, %diag_score_0_v_i1_93_cast_cast
   %prev_score_out_0_op_i1_93 = add i8 -1, %score2_load_1_93
@@ -2406,16 +2425,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_93 = select i1 %or_cond1_i1_93, i8 %tmp_29_93, i8 %prev_score_out_0_op_i1_93
   %prev_orig_out_7_93 = select i1 %or_cond1_i1_93, i20 %up_orig_93, i20 %orig2_load_1_93
   %score2_load_1_94 = select i1 %or_cond_i1_93, i8 %prev_score_out_1_93, i8 %prev_score_out_6_93
-  %orig2_load_1_94 = select i1 %or_cond_i1_93, i20 %prev_orig_out_7_93, i20 %tmp_206
+  %orig2_load_1_94 = select i1 %or_cond_i1_93, i20 %prev_orig_out_7_93, i20 %tmp_202
   %score1_load_95 = load i8* %score1_addr_95, align 1
   %orig1_load_95 = load i20* %orig1_addr_95, align 4
   %p_score1_load_93 = select i1 %tmp_5, i8 -95, i8 %score1_load_94
   %phitmp95 = add i8 -1, %score1_load_95
   %tmp_29_94 = select i1 %tmp_5, i8 -97, i8 %phitmp95
-  %tmp_207 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_94
+  %tmp_203 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_94
   %up_orig_94 = select i1 %tmp_5, i20 0, i20 %orig1_load_95
-  %tmp_108 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_5, i32 30, i32 31)
-  %tmp_49_94 = icmp eq i2 %tmp_108, %tmp_222
+  %tmp_104 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_23, i32 24, i32 31)
+  %tmp_49_94 = icmp eq i8 %tmp_104, %ref_genome_read
   %diag_score_0_v_i1_94_cast_cast = select i1 %tmp_49_94, i8 1, i8 -1
   %prev_score_out_6_94 = add i8 %p_score1_load_93, %diag_score_0_v_i1_94_cast_cast
   %prev_score_out_0_op_i1_94 = add i8 -1, %score2_load_1_94
@@ -2428,17 +2447,17 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_94 = select i1 %or_cond1_i1_94, i8 %tmp_29_94, i8 %prev_score_out_0_op_i1_94
   %prev_orig_out_7_94 = select i1 %or_cond1_i1_94, i20 %up_orig_94, i20 %orig2_load_1_94
   %score2_load_1_95 = select i1 %or_cond_i1_94, i8 %prev_score_out_1_94, i8 %prev_score_out_6_94
-  %orig2_load_1_95 = select i1 %or_cond_i1_94, i20 %prev_orig_out_7_94, i20 %tmp_207
+  %orig2_load_1_95 = select i1 %or_cond_i1_94, i20 %prev_orig_out_7_94, i20 %tmp_203
   %score1_load_96 = load i8* %score1_addr_96, align 16
   %orig1_load_96 = load i20* %orig1_addr_96, align 16
   %p_score1_load_94 = select i1 %tmp_5, i8 -96, i8 %score1_load_95
   %phitmp96 = add i8 -1, %score1_load_96
   %tmp_29_95 = select i1 %tmp_5, i8 -98, i8 %phitmp96
-  %tmp_208 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_95
+  %tmp_204 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_95
   %up_orig_95 = select i1 %tmp_5, i20 0, i20 %orig1_load_96
-  %read_load_6 = load i32* %read_addr_6, align 4
-  %tmp_229 = trunc i32 %read_load_6 to i2
-  %tmp_49_95 = icmp eq i2 %tmp_229, %tmp_222
+  %read_r_load_24 = load i32* %read_r_addr_24, align 4
+  %tmp_205 = trunc i32 %read_r_load_24 to i8
+  %tmp_49_95 = icmp eq i8 %tmp_205, %ref_genome_read
   %diag_score_0_v_i1_95_cast_cast = select i1 %tmp_49_95, i8 1, i8 -1
   %prev_score_out_6_95 = add i8 %p_score1_load_94, %diag_score_0_v_i1_95_cast_cast
   %prev_score_out_0_op_i1_95 = add i8 -1, %score2_load_1_95
@@ -2451,16 +2470,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_95 = select i1 %or_cond1_i1_95, i8 %tmp_29_95, i8 %prev_score_out_0_op_i1_95
   %prev_orig_out_7_95 = select i1 %or_cond1_i1_95, i20 %up_orig_95, i20 %orig2_load_1_95
   %score2_load_1_96 = select i1 %or_cond_i1_95, i8 %prev_score_out_1_95, i8 %prev_score_out_6_95
-  %orig2_load_1_96 = select i1 %or_cond_i1_95, i20 %prev_orig_out_7_95, i20 %tmp_208
+  %orig2_load_1_96 = select i1 %or_cond_i1_95, i20 %prev_orig_out_7_95, i20 %tmp_204
   %score1_load_97 = load i8* %score1_addr_97, align 1
   %orig1_load_97 = load i20* %orig1_addr_97, align 4
   %p_score1_load_95 = select i1 %tmp_5, i8 -97, i8 %score1_load_96
   %phitmp97 = add i8 -1, %score1_load_97
   %tmp_29_96 = select i1 %tmp_5, i8 -99, i8 %phitmp97
-  %tmp_209 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_96
+  %tmp_206 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_96
   %up_orig_96 = select i1 %tmp_5, i20 0, i20 %orig1_load_97
-  %tmp_110 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_6, i32 2, i32 3)
-  %tmp_49_96 = icmp eq i2 %tmp_110, %tmp_222
+  %tmp_106 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_24, i32 8, i32 15)
+  %tmp_49_96 = icmp eq i8 %tmp_106, %ref_genome_read
   %diag_score_0_v_i1_96_cast_cast = select i1 %tmp_49_96, i8 1, i8 -1
   %prev_score_out_6_96 = add i8 %p_score1_load_95, %diag_score_0_v_i1_96_cast_cast
   %prev_score_out_0_op_i1_96 = add i8 -1, %score2_load_1_96
@@ -2473,16 +2492,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_96 = select i1 %or_cond1_i1_96, i8 %tmp_29_96, i8 %prev_score_out_0_op_i1_96
   %prev_orig_out_7_96 = select i1 %or_cond1_i1_96, i20 %up_orig_96, i20 %orig2_load_1_96
   %score2_load_1_97 = select i1 %or_cond_i1_96, i8 %prev_score_out_1_96, i8 %prev_score_out_6_96
-  %orig2_load_1_97 = select i1 %or_cond_i1_96, i20 %prev_orig_out_7_96, i20 %tmp_209
+  %orig2_load_1_97 = select i1 %or_cond_i1_96, i20 %prev_orig_out_7_96, i20 %tmp_206
   %score1_load_98 = load i8* %score1_addr_98, align 2
   %orig1_load_98 = load i20* %orig1_addr_98, align 8
   %p_score1_load_96 = select i1 %tmp_5, i8 -98, i8 %score1_load_97
   %phitmp98 = add i8 -1, %score1_load_98
   %tmp_29_97 = select i1 %tmp_5, i8 -100, i8 %phitmp98
-  %tmp_210 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_97
+  %tmp_207 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_97
   %up_orig_97 = select i1 %tmp_5, i20 0, i20 %orig1_load_98
-  %tmp_111 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_6, i32 4, i32 5)
-  %tmp_49_97 = icmp eq i2 %tmp_111, %tmp_222
+  %tmp_107 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_24, i32 16, i32 23)
+  %tmp_49_97 = icmp eq i8 %tmp_107, %ref_genome_read
   %diag_score_0_v_i1_97_cast_cast = select i1 %tmp_49_97, i8 1, i8 -1
   %prev_score_out_6_97 = add i8 %p_score1_load_96, %diag_score_0_v_i1_97_cast_cast
   %prev_score_out_0_op_i1_97 = add i8 -1, %score2_load_1_97
@@ -2495,16 +2514,16 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_97 = select i1 %or_cond1_i1_97, i8 %tmp_29_97, i8 %prev_score_out_0_op_i1_97
   %prev_orig_out_7_97 = select i1 %or_cond1_i1_97, i20 %up_orig_97, i20 %orig2_load_1_97
   %score2_load_1_98 = select i1 %or_cond_i1_97, i8 %prev_score_out_1_97, i8 %prev_score_out_6_97
-  %orig2_load_1_98 = select i1 %or_cond_i1_97, i20 %prev_orig_out_7_97, i20 %tmp_210
+  %orig2_load_1_98 = select i1 %or_cond_i1_97, i20 %prev_orig_out_7_97, i20 %tmp_207
   %score1_load_99 = load i8* %score1_addr_99, align 1
   %orig1_load_99 = load i20* %orig1_addr_99, align 4
   %p_score1_load_97 = select i1 %tmp_5, i8 -99, i8 %score1_load_98
   %phitmp99 = add i8 -1, %score1_load_99
   %tmp_29_98 = select i1 %tmp_5, i8 -101, i8 %phitmp99
-  %tmp_211 = select i1 %tmp_5, i20 %prev_orig_out_s, i20 %orig1_load_98
+  %tmp_208 = select i1 %tmp_5, i20 %prev_orig_out_cast, i20 %orig1_load_98
   %up_orig_98 = select i1 %tmp_5, i20 0, i20 %orig1_load_99
-  %tmp_112 = call i2 @_ssdm_op_PartSelect.i2.i32.i32.i32(i32 %read_load_6, i32 6, i32 7)
-  %tmp_49_98 = icmp eq i2 %tmp_112, %tmp_222
+  %tmp_108 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %read_r_load_24, i32 24, i32 31)
+  %tmp_49_98 = icmp eq i8 %tmp_108, %ref_genome_read
   %diag_score_0_v_i1_98_cast_cast = select i1 %tmp_49_98, i8 1, i8 -1
   %prev_score_out_6_98 = add i8 %p_score1_load_97, %diag_score_0_v_i1_98_cast_cast
   %prev_score_out_0_op_i1_98 = add i8 -1, %score2_load_1_98
@@ -2517,40 +2536,21 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_score_out_1_98 = select i1 %or_cond1_i1_98, i8 %tmp_29_98, i8 %prev_score_out_0_op_i1_98
   %prev_orig_out_7_98 = select i1 %or_cond1_i1_98, i20 %up_orig_98, i20 %orig2_load_1_98
   %score2_load_2_s = select i1 %or_cond_i1_98, i8 %prev_score_out_1_98, i8 %prev_score_out_6_98
-  %orig2_load_2_s = select i1 %or_cond_i1_98, i20 %prev_orig_out_7_98, i20 %tmp_211
+  %orig2_load_2_s = select i1 %or_cond_i1_98, i20 %prev_orig_out_7_98, i20 %tmp_208
   %max_score_3 = sext i8 %score2_load_2_s to i32
   %tmp_8 = icmp sgt i32 %max_score_3, %max_score
   %max_orig_1 = select i1 %tmp_8, i20 %orig2_load_2_s, i20 %max_orig
   %max_score_1 = select i1 %tmp_8, i32 %max_score_3, i32 %max_score
-  %i_2 = add i20 2, %i
-  %tmp_230 = trunc i20 %i_1 to i2
-  %tmp_114 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %tmp_230, i1 false)
-  %tmp_116 = or i3 %tmp_114, 1
-  %tmp_231 = icmp ugt i3 %tmp_114, %tmp_116
-  %tmp_232 = zext i3 %tmp_114 to i4
-  %tmp_233 = zext i3 %tmp_116 to i4
-  %tmp_234 = call i8 @llvm.part.select.i8(i8 %ref_genome_read, i32 7, i32 0)
-  %tmp_235 = sub i4 %tmp_232, %tmp_233
-  %tmp_236 = xor i4 %tmp_232, 7
-  %tmp_237 = sub i4 %tmp_233, %tmp_232
-  %tmp_238 = select i1 %tmp_231, i4 %tmp_235, i4 %tmp_237
-  %tmp_239 = select i1 %tmp_231, i8 %tmp_234, i8 %ref_genome_read
-  %tmp_240 = select i1 %tmp_231, i4 %tmp_236, i4 %tmp_232
-  %tmp_241 = sub i4 7, %tmp_238
-  %tmp_242 = zext i4 %tmp_240 to i8
-  %tmp_243 = zext i4 %tmp_241 to i8
-  %tmp_244 = lshr i8 %tmp_239, %tmp_242
-  %tmp_245 = lshr i8 -1, %tmp_243
-  %tmp_246 = and i8 %tmp_244, %tmp_245
-  %tmp_247 = trunc i8 %tmp_246 to i2
-  %tmp_117 = icmp eq i2 %tmp_223, %tmp_247
-  %diag_score_0_v_i_cast_cast = select i1 %tmp_117, i8 1, i8 -1
-  %tmp_118 = icmp slt i8 %diag_score_0_v_i_cast_cast, %prev_score_out_0_op_i1_1
-  %prev_score_out_0_op_i1_1_diag_s = select i1 %tmp_118, i8 %prev_score_out_0_op_i1_1, i8 %diag_score_0_v_i_cast_cast
-  %orig2_load_1_1_tmp_3 = select i1 %tmp_118, i20 %orig2_load_1_1, i20 %i_1
+  %i_2 = add i17 2, %i
+  %ref_genome_read_1 = call i8 @_ssdm_op_Read.axis.volatile.i8P(i8* %ref_genome)
+  %tmp_109 = icmp eq i8 %tmp_7, %ref_genome_read_1
+  %diag_score_0_v_i_cast_cast = select i1 %tmp_109, i8 1, i8 -1
+  %tmp_110 = icmp slt i8 %diag_score_0_v_i_cast_cast, %prev_score_out_0_op_i1_1
+  %prev_score_out_0_op_i1_1_diag_s = select i1 %tmp_110, i8 %prev_score_out_0_op_i1_1, i8 %diag_score_0_v_i_cast_cast
+  %orig2_load_1_1_tmp_3 = select i1 %tmp_110, i20 %orig2_load_1_1, i20 %tmp_3
   store i8 %prev_score_out_0_op_i1_1_diag_s, i8* %score1_addr, align 16
   store i20 %orig2_load_1_1_tmp_3, i20* %orig1_addr, align 16
-  %tmp_58_1 = icmp eq i2 %tmp_11, %tmp_247
+  %tmp_58_1 = icmp eq i8 %tmp_9, %ref_genome_read_1
   %diag_score_0_v_i_1_cast_cast = select i1 %tmp_58_1, i8 1, i8 -1
   %prev_score_out_8_1 = add i8 %diag_score_0_v_i_1_cast_cast, %score2_load_1_1
   %prev_score_out_0_op_i_1 = add i8 -1, %prev_score_out_0_op_i1_1_diag_s
@@ -2566,7 +2566,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_1 = select i1 %or_cond_i_1, i20 %prev_orig_out_9_1, i20 %orig2_load_1_1
   store i8 %prev_score_out_2_i_1, i8* %score1_addr_1, align 1
   store i20 %prev_orig_out_2_i_1, i20* %orig1_addr_1, align 4
-  %tmp_58_2 = icmp eq i2 %tmp_13, %tmp_247
+  %tmp_58_2 = icmp eq i8 %tmp_10, %ref_genome_read_1
   %diag_score_0_v_i_2_cast_cast = select i1 %tmp_58_2, i8 1, i8 -1
   %prev_score_out_8_2 = add i8 %diag_score_0_v_i_2_cast_cast, %score2_load_1_2
   %prev_score_out_0_op_i_2 = add i8 -1, %prev_score_out_2_i_1
@@ -2582,7 +2582,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_2 = select i1 %or_cond_i_2, i20 %prev_orig_out_9_2, i20 %orig2_load_1_2
   store i8 %prev_score_out_2_i_2, i8* %score1_addr_2, align 2
   store i20 %prev_orig_out_2_i_2, i20* %orig1_addr_2, align 8
-  %tmp_58_3 = icmp eq i2 %tmp_15, %tmp_247
+  %tmp_58_3 = icmp eq i8 %tmp_11, %ref_genome_read_1
   %diag_score_0_v_i_3_cast_cast = select i1 %tmp_58_3, i8 1, i8 -1
   %prev_score_out_8_3 = add i8 %diag_score_0_v_i_3_cast_cast, %score2_load_1_3
   %prev_score_out_0_op_i_3 = add i8 -1, %prev_score_out_2_i_2
@@ -2598,7 +2598,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_3 = select i1 %or_cond_i_3, i20 %prev_orig_out_9_3, i20 %orig2_load_1_3
   store i8 %prev_score_out_2_i_3, i8* %score1_addr_3, align 1
   store i20 %prev_orig_out_2_i_3, i20* %orig1_addr_3, align 4
-  %tmp_58_4 = icmp eq i2 %tmp_17, %tmp_247
+  %tmp_58_4 = icmp eq i8 %tmp_25, %ref_genome_read_1
   %diag_score_0_v_i_4_cast_cast = select i1 %tmp_58_4, i8 1, i8 -1
   %prev_score_out_8_4 = add i8 %diag_score_0_v_i_4_cast_cast, %score2_load_1_4
   %prev_score_out_0_op_i_4 = add i8 -1, %prev_score_out_2_i_3
@@ -2614,7 +2614,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_4 = select i1 %or_cond_i_4, i20 %prev_orig_out_9_4, i20 %orig2_load_1_4
   store i8 %prev_score_out_2_i_4, i8* %score1_addr_4, align 4
   store i20 %prev_orig_out_2_i_4, i20* %orig1_addr_4, align 16
-  %tmp_58_5 = icmp eq i2 %tmp_18, %tmp_247
+  %tmp_58_5 = icmp eq i8 %tmp_14, %ref_genome_read_1
   %diag_score_0_v_i_5_cast_cast = select i1 %tmp_58_5, i8 1, i8 -1
   %prev_score_out_8_5 = add i8 %diag_score_0_v_i_5_cast_cast, %score2_load_1_5
   %prev_score_out_0_op_i_5 = add i8 -1, %prev_score_out_2_i_4
@@ -2630,7 +2630,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_5 = select i1 %or_cond_i_5, i20 %prev_orig_out_9_5, i20 %orig2_load_1_5
   store i8 %prev_score_out_2_i_5, i8* %score1_addr_5, align 1
   store i20 %prev_orig_out_2_i_5, i20* %orig1_addr_5, align 4
-  %tmp_58_6 = icmp eq i2 %tmp_19, %tmp_247
+  %tmp_58_6 = icmp eq i8 %tmp_15, %ref_genome_read_1
   %diag_score_0_v_i_6_cast_cast = select i1 %tmp_58_6, i8 1, i8 -1
   %prev_score_out_8_6 = add i8 %diag_score_0_v_i_6_cast_cast, %score2_load_1_6
   %prev_score_out_0_op_i_6 = add i8 -1, %prev_score_out_2_i_5
@@ -2646,7 +2646,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_6 = select i1 %or_cond_i_6, i20 %prev_orig_out_9_6, i20 %orig2_load_1_6
   store i8 %prev_score_out_2_i_6, i8* %score1_addr_6, align 2
   store i20 %prev_orig_out_2_i_6, i20* %orig1_addr_6, align 8
-  %tmp_58_7 = icmp eq i2 %tmp_20, %tmp_247
+  %tmp_58_7 = icmp eq i8 %tmp_16, %ref_genome_read_1
   %diag_score_0_v_i_7_cast_cast = select i1 %tmp_58_7, i8 1, i8 -1
   %prev_score_out_8_7 = add i8 %diag_score_0_v_i_7_cast_cast, %score2_load_1_7
   %prev_score_out_0_op_i_7 = add i8 -1, %prev_score_out_2_i_6
@@ -2662,7 +2662,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_7 = select i1 %or_cond_i_7, i20 %prev_orig_out_9_7, i20 %orig2_load_1_7
   store i8 %prev_score_out_2_i_7, i8* %score1_addr_7, align 1
   store i20 %prev_orig_out_2_i_7, i20* %orig1_addr_7, align 4
-  %tmp_58_8 = icmp eq i2 %tmp_21, %tmp_247
+  %tmp_58_8 = icmp eq i8 %tmp_45, %ref_genome_read_1
   %diag_score_0_v_i_8_cast_cast = select i1 %tmp_58_8, i8 1, i8 -1
   %prev_score_out_8_8 = add i8 %diag_score_0_v_i_8_cast_cast, %score2_load_1_8
   %prev_score_out_0_op_i_8 = add i8 -1, %prev_score_out_2_i_7
@@ -2678,7 +2678,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_8 = select i1 %or_cond_i_8, i20 %prev_orig_out_9_8, i20 %orig2_load_1_8
   store i8 %prev_score_out_2_i_8, i8* %score1_addr_8, align 8
   store i20 %prev_orig_out_2_i_8, i20* %orig1_addr_8, align 16
-  %tmp_58_9 = icmp eq i2 %tmp_22, %tmp_247
+  %tmp_58_9 = icmp eq i8 %tmp_18, %ref_genome_read_1
   %diag_score_0_v_i_9_cast_cast = select i1 %tmp_58_9, i8 1, i8 -1
   %prev_score_out_8_9 = add i8 %diag_score_0_v_i_9_cast_cast, %score2_load_1_9
   %prev_score_out_0_op_i_9 = add i8 -1, %prev_score_out_2_i_8
@@ -2694,9 +2694,9 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_9 = select i1 %or_cond_i_9, i20 %prev_orig_out_9_9, i20 %orig2_load_1_9
   store i8 %prev_score_out_2_i_9, i8* %score1_addr_9, align 1
   store i20 %prev_orig_out_2_i_9, i20* %orig1_addr_9, align 4
-  %tmp_58_s = icmp eq i2 %tmp_23, %tmp_247
-  %diag_score_0_v_i_cast_cast_9 = select i1 %tmp_58_s, i8 1, i8 -1
-  %prev_score_out_8_s = add i8 %diag_score_0_v_i_cast_cast_9, %score2_load_1_s
+  %tmp_58_s = icmp eq i8 %tmp_19, %ref_genome_read_1
+  %diag_score_0_v_i_cast_cast_7 = select i1 %tmp_58_s, i8 1, i8 -1
+  %prev_score_out_8_s = add i8 %diag_score_0_v_i_cast_cast_7, %score2_load_1_s
   %prev_score_out_0_op_i_s = add i8 -1, %prev_score_out_2_i_9
   %tmp_59_s = icmp slt i8 %prev_score_out_8_s, %prev_score_out_0_op_i_s
   %tmp_60_s = icmp slt i8 %prev_score_out_8_s, %prev_score_out_0_op_i1_10
@@ -2710,7 +2710,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_s = select i1 %or_cond_i_s, i20 %prev_orig_out_9_s, i20 %orig2_load_1_s
   store i8 %prev_score_out_2_i_s, i8* %score1_addr_10, align 2
   store i20 %prev_orig_out_2_i_s, i20* %orig1_addr_10, align 8
-  %tmp_58_10 = icmp eq i2 %tmp_24, %tmp_247
+  %tmp_58_10 = icmp eq i8 %tmp_20, %ref_genome_read_1
   %diag_score_0_v_i_10_cast_cast = select i1 %tmp_58_10, i8 1, i8 -1
   %prev_score_out_8_10 = add i8 %diag_score_0_v_i_10_cast_cast, %score2_load_1_10
   %prev_score_out_0_op_i_10 = add i8 -1, %prev_score_out_2_i_s
@@ -2726,7 +2726,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_10 = select i1 %or_cond_i_10, i20 %prev_orig_out_9_10, i20 %orig2_load_1_10
   store i8 %prev_score_out_2_i_10, i8* %score1_addr_11, align 1
   store i20 %prev_orig_out_2_i_10, i20* %orig1_addr_11, align 4
-  %tmp_58_11 = icmp eq i2 %tmp_25, %tmp_247
+  %tmp_58_11 = icmp eq i8 %tmp_65, %ref_genome_read_1
   %diag_score_0_v_i_11_cast_cast = select i1 %tmp_58_11, i8 1, i8 -1
   %prev_score_out_8_11 = add i8 %diag_score_0_v_i_11_cast_cast, %score2_load_1_11
   %prev_score_out_0_op_i_11 = add i8 -1, %prev_score_out_2_i_10
@@ -2742,7 +2742,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_11 = select i1 %or_cond_i_11, i20 %prev_orig_out_9_11, i20 %orig2_load_1_11
   store i8 %prev_score_out_2_i_11, i8* %score1_addr_12, align 4
   store i20 %prev_orig_out_2_i_11, i20* %orig1_addr_12, align 16
-  %tmp_58_12 = icmp eq i2 %tmp_26, %tmp_247
+  %tmp_58_12 = icmp eq i8 %tmp_22, %ref_genome_read_1
   %diag_score_0_v_i_12_cast_cast = select i1 %tmp_58_12, i8 1, i8 -1
   %prev_score_out_8_12 = add i8 %diag_score_0_v_i_12_cast_cast, %score2_load_1_12
   %prev_score_out_0_op_i_12 = add i8 -1, %prev_score_out_2_i_11
@@ -2758,7 +2758,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_12 = select i1 %or_cond_i_12, i20 %prev_orig_out_9_12, i20 %orig2_load_1_12
   store i8 %prev_score_out_2_i_12, i8* %score1_addr_13, align 1
   store i20 %prev_orig_out_2_i_12, i20* %orig1_addr_13, align 4
-  %tmp_58_13 = icmp eq i2 %tmp_27, %tmp_247
+  %tmp_58_13 = icmp eq i8 %tmp_23, %ref_genome_read_1
   %diag_score_0_v_i_13_cast_cast = select i1 %tmp_58_13, i8 1, i8 -1
   %prev_score_out_8_13 = add i8 %diag_score_0_v_i_13_cast_cast, %score2_load_1_13
   %prev_score_out_0_op_i_13 = add i8 -1, %prev_score_out_2_i_12
@@ -2774,7 +2774,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_13 = select i1 %or_cond_i_13, i20 %prev_orig_out_9_13, i20 %orig2_load_1_13
   store i8 %prev_score_out_2_i_13, i8* %score1_addr_14, align 2
   store i20 %prev_orig_out_2_i_13, i20* %orig1_addr_14, align 8
-  %tmp_58_14 = icmp eq i2 %tmp_28, %tmp_247
+  %tmp_58_14 = icmp eq i8 %tmp_24, %ref_genome_read_1
   %diag_score_0_v_i_14_cast_cast = select i1 %tmp_58_14, i8 1, i8 -1
   %prev_score_out_8_14 = add i8 %diag_score_0_v_i_14_cast_cast, %score2_load_1_14
   %prev_score_out_0_op_i_14 = add i8 -1, %prev_score_out_2_i_13
@@ -2790,7 +2790,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_14 = select i1 %or_cond_i_14, i20 %prev_orig_out_9_14, i20 %orig2_load_1_14
   store i8 %prev_score_out_2_i_14, i8* %score1_addr_15, align 1
   store i20 %prev_orig_out_2_i_14, i20* %orig1_addr_15, align 4
-  %tmp_58_15 = icmp eq i2 %tmp_224, %tmp_247
+  %tmp_58_15 = icmp eq i8 %tmp_85, %ref_genome_read_1
   %diag_score_0_v_i_15_cast_cast = select i1 %tmp_58_15, i8 1, i8 -1
   %prev_score_out_8_15 = add i8 %diag_score_0_v_i_15_cast_cast, %score2_load_1_15
   %prev_score_out_0_op_i_15 = add i8 -1, %prev_score_out_2_i_14
@@ -2806,7 +2806,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_15 = select i1 %or_cond_i_15, i20 %prev_orig_out_9_15, i20 %orig2_load_1_15
   store i8 %prev_score_out_2_i_15, i8* %score1_addr_16, align 16
   store i20 %prev_orig_out_2_i_15, i20* %orig1_addr_16, align 16
-  %tmp_58_16 = icmp eq i2 %tmp_30, %tmp_247
+  %tmp_58_16 = icmp eq i8 %tmp_26, %ref_genome_read_1
   %diag_score_0_v_i_16_cast_cast = select i1 %tmp_58_16, i8 1, i8 -1
   %prev_score_out_8_16 = add i8 %diag_score_0_v_i_16_cast_cast, %score2_load_1_16
   %prev_score_out_0_op_i_16 = add i8 -1, %prev_score_out_2_i_15
@@ -2822,7 +2822,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_16 = select i1 %or_cond_i_16, i20 %prev_orig_out_9_16, i20 %orig2_load_1_16
   store i8 %prev_score_out_2_i_16, i8* %score1_addr_17, align 1
   store i20 %prev_orig_out_2_i_16, i20* %orig1_addr_17, align 4
-  %tmp_58_17 = icmp eq i2 %tmp_31, %tmp_247
+  %tmp_58_17 = icmp eq i8 %tmp_27, %ref_genome_read_1
   %diag_score_0_v_i_17_cast_cast = select i1 %tmp_58_17, i8 1, i8 -1
   %prev_score_out_8_17 = add i8 %diag_score_0_v_i_17_cast_cast, %score2_load_1_17
   %prev_score_out_0_op_i_17 = add i8 -1, %prev_score_out_2_i_16
@@ -2838,7 +2838,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_17 = select i1 %or_cond_i_17, i20 %prev_orig_out_9_17, i20 %orig2_load_1_17
   store i8 %prev_score_out_2_i_17, i8* %score1_addr_18, align 2
   store i20 %prev_orig_out_2_i_17, i20* %orig1_addr_18, align 8
-  %tmp_58_18 = icmp eq i2 %tmp_32, %tmp_247
+  %tmp_58_18 = icmp eq i8 %tmp_28, %ref_genome_read_1
   %diag_score_0_v_i_18_cast_cast = select i1 %tmp_58_18, i8 1, i8 -1
   %prev_score_out_8_18 = add i8 %diag_score_0_v_i_18_cast_cast, %score2_load_1_18
   %prev_score_out_0_op_i_18 = add i8 -1, %prev_score_out_2_i_17
@@ -2854,7 +2854,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_18 = select i1 %or_cond_i_18, i20 %prev_orig_out_9_18, i20 %orig2_load_1_18
   store i8 %prev_score_out_2_i_18, i8* %score1_addr_19, align 1
   store i20 %prev_orig_out_2_i_18, i20* %orig1_addr_19, align 4
-  %tmp_58_19 = icmp eq i2 %tmp_33, %tmp_247
+  %tmp_58_19 = icmp eq i8 %tmp_105, %ref_genome_read_1
   %diag_score_0_v_i_19_cast_cast = select i1 %tmp_58_19, i8 1, i8 -1
   %prev_score_out_8_19 = add i8 %diag_score_0_v_i_19_cast_cast, %score2_load_1_19
   %prev_score_out_0_op_i_19 = add i8 -1, %prev_score_out_2_i_18
@@ -2870,7 +2870,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_19 = select i1 %or_cond_i_19, i20 %prev_orig_out_9_19, i20 %orig2_load_1_19
   store i8 %prev_score_out_2_i_19, i8* %score1_addr_20, align 4
   store i20 %prev_orig_out_2_i_19, i20* %orig1_addr_20, align 16
-  %tmp_58_20 = icmp eq i2 %tmp_34, %tmp_247
+  %tmp_58_20 = icmp eq i8 %tmp_30, %ref_genome_read_1
   %diag_score_0_v_i_20_cast_cast = select i1 %tmp_58_20, i8 1, i8 -1
   %prev_score_out_8_20 = add i8 %diag_score_0_v_i_20_cast_cast, %score2_load_1_20
   %prev_score_out_0_op_i_20 = add i8 -1, %prev_score_out_2_i_19
@@ -2886,7 +2886,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_20 = select i1 %or_cond_i_20, i20 %prev_orig_out_9_20, i20 %orig2_load_1_20
   store i8 %prev_score_out_2_i_20, i8* %score1_addr_21, align 1
   store i20 %prev_orig_out_2_i_20, i20* %orig1_addr_21, align 4
-  %tmp_58_21 = icmp eq i2 %tmp_35, %tmp_247
+  %tmp_58_21 = icmp eq i8 %tmp_31, %ref_genome_read_1
   %diag_score_0_v_i_21_cast_cast = select i1 %tmp_58_21, i8 1, i8 -1
   %prev_score_out_8_21 = add i8 %diag_score_0_v_i_21_cast_cast, %score2_load_1_21
   %prev_score_out_0_op_i_21 = add i8 -1, %prev_score_out_2_i_20
@@ -2902,7 +2902,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_21 = select i1 %or_cond_i_21, i20 %prev_orig_out_9_21, i20 %orig2_load_1_21
   store i8 %prev_score_out_2_i_21, i8* %score1_addr_22, align 2
   store i20 %prev_orig_out_2_i_21, i20* %orig1_addr_22, align 8
-  %tmp_58_22 = icmp eq i2 %tmp_36, %tmp_247
+  %tmp_58_22 = icmp eq i8 %tmp_32, %ref_genome_read_1
   %diag_score_0_v_i_22_cast_cast = select i1 %tmp_58_22, i8 1, i8 -1
   %prev_score_out_8_22 = add i8 %diag_score_0_v_i_22_cast_cast, %score2_load_1_22
   %prev_score_out_0_op_i_22 = add i8 -1, %prev_score_out_2_i_21
@@ -2918,7 +2918,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_22 = select i1 %or_cond_i_22, i20 %prev_orig_out_9_22, i20 %orig2_load_1_22
   store i8 %prev_score_out_2_i_22, i8* %score1_addr_23, align 1
   store i20 %prev_orig_out_2_i_22, i20* %orig1_addr_23, align 4
-  %tmp_58_23 = icmp eq i2 %tmp_37, %tmp_247
+  %tmp_58_23 = icmp eq i8 %tmp_115, %ref_genome_read_1
   %diag_score_0_v_i_23_cast_cast = select i1 %tmp_58_23, i8 1, i8 -1
   %prev_score_out_8_23 = add i8 %diag_score_0_v_i_23_cast_cast, %score2_load_1_23
   %prev_score_out_0_op_i_23 = add i8 -1, %prev_score_out_2_i_22
@@ -2934,7 +2934,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_23 = select i1 %or_cond_i_23, i20 %prev_orig_out_9_23, i20 %orig2_load_1_23
   store i8 %prev_score_out_2_i_23, i8* %score1_addr_24, align 8
   store i20 %prev_orig_out_2_i_23, i20* %orig1_addr_24, align 16
-  %tmp_58_24 = icmp eq i2 %tmp_38, %tmp_247
+  %tmp_58_24 = icmp eq i8 %tmp_34, %ref_genome_read_1
   %diag_score_0_v_i_24_cast_cast = select i1 %tmp_58_24, i8 1, i8 -1
   %prev_score_out_8_24 = add i8 %diag_score_0_v_i_24_cast_cast, %score2_load_1_24
   %prev_score_out_0_op_i_24 = add i8 -1, %prev_score_out_2_i_23
@@ -2950,7 +2950,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_24 = select i1 %or_cond_i_24, i20 %prev_orig_out_9_24, i20 %orig2_load_1_24
   store i8 %prev_score_out_2_i_24, i8* %score1_addr_25, align 1
   store i20 %prev_orig_out_2_i_24, i20* %orig1_addr_25, align 4
-  %tmp_58_25 = icmp eq i2 %tmp_39, %tmp_247
+  %tmp_58_25 = icmp eq i8 %tmp_35, %ref_genome_read_1
   %diag_score_0_v_i_25_cast_cast = select i1 %tmp_58_25, i8 1, i8 -1
   %prev_score_out_8_25 = add i8 %diag_score_0_v_i_25_cast_cast, %score2_load_1_25
   %prev_score_out_0_op_i_25 = add i8 -1, %prev_score_out_2_i_24
@@ -2966,7 +2966,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_25 = select i1 %or_cond_i_25, i20 %prev_orig_out_9_25, i20 %orig2_load_1_25
   store i8 %prev_score_out_2_i_25, i8* %score1_addr_26, align 2
   store i20 %prev_orig_out_2_i_25, i20* %orig1_addr_26, align 8
-  %tmp_58_26 = icmp eq i2 %tmp_40, %tmp_247
+  %tmp_58_26 = icmp eq i8 %tmp_36, %ref_genome_read_1
   %diag_score_0_v_i_26_cast_cast = select i1 %tmp_58_26, i8 1, i8 -1
   %prev_score_out_8_26 = add i8 %diag_score_0_v_i_26_cast_cast, %score2_load_1_26
   %prev_score_out_0_op_i_26 = add i8 -1, %prev_score_out_2_i_25
@@ -2982,7 +2982,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_26 = select i1 %or_cond_i_26, i20 %prev_orig_out_9_26, i20 %orig2_load_1_26
   store i8 %prev_score_out_2_i_26, i8* %score1_addr_27, align 1
   store i20 %prev_orig_out_2_i_26, i20* %orig1_addr_27, align 4
-  %tmp_58_27 = icmp eq i2 %tmp_41, %tmp_247
+  %tmp_58_27 = icmp eq i8 %tmp_120, %ref_genome_read_1
   %diag_score_0_v_i_27_cast_cast = select i1 %tmp_58_27, i8 1, i8 -1
   %prev_score_out_8_27 = add i8 %diag_score_0_v_i_27_cast_cast, %score2_load_1_27
   %prev_score_out_0_op_i_27 = add i8 -1, %prev_score_out_2_i_26
@@ -2998,7 +2998,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_27 = select i1 %or_cond_i_27, i20 %prev_orig_out_9_27, i20 %orig2_load_1_27
   store i8 %prev_score_out_2_i_27, i8* %score1_addr_28, align 4
   store i20 %prev_orig_out_2_i_27, i20* %orig1_addr_28, align 16
-  %tmp_58_28 = icmp eq i2 %tmp_42, %tmp_247
+  %tmp_58_28 = icmp eq i8 %tmp_38, %ref_genome_read_1
   %diag_score_0_v_i_28_cast_cast = select i1 %tmp_58_28, i8 1, i8 -1
   %prev_score_out_8_28 = add i8 %diag_score_0_v_i_28_cast_cast, %score2_load_1_28
   %prev_score_out_0_op_i_28 = add i8 -1, %prev_score_out_2_i_27
@@ -3014,7 +3014,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_28 = select i1 %or_cond_i_28, i20 %prev_orig_out_9_28, i20 %orig2_load_1_28
   store i8 %prev_score_out_2_i_28, i8* %score1_addr_29, align 1
   store i20 %prev_orig_out_2_i_28, i20* %orig1_addr_29, align 4
-  %tmp_58_29 = icmp eq i2 %tmp_43, %tmp_247
+  %tmp_58_29 = icmp eq i8 %tmp_39, %ref_genome_read_1
   %diag_score_0_v_i_29_cast_cast = select i1 %tmp_58_29, i8 1, i8 -1
   %prev_score_out_8_29 = add i8 %diag_score_0_v_i_29_cast_cast, %score2_load_1_29
   %prev_score_out_0_op_i_29 = add i8 -1, %prev_score_out_2_i_28
@@ -3030,7 +3030,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_29 = select i1 %or_cond_i_29, i20 %prev_orig_out_9_29, i20 %orig2_load_1_29
   store i8 %prev_score_out_2_i_29, i8* %score1_addr_30, align 2
   store i20 %prev_orig_out_2_i_29, i20* %orig1_addr_30, align 8
-  %tmp_58_30 = icmp eq i2 %tmp_44, %tmp_247
+  %tmp_58_30 = icmp eq i8 %tmp_40, %ref_genome_read_1
   %diag_score_0_v_i_30_cast_cast = select i1 %tmp_58_30, i8 1, i8 -1
   %prev_score_out_8_30 = add i8 %diag_score_0_v_i_30_cast_cast, %score2_load_1_30
   %prev_score_out_0_op_i_30 = add i8 -1, %prev_score_out_2_i_29
@@ -3046,7 +3046,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_30 = select i1 %or_cond_i_30, i20 %prev_orig_out_9_30, i20 %orig2_load_1_30
   store i8 %prev_score_out_2_i_30, i8* %score1_addr_31, align 1
   store i20 %prev_orig_out_2_i_30, i20* %orig1_addr_31, align 4
-  %tmp_58_31 = icmp eq i2 %tmp_225, %tmp_247
+  %tmp_58_31 = icmp eq i8 %tmp_125, %ref_genome_read_1
   %diag_score_0_v_i_31_cast_cast = select i1 %tmp_58_31, i8 1, i8 -1
   %prev_score_out_8_31 = add i8 %diag_score_0_v_i_31_cast_cast, %score2_load_1_31
   %prev_score_out_0_op_i_31 = add i8 -1, %prev_score_out_2_i_30
@@ -3062,7 +3062,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_31 = select i1 %or_cond_i_31, i20 %prev_orig_out_9_31, i20 %orig2_load_1_31
   store i8 %prev_score_out_2_i_31, i8* %score1_addr_32, align 16
   store i20 %prev_orig_out_2_i_31, i20* %orig1_addr_32, align 16
-  %tmp_58_32 = icmp eq i2 %tmp_46, %tmp_247
+  %tmp_58_32 = icmp eq i8 %tmp_42, %ref_genome_read_1
   %diag_score_0_v_i_32_cast_cast = select i1 %tmp_58_32, i8 1, i8 -1
   %prev_score_out_8_32 = add i8 %diag_score_0_v_i_32_cast_cast, %score2_load_1_32
   %prev_score_out_0_op_i_32 = add i8 -1, %prev_score_out_2_i_31
@@ -3078,7 +3078,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_32 = select i1 %or_cond_i_32, i20 %prev_orig_out_9_32, i20 %orig2_load_1_32
   store i8 %prev_score_out_2_i_32, i8* %score1_addr_33, align 1
   store i20 %prev_orig_out_2_i_32, i20* %orig1_addr_33, align 4
-  %tmp_58_33 = icmp eq i2 %tmp_47, %tmp_247
+  %tmp_58_33 = icmp eq i8 %tmp_43, %ref_genome_read_1
   %diag_score_0_v_i_33_cast_cast = select i1 %tmp_58_33, i8 1, i8 -1
   %prev_score_out_8_33 = add i8 %diag_score_0_v_i_33_cast_cast, %score2_load_1_33
   %prev_score_out_0_op_i_33 = add i8 -1, %prev_score_out_2_i_32
@@ -3094,7 +3094,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_33 = select i1 %or_cond_i_33, i20 %prev_orig_out_9_33, i20 %orig2_load_1_33
   store i8 %prev_score_out_2_i_33, i8* %score1_addr_34, align 2
   store i20 %prev_orig_out_2_i_33, i20* %orig1_addr_34, align 8
-  %tmp_58_34 = icmp eq i2 %tmp_48, %tmp_247
+  %tmp_58_34 = icmp eq i8 %tmp_44, %ref_genome_read_1
   %diag_score_0_v_i_34_cast_cast = select i1 %tmp_58_34, i8 1, i8 -1
   %prev_score_out_8_34 = add i8 %diag_score_0_v_i_34_cast_cast, %score2_load_1_34
   %prev_score_out_0_op_i_34 = add i8 -1, %prev_score_out_2_i_33
@@ -3110,7 +3110,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_34 = select i1 %or_cond_i_34, i20 %prev_orig_out_9_34, i20 %orig2_load_1_34
   store i8 %prev_score_out_2_i_34, i8* %score1_addr_35, align 1
   store i20 %prev_orig_out_2_i_34, i20* %orig1_addr_35, align 4
-  %tmp_58_35 = icmp eq i2 %tmp_49, %tmp_247
+  %tmp_58_35 = icmp eq i8 %tmp_130, %ref_genome_read_1
   %diag_score_0_v_i_35_cast_cast = select i1 %tmp_58_35, i8 1, i8 -1
   %prev_score_out_8_35 = add i8 %diag_score_0_v_i_35_cast_cast, %score2_load_1_35
   %prev_score_out_0_op_i_35 = add i8 -1, %prev_score_out_2_i_34
@@ -3126,7 +3126,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_35 = select i1 %or_cond_i_35, i20 %prev_orig_out_9_35, i20 %orig2_load_1_35
   store i8 %prev_score_out_2_i_35, i8* %score1_addr_36, align 4
   store i20 %prev_orig_out_2_i_35, i20* %orig1_addr_36, align 16
-  %tmp_58_36 = icmp eq i2 %tmp_50, %tmp_247
+  %tmp_58_36 = icmp eq i8 %tmp_46, %ref_genome_read_1
   %diag_score_0_v_i_36_cast_cast = select i1 %tmp_58_36, i8 1, i8 -1
   %prev_score_out_8_36 = add i8 %diag_score_0_v_i_36_cast_cast, %score2_load_1_36
   %prev_score_out_0_op_i_36 = add i8 -1, %prev_score_out_2_i_35
@@ -3142,7 +3142,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_36 = select i1 %or_cond_i_36, i20 %prev_orig_out_9_36, i20 %orig2_load_1_36
   store i8 %prev_score_out_2_i_36, i8* %score1_addr_37, align 1
   store i20 %prev_orig_out_2_i_36, i20* %orig1_addr_37, align 4
-  %tmp_58_37 = icmp eq i2 %tmp_51, %tmp_247
+  %tmp_58_37 = icmp eq i8 %tmp_47, %ref_genome_read_1
   %diag_score_0_v_i_37_cast_cast = select i1 %tmp_58_37, i8 1, i8 -1
   %prev_score_out_8_37 = add i8 %diag_score_0_v_i_37_cast_cast, %score2_load_1_37
   %prev_score_out_0_op_i_37 = add i8 -1, %prev_score_out_2_i_36
@@ -3158,7 +3158,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_37 = select i1 %or_cond_i_37, i20 %prev_orig_out_9_37, i20 %orig2_load_1_37
   store i8 %prev_score_out_2_i_37, i8* %score1_addr_38, align 2
   store i20 %prev_orig_out_2_i_37, i20* %orig1_addr_38, align 8
-  %tmp_58_38 = icmp eq i2 %tmp_52, %tmp_247
+  %tmp_58_38 = icmp eq i8 %tmp_48, %ref_genome_read_1
   %diag_score_0_v_i_38_cast_cast = select i1 %tmp_58_38, i8 1, i8 -1
   %prev_score_out_8_38 = add i8 %diag_score_0_v_i_38_cast_cast, %score2_load_1_38
   %prev_score_out_0_op_i_38 = add i8 -1, %prev_score_out_2_i_37
@@ -3174,7 +3174,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_38 = select i1 %or_cond_i_38, i20 %prev_orig_out_9_38, i20 %orig2_load_1_38
   store i8 %prev_score_out_2_i_38, i8* %score1_addr_39, align 1
   store i20 %prev_orig_out_2_i_38, i20* %orig1_addr_39, align 4
-  %tmp_58_39 = icmp eq i2 %tmp_53, %tmp_247
+  %tmp_58_39 = icmp eq i8 %tmp_135, %ref_genome_read_1
   %diag_score_0_v_i_39_cast_cast = select i1 %tmp_58_39, i8 1, i8 -1
   %prev_score_out_8_39 = add i8 %diag_score_0_v_i_39_cast_cast, %score2_load_1_39
   %prev_score_out_0_op_i_39 = add i8 -1, %prev_score_out_2_i_38
@@ -3190,7 +3190,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_39 = select i1 %or_cond_i_39, i20 %prev_orig_out_9_39, i20 %orig2_load_1_39
   store i8 %prev_score_out_2_i_39, i8* %score1_addr_40, align 8
   store i20 %prev_orig_out_2_i_39, i20* %orig1_addr_40, align 16
-  %tmp_58_40 = icmp eq i2 %tmp_54, %tmp_247
+  %tmp_58_40 = icmp eq i8 %tmp_50, %ref_genome_read_1
   %diag_score_0_v_i_40_cast_cast = select i1 %tmp_58_40, i8 1, i8 -1
   %prev_score_out_8_40 = add i8 %diag_score_0_v_i_40_cast_cast, %score2_load_1_40
   %prev_score_out_0_op_i_40 = add i8 -1, %prev_score_out_2_i_39
@@ -3206,7 +3206,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_40 = select i1 %or_cond_i_40, i20 %prev_orig_out_9_40, i20 %orig2_load_1_40
   store i8 %prev_score_out_2_i_40, i8* %score1_addr_41, align 1
   store i20 %prev_orig_out_2_i_40, i20* %orig1_addr_41, align 4
-  %tmp_58_41 = icmp eq i2 %tmp_55, %tmp_247
+  %tmp_58_41 = icmp eq i8 %tmp_51, %ref_genome_read_1
   %diag_score_0_v_i_41_cast_cast = select i1 %tmp_58_41, i8 1, i8 -1
   %prev_score_out_8_41 = add i8 %diag_score_0_v_i_41_cast_cast, %score2_load_1_41
   %prev_score_out_0_op_i_41 = add i8 -1, %prev_score_out_2_i_40
@@ -3222,7 +3222,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_41 = select i1 %or_cond_i_41, i20 %prev_orig_out_9_41, i20 %orig2_load_1_41
   store i8 %prev_score_out_2_i_41, i8* %score1_addr_42, align 2
   store i20 %prev_orig_out_2_i_41, i20* %orig1_addr_42, align 8
-  %tmp_58_42 = icmp eq i2 %tmp_56, %tmp_247
+  %tmp_58_42 = icmp eq i8 %tmp_52, %ref_genome_read_1
   %diag_score_0_v_i_42_cast_cast = select i1 %tmp_58_42, i8 1, i8 -1
   %prev_score_out_8_42 = add i8 %diag_score_0_v_i_42_cast_cast, %score2_load_1_42
   %prev_score_out_0_op_i_42 = add i8 -1, %prev_score_out_2_i_41
@@ -3238,7 +3238,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_42 = select i1 %or_cond_i_42, i20 %prev_orig_out_9_42, i20 %orig2_load_1_42
   store i8 %prev_score_out_2_i_42, i8* %score1_addr_43, align 1
   store i20 %prev_orig_out_2_i_42, i20* %orig1_addr_43, align 4
-  %tmp_58_43 = icmp eq i2 %tmp_57, %tmp_247
+  %tmp_58_43 = icmp eq i8 %tmp_140, %ref_genome_read_1
   %diag_score_0_v_i_43_cast_cast = select i1 %tmp_58_43, i8 1, i8 -1
   %prev_score_out_8_43 = add i8 %diag_score_0_v_i_43_cast_cast, %score2_load_1_43
   %prev_score_out_0_op_i_43 = add i8 -1, %prev_score_out_2_i_42
@@ -3254,7 +3254,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_43 = select i1 %or_cond_i_43, i20 %prev_orig_out_9_43, i20 %orig2_load_1_43
   store i8 %prev_score_out_2_i_43, i8* %score1_addr_44, align 4
   store i20 %prev_orig_out_2_i_43, i20* %orig1_addr_44, align 16
-  %tmp_58_44 = icmp eq i2 %tmp_58, %tmp_247
+  %tmp_58_44 = icmp eq i8 %tmp_54, %ref_genome_read_1
   %diag_score_0_v_i_44_cast_cast = select i1 %tmp_58_44, i8 1, i8 -1
   %prev_score_out_8_44 = add i8 %diag_score_0_v_i_44_cast_cast, %score2_load_1_44
   %prev_score_out_0_op_i_44 = add i8 -1, %prev_score_out_2_i_43
@@ -3270,7 +3270,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_44 = select i1 %or_cond_i_44, i20 %prev_orig_out_9_44, i20 %orig2_load_1_44
   store i8 %prev_score_out_2_i_44, i8* %score1_addr_45, align 1
   store i20 %prev_orig_out_2_i_44, i20* %orig1_addr_45, align 4
-  %tmp_58_45 = icmp eq i2 %tmp_59, %tmp_247
+  %tmp_58_45 = icmp eq i8 %tmp_55, %ref_genome_read_1
   %diag_score_0_v_i_45_cast_cast = select i1 %tmp_58_45, i8 1, i8 -1
   %prev_score_out_8_45 = add i8 %diag_score_0_v_i_45_cast_cast, %score2_load_1_45
   %prev_score_out_0_op_i_45 = add i8 -1, %prev_score_out_2_i_44
@@ -3286,7 +3286,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_45 = select i1 %or_cond_i_45, i20 %prev_orig_out_9_45, i20 %orig2_load_1_45
   store i8 %prev_score_out_2_i_45, i8* %score1_addr_46, align 2
   store i20 %prev_orig_out_2_i_45, i20* %orig1_addr_46, align 8
-  %tmp_58_46 = icmp eq i2 %tmp_60, %tmp_247
+  %tmp_58_46 = icmp eq i8 %tmp_56, %ref_genome_read_1
   %diag_score_0_v_i_46_cast_cast = select i1 %tmp_58_46, i8 1, i8 -1
   %prev_score_out_8_46 = add i8 %diag_score_0_v_i_46_cast_cast, %score2_load_1_46
   %prev_score_out_0_op_i_46 = add i8 -1, %prev_score_out_2_i_45
@@ -3302,7 +3302,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_46 = select i1 %or_cond_i_46, i20 %prev_orig_out_9_46, i20 %orig2_load_1_46
   store i8 %prev_score_out_2_i_46, i8* %score1_addr_47, align 1
   store i20 %prev_orig_out_2_i_46, i20* %orig1_addr_47, align 4
-  %tmp_58_47 = icmp eq i2 %tmp_226, %tmp_247
+  %tmp_58_47 = icmp eq i8 %tmp_145, %ref_genome_read_1
   %diag_score_0_v_i_47_cast_cast = select i1 %tmp_58_47, i8 1, i8 -1
   %prev_score_out_8_47 = add i8 %diag_score_0_v_i_47_cast_cast, %score2_load_1_47
   %prev_score_out_0_op_i_47 = add i8 -1, %prev_score_out_2_i_46
@@ -3318,7 +3318,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_47 = select i1 %or_cond_i_47, i20 %prev_orig_out_9_47, i20 %orig2_load_1_47
   store i8 %prev_score_out_2_i_47, i8* %score1_addr_48, align 16
   store i20 %prev_orig_out_2_i_47, i20* %orig1_addr_48, align 16
-  %tmp_58_48 = icmp eq i2 %tmp_62, %tmp_247
+  %tmp_58_48 = icmp eq i8 %tmp_58, %ref_genome_read_1
   %diag_score_0_v_i_48_cast_cast = select i1 %tmp_58_48, i8 1, i8 -1
   %prev_score_out_8_48 = add i8 %diag_score_0_v_i_48_cast_cast, %score2_load_1_48
   %prev_score_out_0_op_i_48 = add i8 -1, %prev_score_out_2_i_47
@@ -3334,7 +3334,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_48 = select i1 %or_cond_i_48, i20 %prev_orig_out_9_48, i20 %orig2_load_1_48
   store i8 %prev_score_out_2_i_48, i8* %score1_addr_49, align 1
   store i20 %prev_orig_out_2_i_48, i20* %orig1_addr_49, align 4
-  %tmp_58_49 = icmp eq i2 %tmp_63, %tmp_247
+  %tmp_58_49 = icmp eq i8 %tmp_59, %ref_genome_read_1
   %diag_score_0_v_i_49_cast_cast = select i1 %tmp_58_49, i8 1, i8 -1
   %prev_score_out_8_49 = add i8 %diag_score_0_v_i_49_cast_cast, %score2_load_1_49
   %prev_score_out_0_op_i_49 = add i8 -1, %prev_score_out_2_i_48
@@ -3350,7 +3350,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_49 = select i1 %or_cond_i_49, i20 %prev_orig_out_9_49, i20 %orig2_load_1_49
   store i8 %prev_score_out_2_i_49, i8* %score1_addr_50, align 2
   store i20 %prev_orig_out_2_i_49, i20* %orig1_addr_50, align 8
-  %tmp_58_50 = icmp eq i2 %tmp_64, %tmp_247
+  %tmp_58_50 = icmp eq i8 %tmp_60, %ref_genome_read_1
   %diag_score_0_v_i_50_cast_cast = select i1 %tmp_58_50, i8 1, i8 -1
   %prev_score_out_8_50 = add i8 %diag_score_0_v_i_50_cast_cast, %score2_load_1_50
   %prev_score_out_0_op_i_50 = add i8 -1, %prev_score_out_2_i_49
@@ -3366,7 +3366,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_50 = select i1 %or_cond_i_50, i20 %prev_orig_out_9_50, i20 %orig2_load_1_50
   store i8 %prev_score_out_2_i_50, i8* %score1_addr_51, align 1
   store i20 %prev_orig_out_2_i_50, i20* %orig1_addr_51, align 4
-  %tmp_58_51 = icmp eq i2 %tmp_65, %tmp_247
+  %tmp_58_51 = icmp eq i8 %tmp_150, %ref_genome_read_1
   %diag_score_0_v_i_51_cast_cast = select i1 %tmp_58_51, i8 1, i8 -1
   %prev_score_out_8_51 = add i8 %diag_score_0_v_i_51_cast_cast, %score2_load_1_51
   %prev_score_out_0_op_i_51 = add i8 -1, %prev_score_out_2_i_50
@@ -3382,7 +3382,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_51 = select i1 %or_cond_i_51, i20 %prev_orig_out_9_51, i20 %orig2_load_1_51
   store i8 %prev_score_out_2_i_51, i8* %score1_addr_52, align 4
   store i20 %prev_orig_out_2_i_51, i20* %orig1_addr_52, align 16
-  %tmp_58_52 = icmp eq i2 %tmp_66, %tmp_247
+  %tmp_58_52 = icmp eq i8 %tmp_62, %ref_genome_read_1
   %diag_score_0_v_i_52_cast_cast = select i1 %tmp_58_52, i8 1, i8 -1
   %prev_score_out_8_52 = add i8 %diag_score_0_v_i_52_cast_cast, %score2_load_1_52
   %prev_score_out_0_op_i_52 = add i8 -1, %prev_score_out_2_i_51
@@ -3398,7 +3398,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_52 = select i1 %or_cond_i_52, i20 %prev_orig_out_9_52, i20 %orig2_load_1_52
   store i8 %prev_score_out_2_i_52, i8* %score1_addr_53, align 1
   store i20 %prev_orig_out_2_i_52, i20* %orig1_addr_53, align 4
-  %tmp_58_53 = icmp eq i2 %tmp_67, %tmp_247
+  %tmp_58_53 = icmp eq i8 %tmp_63, %ref_genome_read_1
   %diag_score_0_v_i_53_cast_cast = select i1 %tmp_58_53, i8 1, i8 -1
   %prev_score_out_8_53 = add i8 %diag_score_0_v_i_53_cast_cast, %score2_load_1_53
   %prev_score_out_0_op_i_53 = add i8 -1, %prev_score_out_2_i_52
@@ -3414,7 +3414,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_53 = select i1 %or_cond_i_53, i20 %prev_orig_out_9_53, i20 %orig2_load_1_53
   store i8 %prev_score_out_2_i_53, i8* %score1_addr_54, align 2
   store i20 %prev_orig_out_2_i_53, i20* %orig1_addr_54, align 8
-  %tmp_58_54 = icmp eq i2 %tmp_68, %tmp_247
+  %tmp_58_54 = icmp eq i8 %tmp_64, %ref_genome_read_1
   %diag_score_0_v_i_54_cast_cast = select i1 %tmp_58_54, i8 1, i8 -1
   %prev_score_out_8_54 = add i8 %diag_score_0_v_i_54_cast_cast, %score2_load_1_54
   %prev_score_out_0_op_i_54 = add i8 -1, %prev_score_out_2_i_53
@@ -3430,7 +3430,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_54 = select i1 %or_cond_i_54, i20 %prev_orig_out_9_54, i20 %orig2_load_1_54
   store i8 %prev_score_out_2_i_54, i8* %score1_addr_55, align 1
   store i20 %prev_orig_out_2_i_54, i20* %orig1_addr_55, align 4
-  %tmp_58_55 = icmp eq i2 %tmp_69, %tmp_247
+  %tmp_58_55 = icmp eq i8 %tmp_155, %ref_genome_read_1
   %diag_score_0_v_i_55_cast_cast = select i1 %tmp_58_55, i8 1, i8 -1
   %prev_score_out_8_55 = add i8 %diag_score_0_v_i_55_cast_cast, %score2_load_1_55
   %prev_score_out_0_op_i_55 = add i8 -1, %prev_score_out_2_i_54
@@ -3446,7 +3446,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_55 = select i1 %or_cond_i_55, i20 %prev_orig_out_9_55, i20 %orig2_load_1_55
   store i8 %prev_score_out_2_i_55, i8* %score1_addr_56, align 8
   store i20 %prev_orig_out_2_i_55, i20* %orig1_addr_56, align 16
-  %tmp_58_56 = icmp eq i2 %tmp_70, %tmp_247
+  %tmp_58_56 = icmp eq i8 %tmp_66, %ref_genome_read_1
   %diag_score_0_v_i_56_cast_cast = select i1 %tmp_58_56, i8 1, i8 -1
   %prev_score_out_8_56 = add i8 %diag_score_0_v_i_56_cast_cast, %score2_load_1_56
   %prev_score_out_0_op_i_56 = add i8 -1, %prev_score_out_2_i_55
@@ -3462,7 +3462,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_56 = select i1 %or_cond_i_56, i20 %prev_orig_out_9_56, i20 %orig2_load_1_56
   store i8 %prev_score_out_2_i_56, i8* %score1_addr_57, align 1
   store i20 %prev_orig_out_2_i_56, i20* %orig1_addr_57, align 4
-  %tmp_58_57 = icmp eq i2 %tmp_71, %tmp_247
+  %tmp_58_57 = icmp eq i8 %tmp_67, %ref_genome_read_1
   %diag_score_0_v_i_57_cast_cast = select i1 %tmp_58_57, i8 1, i8 -1
   %prev_score_out_8_57 = add i8 %diag_score_0_v_i_57_cast_cast, %score2_load_1_57
   %prev_score_out_0_op_i_57 = add i8 -1, %prev_score_out_2_i_56
@@ -3478,7 +3478,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_57 = select i1 %or_cond_i_57, i20 %prev_orig_out_9_57, i20 %orig2_load_1_57
   store i8 %prev_score_out_2_i_57, i8* %score1_addr_58, align 2
   store i20 %prev_orig_out_2_i_57, i20* %orig1_addr_58, align 8
-  %tmp_58_58 = icmp eq i2 %tmp_72, %tmp_247
+  %tmp_58_58 = icmp eq i8 %tmp_68, %ref_genome_read_1
   %diag_score_0_v_i_58_cast_cast = select i1 %tmp_58_58, i8 1, i8 -1
   %prev_score_out_8_58 = add i8 %diag_score_0_v_i_58_cast_cast, %score2_load_1_58
   %prev_score_out_0_op_i_58 = add i8 -1, %prev_score_out_2_i_57
@@ -3494,7 +3494,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_58 = select i1 %or_cond_i_58, i20 %prev_orig_out_9_58, i20 %orig2_load_1_58
   store i8 %prev_score_out_2_i_58, i8* %score1_addr_59, align 1
   store i20 %prev_orig_out_2_i_58, i20* %orig1_addr_59, align 4
-  %tmp_58_59 = icmp eq i2 %tmp_73, %tmp_247
+  %tmp_58_59 = icmp eq i8 %tmp_160, %ref_genome_read_1
   %diag_score_0_v_i_59_cast_cast = select i1 %tmp_58_59, i8 1, i8 -1
   %prev_score_out_8_59 = add i8 %diag_score_0_v_i_59_cast_cast, %score2_load_1_59
   %prev_score_out_0_op_i_59 = add i8 -1, %prev_score_out_2_i_58
@@ -3510,7 +3510,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_59 = select i1 %or_cond_i_59, i20 %prev_orig_out_9_59, i20 %orig2_load_1_59
   store i8 %prev_score_out_2_i_59, i8* %score1_addr_60, align 4
   store i20 %prev_orig_out_2_i_59, i20* %orig1_addr_60, align 16
-  %tmp_58_60 = icmp eq i2 %tmp_74, %tmp_247
+  %tmp_58_60 = icmp eq i8 %tmp_70, %ref_genome_read_1
   %diag_score_0_v_i_60_cast_cast = select i1 %tmp_58_60, i8 1, i8 -1
   %prev_score_out_8_60 = add i8 %diag_score_0_v_i_60_cast_cast, %score2_load_1_60
   %prev_score_out_0_op_i_60 = add i8 -1, %prev_score_out_2_i_59
@@ -3526,7 +3526,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_60 = select i1 %or_cond_i_60, i20 %prev_orig_out_9_60, i20 %orig2_load_1_60
   store i8 %prev_score_out_2_i_60, i8* %score1_addr_61, align 1
   store i20 %prev_orig_out_2_i_60, i20* %orig1_addr_61, align 4
-  %tmp_58_61 = icmp eq i2 %tmp_75, %tmp_247
+  %tmp_58_61 = icmp eq i8 %tmp_71, %ref_genome_read_1
   %diag_score_0_v_i_61_cast_cast = select i1 %tmp_58_61, i8 1, i8 -1
   %prev_score_out_8_61 = add i8 %diag_score_0_v_i_61_cast_cast, %score2_load_1_61
   %prev_score_out_0_op_i_61 = add i8 -1, %prev_score_out_2_i_60
@@ -3542,7 +3542,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_61 = select i1 %or_cond_i_61, i20 %prev_orig_out_9_61, i20 %orig2_load_1_61
   store i8 %prev_score_out_2_i_61, i8* %score1_addr_62, align 2
   store i20 %prev_orig_out_2_i_61, i20* %orig1_addr_62, align 8
-  %tmp_58_62 = icmp eq i2 %tmp_76, %tmp_247
+  %tmp_58_62 = icmp eq i8 %tmp_72, %ref_genome_read_1
   %diag_score_0_v_i_62_cast_cast = select i1 %tmp_58_62, i8 1, i8 -1
   %prev_score_out_8_62 = add i8 %diag_score_0_v_i_62_cast_cast, %score2_load_1_62
   %prev_score_out_0_op_i_62 = add i8 -1, %prev_score_out_2_i_61
@@ -3558,7 +3558,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_62 = select i1 %or_cond_i_62, i20 %prev_orig_out_9_62, i20 %orig2_load_1_62
   store i8 %prev_score_out_2_i_62, i8* %score1_addr_63, align 1
   store i20 %prev_orig_out_2_i_62, i20* %orig1_addr_63, align 4
-  %tmp_58_63 = icmp eq i2 %tmp_227, %tmp_247
+  %tmp_58_63 = icmp eq i8 %tmp_165, %ref_genome_read_1
   %diag_score_0_v_i_63_cast_cast = select i1 %tmp_58_63, i8 1, i8 -1
   %prev_score_out_8_63 = add i8 %diag_score_0_v_i_63_cast_cast, %score2_load_1_63
   %prev_score_out_0_op_i_63 = add i8 -1, %prev_score_out_2_i_62
@@ -3574,7 +3574,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_63 = select i1 %or_cond_i_63, i20 %prev_orig_out_9_63, i20 %orig2_load_1_63
   store i8 %prev_score_out_2_i_63, i8* %score1_addr_64, align 16
   store i20 %prev_orig_out_2_i_63, i20* %orig1_addr_64, align 16
-  %tmp_58_64 = icmp eq i2 %tmp_78, %tmp_247
+  %tmp_58_64 = icmp eq i8 %tmp_74, %ref_genome_read_1
   %diag_score_0_v_i_64_cast_cast = select i1 %tmp_58_64, i8 1, i8 -1
   %prev_score_out_8_64 = add i8 %diag_score_0_v_i_64_cast_cast, %score2_load_1_64
   %prev_score_out_0_op_i_64 = add i8 -1, %prev_score_out_2_i_63
@@ -3590,7 +3590,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_64 = select i1 %or_cond_i_64, i20 %prev_orig_out_9_64, i20 %orig2_load_1_64
   store i8 %prev_score_out_2_i_64, i8* %score1_addr_65, align 1
   store i20 %prev_orig_out_2_i_64, i20* %orig1_addr_65, align 4
-  %tmp_58_65 = icmp eq i2 %tmp_79, %tmp_247
+  %tmp_58_65 = icmp eq i8 %tmp_75, %ref_genome_read_1
   %diag_score_0_v_i_65_cast_cast = select i1 %tmp_58_65, i8 1, i8 -1
   %prev_score_out_8_65 = add i8 %diag_score_0_v_i_65_cast_cast, %score2_load_1_65
   %prev_score_out_0_op_i_65 = add i8 -1, %prev_score_out_2_i_64
@@ -3606,7 +3606,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_65 = select i1 %or_cond_i_65, i20 %prev_orig_out_9_65, i20 %orig2_load_1_65
   store i8 %prev_score_out_2_i_65, i8* %score1_addr_66, align 2
   store i20 %prev_orig_out_2_i_65, i20* %orig1_addr_66, align 8
-  %tmp_58_66 = icmp eq i2 %tmp_80, %tmp_247
+  %tmp_58_66 = icmp eq i8 %tmp_76, %ref_genome_read_1
   %diag_score_0_v_i_66_cast_cast = select i1 %tmp_58_66, i8 1, i8 -1
   %prev_score_out_8_66 = add i8 %diag_score_0_v_i_66_cast_cast, %score2_load_1_66
   %prev_score_out_0_op_i_66 = add i8 -1, %prev_score_out_2_i_65
@@ -3622,7 +3622,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_66 = select i1 %or_cond_i_66, i20 %prev_orig_out_9_66, i20 %orig2_load_1_66
   store i8 %prev_score_out_2_i_66, i8* %score1_addr_67, align 1
   store i20 %prev_orig_out_2_i_66, i20* %orig1_addr_67, align 4
-  %tmp_58_67 = icmp eq i2 %tmp_81, %tmp_247
+  %tmp_58_67 = icmp eq i8 %tmp_170, %ref_genome_read_1
   %diag_score_0_v_i_67_cast_cast = select i1 %tmp_58_67, i8 1, i8 -1
   %prev_score_out_8_67 = add i8 %diag_score_0_v_i_67_cast_cast, %score2_load_1_67
   %prev_score_out_0_op_i_67 = add i8 -1, %prev_score_out_2_i_66
@@ -3638,7 +3638,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_67 = select i1 %or_cond_i_67, i20 %prev_orig_out_9_67, i20 %orig2_load_1_67
   store i8 %prev_score_out_2_i_67, i8* %score1_addr_68, align 4
   store i20 %prev_orig_out_2_i_67, i20* %orig1_addr_68, align 16
-  %tmp_58_68 = icmp eq i2 %tmp_82, %tmp_247
+  %tmp_58_68 = icmp eq i8 %tmp_78, %ref_genome_read_1
   %diag_score_0_v_i_68_cast_cast = select i1 %tmp_58_68, i8 1, i8 -1
   %prev_score_out_8_68 = add i8 %diag_score_0_v_i_68_cast_cast, %score2_load_1_68
   %prev_score_out_0_op_i_68 = add i8 -1, %prev_score_out_2_i_67
@@ -3654,7 +3654,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_68 = select i1 %or_cond_i_68, i20 %prev_orig_out_9_68, i20 %orig2_load_1_68
   store i8 %prev_score_out_2_i_68, i8* %score1_addr_69, align 1
   store i20 %prev_orig_out_2_i_68, i20* %orig1_addr_69, align 4
-  %tmp_58_69 = icmp eq i2 %tmp_83, %tmp_247
+  %tmp_58_69 = icmp eq i8 %tmp_79, %ref_genome_read_1
   %diag_score_0_v_i_69_cast_cast = select i1 %tmp_58_69, i8 1, i8 -1
   %prev_score_out_8_69 = add i8 %diag_score_0_v_i_69_cast_cast, %score2_load_1_69
   %prev_score_out_0_op_i_69 = add i8 -1, %prev_score_out_2_i_68
@@ -3670,7 +3670,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_69 = select i1 %or_cond_i_69, i20 %prev_orig_out_9_69, i20 %orig2_load_1_69
   store i8 %prev_score_out_2_i_69, i8* %score1_addr_70, align 2
   store i20 %prev_orig_out_2_i_69, i20* %orig1_addr_70, align 8
-  %tmp_58_70 = icmp eq i2 %tmp_84, %tmp_247
+  %tmp_58_70 = icmp eq i8 %tmp_80, %ref_genome_read_1
   %diag_score_0_v_i_70_cast_cast = select i1 %tmp_58_70, i8 1, i8 -1
   %prev_score_out_8_70 = add i8 %diag_score_0_v_i_70_cast_cast, %score2_load_1_70
   %prev_score_out_0_op_i_70 = add i8 -1, %prev_score_out_2_i_69
@@ -3686,7 +3686,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_70 = select i1 %or_cond_i_70, i20 %prev_orig_out_9_70, i20 %orig2_load_1_70
   store i8 %prev_score_out_2_i_70, i8* %score1_addr_71, align 1
   store i20 %prev_orig_out_2_i_70, i20* %orig1_addr_71, align 4
-  %tmp_58_71 = icmp eq i2 %tmp_85, %tmp_247
+  %tmp_58_71 = icmp eq i8 %tmp_175, %ref_genome_read_1
   %diag_score_0_v_i_71_cast_cast = select i1 %tmp_58_71, i8 1, i8 -1
   %prev_score_out_8_71 = add i8 %diag_score_0_v_i_71_cast_cast, %score2_load_1_71
   %prev_score_out_0_op_i_71 = add i8 -1, %prev_score_out_2_i_70
@@ -3702,7 +3702,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_71 = select i1 %or_cond_i_71, i20 %prev_orig_out_9_71, i20 %orig2_load_1_71
   store i8 %prev_score_out_2_i_71, i8* %score1_addr_72, align 8
   store i20 %prev_orig_out_2_i_71, i20* %orig1_addr_72, align 16
-  %tmp_58_72 = icmp eq i2 %tmp_86, %tmp_247
+  %tmp_58_72 = icmp eq i8 %tmp_82, %ref_genome_read_1
   %diag_score_0_v_i_72_cast_cast = select i1 %tmp_58_72, i8 1, i8 -1
   %prev_score_out_8_72 = add i8 %diag_score_0_v_i_72_cast_cast, %score2_load_1_72
   %prev_score_out_0_op_i_72 = add i8 -1, %prev_score_out_2_i_71
@@ -3718,7 +3718,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_72 = select i1 %or_cond_i_72, i20 %prev_orig_out_9_72, i20 %orig2_load_1_72
   store i8 %prev_score_out_2_i_72, i8* %score1_addr_73, align 1
   store i20 %prev_orig_out_2_i_72, i20* %orig1_addr_73, align 4
-  %tmp_58_73 = icmp eq i2 %tmp_87, %tmp_247
+  %tmp_58_73 = icmp eq i8 %tmp_83, %ref_genome_read_1
   %diag_score_0_v_i_73_cast_cast = select i1 %tmp_58_73, i8 1, i8 -1
   %prev_score_out_8_73 = add i8 %diag_score_0_v_i_73_cast_cast, %score2_load_1_73
   %prev_score_out_0_op_i_73 = add i8 -1, %prev_score_out_2_i_72
@@ -3734,7 +3734,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_73 = select i1 %or_cond_i_73, i20 %prev_orig_out_9_73, i20 %orig2_load_1_73
   store i8 %prev_score_out_2_i_73, i8* %score1_addr_74, align 2
   store i20 %prev_orig_out_2_i_73, i20* %orig1_addr_74, align 8
-  %tmp_58_74 = icmp eq i2 %tmp_88, %tmp_247
+  %tmp_58_74 = icmp eq i8 %tmp_84, %ref_genome_read_1
   %diag_score_0_v_i_74_cast_cast = select i1 %tmp_58_74, i8 1, i8 -1
   %prev_score_out_8_74 = add i8 %diag_score_0_v_i_74_cast_cast, %score2_load_1_74
   %prev_score_out_0_op_i_74 = add i8 -1, %prev_score_out_2_i_73
@@ -3750,7 +3750,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_74 = select i1 %or_cond_i_74, i20 %prev_orig_out_9_74, i20 %orig2_load_1_74
   store i8 %prev_score_out_2_i_74, i8* %score1_addr_75, align 1
   store i20 %prev_orig_out_2_i_74, i20* %orig1_addr_75, align 4
-  %tmp_58_75 = icmp eq i2 %tmp_89, %tmp_247
+  %tmp_58_75 = icmp eq i8 %tmp_180, %ref_genome_read_1
   %diag_score_0_v_i_75_cast_cast = select i1 %tmp_58_75, i8 1, i8 -1
   %prev_score_out_8_75 = add i8 %diag_score_0_v_i_75_cast_cast, %score2_load_1_75
   %prev_score_out_0_op_i_75 = add i8 -1, %prev_score_out_2_i_74
@@ -3766,7 +3766,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_75 = select i1 %or_cond_i_75, i20 %prev_orig_out_9_75, i20 %orig2_load_1_75
   store i8 %prev_score_out_2_i_75, i8* %score1_addr_76, align 4
   store i20 %prev_orig_out_2_i_75, i20* %orig1_addr_76, align 16
-  %tmp_58_76 = icmp eq i2 %tmp_90, %tmp_247
+  %tmp_58_76 = icmp eq i8 %tmp_86, %ref_genome_read_1
   %diag_score_0_v_i_76_cast_cast = select i1 %tmp_58_76, i8 1, i8 -1
   %prev_score_out_8_76 = add i8 %diag_score_0_v_i_76_cast_cast, %score2_load_1_76
   %prev_score_out_0_op_i_76 = add i8 -1, %prev_score_out_2_i_75
@@ -3782,7 +3782,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_76 = select i1 %or_cond_i_76, i20 %prev_orig_out_9_76, i20 %orig2_load_1_76
   store i8 %prev_score_out_2_i_76, i8* %score1_addr_77, align 1
   store i20 %prev_orig_out_2_i_76, i20* %orig1_addr_77, align 4
-  %tmp_58_77 = icmp eq i2 %tmp_91, %tmp_247
+  %tmp_58_77 = icmp eq i8 %tmp_87, %ref_genome_read_1
   %diag_score_0_v_i_77_cast_cast = select i1 %tmp_58_77, i8 1, i8 -1
   %prev_score_out_8_77 = add i8 %diag_score_0_v_i_77_cast_cast, %score2_load_1_77
   %prev_score_out_0_op_i_77 = add i8 -1, %prev_score_out_2_i_76
@@ -3798,7 +3798,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_77 = select i1 %or_cond_i_77, i20 %prev_orig_out_9_77, i20 %orig2_load_1_77
   store i8 %prev_score_out_2_i_77, i8* %score1_addr_78, align 2
   store i20 %prev_orig_out_2_i_77, i20* %orig1_addr_78, align 8
-  %tmp_58_78 = icmp eq i2 %tmp_92, %tmp_247
+  %tmp_58_78 = icmp eq i8 %tmp_88, %ref_genome_read_1
   %diag_score_0_v_i_78_cast_cast = select i1 %tmp_58_78, i8 1, i8 -1
   %prev_score_out_8_78 = add i8 %diag_score_0_v_i_78_cast_cast, %score2_load_1_78
   %prev_score_out_0_op_i_78 = add i8 -1, %prev_score_out_2_i_77
@@ -3814,7 +3814,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_78 = select i1 %or_cond_i_78, i20 %prev_orig_out_9_78, i20 %orig2_load_1_78
   store i8 %prev_score_out_2_i_78, i8* %score1_addr_79, align 1
   store i20 %prev_orig_out_2_i_78, i20* %orig1_addr_79, align 4
-  %tmp_58_79 = icmp eq i2 %tmp_228, %tmp_247
+  %tmp_58_79 = icmp eq i8 %tmp_185, %ref_genome_read_1
   %diag_score_0_v_i_79_cast_cast = select i1 %tmp_58_79, i8 1, i8 -1
   %prev_score_out_8_79 = add i8 %diag_score_0_v_i_79_cast_cast, %score2_load_1_79
   %prev_score_out_0_op_i_79 = add i8 -1, %prev_score_out_2_i_78
@@ -3830,7 +3830,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_79 = select i1 %or_cond_i_79, i20 %prev_orig_out_9_79, i20 %orig2_load_1_79
   store i8 %prev_score_out_2_i_79, i8* %score1_addr_80, align 16
   store i20 %prev_orig_out_2_i_79, i20* %orig1_addr_80, align 16
-  %tmp_58_80 = icmp eq i2 %tmp_94, %tmp_247
+  %tmp_58_80 = icmp eq i8 %tmp_90, %ref_genome_read_1
   %diag_score_0_v_i_80_cast_cast = select i1 %tmp_58_80, i8 1, i8 -1
   %prev_score_out_8_80 = add i8 %diag_score_0_v_i_80_cast_cast, %score2_load_1_80
   %prev_score_out_0_op_i_80 = add i8 -1, %prev_score_out_2_i_79
@@ -3846,7 +3846,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_80 = select i1 %or_cond_i_80, i20 %prev_orig_out_9_80, i20 %orig2_load_1_80
   store i8 %prev_score_out_2_i_80, i8* %score1_addr_81, align 1
   store i20 %prev_orig_out_2_i_80, i20* %orig1_addr_81, align 4
-  %tmp_58_81 = icmp eq i2 %tmp_95, %tmp_247
+  %tmp_58_81 = icmp eq i8 %tmp_91, %ref_genome_read_1
   %diag_score_0_v_i_81_cast_cast = select i1 %tmp_58_81, i8 1, i8 -1
   %prev_score_out_8_81 = add i8 %diag_score_0_v_i_81_cast_cast, %score2_load_1_81
   %prev_score_out_0_op_i_81 = add i8 -1, %prev_score_out_2_i_80
@@ -3862,7 +3862,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_81 = select i1 %or_cond_i_81, i20 %prev_orig_out_9_81, i20 %orig2_load_1_81
   store i8 %prev_score_out_2_i_81, i8* %score1_addr_82, align 2
   store i20 %prev_orig_out_2_i_81, i20* %orig1_addr_82, align 8
-  %tmp_58_82 = icmp eq i2 %tmp_96, %tmp_247
+  %tmp_58_82 = icmp eq i8 %tmp_92, %ref_genome_read_1
   %diag_score_0_v_i_82_cast_cast = select i1 %tmp_58_82, i8 1, i8 -1
   %prev_score_out_8_82 = add i8 %diag_score_0_v_i_82_cast_cast, %score2_load_1_82
   %prev_score_out_0_op_i_82 = add i8 -1, %prev_score_out_2_i_81
@@ -3878,7 +3878,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_82 = select i1 %or_cond_i_82, i20 %prev_orig_out_9_82, i20 %orig2_load_1_82
   store i8 %prev_score_out_2_i_82, i8* %score1_addr_83, align 1
   store i20 %prev_orig_out_2_i_82, i20* %orig1_addr_83, align 4
-  %tmp_58_83 = icmp eq i2 %tmp_97, %tmp_247
+  %tmp_58_83 = icmp eq i8 %tmp_190, %ref_genome_read_1
   %diag_score_0_v_i_83_cast_cast = select i1 %tmp_58_83, i8 1, i8 -1
   %prev_score_out_8_83 = add i8 %diag_score_0_v_i_83_cast_cast, %score2_load_1_83
   %prev_score_out_0_op_i_83 = add i8 -1, %prev_score_out_2_i_82
@@ -3894,7 +3894,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_83 = select i1 %or_cond_i_83, i20 %prev_orig_out_9_83, i20 %orig2_load_1_83
   store i8 %prev_score_out_2_i_83, i8* %score1_addr_84, align 4
   store i20 %prev_orig_out_2_i_83, i20* %orig1_addr_84, align 16
-  %tmp_58_84 = icmp eq i2 %tmp_98, %tmp_247
+  %tmp_58_84 = icmp eq i8 %tmp_94, %ref_genome_read_1
   %diag_score_0_v_i_84_cast_cast = select i1 %tmp_58_84, i8 1, i8 -1
   %prev_score_out_8_84 = add i8 %diag_score_0_v_i_84_cast_cast, %score2_load_1_84
   %prev_score_out_0_op_i_84 = add i8 -1, %prev_score_out_2_i_83
@@ -3910,7 +3910,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_84 = select i1 %or_cond_i_84, i20 %prev_orig_out_9_84, i20 %orig2_load_1_84
   store i8 %prev_score_out_2_i_84, i8* %score1_addr_85, align 1
   store i20 %prev_orig_out_2_i_84, i20* %orig1_addr_85, align 4
-  %tmp_58_85 = icmp eq i2 %tmp_99, %tmp_247
+  %tmp_58_85 = icmp eq i8 %tmp_95, %ref_genome_read_1
   %diag_score_0_v_i_85_cast_cast = select i1 %tmp_58_85, i8 1, i8 -1
   %prev_score_out_8_85 = add i8 %diag_score_0_v_i_85_cast_cast, %score2_load_1_85
   %prev_score_out_0_op_i_85 = add i8 -1, %prev_score_out_2_i_84
@@ -3926,7 +3926,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_85 = select i1 %or_cond_i_85, i20 %prev_orig_out_9_85, i20 %orig2_load_1_85
   store i8 %prev_score_out_2_i_85, i8* %score1_addr_86, align 2
   store i20 %prev_orig_out_2_i_85, i20* %orig1_addr_86, align 8
-  %tmp_58_86 = icmp eq i2 %tmp_100, %tmp_247
+  %tmp_58_86 = icmp eq i8 %tmp_96, %ref_genome_read_1
   %diag_score_0_v_i_86_cast_cast = select i1 %tmp_58_86, i8 1, i8 -1
   %prev_score_out_8_86 = add i8 %diag_score_0_v_i_86_cast_cast, %score2_load_1_86
   %prev_score_out_0_op_i_86 = add i8 -1, %prev_score_out_2_i_85
@@ -3942,7 +3942,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_86 = select i1 %or_cond_i_86, i20 %prev_orig_out_9_86, i20 %orig2_load_1_86
   store i8 %prev_score_out_2_i_86, i8* %score1_addr_87, align 1
   store i20 %prev_orig_out_2_i_86, i20* %orig1_addr_87, align 4
-  %tmp_58_87 = icmp eq i2 %tmp_101, %tmp_247
+  %tmp_58_87 = icmp eq i8 %tmp_195, %ref_genome_read_1
   %diag_score_0_v_i_87_cast_cast = select i1 %tmp_58_87, i8 1, i8 -1
   %prev_score_out_8_87 = add i8 %diag_score_0_v_i_87_cast_cast, %score2_load_1_87
   %prev_score_out_0_op_i_87 = add i8 -1, %prev_score_out_2_i_86
@@ -3958,7 +3958,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_87 = select i1 %or_cond_i_87, i20 %prev_orig_out_9_87, i20 %orig2_load_1_87
   store i8 %prev_score_out_2_i_87, i8* %score1_addr_88, align 8
   store i20 %prev_orig_out_2_i_87, i20* %orig1_addr_88, align 16
-  %tmp_58_88 = icmp eq i2 %tmp_102, %tmp_247
+  %tmp_58_88 = icmp eq i8 %tmp_98, %ref_genome_read_1
   %diag_score_0_v_i_88_cast_cast = select i1 %tmp_58_88, i8 1, i8 -1
   %prev_score_out_8_88 = add i8 %diag_score_0_v_i_88_cast_cast, %score2_load_1_88
   %prev_score_out_0_op_i_88 = add i8 -1, %prev_score_out_2_i_87
@@ -3974,7 +3974,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_88 = select i1 %or_cond_i_88, i20 %prev_orig_out_9_88, i20 %orig2_load_1_88
   store i8 %prev_score_out_2_i_88, i8* %score1_addr_89, align 1
   store i20 %prev_orig_out_2_i_88, i20* %orig1_addr_89, align 4
-  %tmp_58_89 = icmp eq i2 %tmp_103, %tmp_247
+  %tmp_58_89 = icmp eq i8 %tmp_99, %ref_genome_read_1
   %diag_score_0_v_i_89_cast_cast = select i1 %tmp_58_89, i8 1, i8 -1
   %prev_score_out_8_89 = add i8 %diag_score_0_v_i_89_cast_cast, %score2_load_1_89
   %prev_score_out_0_op_i_89 = add i8 -1, %prev_score_out_2_i_88
@@ -3990,7 +3990,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_89 = select i1 %or_cond_i_89, i20 %prev_orig_out_9_89, i20 %orig2_load_1_89
   store i8 %prev_score_out_2_i_89, i8* %score1_addr_90, align 2
   store i20 %prev_orig_out_2_i_89, i20* %orig1_addr_90, align 8
-  %tmp_58_90 = icmp eq i2 %tmp_104, %tmp_247
+  %tmp_58_90 = icmp eq i8 %tmp_100, %ref_genome_read_1
   %diag_score_0_v_i_90_cast_cast = select i1 %tmp_58_90, i8 1, i8 -1
   %prev_score_out_8_90 = add i8 %diag_score_0_v_i_90_cast_cast, %score2_load_1_90
   %prev_score_out_0_op_i_90 = add i8 -1, %prev_score_out_2_i_89
@@ -4006,7 +4006,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_90 = select i1 %or_cond_i_90, i20 %prev_orig_out_9_90, i20 %orig2_load_1_90
   store i8 %prev_score_out_2_i_90, i8* %score1_addr_91, align 1
   store i20 %prev_orig_out_2_i_90, i20* %orig1_addr_91, align 4
-  %tmp_58_91 = icmp eq i2 %tmp_105, %tmp_247
+  %tmp_58_91 = icmp eq i8 %tmp_200, %ref_genome_read_1
   %diag_score_0_v_i_91_cast_cast = select i1 %tmp_58_91, i8 1, i8 -1
   %prev_score_out_8_91 = add i8 %diag_score_0_v_i_91_cast_cast, %score2_load_1_91
   %prev_score_out_0_op_i_91 = add i8 -1, %prev_score_out_2_i_90
@@ -4022,7 +4022,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_91 = select i1 %or_cond_i_91, i20 %prev_orig_out_9_91, i20 %orig2_load_1_91
   store i8 %prev_score_out_2_i_91, i8* %score1_addr_92, align 4
   store i20 %prev_orig_out_2_i_91, i20* %orig1_addr_92, align 16
-  %tmp_58_92 = icmp eq i2 %tmp_106, %tmp_247
+  %tmp_58_92 = icmp eq i8 %tmp_102, %ref_genome_read_1
   %diag_score_0_v_i_92_cast_cast = select i1 %tmp_58_92, i8 1, i8 -1
   %prev_score_out_8_92 = add i8 %diag_score_0_v_i_92_cast_cast, %score2_load_1_92
   %prev_score_out_0_op_i_92 = add i8 -1, %prev_score_out_2_i_91
@@ -4038,7 +4038,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_92 = select i1 %or_cond_i_92, i20 %prev_orig_out_9_92, i20 %orig2_load_1_92
   store i8 %prev_score_out_2_i_92, i8* %score1_addr_93, align 1
   store i20 %prev_orig_out_2_i_92, i20* %orig1_addr_93, align 4
-  %tmp_58_93 = icmp eq i2 %tmp_107, %tmp_247
+  %tmp_58_93 = icmp eq i8 %tmp_103, %ref_genome_read_1
   %diag_score_0_v_i_93_cast_cast = select i1 %tmp_58_93, i8 1, i8 -1
   %prev_score_out_8_93 = add i8 %diag_score_0_v_i_93_cast_cast, %score2_load_1_93
   %prev_score_out_0_op_i_93 = add i8 -1, %prev_score_out_2_i_92
@@ -4054,7 +4054,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_93 = select i1 %or_cond_i_93, i20 %prev_orig_out_9_93, i20 %orig2_load_1_93
   store i8 %prev_score_out_2_i_93, i8* %score1_addr_94, align 2
   store i20 %prev_orig_out_2_i_93, i20* %orig1_addr_94, align 8
-  %tmp_58_94 = icmp eq i2 %tmp_108, %tmp_247
+  %tmp_58_94 = icmp eq i8 %tmp_104, %ref_genome_read_1
   %diag_score_0_v_i_94_cast_cast = select i1 %tmp_58_94, i8 1, i8 -1
   %prev_score_out_8_94 = add i8 %diag_score_0_v_i_94_cast_cast, %score2_load_1_94
   %prev_score_out_0_op_i_94 = add i8 -1, %prev_score_out_2_i_93
@@ -4070,7 +4070,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_94 = select i1 %or_cond_i_94, i20 %prev_orig_out_9_94, i20 %orig2_load_1_94
   store i8 %prev_score_out_2_i_94, i8* %score1_addr_95, align 1
   store i20 %prev_orig_out_2_i_94, i20* %orig1_addr_95, align 4
-  %tmp_58_95 = icmp eq i2 %tmp_229, %tmp_247
+  %tmp_58_95 = icmp eq i8 %tmp_205, %ref_genome_read_1
   %diag_score_0_v_i_95_cast_cast = select i1 %tmp_58_95, i8 1, i8 -1
   %prev_score_out_8_95 = add i8 %diag_score_0_v_i_95_cast_cast, %score2_load_1_95
   %prev_score_out_0_op_i_95 = add i8 -1, %prev_score_out_2_i_94
@@ -4086,7 +4086,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_95 = select i1 %or_cond_i_95, i20 %prev_orig_out_9_95, i20 %orig2_load_1_95
   store i8 %prev_score_out_2_i_95, i8* %score1_addr_96, align 16
   store i20 %prev_orig_out_2_i_95, i20* %orig1_addr_96, align 16
-  %tmp_58_96 = icmp eq i2 %tmp_110, %tmp_247
+  %tmp_58_96 = icmp eq i8 %tmp_106, %ref_genome_read_1
   %diag_score_0_v_i_96_cast_cast = select i1 %tmp_58_96, i8 1, i8 -1
   %prev_score_out_8_96 = add i8 %diag_score_0_v_i_96_cast_cast, %score2_load_1_96
   %prev_score_out_0_op_i_96 = add i8 -1, %prev_score_out_2_i_95
@@ -4102,7 +4102,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   %prev_orig_out_2_i_96 = select i1 %or_cond_i_96, i20 %prev_orig_out_9_96, i20 %orig2_load_1_96
   store i8 %prev_score_out_2_i_96, i8* %score1_addr_97, align 1
   store i20 %prev_orig_out_2_i_96, i20* %orig1_addr_97, align 4
-  %tmp_58_97 = icmp eq i2 %tmp_111, %tmp_247
+  %tmp_58_97 = icmp eq i8 %tmp_107, %ref_genome_read_1
   %diag_score_0_v_i_97_cast_cast = select i1 %tmp_58_97, i8 1, i8 -1
   %prev_score_out_8_97 = add i8 %diag_score_0_v_i_97_cast_cast, %score2_load_1_97
   %prev_score_out_0_op_i_97 = add i8 -1, %prev_score_out_2_i_96
@@ -4119,7 +4119,7 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   store i8 %prev_score_out_2_i_97, i8* %score1_addr_98, align 2
   store i20 %prev_orig_out_2_i_97, i20* %orig1_addr_98, align 8
   %phitmp100 = add i8 -1, %score2_load_2_s
-  %tmp_58_98 = icmp eq i2 %tmp_112, %tmp_247
+  %tmp_58_98 = icmp eq i8 %tmp_108, %ref_genome_read_1
   %diag_score_0_v_i_98_cast_cast = select i1 %tmp_58_98, i8 1, i8 -1
   %prev_score_out_8_98 = add i8 %diag_score_0_v_i_98_cast_cast, %score2_load_1_98
   %prev_score_out_0_op_i_98 = add i8 -1, %prev_score_out_2_i_97
@@ -4136,23 +4136,14 @@ define i20 @needlemanWunsch([7 x i32]* %read_r, i8* %ref_genome) {
   store i8 %prev_score_out_2_i_98, i8* %score1_addr_99, align 1
   store i20 %prev_orig_out_2_i_98, i20* %orig1_addr_99, align 4
   %max_score_4 = sext i8 %prev_score_out_2_i_98 to i32
-  %tmp_s = icmp sgt i32 %max_score_4, %max_score_1
-  %max_orig_2 = select i1 %tmp_s, i20 %prev_orig_out_2_i_98, i20 %max_orig_1
-  %max_score_2 = select i1 %tmp_s, i32 %max_score_4, i32 %max_score_1
-  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str7, i32 %tmp_1) nounwind
+  %tmp_12 = icmp sgt i32 %max_score_4, %max_score_1
+  %max_orig_2 = select i1 %tmp_12, i20 %prev_orig_out_2_i_98, i20 %max_orig_1
+  %max_score_2 = select i1 %tmp_12, i32 %max_score_4, i32 %max_score_1
+  %empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str8, i32 %tmp_1) nounwind
   br label %1
 
 ; <label>:2                                       ; preds = %1
   ret i20 %max_orig
-}
-
-define weak i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2, i1) nounwind readnone {
-entry:
-  %empty = zext i2 %0 to i3
-  %empty_11 = zext i1 %1 to i3
-  %empty_12 = shl i3 %empty, 1
-  %empty_13 = or i3 %empty_12, %empty_11
-  ret i3 %empty_13
 }
 
 define weak i8 @_ssdm_op_Read.axis.volatile.i8P(i8*) {
@@ -4161,125 +4152,41 @@ entry:
   ret i8 %empty
 }
 
-declare i8 @llvm.part.select.i8(i8, i32, i32) nounwind readnone
-
 declare i32 @llvm.part.select.i32(i32, i32, i32) nounwind readnone
-
-declare i2 @_ssdm_op_PartSelect.i2.i8.i32.i32(i8, i32, i32) nounwind readnone
-
-declare i2 @_ssdm_op_PartSelect.i2.i20.i32.i32(i20, i32, i32) nounwind readnone
 
 !hls.encrypted.func = !{}
 !llvm.map.gv = !{}
 
-!0 = metadata !{metadata !1, metadata !6, metadata !11, metadata !16, metadata !21, metadata !29, metadata !34, metadata !39, metadata !44, metadata !49, metadata !54, metadata !59, metadata !64, metadata !69, metadata !74, metadata !79}
-!1 = metadata !{i32 0, i32 1, metadata !2}
+!0 = metadata !{metadata !1, metadata !6, metadata !11, metadata !16}
+!1 = metadata !{i32 0, i32 7, metadata !2}
 !2 = metadata !{metadata !3}
-!3 = metadata !{metadata !"read", metadata !4, metadata !"uint2", i32 0, i32 1}
+!3 = metadata !{metadata !"read_r", metadata !4, metadata !"uint8", i32 0, i32 7}
 !4 = metadata !{metadata !5}
-!5 = metadata !{i32 0, i32 96, i32 16}
-!6 = metadata !{i32 2, i32 3, metadata !7}
+!5 = metadata !{i32 0, i32 96, i32 4}
+!6 = metadata !{i32 8, i32 15, metadata !7}
 !7 = metadata !{metadata !8}
-!8 = metadata !{metadata !"read", metadata !9, metadata !"uint2", i32 0, i32 1}
+!8 = metadata !{metadata !"read_r", metadata !9, metadata !"uint8", i32 0, i32 7}
 !9 = metadata !{metadata !10}
-!10 = metadata !{i32 1, i32 97, i32 16}
-!11 = metadata !{i32 4, i32 5, metadata !12}
+!10 = metadata !{i32 1, i32 97, i32 4}
+!11 = metadata !{i32 16, i32 23, metadata !12}
 !12 = metadata !{metadata !13}
-!13 = metadata !{metadata !"read", metadata !14, metadata !"uint2", i32 0, i32 1}
+!13 = metadata !{metadata !"read_r", metadata !14, metadata !"uint8", i32 0, i32 7}
 !14 = metadata !{metadata !15}
-!15 = metadata !{i32 2, i32 98, i32 16}
-!16 = metadata !{i32 6, i32 7, metadata !17}
+!15 = metadata !{i32 2, i32 98, i32 4}
+!16 = metadata !{i32 24, i32 31, metadata !17}
 !17 = metadata !{metadata !18}
-!18 = metadata !{metadata !"read", metadata !19, metadata !"uint2", i32 0, i32 1}
+!18 = metadata !{metadata !"read_r", metadata !19, metadata !"uint8", i32 0, i32 7}
 !19 = metadata !{metadata !20}
-!20 = metadata !{i32 3, i32 99, i32 16}
-!21 = metadata !{i32 8, i32 9, metadata !22}
-!22 = metadata !{metadata !23, metadata !26}
-!23 = metadata !{metadata !"read", metadata !24, metadata !"uint2", i32 0, i32 1}
-!24 = metadata !{metadata !25}
-!25 = metadata !{i32 4, i32 99, i32 16}
-!26 = metadata !{metadata !"", metadata !27, metadata !"", i32 0, i32 1}
+!20 = metadata !{i32 3, i32 99, i32 4}
+!21 = metadata !{metadata !22}
+!22 = metadata !{i32 0, i32 7, metadata !23}
+!23 = metadata !{metadata !24}
+!24 = metadata !{metadata !"ref_genome", metadata !25, metadata !"uint8", i32 0, i32 7}
+!25 = metadata !{metadata !26}
+!26 = metadata !{i32 0, i32 99999, i32 1}
 !27 = metadata !{metadata !28}
-!28 = metadata !{i32 0, i32 0, i32 1}
-!29 = metadata !{i32 10, i32 11, metadata !30}
-!30 = metadata !{metadata !31, metadata !26}
-!31 = metadata !{metadata !"read", metadata !32, metadata !"uint2", i32 0, i32 1}
-!32 = metadata !{metadata !33}
-!33 = metadata !{i32 5, i32 99, i32 16}
-!34 = metadata !{i32 12, i32 13, metadata !35}
-!35 = metadata !{metadata !36, metadata !26}
-!36 = metadata !{metadata !"read", metadata !37, metadata !"uint2", i32 0, i32 1}
-!37 = metadata !{metadata !38}
-!38 = metadata !{i32 6, i32 99, i32 16}
-!39 = metadata !{i32 14, i32 15, metadata !40}
-!40 = metadata !{metadata !41, metadata !26}
-!41 = metadata !{metadata !"read", metadata !42, metadata !"uint2", i32 0, i32 1}
-!42 = metadata !{metadata !43}
-!43 = metadata !{i32 7, i32 99, i32 16}
-!44 = metadata !{i32 16, i32 17, metadata !45}
-!45 = metadata !{metadata !46, metadata !26}
-!46 = metadata !{metadata !"read", metadata !47, metadata !"uint2", i32 0, i32 1}
-!47 = metadata !{metadata !48}
-!48 = metadata !{i32 8, i32 99, i32 16}
-!49 = metadata !{i32 18, i32 19, metadata !50}
-!50 = metadata !{metadata !51, metadata !26}
-!51 = metadata !{metadata !"read", metadata !52, metadata !"uint2", i32 0, i32 1}
-!52 = metadata !{metadata !53}
-!53 = metadata !{i32 9, i32 99, i32 16}
-!54 = metadata !{i32 20, i32 21, metadata !55}
-!55 = metadata !{metadata !56, metadata !26}
-!56 = metadata !{metadata !"read", metadata !57, metadata !"uint2", i32 0, i32 1}
-!57 = metadata !{metadata !58}
-!58 = metadata !{i32 10, i32 99, i32 16}
-!59 = metadata !{i32 22, i32 23, metadata !60}
-!60 = metadata !{metadata !61, metadata !26}
-!61 = metadata !{metadata !"read", metadata !62, metadata !"uint2", i32 0, i32 1}
-!62 = metadata !{metadata !63}
-!63 = metadata !{i32 11, i32 99, i32 16}
-!64 = metadata !{i32 24, i32 25, metadata !65}
-!65 = metadata !{metadata !66, metadata !26}
-!66 = metadata !{metadata !"read", metadata !67, metadata !"uint2", i32 0, i32 1}
-!67 = metadata !{metadata !68}
-!68 = metadata !{i32 12, i32 99, i32 16}
-!69 = metadata !{i32 26, i32 27, metadata !70}
-!70 = metadata !{metadata !71, metadata !26}
-!71 = metadata !{metadata !"read", metadata !72, metadata !"uint2", i32 0, i32 1}
-!72 = metadata !{metadata !73}
-!73 = metadata !{i32 13, i32 99, i32 16}
-!74 = metadata !{i32 28, i32 29, metadata !75}
-!75 = metadata !{metadata !76, metadata !26}
-!76 = metadata !{metadata !"read", metadata !77, metadata !"uint2", i32 0, i32 1}
-!77 = metadata !{metadata !78}
-!78 = metadata !{i32 14, i32 99, i32 16}
-!79 = metadata !{i32 30, i32 31, metadata !80}
-!80 = metadata !{metadata !81, metadata !26}
-!81 = metadata !{metadata !"read", metadata !82, metadata !"uint2", i32 0, i32 1}
-!82 = metadata !{metadata !83}
-!83 = metadata !{i32 15, i32 99, i32 16}
-!84 = metadata !{metadata !85, metadata !90, metadata !95, metadata !100}
-!85 = metadata !{i32 0, i32 1, metadata !86}
-!86 = metadata !{metadata !87}
-!87 = metadata !{metadata !"ref_genome", metadata !88, metadata !"uint2", i32 0, i32 1}
-!88 = metadata !{metadata !89}
-!89 = metadata !{i32 0, i32 999996, i32 4}
-!90 = metadata !{i32 2, i32 3, metadata !91}
-!91 = metadata !{metadata !92}
-!92 = metadata !{metadata !"ref_genome", metadata !93, metadata !"uint2", i32 0, i32 1}
-!93 = metadata !{metadata !94}
-!94 = metadata !{i32 1, i32 999997, i32 4}
-!95 = metadata !{i32 4, i32 5, metadata !96}
-!96 = metadata !{metadata !97}
-!97 = metadata !{metadata !"ref_genome", metadata !98, metadata !"uint2", i32 0, i32 1}
-!98 = metadata !{metadata !99}
-!99 = metadata !{i32 2, i32 999998, i32 4}
-!100 = metadata !{i32 6, i32 7, metadata !101}
-!101 = metadata !{metadata !102}
-!102 = metadata !{metadata !"ref_genome", metadata !103, metadata !"uint2", i32 0, i32 1}
-!103 = metadata !{metadata !104}
-!104 = metadata !{i32 3, i32 999999, i32 4}
-!105 = metadata !{metadata !106}
-!106 = metadata !{i32 0, i32 19, metadata !107}
-!107 = metadata !{metadata !108}
-!108 = metadata !{metadata !"return", metadata !109, metadata !"orig_t", i32 0, i32 19}
-!109 = metadata !{metadata !110}
-!110 = metadata !{i32 0, i32 1, i32 0}
+!28 = metadata !{i32 0, i32 19, metadata !29}
+!29 = metadata !{metadata !30}
+!30 = metadata !{metadata !"return", metadata !31, metadata !"orig_t", i32 0, i32 19}
+!31 = metadata !{metadata !32}
+!32 = metadata !{i32 0, i32 1, i32 0}

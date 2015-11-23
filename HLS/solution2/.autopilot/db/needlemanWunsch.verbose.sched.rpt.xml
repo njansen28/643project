@@ -1,10 +1,10 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'needlemanWunsch'" level="0">
-<item name = "Date">Sat Nov 21 17:09:11 2015
+<item name = "Date">Sun Nov 22 19:06:16 2015
 </item>
 <item name = "Version">2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)</item>
-<item name = "Project">hls1121</item>
+<item name = "Project">643_PE</item>
 <item name = "Solution">solution2</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020clg484-1</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">50000106, 50000106, 50000107, 50000107, none</column>
+<column name="">5000106, 5000106, 5000107, 5000107, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- ROW">50000104, 50000104, 205, 100, 100, 500000, yes</column>
+<column name="- ROW">5000104, 5000104, 205, 100, 100, 50000, yes</column>
 </table>
 </item>
 </section>

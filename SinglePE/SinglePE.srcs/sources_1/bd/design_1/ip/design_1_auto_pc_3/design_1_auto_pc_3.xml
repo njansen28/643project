@@ -989,7 +989,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Nov 21 17:00:09 UTC 2015</spirit:value>
+            <spirit:value>Mon Nov 23 00:10:35 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1024,7 +1024,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Nov 21 20:22:11 UTC 2015</spirit:value>
+            <spirit:value>Mon Nov 23 01:14:47 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -3793,7 +3793,7 @@
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:ip:axi_protocol_converter:2.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2015-06-24T20:05:02Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2015-07-27T09:01:15Z</xilinx:coreCreationDateTime>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RST.POLARITY" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.SI_PROTOCOL" xilinx:valueSource="user"/>
@@ -3844,7 +3844,7 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2015.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2015.2.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="107f8ba3"/>
       <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="dd4a5614"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="e3bfb6f4"/>

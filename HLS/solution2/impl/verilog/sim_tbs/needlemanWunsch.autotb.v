@@ -15,10 +15,10 @@
 `define AUTOTB_PER_RESULT_TRANS_FILE "needlemanWunsch.performance.result.transaction.xml"
 `define AUTOTB_TOP_INST AESL_inst_apatb_needlemanWunsch_top
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
-`define AUTOTB_TRANSACTION_NUM  3
+`define AUTOTB_TRANSACTION_NUM  1
 `define AUTOTB_CLOCK_PERIOD 5.000000
 `define LENGTH_read_r 25
-`define LENGTH_ref_genome 250000
+`define LENGTH_ref_genome 100000
 `define LENGTH_ap_return 1
 
 `define	AESL_BRAM_read_r AESL_autobram_read_r
@@ -135,8 +135,8 @@ reg [31 : 0] AESL_mLatCnterIn_addr;
 reg [31 : 0] AESL_mLatCnterOut [0 : `AUTOTB_TRANSACTION_NUM + 1];
 reg [31 : 0] AESL_mLatCnterOut_addr ;
 reg [31 : 0] AESL_clk_counter ;
-reg [27 - 1 : 0] AESL_clk_ready[0 : `AUTOTB_TRANSACTION_NUM + 1];
-reg [27 - 1 : 0] AESL_clk_done[0 : `AUTOTB_TRANSACTION_NUM + 1];
+reg [24 - 1 : 0] AESL_clk_ready[0 : `AUTOTB_TRANSACTION_NUM + 1];
+reg [24 - 1 : 0] AESL_clk_done[0 : `AUTOTB_TRANSACTION_NUM + 1];
 
 reg reported_stuck = 0;
 reg reported_stuck_cnt = 0;
@@ -161,18 +161,11 @@ wire ap_clk;
 wire ap_rst_n;
 wire [31 : 0] read_r_Addr_A;
 wire  read_r_EN_A;
-wire [0 : 0] read_r_WEN_A;
-wire [7 : 0] read_r_Din_A;
-wire [7 : 0] read_r_Dout_A;
+wire [3 : 0] read_r_WEN_A;
+wire [31 : 0] read_r_Din_A;
+wire [31 : 0] read_r_Dout_A;
 wire  read_r_Clk_A;
 wire  read_r_Rst_A;
-wire [31 : 0] read_r_Addr_B;
-wire  read_r_EN_B;
-wire [0 : 0] read_r_WEN_B;
-wire [7 : 0] read_r_Din_B;
-wire [7 : 0] read_r_Dout_B;
-wire  read_r_Clk_B;
-wire  read_r_Rst_B;
 wire [7 : 0] ref_genome_TDATA;
 wire  ref_genome_TVALID;
 wire  ref_genome_TREADY;
@@ -224,13 +217,6 @@ reg slave_done_status = 0;
 .read_r_Dout_A(read_r_Dout_A),
 .read_r_Clk_A(read_r_Clk_A),
 .read_r_Rst_A(read_r_Rst_A),
-.read_r_Addr_B(read_r_Addr_B),
-.read_r_EN_B(read_r_EN_B),
-.read_r_WEN_B(read_r_WEN_B),
-.read_r_Din_B(read_r_Din_B),
-.read_r_Dout_B(read_r_Dout_B),
-.read_r_Clk_B(read_r_Clk_B),
-.read_r_Rst_B(read_r_Rst_B),
 .ref_genome_TDATA(ref_genome_TDATA),
 .ref_genome_TVALID(ref_genome_TVALID),
 .ref_genome_TREADY(ref_genome_TREADY),
@@ -304,10 +290,10 @@ end
 // The input and output of bramread_r
 wire  bramread_r_Clk_A, bramread_r_Clk_B;
 wire  bramread_r_EN_A, bramread_r_EN_B;
-wire  [1 - 1 : 0] bramread_r_WEN_A, bramread_r_WEN_B;
+wire  [4 - 1 : 0] bramread_r_WEN_A, bramread_r_WEN_B;
 wire    [31 : 0]	bramread_r_Addr_A, bramread_r_Addr_B;
-wire	[7 : 0]	bramread_r_Din_A, bramread_r_Din_B;
-wire    [7 : 0]	bramread_r_Dout_A, bramread_r_Dout_B;
+wire	[31 : 0]	bramread_r_Din_A, bramread_r_Din_B;
+wire    [31 : 0]	bramread_r_Dout_A, bramread_r_Dout_B;
 wire	bramread_r_ready;
 wire	bramread_r_done;
 
@@ -338,13 +324,6 @@ assign bramread_r_EN_A = read_r_EN_A;
 assign read_r_Dout_A = bramread_r_Dout_A;
 assign bramread_r_WEN_A = 0;
 assign bramread_r_Din_A = 0;
-assign bramread_r_Clk_B = read_r_Clk_B;
-assign bramread_r_Rst_B = read_r_Rst_B;
-assign bramread_r_Addr_B = read_r_Addr_B;
-assign bramread_r_EN_B = read_r_EN_B;
-assign read_r_Dout_B = bramread_r_Dout_B;
-assign bramread_r_WEN_B = 0;
-assign bramread_r_Din_B = 0;
 assign bramread_r_ready=	ready;
 assign bramread_r_done = 0;
 

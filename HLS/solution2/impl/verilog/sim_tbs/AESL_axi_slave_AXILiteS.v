@@ -322,7 +322,7 @@ always @(reset or posedge clk) begin
         write_start_count <= 0;
     end
     else begin
-        if (write_start_count >= 3) begin
+        if (write_start_count >= 1) begin
             write_start_run_flag <= 0; 
         end
         else if (TRAN_AXILiteS_write_start_in === 1) begin

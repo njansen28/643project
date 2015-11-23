@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:needlemanWunsch:1.0
-// IP Revision: 1511211155
+// IP Revision: 1511221908
 
-(* X_CORE_INFO = "needlemanWunsch,Vivado 2015.2" *)
+(* X_CORE_INFO = "needlemanWunsch,Vivado 2015.2.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_needlemanWunsch_0_1,needlemanWunsch,{}" *)
-(* CORE_GENERATION_INFO = "design_1_needlemanWunsch_0_1,needlemanWunsch,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=needlemanWunsch,x_ipVersion=1.0,x_ipCoreRevision=1511211155,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_AXILITES_ADDR_WIDTH=5,C_S_AXI_AXILITES_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "design_1_needlemanWunsch_0_1,needlemanWunsch,{x_ipProduct=Vivado 2015.2.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=needlemanWunsch,x_ipVersion=1.0,x_ipCoreRevision=1511221908,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_AXILITES_ADDR_WIDTH=5,C_S_AXI_AXILITES_DATA_WIDTH=32}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_needlemanWunsch_0_1 (
   s_axi_AXILiteS_AWADDR,

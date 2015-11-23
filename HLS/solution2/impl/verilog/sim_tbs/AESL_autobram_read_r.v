@@ -31,7 +31,7 @@ localparam
     TV_IN  = "c.needlemanWunsch.autotvin_read_r.dat", 
     TV_OUT = "impl_rtl.needlemanWunsch.autotvout_read_r.dat"; 
 //------------------------Local signal-------------------
-parameter DATA_WIDTH = 32'd 8;
+parameter DATA_WIDTH = 32'd 32;
 parameter ADDR_WIDTH = 32'd 32;
 parameter DEPTH = 32'd 25;
 
@@ -149,7 +149,7 @@ always @ (posedge Clk_A or Rst_A) begin
   end
   else begin
 	    if(EN_A)
-		    Dout_A <= mem[Addr_A*8/8];
+		    Dout_A <= mem[Addr_A*8/32];
 	end
 end
 always @ (posedge Clk_B or Rst_B) begin
@@ -158,7 +158,7 @@ always @ (posedge Clk_B or Rst_B) begin
   end
   else begin
 	    if(EN_B)
-		    Dout_B <= mem[Addr_B*8/8];
+		    Dout_B <= mem[Addr_B*8/32];
 	end
 end
 
@@ -170,12 +170,30 @@ always @ (posedge Clk_A) begin : write_data_A
           if(WEN_A[0]) begin
               mem[Addr_A*8/DATA_WIDTH][0*8+7 : 0*8] = Din_A[0*8+7 : 0*8];
           end
+          if(WEN_A[1]) begin
+              mem[Addr_A*8/DATA_WIDTH][1*8+7 : 1*8] = Din_A[1*8+7 : 1*8];
+          end
+          if(WEN_A[2]) begin
+              mem[Addr_A*8/DATA_WIDTH][2*8+7 : 2*8] = Din_A[2*8+7 : 2*8];
+          end
+          if(WEN_A[3]) begin
+              mem[Addr_A*8/DATA_WIDTH][3*8+7 : 3*8] = Din_A[3*8+7 : 3*8];
+          end
   end
 end
 always @ (posedge Clk_B) begin : write_data_B
   if(EN_B) begin
           if(WEN_B[0]) begin
               mem[Addr_B*8/DATA_WIDTH][0*8+7 : 0*8] = Din_B[0*8+7 : 0*8];
+          end
+          if(WEN_B[1]) begin
+              mem[Addr_B*8/DATA_WIDTH][1*8+7 : 1*8] = Din_B[1*8+7 : 1*8];
+          end
+          if(WEN_B[2]) begin
+              mem[Addr_B*8/DATA_WIDTH][2*8+7 : 2*8] = Din_B[2*8+7 : 2*8];
+          end
+          if(WEN_B[3]) begin
+              mem[Addr_B*8/DATA_WIDTH][3*8+7 : 3*8] = Din_B[3*8+7 : 3*8];
           end
   end
 end

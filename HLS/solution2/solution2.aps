@@ -3,7 +3,7 @@
         <DownStreamTool name=""/>
     </downStreamTool>
     <clockList>
-        <clock default="false" name="default" period="5"/>
+        <clock name="default" period="5"/>
     </clockList>
     <config>
         <schedule model="needlemanWunsch"/>
@@ -41,7 +41,7 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="false" formatName="ip_catalog" rtl="verilog">
-        <Format display_name="needlemanWunsch" formatName="ip_catalog" description="" vendor="" library="" version="1.0" driver_input_dir="" taxonomy=""/>
+        <Format formatName="ip_catalog" description="" vendor="" library="" version="1.0" driver_input_dir="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
@@ -58,7 +58,7 @@
         <value string="solution2"/>
     </name>
     <project>
-        <value string="hls1121"/>
+        <value string="643_PE"/>
     </project>
     <targetInfo>
         <TargetInfo value="xc7z020:clg484:-1"/>
