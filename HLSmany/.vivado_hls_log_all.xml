@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_49_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.881-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_49_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.873-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_48_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.867-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_48_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.859-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_47_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.850-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_47_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.844-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_46_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.837-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_46_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.829-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_45_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.820-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_45_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.811-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_44_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.804-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_44_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.798-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_43_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.790-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_43_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.782-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_42_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.773-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_42_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.764-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_41_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.757-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_41_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.748-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_40_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.740-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_40_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.731-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_39_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.723-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_39_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.715-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_38_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.707-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_38_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.697-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_37_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.688-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_37_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.680-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_36_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.658-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_36_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.649-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_35_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.640-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_35_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.632-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_34_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.624-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_34_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.619-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_33_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.612-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_33_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.606-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_32_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.598-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_32_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.590-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_31_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.581-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_31_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.572-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_30_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.563-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_30_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.556-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_29_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.548-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_29_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.540-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_28_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.533-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_28_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.528-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_27_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.522-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_27_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.514-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_26_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.506-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_26_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.500-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_25_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.495-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_25_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.491-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_24_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.484-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_24_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.479-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_23_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.475-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_23_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.468-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_22_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.463-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_22_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.459-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_21_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.454-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_21_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.444-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_20_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.434-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_20_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.425-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_19_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.413-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_19_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.234-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_18_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.228-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_18_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.220-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_17_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.213-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_17_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.205-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_16_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.196-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_16_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.189-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_15_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.182-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_15_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.176-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_14_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.170-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_14_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.144-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_13_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.134-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_13_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.127-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_12_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.120-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_12_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.115-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_11_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.110-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_11_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.103-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_10_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.095-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_10_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.088-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_9_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.080-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_9_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.073-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_8_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.066-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_8_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.058-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_7_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.050-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_7_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.043-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_6_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.036-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_6_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.029-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_5_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.023-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_5_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.014-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_4_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:55.008-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_4_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.999-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_3_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.994-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_3_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.987-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_2_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.981-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_2_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.976-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_1_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.971-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_1_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.965-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_0_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.959-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_0_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:54.955-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch_doRow/read_r_Din_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:53.856-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch_doRow/read_r_WEN_A' to 0." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:53.849-0500" type="Warning"/>
+        <logs message="@W [SCHED-21] The critical path consists of the following:&#xD;&#xA;&#x9;'add' operation ('prev_score_out', HLSmany/week4.c:44) (1.72 ns)&#xD;&#xA;&#x9;'icmp' operation ('tmp_13', HLSmany/week4.c:52) (2 ns)&#xD;&#xA;&#x9;'select' operation ('prev_score_out', HLSmany/week4.c:52) (1.37 ns)" projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:50.393-0500" type="Warning"/>
+        <logs message="@W [SCHED-21] Estimated clock period (5.09ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.38ns)." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:50.388-0500" type="Warning"/>
+        <logs message="@W [XFORM-104] Completely partitioning array 'max_score' (HLSmany/week4.c:69) accessed through non-constant indices on dimension 1 (HLSmany/week4.c:79:3), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:49.073-0500" type="Warning"/>
+        <logs message="@W [XFORM-104] Completely partitioning array 'max_orig' (HLSmany/week4.c:68) accessed through non-constant indices on dimension 1 (HLSmany/week4.c:78:3), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:49.067-0500" type="Warning"/>
+        <logs message="@W [XFORM-180] Applying partition directive (HLSmany/week4.c:66:1) and reshape directive (HLSmany/week4.c:66:1) on the same variable 'read_r' (HLSmany/week4.c:65) may lead to unexpected synthesis behaviors." projectName="HLSmany" solutionName="solution1" date="2015-11-23T23:47:49.012-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

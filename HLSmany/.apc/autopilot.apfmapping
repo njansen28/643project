@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="week4.c" path="D:\Vivado_Projects\project\643project\HLSmany\week4.c"/>
+  </source>
+  <testbench>
+    <originFiles name="week4_test.c" path="D:\Vivado_Projects\project\643project\HLSmany\week4_test.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
