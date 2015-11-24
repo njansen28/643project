@@ -38,9 +38,9 @@
 #define XPAR_AXI_DMA_0_ENABLE_MULTI_CHANNEL 0
 #define XPAR_AXI_DMA_0_NUM_MM2S_CHANNELS 1
 #define XPAR_AXI_DMA_0_NUM_S2MM_CHANNELS 1
-#define XPAR_AXI_DMA_0_MM2S_BURST_SIZE 16
+#define XPAR_AXI_DMA_0_MM2S_BURST_SIZE 8
 #define XPAR_AXI_DMA_0_S2MM_BURST_SIZE 16
-#define XPAR_AXI_DMA_0_MICRO_DMA 1
+#define XPAR_AXI_DMA_0_MICRO_DMA 0
 
 
 /******************************************************************/
@@ -59,9 +59,9 @@
 #define XPAR_AXIDMA_0_ENABLE_MULTI_CHANNEL 0
 #define XPAR_AXIDMA_0_NUM_MM2S_CHANNELS 1
 #define XPAR_AXIDMA_0_NUM_S2MM_CHANNELS 1
-#define XPAR_AXIDMA_0_MM2S_BURST_SIZE 16
+#define XPAR_AXIDMA_0_MM2S_BURST_SIZE 8
 #define XPAR_AXIDMA_0_S2MM_BURST_SIZE 16
-#define XPAR_AXIDMA_0_MICRO_DMA 1
+#define XPAR_AXIDMA_0_MICRO_DMA 0
 
 
 /******************************************************************/

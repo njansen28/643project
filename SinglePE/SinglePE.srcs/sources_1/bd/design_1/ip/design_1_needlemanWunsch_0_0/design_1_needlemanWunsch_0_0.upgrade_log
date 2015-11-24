@@ -1,6 +1,131 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Mon Nov 23 16:00:16 2015
+| Host         : Mads running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_needlemanWunsch_0_0 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511222158) to (Rev. 1511231556)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Mon Nov 23 16:00:02 2015
+| Host         : Mads running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_needlemanWunsch_0_0 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511211146) to (Rev. 1511222158)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Nov 21 11:48:08 2015
+| Host         : Mads running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_needlemanWunsch_0_0 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511211137) to (Rev. 1511211146)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_needlemanWunsch_0_0'. These changes may impact your design.
+
+
+-upgraded port 'read_r_Din_A' width 32 differs from original width 8
+-upgraded port 'read_r_Dout_A' width 32 differs from original width 8
+-upgraded port 'read_r_WEN_A' width 4 differs from original width 1
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sat Nov 21 11:40:16 2015
+| Host         : Mads running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_needlemanWunsch_0_0 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511181432) to (Rev. 1511211137)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'design_1_needlemanWunsch_0_0'.
+
+
+-upgrade has removed interface 'read_r_address0'
+-upgrade has removed interface 'read_r_q0'
+-upgrade has added interface 'read_r_PORTA'
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_needlemanWunsch_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'read_r_address0'
+-upgrade has removed port 'read_r_ce0'
+-upgrade has removed port 'read_r_q0'
+-upgrade has added port 'read_r_Addr_A'
+-upgrade has added port 'read_r_Clk_A'
+-upgrade has added port 'read_r_Din_A'
+-upgrade has added port 'read_r_Dout_A'
+-upgrade has added port 'read_r_EN_A'
+-upgrade has added port 'read_r_Rst_A'
+-upgrade has added port 'read_r_WEN_A'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
 | Date         : Wed Nov 18 14:38:56 2015
 | Host         : Mads running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

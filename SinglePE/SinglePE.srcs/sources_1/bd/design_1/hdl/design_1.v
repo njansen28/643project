@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Wed Nov 18 14:49:46 2015
+//Date        : Mon Nov 23 17:23:31 2015
 //Host        : Mads running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=0,da_axi4_cnt=5,da_bram_cntlr_cnt=1,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=20,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=0,da_axi4_cnt=5,da_bram_cntlr_cnt=1,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -63,10 +63,7 @@ module design_1
   wire axi_bram_ctrl_0_BRAM_PORTA_EN;
   wire axi_bram_ctrl_0_BRAM_PORTA_RST;
   wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
-  wire [31:0]axi_bram_ctrl_0_bram_doutb;
   wire [63:0]axi_dma_0_M_AXIS_MM2S_TDATA;
-  wire [7:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
-  wire axi_dma_0_M_AXIS_MM2S_TLAST;
   wire axi_dma_0_M_AXIS_MM2S_TREADY;
   wire axi_dma_0_M_AXIS_MM2S_TVALID;
   wire [31:0]axi_dma_0_M_AXI_MM2S_ARADDR;
@@ -168,8 +165,16 @@ module design_1
   wire [7:0]axis_dwidth_converter_0_M_AXIS_TDATA;
   wire axis_dwidth_converter_0_M_AXIS_TREADY;
   wire axis_dwidth_converter_0_M_AXIS_TVALID;
-  wire [4:0]needlemanWunsch_0_read_r_address0;
-  wire needlemanWunsch_0_read_r_ce0;
+  wire [63:0]fifo_generator_0_M_AXIS_TDATA;
+  wire fifo_generator_0_M_AXIS_TREADY;
+  wire fifo_generator_0_M_AXIS_TVALID;
+  wire [31:0]needlemanWunsch_0_read_r_PORTA_ADDR;
+  wire needlemanWunsch_0_read_r_PORTA_CLK;
+  wire [31:0]needlemanWunsch_0_read_r_PORTA_DIN;
+  wire [31:0]needlemanWunsch_0_read_r_PORTA_DOUT;
+  wire needlemanWunsch_0_read_r_PORTA_EN;
+  wire needlemanWunsch_0_read_r_PORTA_RST;
+  wire [3:0]needlemanWunsch_0_read_r_PORTA_WE;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -287,19 +292,19 @@ module design_1
         .s_axi_wvalid(axi_mem_intercon_M00_AXI_WVALID));
   design_1_axi_bram_ctrl_0_bram_0 axi_bram_ctrl_0_bram
        (.addra({GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,VCC_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
-        .addrb(needlemanWunsch_0_read_r_address0),
+        .addrb(needlemanWunsch_0_read_r_PORTA_ADDR),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
-        .clkb(processing_system7_0_FCLK_CLK0),
+        .clkb(needlemanWunsch_0_read_r_PORTA_CLK),
         .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
-        .dinb({GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1,GND_1}),
+        .dinb(needlemanWunsch_0_read_r_PORTA_DIN),
         .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
-        .doutb(axi_bram_ctrl_0_bram_doutb),
+        .doutb(needlemanWunsch_0_read_r_PORTA_DOUT),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
-        .enb(needlemanWunsch_0_read_r_ce0),
+        .enb(needlemanWunsch_0_read_r_PORTA_EN),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
-        .rstb(rst_processing_system7_0_100M_peripheral_aresetn),
+        .rstb(needlemanWunsch_0_read_r_PORTA_RST),
         .wea(axi_bram_ctrl_0_BRAM_PORTA_WE),
-        .web({GND_1,GND_1,GND_1,GND_1}));
+        .web(needlemanWunsch_0_read_r_PORTA_WE));
   design_1_axi_dma_0_0 axi_dma_0
        (.axi_resetn(rst_processing_system7_0_100M_peripheral_aresetn),
         .m_axi_mm2s_aclk(processing_system7_0_FCLK_CLK0),
@@ -317,8 +322,6 @@ module design_1
         .m_axi_mm2s_rresp(axi_dma_0_M_AXI_MM2S_RRESP),
         .m_axi_mm2s_rvalid(axi_dma_0_M_AXI_MM2S_RVALID),
         .m_axis_mm2s_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
-        .m_axis_mm2s_tkeep(axi_dma_0_M_AXIS_MM2S_TKEEP),
-        .m_axis_mm2s_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
         .m_axis_mm2s_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
         .m_axis_mm2s_tvalid(axi_dma_0_M_AXIS_MM2S_TVALID),
         .s_axi_lite_aclk(processing_system7_0_FCLK_CLK0),
@@ -496,17 +499,29 @@ module design_1
         .m_axis_tdata(axis_dwidth_converter_0_M_AXIS_TDATA),
         .m_axis_tready(axis_dwidth_converter_0_M_AXIS_TREADY),
         .m_axis_tvalid(axis_dwidth_converter_0_M_AXIS_TVALID),
+        .s_axis_tdata(fifo_generator_0_M_AXIS_TDATA),
+        .s_axis_tready(fifo_generator_0_M_AXIS_TREADY),
+        .s_axis_tvalid(fifo_generator_0_M_AXIS_TVALID));
+  design_1_fifo_generator_0_0 fifo_generator_0
+       (.m_aclk(processing_system7_0_FCLK_CLK0),
+        .m_axis_tdata(fifo_generator_0_M_AXIS_TDATA),
+        .m_axis_tready(fifo_generator_0_M_AXIS_TREADY),
+        .m_axis_tvalid(fifo_generator_0_M_AXIS_TVALID),
+        .s_aclk(processing_system7_0_FCLK_CLK0),
+        .s_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),
         .s_axis_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
-        .s_axis_tkeep(axi_dma_0_M_AXIS_MM2S_TKEEP),
-        .s_axis_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
         .s_axis_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
         .s_axis_tvalid(axi_dma_0_M_AXIS_MM2S_TVALID));
   design_1_needlemanWunsch_0_0 needlemanWunsch_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_processing_system7_0_100M_peripheral_aresetn),
-        .read_r_address0(needlemanWunsch_0_read_r_address0),
-        .read_r_ce0(needlemanWunsch_0_read_r_ce0),
-        .read_r_q0(axi_bram_ctrl_0_bram_doutb[7:0]),
+        .read_r_Addr_A(needlemanWunsch_0_read_r_PORTA_ADDR),
+        .read_r_Clk_A(needlemanWunsch_0_read_r_PORTA_CLK),
+        .read_r_Din_A(needlemanWunsch_0_read_r_PORTA_DIN),
+        .read_r_Dout_A(needlemanWunsch_0_read_r_PORTA_DOUT),
+        .read_r_EN_A(needlemanWunsch_0_read_r_PORTA_EN),
+        .read_r_Rst_A(needlemanWunsch_0_read_r_PORTA_RST),
+        .read_r_WEN_A(needlemanWunsch_0_read_r_PORTA_WE),
         .ref_genome_TDATA(axis_dwidth_converter_0_M_AXIS_TDATA),
         .ref_genome_TREADY(axis_dwidth_converter_0_M_AXIS_TREADY),
         .ref_genome_TVALID(axis_dwidth_converter_0_M_AXIS_TVALID),

@@ -48,14 +48,13 @@
 
 
 // IP VLNV: xilinx.com:hls:needlemanWunsch:1.0
-// IP Revision: 1511181432
+// IP Revision: 1511231556
 
 (* X_CORE_INFO = "needlemanWunsch,Vivado 2015.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_needlemanWunsch_0_0,needlemanWunsch,{}" *)
-(* CORE_GENERATION_INFO = "design_1_needlemanWunsch_0_0,needlemanWunsch,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=needlemanWunsch,x_ipVersion=1.0,x_ipCoreRevision=1511181432,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_AXILITES_ADDR_WIDTH=5,C_S_AXI_AXILITES_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "design_1_needlemanWunsch_0_0,needlemanWunsch,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=needlemanWunsch,x_ipVersion=1.0,x_ipCoreRevision=1511231556,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_AXILITES_ADDR_WIDTH=5,C_S_AXI_AXILITES_DATA_WIDTH=32}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_needlemanWunsch_0_0 (
-  read_r_ce0,
   s_axi_AXILiteS_AWADDR,
   s_axi_AXILiteS_AWVALID,
   s_axi_AXILiteS_AWREADY,
@@ -76,14 +75,18 @@ module design_1_needlemanWunsch_0_0 (
   ap_clk,
   ap_rst_n,
   interrupt,
-  read_r_address0,
-  read_r_q0,
+  read_r_Clk_A,
+  read_r_Rst_A,
+  read_r_EN_A,
+  read_r_WEN_A,
+  read_r_Addr_A,
+  read_r_Din_A,
+  read_r_Dout_A,
   ref_genome_TVALID,
   ref_genome_TREADY,
   ref_genome_TDATA
 );
 
-output wire read_r_ce0;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWADDR" *)
 input wire [4 : 0] s_axi_AXILiteS_AWADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWVALID" *)
@@ -124,10 +127,20 @@ input wire ap_clk;
 input wire ap_rst_n;
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *)
 output wire interrupt;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 read_r_address0 DATA" *)
-output wire [4 : 0] read_r_address0;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 read_r_q0 DATA" *)
-input wire [7 : 0] read_r_q0;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 read_r_PORTA CLK" *)
+output wire read_r_Clk_A;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 read_r_PORTA RST" *)
+output wire read_r_Rst_A;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 read_r_PORTA EN" *)
+output wire read_r_EN_A;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 read_r_PORTA WE" *)
+output wire [3 : 0] read_r_WEN_A;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 read_r_PORTA ADDR" *)
+output wire [31 : 0] read_r_Addr_A;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 read_r_PORTA DIN" *)
+output wire [31 : 0] read_r_Din_A;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 read_r_PORTA DOUT" *)
+input wire [31 : 0] read_r_Dout_A;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 ref_genome TVALID" *)
 input wire ref_genome_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 ref_genome TREADY" *)
@@ -139,7 +152,6 @@ input wire [7 : 0] ref_genome_TDATA;
     .C_S_AXI_AXILITES_ADDR_WIDTH(5),
     .C_S_AXI_AXILITES_DATA_WIDTH(32)
   ) inst (
-    .read_r_ce0(read_r_ce0),
     .s_axi_AXILiteS_AWADDR(s_axi_AXILiteS_AWADDR),
     .s_axi_AXILiteS_AWVALID(s_axi_AXILiteS_AWVALID),
     .s_axi_AXILiteS_AWREADY(s_axi_AXILiteS_AWREADY),
@@ -160,8 +172,13 @@ input wire [7 : 0] ref_genome_TDATA;
     .ap_clk(ap_clk),
     .ap_rst_n(ap_rst_n),
     .interrupt(interrupt),
-    .read_r_address0(read_r_address0),
-    .read_r_q0(read_r_q0),
+    .read_r_Clk_A(read_r_Clk_A),
+    .read_r_Rst_A(read_r_Rst_A),
+    .read_r_EN_A(read_r_EN_A),
+    .read_r_WEN_A(read_r_WEN_A),
+    .read_r_Addr_A(read_r_Addr_A),
+    .read_r_Din_A(read_r_Din_A),
+    .read_r_Dout_A(read_r_Dout_A),
     .ref_genome_TVALID(ref_genome_TVALID),
     .ref_genome_TREADY(ref_genome_TREADY),
     .ref_genome_TDATA(ref_genome_TDATA)
