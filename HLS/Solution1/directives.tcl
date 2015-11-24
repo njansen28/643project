@@ -4,8 +4,8 @@
 ## Copyright (C) 2015 Xilinx Inc. All rights reserved.
 ############################################################
 set_directive_interface -mode axis "needlemanWunsch" ref_genome
-set_directive_pipeline "needlemanWunsch/COL"
 set_directive_pipeline -II 1 "doRow/COL"
-set_directive_array_reshape -type cyclic -factor 4 -dim 1 "needlemanWunsch" read
+set_directive_array_reshape -type cyclic -factor 16 -dim 1 "needlemanWunsch" read_r
 set_directive_interface -mode s_axilite "needlemanWunsch"
-set_directive_array_reshape -type cyclic -factor 4 -dim 1 "needlemanWunsch" ref_genome
+set_directive_interface -mode bram "needlemanWunsch" read_r
+set_directive_data_pack "needlemanWunsch" ref_genome

@@ -6,9 +6,6 @@
                 <option name="port" value="ref_genome" positionalBoolean="4"/>
             </pragma>
         </directive>
-        <directive functionName="needlemanWunsch" label="COL" functionLabel="">
-            <pragma name="PIPELINE"/>
-        </directive>
         <directive functionName="doRow" label="COL" functionLabel="">
             <pragma name="PIPELINE">
                 <option name="II" value="1"/>
@@ -16,9 +13,9 @@
         </directive>
         <directive functionName="needlemanWunsch" label="" functionLabel="">
             <pragma name="ARRAY_RESHAPE">
-                <option name="variable" value="read" positionalBoolean="4"/>
+                <option name="variable" value="read_r" positionalBoolean="4"/>
                 <option name="cyclic" value="" positionalBoolean="type"/>
-                <option name="factor" value="4"/>
+                <option name="factor" value="16"/>
                 <option name="dim" value="1"/>
             </pragma>
         </directive>
@@ -29,11 +26,14 @@
             </pragma>
         </directive>
         <directive functionName="needlemanWunsch" label="" functionLabel="">
-            <pragma name="ARRAY_RESHAPE">
+            <pragma name="INTERFACE">
+                <option name="bram" value="" positionalBoolean="mode"/>
+                <option name="port" value="read_r" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="needlemanWunsch" label="" functionLabel="">
+            <pragma name="DATA_PACK">
                 <option name="variable" value="ref_genome" positionalBoolean="4"/>
-                <option name="cyclic" value="" positionalBoolean="type"/>
-                <option name="factor" value="4"/>
-                <option name="dim" value="1"/>
             </pragma>
         </directive>
     </sourceFile>

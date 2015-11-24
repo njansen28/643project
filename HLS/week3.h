@@ -8,7 +8,7 @@
 // Comment out for normal operation
 //#define DEBUG 1
 
-#define REF_SIZE 1000000 	// Size of reference genome
+#define REF_SIZE 100000 	// Size of reference genome
 #define READ_SIZE 100		// Size of each read
 #define NUM_READS 10		// Number of reads in read file
 #define REF_LINE_SIZE 100	// Length of each line in file of reference genome
@@ -20,6 +20,12 @@
 typedef uint2 basepair_t;
 typedef int8 score_t;
 typedef uint20 orig_t;
+typedef struct {
+	basepair_t a;
+	basepair_t b;
+	basepair_t c;
+	basepair_t d;
+} basepair_quartet_t;
 
 // Scoring system
 #define GAP_PEN       -1

@@ -1,6 +1,6 @@
 #include "week3.h"
 
-void doRow(int i, basepair_t read[READ_SIZE], basepair_t ref_genome,
+void doRow(int i, basepair_t read_r[READ_SIZE], basepair_t ref_genome,
 		score_t score_in[READ_SIZE], score_t score_out[READ_SIZE],
 		orig_t orig_in[READ_SIZE], orig_t orig_out[READ_SIZE]) {
 	int j;
@@ -37,7 +37,7 @@ void doRow(int i, basepair_t read[READ_SIZE], basepair_t ref_genome,
 		left_orig = prev_orig_out;
 
 		// Calculate each score
-		match = ref_genome == read[j-1];
+		match = ref_genome == read_r[j-1];
 		if (match) diag_score = diag + MATCH_SCORE;
 		else diag_score = diag + MISMATCH_PEN; // pen is negative
 
@@ -62,11 +62,12 @@ void doRow(int i, basepair_t read[READ_SIZE], basepair_t ref_genome,
 	}
 }
 
-orig_t needlemanWunsch(basepair_t read[READ_SIZE], basepair_t ref_genome[REF_SIZE]) {
+orig_t needlemanWunsch(basepair_t read_r[READ_SIZE], basepair_quartet_t ref_genome[REF_SIZE/4]) {
 
 	unsigned int i;								// loop variables
 	orig_t max_orig;							// Index of maximum original column value
 	int max_score;								// Maximum final column value
+	basepair_quartet_t ref;
 
 	score_t score1[READ_SIZE];
 	score_t score2[READ_SIZE];
@@ -77,26 +78,44 @@ orig_t needlemanWunsch(basepair_t read[READ_SIZE], basepair_t ref_genome[REF_SIZ
 	max_score = -READ_SIZE;
 
 	ROW: for (i=1; i<REF_SIZE+1; i++) { // Loop through each row
-		doRow(i, read, ref_genome[i-1], score1, score2, orig1, orig2);
+		ref = ref_genome[i/4];
+
+		doRow(i, read_r, ref.a, score1, score2, orig1, orig2);
 
 		// Determine if it's the new max path (TODO: allow more than 1 max path end?)
 		if (score2[READ_SIZE-1] > max_score) {
-			//max = i;
 			max_score = score2[READ_SIZE-1];
 			max_orig = orig2[READ_SIZE-1];
-			//printf("max_orig = %d %d %d %d\n", max_orig, i, max, max_score);
 		}
 
 		i++;
 
-		doRow(i, read, ref_genome[i-1], score2, score1, orig2, orig1);
+		doRow(i, read_r, ref.b, score2, score1, orig2, orig1);
 
 		// Determine if it's the new max path (TODO: allow more than 1 max path end?)
 		if (score1[READ_SIZE-1] > max_score) {
-			//max = i;
 			max_score = score1[READ_SIZE-1];
 			max_orig = orig1[READ_SIZE-1];
-			//printf("max_orig = %d %d %d %d\n", max_orig, i, max, max_score);
+		}
+
+		i++;
+
+		doRow(i, read_r, ref.c, score1, score2, orig1, orig2);
+
+		// Determine if it's the new max path (TODO: allow more than 1 max path end?)
+		if (score2[READ_SIZE-1] > max_score) {
+			max_score = score2[READ_SIZE-1];
+			max_orig = orig2[READ_SIZE-1];
+		}
+
+		i++;
+
+		doRow(i, read_r, ref.d, score2, score1, orig2, orig1);
+
+		// Determine if it's the new max path (TODO: allow more than 1 max path end?)
+		if (score1[READ_SIZE-1] > max_score) {
+			max_score = score1[READ_SIZE-1];
+			max_orig = orig1[READ_SIZE-1];
 		}
 	}
 
