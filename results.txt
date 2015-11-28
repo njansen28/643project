@@ -1,0 +1,9 @@
+113.500s - Single PE version
+113.501s - Single PE at a time on Many PE version
+  2.270s - Many PE version
+TODO     - Single large PE version
+
+53.314s - Software non-SIMD
+28.506s - Software SIMD
+(Intel Core i7-4720HQ CPU at 2.6 GHz in a virtual machine with 2 cores, 8GB memory, VT-x and nested paging enabled, running Debian 8)
+
