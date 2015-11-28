@@ -88,6 +88,12 @@
                 <option name="dim" value="1"/>
             </pragma>
         </directive>
+        <directive functionName="needlemanWunsch" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="bram" value="" positionalBoolean="mode"/>
+                <option name="port" value="results" positionalBoolean="4"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

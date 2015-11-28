@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="needlemanWunsch" name="HLSmany">
+<project xmlns="com.autoesl.autopilot.project" name="HLSmany" top="needlemanWunsch">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

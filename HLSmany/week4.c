@@ -62,7 +62,7 @@ void doRow(int i, basepair_t read_r[READ_SIZE], basepair_t ref_genome,
 	}
 }
 
-orig_t needlemanWunsch(basepair_t read_r[READS_PER_RUN][READ_SIZE], basepair_quartet_t ref_genome[REF_SIZE/4]) {
+void needlemanWunsch(basepair_t read_r[READS_PER_RUN][READ_SIZE], basepair_quartet_t ref_genome[REF_SIZE/4], int results[READS_PER_RUN]) {
 
 	unsigned int i,j;							// loop variables
 	orig_t max_orig[READS_PER_RUN];				// Index of maximum original column value
@@ -117,6 +117,8 @@ orig_t needlemanWunsch(basepair_t read_r[READS_PER_RUN][READ_SIZE], basepair_qua
 		}
 	}
 
-	return max_orig[0]; // FIXME
+	RESULTS: for (j=0; j<READS_PER_RUN; j++) {
+		results[j] = max_orig[j];
+	}
 }
 

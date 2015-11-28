@@ -17,3 +17,4 @@ set_directive_array_partition -type complete -dim 1 "needlemanWunsch" orig1
 set_directive_array_partition -type complete -dim 1 "needlemanWunsch" orig2
 set_directive_array_partition -type complete -dim 1 "needlemanWunsch" max_orig
 set_directive_array_partition -type complete -dim 1 "needlemanWunsch" max_score
+set_directive_interface -mode bram "needlemanWunsch" results
