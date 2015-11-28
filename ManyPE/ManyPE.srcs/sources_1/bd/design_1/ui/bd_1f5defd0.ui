@@ -1,0 +1,290 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.12  2014-12-16 bk=1.3272 VDI=35 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 5770 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 5890 -defaultsOSRD
+preplace inst axi_bram_ctrl_25 -pg 1 -lvl 3 -y 2460 -defaultsOSRD
+preplace inst axi_bram_ctrl_10 -pg 1 -lvl 3 -y 900 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_38 -pg 1 -lvl 7 -y 4150 -defaultsOSRD
+preplace inst axi_bram_ctrl_26 -pg 1 -lvl 3 -y 2580 -defaultsOSRD
+preplace inst axi_bram_ctrl_11 -pg 1 -lvl 3 -y 1020 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_10 -pg 1 -lvl 7 -y 1070 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -y 5850 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_39 -pg 1 -lvl 7 -y 4250 -defaultsOSRD
+preplace inst axi_bram_ctrl_27 -pg 1 -lvl 3 -y 2720 -defaultsOSRD
+preplace inst axi_bram_ctrl_12 -pg 1 -lvl 3 -y 1380 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_11 -pg 1 -lvl 7 -y 1350 -defaultsOSRD
+preplace inst axi_bram_ctrl_28 -pg 1 -lvl 3 -y 2840 -defaultsOSRD
+preplace inst axi_bram_ctrl_13 -pg 1 -lvl 3 -y 1500 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_12 -pg 1 -lvl 7 -y 1450 -defaultsOSRD
+preplace inst axi_bram_ctrl_29 -pg 1 -lvl 3 -y 3080 -defaultsOSRD
+preplace inst axi_bram_ctrl_14 -pg 1 -lvl 3 -y 1620 -defaultsOSRD
+preplace inst axis_dwidth_converter_0 -pg 1 -lvl 5 -y 5600 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_13 -pg 1 -lvl 7 -y 1750 -defaultsOSRD
+preplace inst axi_bram_ctrl_15 -pg 1 -lvl 3 -y 1740 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -y 420 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_14 -pg 1 -lvl 7 -y 1850 -defaultsOSRD
+preplace inst axi_bram_ctrl_results -pg 1 -lvl 3 -y 5000 -defaultsOSRD
+preplace inst axi_bram_ctrl_16 -pg 1 -lvl 3 -y 1860 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 3 -y 60 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_15 -pg 1 -lvl 7 -y 1950 -defaultsOSRD
+preplace inst axi_bram_ctrl_17 -pg 1 -lvl 3 -y 2100 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_16 -pg 1 -lvl 7 -y 2150 -defaultsOSRD
+preplace inst axi_bram_ctrl_2 -pg 1 -lvl 3 -y 180 -defaultsOSRD
+preplace inst axi_bram_ctrl_40 -pg 1 -lvl 3 -y 4280 -defaultsOSRD
+preplace inst axi_bram_ctrl_18 -pg 1 -lvl 3 -y 1980 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_17 -pg 1 -lvl 7 -y 2050 -defaultsOSRD
+preplace inst axi_bram_ctrl_3 -pg 1 -lvl 3 -y 300 -defaultsOSRD
+preplace inst axi_bram_ctrl_41 -pg 1 -lvl 3 -y 4400 -defaultsOSRD
+preplace inst axi_bram_ctrl_19 -pg 1 -lvl 3 -y 1140 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_40 -pg 1 -lvl 7 -y 4350 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_18 -pg 1 -lvl 7 -y 1550 -defaultsOSRD
+preplace inst axi_bram_ctrl_4 -pg 1 -lvl 3 -y 2220 -defaultsOSRD
+preplace inst axi_bram_ctrl_42 -pg 1 -lvl 3 -y 4520 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_41 -pg 1 -lvl 7 -y 4450 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_19 -pg 1 -lvl 7 -y 1650 -defaultsOSRD
+preplace inst axi_bram_ctrl_5 -pg 1 -lvl 3 -y 5120 -defaultsOSRD
+preplace inst axi_bram_ctrl_43 -pg 1 -lvl 3 -y 4640 -defaultsOSRD
+preplace inst axi_bram_ctrl_6 -pg 1 -lvl 3 -y 5240 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_0 -pg 1 -lvl 7 -y 50 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_42 -pg 1 -lvl 7 -y 4550 -defaultsOSRD
+preplace inst axi_bram_ctrl_44 -pg 1 -lvl 3 -y 4760 -defaultsOSRD
+preplace inst axi_bram_ctrl_30 -pg 1 -lvl 3 -y 2960 -defaultsOSRD
+preplace inst axi_bram_ctrl_7 -pg 1 -lvl 3 -y 5480 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_1 -pg 1 -lvl 7 -y 170 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_43 -pg 1 -lvl 7 -y 4650 -defaultsOSRD
+preplace inst axi_bram_ctrl_45 -pg 1 -lvl 3 -y 4880 -defaultsOSRD
+preplace inst axi_bram_ctrl_31 -pg 1 -lvl 3 -y 3200 -defaultsOSRD
+preplace inst axi_bram_ctrl_8 -pg 1 -lvl 3 -y 5600 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_2 -pg 1 -lvl 7 -y 290 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_44 -pg 1 -lvl 7 -y 4750 -defaultsOSRD
+preplace inst axi_bram_ctrl_46 -pg 1 -lvl 3 -y 5360 -defaultsOSRD
+preplace inst axi_bram_ctrl_32 -pg 1 -lvl 3 -y 3320 -defaultsOSRD
+preplace inst axi_bram_ctrl_9 -pg 1 -lvl 3 -y 6290 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_3 -pg 1 -lvl 7 -y 2250 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_45 -pg 1 -lvl 7 -y 4850 -defaultsOSRD
+preplace inst axi_bram_ctrl_47 -pg 1 -lvl 3 -y 5930 -defaultsOSRD
+preplace inst axi_bram_ctrl_33 -pg 1 -lvl 3 -y 3440 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_4 -pg 1 -lvl 7 -y 4950 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_46 -pg 1 -lvl 7 -y 6050 -defaultsOSRD
+preplace inst axi_bram_ctrl_48 -pg 1 -lvl 3 -y 6050 -defaultsOSRD
+preplace inst axi_bram_ctrl_34 -pg 1 -lvl 3 -y 3560 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_5 -pg 1 -lvl 7 -y 5150 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_47 -pg 1 -lvl 7 -y 5950 -defaultsOSRD
+preplace inst axi_bram_ctrl_49 -pg 1 -lvl 3 -y 6170 -defaultsOSRD
+preplace inst axi_bram_ctrl_35 -pg 1 -lvl 3 -y 3680 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_6 -pg 1 -lvl 7 -y 5410 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_48 -pg 1 -lvl 7 -y 5830 -defaultsOSRD
+preplace inst axi_bram_ctrl_36 -pg 1 -lvl 3 -y 3800 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_7 -pg 1 -lvl 7 -y 5510 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_20 -pg 1 -lvl 7 -y 650 -defaultsOSRD
+preplace inst axi_bram_ctrl_37 -pg 1 -lvl 3 -y 3920 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_8 -pg 1 -lvl 7 -y 5610 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_21 -pg 1 -lvl 7 -y 770 -defaultsOSRD
+preplace inst axi_bram_ctrl_38 -pg 1 -lvl 3 -y 4040 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_9 -pg 1 -lvl 7 -y 970 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_22 -pg 1 -lvl 7 -y 870 -defaultsOSRD
+preplace inst axi_bram_ctrl_39 -pg 1 -lvl 3 -y 4160 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_23 -pg 1 -lvl 7 -y 2350 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 4390 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_24 -pg 1 -lvl 7 -y 2450 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram -pg 1 -lvl 7 -y 410 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_25 -pg 1 -lvl 7 -y 2550 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_26 -pg 1 -lvl 7 -y 2650 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_27 -pg 1 -lvl 7 -y 2750 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 4 -y 5710 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_28 -pg 1 -lvl 7 -y 2950 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_29 -pg 1 -lvl 7 -y 2850 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -y 5920 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_30 -pg 1 -lvl 7 -y 3350 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_31 -pg 1 -lvl 7 -y 3450 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_results -pg 1 -lvl 7 -y 5050 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_32 -pg 1 -lvl 7 -y 3550 -defaultsOSRD
+preplace inst axi_bram_ctrl_20 -pg 1 -lvl 3 -y 1260 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_33 -pg 1 -lvl 7 -y 3650 -defaultsOSRD
+preplace inst needlemanWunsch_0 -pg 1 -lvl 6 -y 3160 -defaultsOSRD
+preplace inst axi_bram_ctrl_21 -pg 1 -lvl 3 -y 660 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_34 -pg 1 -lvl 7 -y 3750 -defaultsOSRD
+preplace inst axi_bram_ctrl_22 -pg 1 -lvl 3 -y 780 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_35 -pg 1 -lvl 7 -y 3850 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -y 5760 -defaultsOSRD
+preplace inst axi_bram_ctrl_23 -pg 1 -lvl 3 -y 540 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 3140 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_36 -pg 1 -lvl 7 -y 3950 -defaultsOSRD
+preplace inst axi_bram_ctrl_24 -pg 1 -lvl 3 -y 2340 -defaultsOSRD
+preplace inst needlemanWunsch_0_bram_37 -pg 1 -lvl 7 -y 4050 -defaultsOSRD
+preplace netloc processing_system7_0_axi_periph_M36_AXI 1 2 1 810
+preplace netloc needlemanWunsch_0_read_r_27_PORTA 1 6 1 2830
+preplace netloc needlemanWunsch_0_read_r_12_PORTA 1 6 1 2600
+preplace netloc axi_bram_ctrl_48_BRAM_PORTA 1 3 4 NJ 6050 NJ 6050 NJ 6050 2900
+preplace netloc axi_bram_ctrl_39_BRAM_PORTA 1 3 4 NJ 4160 NJ 4160 NJ 4160 N
+preplace netloc processing_system7_0_axi_periph_M08_AXI 1 2 1 960
+preplace netloc axi_bram_ctrl_24_BRAM_PORTA 1 3 4 1360 2360 NJ 2360 NJ 2360 NJ
+preplace netloc needlemanWunsch_0_read_r_20_PORTA 1 6 1 2710
+preplace netloc needlemanWunsch_0_read_r_18_PORTA 1 6 1 2730
+preplace netloc processing_system7_0_axi_periph_M51_AXI 1 2 1 670
+preplace netloc processing_system7_0_axi_periph_M39_AXI 1 2 1 1010
+preplace netloc processing_system7_0_axi_periph_M17_AXI 1 2 1 850
+preplace netloc needlemanWunsch_0_read_r_22_PORTA 1 6 1 2630
+preplace netloc processing_system7_0_FIXED_IO 1 5 3 NJ 5790 NJ 5890 NJ
+preplace netloc processing_system7_0_axi_periph_M48_AXI 1 2 1 740
+preplace netloc processing_system7_0_axi_periph_M28_AXI 1 2 1 1000
+preplace netloc axi_bram_ctrl_49_BRAM_PORTA 1 3 4 1390 6040 NJ 6040 NJ 5840 NJ
+preplace netloc axi_bram_ctrl_20_BRAM_PORTA 1 3 4 NJ 1260 NJ 1260 NJ 1260 2890
+preplace netloc needlemanWunsch_0_read_r_47_PORTA 1 6 1 2560
+preplace netloc needlemanWunsch_0_read_r_43_PORTA 1 6 1 2640
+preplace netloc processing_system7_0_axi_periph_M33_AXI 1 2 1 1030
+preplace netloc processing_system7_0_axi_periph_M30_AXI 1 2 1 890
+preplace netloc axi_bram_ctrl_45_BRAM_PORTA 1 3 4 NJ 4880 NJ 4880 NJ 4880 2900
+preplace netloc axi_bram_ctrl_18_BRAM_PORTA 1 3 4 1360 2060 NJ 2060 NJ 2060 NJ
+preplace netloc needlemanWunsch_0_read_r_45_PORTA 1 6 1 2600
+preplace netloc needlemanWunsch_0_read_r_38_PORTA 1 6 1 2760
+preplace netloc processing_system7_0_axi_periph_M45_AXI 1 2 1 800
+preplace netloc processing_system7_0_axi_periph_M26_AXI 1 2 1 980
+preplace netloc processing_system7_0_axi_periph_M24_AXI 1 2 1 830
+preplace netloc axi_bram_ctrl_23_BRAM_PORTA 1 3 4 NJ 540 NJ 540 NJ 540 2680
+preplace netloc axi_bram_ctrl_15_BRAM_PORTA 1 3 4 1360 1860 NJ 1860 NJ 1860 NJ
+preplace netloc needlemanWunsch_0_results_PORTA 1 6 1 2580
+preplace netloc processing_system7_0_axi_periph_M37_AXI 1 2 1 1030
+preplace netloc axi_bram_ctrl_21_BRAM_PORTA 1 3 4 NJ 660 NJ 660 NJ 660 N
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 3 4 NJ 60 NJ 60 NJ 60 N
+preplace netloc processing_system7_0_axi_periph_M18_AXI 1 2 1 880
+preplace netloc axi_bram_ctrl_46_BRAM_PORTA 1 3 4 1380 4860 NJ 4860 NJ 4860 NJ
+preplace netloc axi_bram_ctrl_28_BRAM_PORTA 1 3 4 1380 2590 NJ 2590 NJ 2580 NJ
+preplace netloc needlemanWunsch_0_read_r_5_PORTA 1 6 1 2790
+preplace netloc needlemanWunsch_0_read_r_1_PORTA 1 6 1 2540
+preplace netloc processing_system7_0_axi_periph_M44_AXI 1 2 1 830
+preplace netloc processing_system7_0_axi_periph_M16_AXI 1 2 1 810
+preplace netloc axi_bram_ctrl_36_BRAM_PORTA 1 3 4 1370 3860 NJ 3860 NJ 3860 NJ
+preplace netloc needlemanWunsch_0_read_r_39_PORTA 1 6 1 2740
+preplace netloc needlemanWunsch_0_read_r_16_PORTA 1 6 1 2700
+preplace netloc processing_system7_0_axi_periph_M06_AXI 1 2 1 820
+preplace netloc axi_bram_ctrl_26_BRAM_PORTA 1 3 4 1350 2560 NJ 2560 NJ 2560 NJ
+preplace netloc needlemanWunsch_0_read_r_34_PORTA 1 6 1 2850
+preplace netloc needlemanWunsch_0_read_r_11_PORTA 1 6 1 2590
+preplace netloc processing_system7_0_axi_periph_M32_AXI 1 2 1 1010
+preplace netloc processing_system7_0_axi_periph_M27_AXI 1 2 1 990
+preplace netloc needlemanWunsch_0_read_r_10_PORTA 1 6 1 2580
+preplace netloc processing_system7_0_DDR 1 5 3 NJ 5770 NJ 5770 NJ
+preplace netloc axi_bram_ctrl_results_BRAM_PORTA 1 3 4 1350 5060 NJ 5060 NJ 5060 NJ
+preplace netloc axi_bram_ctrl_13_BRAM_PORTA 1 3 4 1370 1460 NJ 1460 NJ 1460 NJ
+preplace netloc needlemanWunsch_0_read_r_7_PORTA 1 6 1 2750
+preplace netloc axi_bram_ctrl_33_BRAM_PORTA 1 3 4 1380 3740 NJ 3740 NJ 3740 NJ
+preplace netloc axi_bram_ctrl_31_BRAM_PORTA 1 3 4 1410 3720 NJ 3720 NJ 3720 NJ
+preplace netloc processing_system7_0_axi_periph_M38_AXI 1 2 1 1020
+preplace netloc axi_bram_ctrl_29_BRAM_PORTA 1 3 4 1410 2610 NJ 2610 NJ 2600 NJ
+preplace netloc axi_bram_ctrl_6_BRAM_PORTA 1 3 4 1410 5160 NJ 5160 NJ 5160 NJ
+preplace netloc processing_system7_0_axi_periph_M05_AXI 1 2 1 700
+preplace netloc axi_bram_ctrl_8_BRAM_PORTA 1 3 4 NJ 5520 NJ 5520 NJ 5520 N
+preplace netloc axi_bram_ctrl_7_BRAM_PORTA 1 3 4 1370 5420 NJ 5420 NJ 5420 NJ
+preplace netloc needlemanWunsch_0_read_r_32_PORTA 1 6 1 2870
+preplace netloc needlemanWunsch_0_read_r_6_PORTA 1 6 1 2770
+preplace netloc processing_system7_0_axi_periph_M42_AXI 1 2 1 700
+preplace netloc processing_system7_0_axi_periph_M40_AXI 1 2 1 680
+preplace netloc processing_system7_0_axi_periph_M21_AXI 1 2 1 840
+preplace netloc processing_system7_0_axi_periph_M20_AXI 1 2 1 930
+preplace netloc needlemanWunsch_0_read_r_30_PORTA 1 6 1 2850
+preplace netloc needlemanWunsch_0_read_r_26_PORTA 1 6 1 2820
+preplace netloc fifo_generator_0_M_AXIS 1 4 1 1710
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 1 1400
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 20 5840 NJ 5840 NJ 5840 NJ 5800 NJ 6000 2180
+preplace netloc processing_system7_0_axi_periph_M35_AXI 1 2 1 850
+preplace netloc needlemanWunsch_0_read_r_3_PORTA 1 6 1 2570
+preplace netloc processing_system7_0_axi_periph_M52_AXI 1 2 1 730
+preplace netloc processing_system7_0_axi_periph_M10_AXI 1 2 1 870
+preplace netloc processing_system7_0_axi_periph_M03_AXI 1 2 1 670
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 2 1 690
+preplace netloc axi_bram_ctrl_30_BRAM_PORTA 1 3 4 1390 2600 NJ 2600 NJ 2590 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 4 NJ 420 NJ 420 NJ 420 N
+preplace netloc needlemanWunsch_0_read_r_41_PORTA 1 6 1 2670
+preplace netloc processing_system7_0_axi_periph_M46_AXI 1 2 1 760
+preplace netloc processing_system7_0_axi_periph_M07_AXI 1 2 1 970
+preplace netloc axi_bram_ctrl_38_BRAM_PORTA 1 3 4 1370 4060 NJ 4060 NJ 4060 NJ
+preplace netloc axi_bram_ctrl_5_BRAM_PORTA 1 3 4 1360 4960 NJ 4960 NJ 4960 NJ
+preplace netloc needlemanWunsch_0_read_r_35_PORTA 1 6 1 2830
+preplace netloc needlemanWunsch_0_read_r_9_PORTA 1 6 1 2690
+preplace netloc processing_system7_0_axi_periph_M09_AXI 1 2 1 920
+preplace netloc axi_bram_ctrl_47_BRAM_PORTA 1 3 4 1350 6060 NJ 6060 NJ 6060 NJ
+preplace netloc axi_bram_ctrl_27_BRAM_PORTA 1 3 4 1360 2570 NJ 2570 NJ 2570 NJ
+preplace netloc axi_bram_ctrl_11_BRAM_PORTA 1 3 4 1370 1080 NJ 1080 NJ 1080 NJ
+preplace netloc needlemanWunsch_0_read_r_46_PORTA 1 6 1 2590
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 1370
+preplace netloc processing_system7_0_axi_periph_M50_AXI 1 2 1 710
+preplace netloc processing_system7_0_axi_periph_M11_AXI 1 2 1 770
+preplace netloc needlemanWunsch_0_read_r_4_PORTA 1 6 1 2650
+preplace netloc needlemanWunsch_0_read_r_0_PORTA 1 6 1 2560
+preplace netloc processing_system7_0_axi_periph_M13_AXI 1 2 1 750
+preplace netloc axi_bram_ctrl_17_BRAM_PORTA 1 3 4 1360 2160 NJ 2160 NJ 2160 NJ
+preplace netloc axi_bram_ctrl_12_BRAM_PORTA 1 3 4 1370 1360 NJ 1360 NJ 1360 NJ
+preplace netloc axis_dwidth_converter_0_M_AXIS 1 5 1 2170
+preplace netloc processing_system7_0_axi_periph_M22_AXI 1 2 1 860
+preplace netloc processing_system7_0_axi_periph_M19_AXI 1 2 1 940
+preplace netloc axi_bram_ctrl_42_BRAM_PORTA 1 3 4 1380 4460 NJ 4460 NJ 4460 NJ
+preplace netloc axi_bram_ctrl_22_BRAM_PORTA 1 3 4 NJ 780 NJ 780 NJ 780 N
+preplace netloc axi_bram_ctrl_4_BRAM_PORTA 1 3 4 1360 2260 NJ 2260 NJ 2260 NJ
+preplace netloc needlemanWunsch_0_read_r_42_PORTA 1 6 1 2660
+preplace netloc needlemanWunsch_0_read_r_36_PORTA 1 6 1 2820
+preplace netloc needlemanWunsch_0_read_r_33_PORTA 1 6 1 2860
+preplace netloc needlemanWunsch_0_read_r_29_PORTA 1 6 1 2860
+preplace netloc processing_system7_0_axi_periph_M43_AXI 1 2 1 850
+preplace netloc processing_system7_0_axi_periph_M12_AXI 1 2 1 710
+preplace netloc axi_bram_ctrl_19_BRAM_PORTA 1 3 4 NJ 1140 NJ 1140 NJ 1140 2900
+preplace netloc axi_bram_ctrl_16_BRAM_PORTA 1 3 4 1350 1960 NJ 1960 NJ 1960 NJ
+preplace netloc needlemanWunsch_0_read_r_44_PORTA 1 6 1 2620
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 4 NJ 2650 NJ 2580 NJ 2580 2170
+preplace netloc needlemanWunsch_0_read_r_28_PORTA 1 6 1 2840
+preplace netloc processing_system7_0_axi_periph_M47_AXI 1 2 1 750
+preplace netloc processing_system7_0_axi_periph_M41_AXI 1 2 1 690
+preplace netloc processing_system7_0_axi_periph_M25_AXI 1 2 1 800
+preplace netloc axi_bram_ctrl_35_BRAM_PORTA 1 3 4 1350 3760 NJ 3760 NJ 3760 NJ
+preplace netloc needlemanWunsch_0_read_r_21_PORTA 1 6 1 2620
+preplace netloc needlemanWunsch_0_read_r_13_PORTA 1 6 1 2610
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 4300 340 4300 900 5850 1410 5790 1730 5670 2190
+preplace netloc axi_bram_ctrl_3_BRAM_PORTA 1 3 4 NJ 300 NJ 300 NJ 300 N
+preplace netloc axi_bram_ctrl_41_BRAM_PORTA 1 3 4 1370 4360 NJ 4360 NJ 4360 NJ
+preplace netloc axi_bram_ctrl_32_BRAM_PORTA 1 3 4 1390 3730 NJ 3730 NJ 3730 NJ
+preplace netloc needlemanWunsch_0_read_r_40_PORTA 1 6 1 2700
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 4 360 5680 NJ 5680 1390 5620 NJ
+preplace netloc processing_system7_0_axi_periph_M31_AXI 1 2 1 1020
+preplace netloc needlemanWunsch_0_read_r_31_PORTA 1 6 1 2900
+preplace netloc needlemanWunsch_0_read_r_25_PORTA 1 6 1 2810
+preplace netloc needlemanWunsch_0_read_r_14_PORTA 1 6 1 2640
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 950
+preplace netloc axi_bram_ctrl_44_BRAM_PORTA 1 3 4 NJ 4760 NJ 4760 NJ 4760 2880
+preplace netloc axi_bram_ctrl_43_BRAM_PORTA 1 3 4 1370 4560 NJ 4560 NJ 4560 NJ
+preplace netloc axi_bram_ctrl_25_BRAM_PORTA 1 3 4 NJ 2460 NJ 2460 NJ 2460 N
+preplace netloc processing_system7_0_axi_periph_M49_AXI 1 2 1 720
+preplace netloc axi_bram_ctrl_10_BRAM_PORTA 1 3 4 1370 980 NJ 980 NJ 980 NJ
+preplace netloc axi_bram_ctrl_9_BRAM_PORTA 1 3 4 NJ 6290 NJ 6290 NJ 6290 2800
+preplace netloc needlemanWunsch_0_read_r_37_PORTA 1 6 1 2780
+preplace netloc needlemanWunsch_0_read_r_24_PORTA 1 6 1 2800
+preplace netloc axi_bram_ctrl_34_BRAM_PORTA 1 3 4 1360 3750 NJ 3750 NJ 3750 NJ
+preplace netloc axi_bram_ctrl_2_BRAM_PORTA 1 3 4 NJ 180 NJ 180 NJ 180 N
+preplace netloc needlemanWunsch_0_read_r_19_PORTA 1 6 1 2680
+preplace netloc processing_system7_0_axi_periph_M14_AXI 1 2 1 760
+preplace netloc needlemanWunsch_0_read_r_8_PORTA 1 6 1 2720
+preplace netloc axi_bram_ctrl_40_BRAM_PORTA 1 3 4 1380 4260 NJ 4260 NJ 4260 NJ
+preplace netloc needlemanWunsch_0_read_r_2_PORTA 1 6 1 2550
+preplace netloc processing_system7_0_axi_periph_M34_AXI 1 2 1 N
+preplace netloc axi_bram_ctrl_37_BRAM_PORTA 1 3 4 1380 3960 NJ 3960 NJ 3960 NJ
+preplace netloc needlemanWunsch_0_read_r_49_PORTA 1 6 1 2570
+preplace netloc needlemanWunsch_0_read_r_48_PORTA 1 6 1 2550
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 370 5670 NJ 5670 NJ 5630 NJ 5680 2170
+preplace netloc axi_bram_ctrl_14_BRAM_PORTA 1 3 4 1370 1760 NJ 1760 NJ 1760 NJ
+preplace netloc needlemanWunsch_0_read_r_23_PORTA 1 6 1 2660
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1720
+preplace netloc needlemanWunsch_0_read_r_15_PORTA 1 6 1 2670
+preplace netloc processing_system7_0_axi_periph_M29_AXI 1 2 1 690
+preplace netloc processing_system7_0_axi_periph_M23_AXI 1 2 1 790
+preplace netloc processing_system7_0_axi_periph_M15_AXI 1 2 1 780
+preplace netloc processing_system7_0_axi_periph_M04_AXI 1 2 1 680
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 5 350 4310 910 5860 1360 5530 NJ 5530 2180
+preplace netloc needlemanWunsch_0_read_r_17_PORTA 1 6 1 2740
+levelinfo -pg 1 0 180 520 1190 1560 1950 2370 3000 3130
+",
+}
+{
+   da_axi4_cnt: "54",
+   da_bram_cntlr_cnt: "51",
+   da_ps7_cnt: "1",
+}

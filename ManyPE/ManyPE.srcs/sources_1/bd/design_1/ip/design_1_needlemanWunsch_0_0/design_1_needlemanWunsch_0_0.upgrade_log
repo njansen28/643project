@@ -1,0 +1,110 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Fri Nov 27 16:52:18 2015
+| Host         : Mads running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_needlemanWunsch_0_0 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511271641) to (Rev. 1511271650)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'design_1_needlemanWunsch_0_0'.
+
+
+-upgrade has removed interface 'results_address0'
+-upgrade has removed interface 'results_d0'
+-upgrade has added interface 'results_PORTA'
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_needlemanWunsch_0_0'. These changes may impact your design.
+
+
+-upgrade has removed port 'results_address0'
+-upgrade has removed port 'results_ce0'
+-upgrade has removed port 'results_d0'
+-upgrade has removed port 'results_we0'
+-upgrade has added port 'results_Addr_A'
+-upgrade has added port 'results_Clk_A'
+-upgrade has added port 'results_Din_A'
+-upgrade has added port 'results_Dout_A'
+-upgrade has added port 'results_EN_A'
+-upgrade has added port 'results_Rst_A'
+-upgrade has added port 'results_WEN_A'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Fri Nov 27 16:43:59 2015
+| Host         : Mads running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_needlemanWunsch_0_0 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511261546) to (Rev. 1511271641)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading IP 'design_1_needlemanWunsch_0_0'.
+
+
+-upgrade has added interface 'results_address0'
+-upgrade has added interface 'results_d0'
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading IP 'design_1_needlemanWunsch_0_0'. These changes may impact your design.
+
+
+-upgrade has added port 'results_address0'
+-upgrade has added port 'results_ce0'
+-upgrade has added port 'results_d0'
+-upgrade has added port 'results_we0'
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Thu Nov 26 15:47:58 2015
+| Host         : Mads running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_needlemanWunsch_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_needlemanWunsch_0_0 (xilinx.com:hls:needlemanWunsch:1.0) from (Rev. 1511232352) to (Rev. 1511261546)
+

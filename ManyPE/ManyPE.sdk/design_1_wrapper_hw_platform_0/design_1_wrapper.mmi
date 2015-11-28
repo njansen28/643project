@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MemInfo Version="1" Minor="0">
+  <Processor Endianness="Little" InstPath="design_1_i/processing_system7_0">
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_0" Begin="1073741824" End="1073745919">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X2Y7">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_1" Begin="1107296256" End="1107300351">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X2Y8">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_2" Begin="1140850688" End="1140854783">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X2Y9">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_3" Begin="1174405120" End="1174409215">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X1Y7">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_4" Begin="1207959552" End="1207963647">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X1Y6">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_5" Begin="1241513984" End="1241518079">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X1Y8">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_6" Begin="1275068416" End="1275072511">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X4Y5">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_7" Begin="1308622848" End="1308626943">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X3Y4">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_8" Begin="1342177280" End="1342181375">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X3Y2">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+    <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_9" Begin="1375731712" End="1375735807">
+      <BusBlock>
+        <BitLane MemType="RAMB32" Placement="X4Y2">
+          <DataWidth MSB="31" LSB="0"/>
+          <AddressRange Begin="0" End="1023"/>
+          <Parity ON="false" NumBits="0"/>
+        </BitLane>
+      </BusBlock>
+    </AddressSpace>
+  </Processor>
+  <Config>
+    <Option Name="Part" Val="xc7z020clg484-1"/>
+  </Config>
+</MemInfo>
