@@ -17,7 +17,7 @@
 
 #define TIMER_DEV_ID   	XPAR_XSCUTIMER_0_DEVICE_ID
 #define TIMER_MAX       0xFFFFFFFF
-#define TIMER_PRESCALE  1
+#define TIMER_PRESCALE  256
 #define TIMER_PERIOD    3.0e-9 // 333.3MHz = 3 nanoseconds
 
 #define ACTUAL_READS 100
@@ -116,7 +116,7 @@ void print_time(u32 start_time, u32 end_time) {
 
 
 	u32 length = (u32)(0xFFFFFFFF) - end_time;
-	float time = length * TIMER_PERIOD;
+	float time = length * TIMER_PERIOD * TIMER_PRESCALE;
 	whole = time;
 	thousandths = (time - (float)whole)*1000.0;
 	xil_printf("Time: %d.%03d seconds\r\n", whole, thousandths);
