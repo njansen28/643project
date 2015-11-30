@@ -30,7 +30,7 @@ preplace netloc processing_system7_0_FIXED_IO 1 5 3 1880 100 NJ 100 NJ
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 30 60 370 440 700 590 1070 440 1430 310 1900
 preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 3 360 470 NJ 430 NJ
 preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 1 N
-levelinfo -pg 1 0 190 540 900 1260 1660 2080 2340 2460
+levelinfo -pg 1 0 190 540 900 1260 1660 2080 2350 2470
 ",
 }
 {

@@ -707,7 +707,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>d6ae9636</spirit:value>
+            <spirit:value>a3edfccf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -723,7 +723,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Nov 23 21:07:53 UTC 2015</spirit:value>
+            <spirit:value>Mon Nov 30 04:58:12 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -742,7 +742,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>d6ae9636</spirit:value>
+            <spirit:value>a3edfccf</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -758,7 +758,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Nov 23 21:07:53 UTC 2015</spirit:value>
+            <spirit:value>Mon Nov 30 04:58:12 UTC 2015</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -1403,30 +1403,26 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/9d23ed48/constraints/needlemanWunsch_ooc.xdc</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/b6ac1623/constraints/needlemanWunsch_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
         <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
         <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/9d23ed48/hdl/verilog/needlemanWunsch.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/b6ac1623/hdl/verilog/needlemanWunsch.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/9d23ed48/hdl/verilog/needlemanWunsch_AXILiteS_s_axi.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/b6ac1623/hdl/verilog/needlemanWunsch_AXILiteS_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/9d23ed48/hdl/verilog/needlemanWunsch_doRow.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/b6ac1623/hdl/verilog/needlemanWunsch_orig1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/9d23ed48/hdl/verilog/needlemanWunsch_orig1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/9d23ed48/hdl/verilog/needlemanWunsch_score1.v</spirit:name>
+        <spirit:name>../../../../ipshared/xilinx.com/needlemanwunsch_v1_0/b6ac1623/hdl/verilog/needlemanWunsch_score1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1480,7 +1476,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.latency" spirit:order="5">113500001</spirit:value>
+      <spirit:value spirit:resolve="immediate" spirit:id="PARAM_VALUE.latency" spirit:order="5">25000110</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1510,8 +1506,8 @@
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Needlemanwunsch</xilinx:displayName>
-      <xilinx:coreRevision>1511231556</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2015-11-23T20:57:00Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1511292357</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2015-11-30T04:57:40Z</xilinx:coreCreationDateTime>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_AXILITES.AWUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_AXILITES.ARUSER_WIDTH" xilinx:valueSource="constant"/>

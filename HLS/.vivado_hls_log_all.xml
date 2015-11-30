@@ -15,6 +15,12 @@
   <warningLogs>
     <logs>
       <synLog>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_Din_A' to 0." projectName="HLS" solutionName="solution2" date="2015-11-29T23:56:47.817-0500" type="Warning"/>
+        <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_WEN_A' to 0." projectName="HLS" solutionName="solution2" date="2015-11-29T23:56:47.077-0500" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'COL' (HLS/week3.c:20) because its parent loop or function is pipelined." projectName="HLS" solutionName="solution2" date="2015-11-29T23:54:41.891-0500" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'COL' (HLS/week3.c:20) because its parent loop or function is pipelined." projectName="HLS" solutionName="solution2" date="2015-11-29T23:54:41.882-0500" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'COL' (HLS/week3.c:20) because its parent loop or function is pipelined." projectName="HLS" solutionName="solution2" date="2015-11-29T23:54:41.875-0500" type="Warning"/>
+        <logs message="@W [XFORM-505] Ignored pipeline directive for loop 'COL' (HLS/week3.c:20) because its parent loop or function is pipelined." projectName="HLS" solutionName="solution2" date="2015-11-29T23:54:41.870-0500" type="Warning"/>
         <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_Din_A' to 0." projectName="HLS" solutionName="solution1" date="2015-11-23T17:26:18.783-0500" type="Warning"/>
         <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch/read_r_WEN_A' to 0." projectName="HLS" solutionName="solution1" date="2015-11-23T17:26:18.776-0500" type="Warning"/>
         <logs message="@W [RTGEN-101] Setting dangling out port 'needlemanWunsch_doRow/read_r_Din_A' to 0." projectName="HLS" solutionName="solution1" date="2015-11-23T17:26:18.585-0500" type="Warning"/>
